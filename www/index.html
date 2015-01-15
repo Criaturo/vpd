@@ -14,9 +14,6 @@
     <script src="js/jquery/jquery-1.11.1.min.js"></script>
     <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
 
-    <!-- debug -->
-    <script type="text/javascript" src="http://192.168.0.101:8080/target/target-script-min.js#anonymous"></script>
-
 </head> 
 <body>
 	
@@ -33,56 +30,53 @@
 	
 	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
 		<script>
-
-		$(document).ready(function(){
-			$('.btnSalvar2').click(function(){
-				var lS = prompt("De um nome ao resultado para salvar.","");
-				localStorage.setItem(lS, $(location).attr('href'));
-			}) 				
-			  
-			$('.btn-favoritos2').click(function(){
-				var tamanho = localStorage.length;
-				var chave = '';
-				var valor = '';
-				
-				if(document.getElementById("tableResults").rows.length > 1)	{
-					for(var t = document.getElementById("tableResults").rows.length; t > 1; t--){
-					document.getElementById("tableResults").deleteRow(1);
+			$(document).ready(function(){
+				$('.btnSalvar2').click(function(){
+					var lS = prompt("De um nome ao resultado para salvar.","");
+					localStorage.setItem(lS, $(location).attr('href'));
+				}) 				
+				  
+				$('.btn-favoritos2').click(function(){
+					var tamanho = localStorage.length;
+					var chave = '';
+					var valor = '';
+					
+					if(document.getElementById("tableResults").rows.length > 1)	{
+						for(var t = document.getElementById("tableResults").rows.length; t > 1; t--){
+						document.getElementById("tableResults").deleteRow(1);
+						}
 					}
-				}
-									
-				var numOfCols = document.getElementById("tableResults").rows[document.getElementById("tableResults").rows.length-1].cells.length;
-					
-				for(var c = 0; c < tamanho;c++){
-					chave = localStorage.key(c);
-					valor = localStorage.getItem(chave);
-					
-					
-					var newRow = document.getElementById("tableResults").insertRow(document.getElementById("tableResults").rows.length);
+										
+					var numOfCols = document.getElementById("tableResults").rows[document.getElementById("tableResults").rows.length-1].cells.length;
 						
-						for (var j = 0; j < numOfCols; j++) {
+					for(var c = 0; c < tamanho;c++){
+						chave = localStorage.key(c);
+						valor = localStorage.getItem(chave);
 						
-						newCell = newRow.insertCell(j);
 						
-						if(j==0){
+						var newRow = document.getElementById("tableResults").insertRow(document.getElementById("tableResults").rows.length);
 							
-							}else if(j == 1){
-								newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
-							} } }	
-				});
+							for (var j = 0; j < numOfCols; j++) {
+							
+							newCell = newRow.insertCell(j);
+							
+							if(j==0){
+								
+								}else if(j == 1){
+									newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+								} } }	
+					});
+			});
 
-
-		});
-
-		$('.link').on('tap', function() {
-		    url = $(this).attr("rel");   
-		    loadURL(url);
-		});
-			
-		function loadURL(url){
-				    navigator.app.loadUrl(url, { openExternal:true });
-				    return false;
-		}
+			$('.link').on('tap', function() {
+			    url = $(this).attr("rel");   
+			    loadURL(url);
+			});
+				
+			function loadURL(url){
+					    navigator.app.loadUrl(url, { openExternal:true });
+					    return false;
+			}
 		</script>
 			
 			<table id="tableResults" class="tabela" border="0">
