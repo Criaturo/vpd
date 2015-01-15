@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+	<meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+  <script src="js/jquery/jquery-1.11.1.min.js"></script>
+ 
+ 
+ 
+ 
+ 
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="index.html" data-transition="flip"><img src="images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Ajustes</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+
+			$(function() {	
+				$('.btnSalvar2').click(function(){
+					var lS = prompt("De um nome ao resultado para salvar.","");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults5").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults5").rows.length; t > 1; t--){
+				document.getElementById("tableResults5").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults5").rows[document.getElementById("tableResults5").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults5").insertRow(document.getElementById("tableResults5").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})
+		
+		</script>
+			
+			<table id="tableResults5" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>
+	
+
+ 
+
+	<div data-role="main" class="ui-content">
+		
+		<div class="ui-grid-a">
+			<div class="ui-block-a bg-limpar-favoritos">
+				
+	<script>
+		
+		$('.btnApagar').click(function(){
+			localStorage.clear();
+			alert( "Pronto! Favoritos Limpo. :)");  
+			})	
+		
+	</script>
+				
+				<a href="#" class="btn-home btnApagar"   data-transition="flip">
+						<img src="images/ico-limparfavoritos.png" />
+						<span>Limpar Favoritos</span>
+				</a>
+			</div>
+		 </div>
+	</div>
+
+
+	
+	
+</div><!-- /page -->	
+ 
+ 
+	
+ 
+	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+
+	<script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>

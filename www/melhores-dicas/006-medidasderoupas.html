@@ -1,0 +1,744 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Medidas de roupas e calçados nos EUA</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  
+   <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   navigator.app.loadUrl(url, { openExternal:true });
+		   return false;
+		} 
+	</script>
+  
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../melhores-dicas.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Melhores dicas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/dicas/thumbs/006-medidasderoupas.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-melhoresdicas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Medidas de roupas e calçados nos EUA</h2>
+
+
+
+
+
+  <p>Hoje vamos falar sobre um ponto que muita gente vem nos perguntando nos últimos meses: conversão das medidas de roupas e calçados nos EUA. Essa é uma informação que ao mesmo tempo que é fácil de achar pela internet é difícil de confiar, pois cada site que você acessa tem valores e tabelas muito diferentes entre si.</p>
+  <p>Sei que roupa é roupa e que no fim, uma marca pode acabar optando por medidas ou nomenclaturas diferentes das outras, mas nos EUA o padrão é consideravelmente respeitado. Confesso aqui que mesmo depois de muitas viagens aos Estados Unidos, nunca aprendi a relação entre os tamanhos do Brasil e os de lá, por isso, decidi pesquisar em fontes mais oficiais, como o Guia de Turismo da Folha e outros guias de viagens internacionais para poder escrever essa matéria.</p>
+  <p>Nas nossas viagens, bem como nos guias que pesquisamos para escrever essa matéria, destacamos as seguintes dicas para quem está querendo renovar o guarda roupas nos outlets americanos:</p>
+  <ol>
+    <li><strong>Experimentar sempre</strong>: tamanho é tamanho, mas nada como experimentar o que você pretende comprar. Tem coisa que por mais que seja o seu tamanho, não fica legal quando você coloca no corpo, então pra não voltar pro Brasil com roupas que você não vai usar, melhor perder um tempinho na fila do provador e confiar menos no que diz a etiqueta do produto.</li>
+    <li><strong>Conheça a fita métrica</strong>: essa dica é muito útil para quem vai comprar roupa pela internet. Os sites em geral colocam não só o tamanho da peça, mas também as medidas em centímetros ou polegadas. É hora então de procurar uma fita métrica na sua casa e medir altura da perna, cintura, quadril, peitoral e por aí vai. Algumas referências que colocamos abaixo, seguem o padrão de medidas que podem ser tiradas com uma fita métrica. Pra quem vai comprar algo de presente nos EUA, vale não só levar as medidas anotadas, como também levar uma pequena fita para ajudar na hora da compra.</li>
+    <li><strong>Inglês básico</strong>: na hora de ler as etiquetas, vale saber um pouco de inglês como<em>Small</em> ou &ldquo;S&rdquo; (pequeno ou &ldquo;P), <em>Medium</em> ou &ldquo;M&rdquo; (médio), <em>Large</em> ou &ldquo;L&rdquo; (grande ou &ldquo;G&rdquo;),<em>Extra Large</em> ou &ldquo;XL&rdquo; (o famoso &ldquo;GG&rdquo;) são usados para definir o tamanho da peça. Outros termos como <em>Tall</em> (alto), <em>Short</em> (curto ou baixinho) e <em>Petit</em> (do francês &ldquo;pequenininho&rdquo;) também podem ser usados em algumas lojas.</li>
+    <li><strong>Medidas diferentes</strong>: nos EUA não se usa muito centímetros e sim polegadas, ou do inglês, <em>inches</em>. Vale aqui saber que 1 inch = 2,54cm. Se você estiver com preguiça de fazer a conta da conversão das medidas, basta jogar no Google &ldquo;10 inches in cm&rdquo; ou &ldquo;10 polegadas em cm&rdquo; ou qualquer outra medida, que ele te devolve o resultado. Assim olha:<img src="../cont-imgs/dicas/006-medidasroupa/medidas.png" alt="Screen Shot 2014-09-16 at 8.03.41 PM" width="800" height="267"></li>
+    <li><strong>Política de trocas</strong>: trocar produtos nos EUA é muito tranquilo, mas se não estiver com certeza de que uma roupa caiu legal, não tire a etiqueta dela. Sempre dá tempo de voltar na loja até o fim da viagem para trocá-la e para isso, basta ir até o caixa e dizer que você quer &ldquo;<em>return</em>&rdquo; ou &ldquo;<em>exchange</em>&ldquo;.</li>
+    <li><strong>Cada um no seu quadrado</strong>: assim como no Brasil uma roupa feminina tamanho P não tem o mesmo tamanho de um P de uma roupa masculina, nos EUA as medidas são diferentes. Fique atento nas tabelas abaixo, para ver a diferença entre as medidas para homens, mulheres e crianças. Além disso, ser P no Brasil não significa ser S nos EUA. Os tamanhos podem variar bastante (em geral para menos).</li>
+    <li><strong>Calça de dois tamanhos</strong>: você vai notar que em muitas marcas, as calças, principalmente as jeans, terão 2 tamanhos estampados na etiquetas separados por uma barra, como por exemplo 32/30. Isso significa que o primeiro número é a medida da cintura (veja a sua medida nas tabelas abaixo) e o segundo, a altura da perna. O legal disso lá nos Estados Unidos é que você tem calças do mesmo tamanho, com diferentes alturas, ou seja, dificilmente você vai precisar fazer a barra da sua calça. E fique tranquilo pois você vai aprender qual é o seu tamanho depois de experimentar alguns modelos.</li>
+  </ol>
+  <p>As tabelas são muito úteis para o momento da compra, então colocamos todas elas em um PDF para que você possa imprimir e levar para o shopping. <a class=“linkvai" href="javascript:loadURL('http://goo.gl/WAAoCP');">Clique aqui</a> para fazer o download.<span style="text-align: center"></span></p>
+  <table>
+    <tbody>
+      <tr>
+        <th colspan="6">Medidas de roupas para homens nos EUA</th>
+      </tr>
+      <tr>
+        <td>Tamanho (inglês / português)</td>
+        <td>Altura / Height (cm)</td>
+        <td>Peitoral / Chest (cm)</td>
+        <td>Cintura / Waist (cm)</td>
+        <td>Quadril / Hips (cm)</td>
+        <td>Jeans (polegadas)</td>
+      </tr>
+      <tr>
+        <td>XS / PP</td>
+        <td>165-169</td>
+        <td>82-89</td>
+        <td>66-72</td>
+        <td>85-90</td>
+        <td>28</td>
+      </tr>
+      <tr>
+        <td>S / P</td>
+        <td>170-174</td>
+        <td>90-97</td>
+        <td>73-79</td>
+        <td>91-96</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>M / M</td>
+        <td>175-179</td>
+        <td>98-105</td>
+        <td>80-85</td>
+        <td>97-102</td>
+        <td>32</td>
+      </tr>
+      <tr>
+        <td>L / G</td>
+        <td>180-184</td>
+        <td>106-113</td>
+        <td>86-93</td>
+        <td>103-108</td>
+        <td>34</td>
+      </tr>
+      <tr>
+        <td>XL / GG</td>
+        <td>185-189</td>
+        <td>114-121</td>
+        <td>94-99</td>
+        <td>109-114</td>
+        <td>36</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th colspan="2">Medidas de camisas para homens nos EUA</th>
+      </tr>
+      <tr>
+        <td>Tamanho Brasil</td>
+        <td>Tamanho EUA</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>13</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>16</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td>15 ½</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>16</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td>16 ½</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td>17 ½</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>18</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th colspan="2">Medidas de ternos para homens nos EUA</th>
+      </tr>
+      <tr>
+        <td>Tamanho Brasil</td>
+        <td>Tamanho EUA</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>36</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td>44</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td>46</td>
+      </tr>
+      <tr>
+        <td>54</td>
+        <td> 48</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th colspan="6">Medidas de roupas para muheres nos EUA</th>
+      </tr>
+      <tr>
+        <td>Tamanho<br>
+          (inglês / português)</td>
+        <td>Altura /<br>
+          Height (cm)</td>
+        <td>Peitoral /<br>
+          Chest (cm)</td>
+        <td>Cintura /<br>
+          Waist (cm)</td>
+        <td>Quadril /<br>
+          Hips (cm)</td>
+        <td>Jeans<br>
+          (polegadas)</td>
+      </tr>
+      <tr>
+        <td>XS / PP</td>
+        <td>158-163</td>
+        <td>82-84</td>
+        <td>60-65</td>
+        <td>84-88</td>
+        <td>26/27</td>
+      </tr>
+      <tr>
+        <td>S / P</td>
+        <td>163-168</td>
+        <td>84-88</td>
+        <td>65-70</td>
+        <td>88-92</td>
+        <td>27/28</td>
+      </tr>
+      <tr>
+        <td>M / M</td>
+        <td>168-173</td>
+        <td>88-92</td>
+        <td>70-75</td>
+        <td>92-96</td>
+        <td>29</td>
+      </tr>
+      <tr>
+        <td>L / G</td>
+        <td>173-178</td>
+        <td>92-96</td>
+        <td>75-80</td>
+        <td>96-100</td>
+        <td>30/31</td>
+      </tr>
+      <tr>
+        <td>XL / GG</td>
+        <td>178-183</td>
+        <td>96-100</td>
+        <td>80-85</td>
+        <td>100-104</td>
+        <td>32</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table width="314">
+    <tbody>
+      <tr>
+        <th colspan="2">Medidas de calças para mulheres nos EUA</th>
+      </tr>
+      <tr>
+        <td>Tamanho<br>
+          Brasil</td>
+        <td>Tamanho<br>
+          EUA</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td>16</td>
+      </tr>
+      <tr>
+        <td>52</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>54</td>
+        <td> 20</td>
+      </tr>
+      <tr>
+        <td>56</td>
+        <td> 22</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th colspan="2">Medidas de vestidos, saias e casacos para muheres nos EUA</th>
+      </tr>
+      <tr>
+        <td>Tamanho Brasil</td>
+        <td>Tamanho EUA</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td> 16</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th colspan="2">Medidas de blusas e malhas para muheres nos EUA</th>
+      </tr>
+      <tr>
+        <td>Tamanho Brasil</td>
+        <td>Tamanho EUA</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td>16</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th colspan="2">Medidas de roupas para crianças nos EUA</th>
+      </tr>
+      <tr>
+        <td>Tamanho<br>
+          Brasil</td>
+        <td>Tamanho<br>
+          EUA</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2-3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>4-5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>6-6x</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>7-8</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>16+</td>
+        <td>16+</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>&nbsp;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th colspan="4">Numeração calçados Brasil e EUA</th>
+      </tr>
+      <tr>
+        <td>Numeração Brasil</td>
+        <td>Numeracao EUA – Crianças</td>
+        <td>Numeração EUA – Mulheres</td>
+        <td>Numeração EUA – Homens</td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>3 1½</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>4</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td>5</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>21</td>
+        <td>6</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td>7</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td>7 ½</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td>8 ½</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td>9</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>26</td>
+        <td>10</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td>11</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td>11 ½</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td>12 ½</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>13</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>31</td>
+        <td>1 (Y)</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td>2 (Y)</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td>2 ½ (Y)</td>
+        <td>4 ½</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td>3 (Y)</td>
+        <td>5 ½</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td>-</td>
+        <td>6</td>
+        <td>5 ½</td>
+      </tr>
+      <tr>
+        <td>36</td>
+        <td>-</td>
+        <td>7</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td>-</td>
+        <td>7 ½</td>
+        <td>6 ½</td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td>-</td>
+        <td>8</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td>-</td>
+        <td>9</td>
+        <td>7 ½</td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td>-</td>
+        <td>10</td>
+        <td>8 ½</td>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td>-</td>
+        <td>10 ½</td>
+        <td>9 ½</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td>-</td>
+        <td>11 ½</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td>-</td>
+        <td>-</td>
+        <td>11</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td>-</td>
+        <td>-</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td>-</td>
+        <td>-</td>
+        <td>12 ½</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td>-</td>
+        <td>-</td>
+        <td>13 ½</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Pronto! Com essas dicas, espero que tenha ficado mais fácil correr para as compras e não perder tempo na hora de escolher o seu tamanho.</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

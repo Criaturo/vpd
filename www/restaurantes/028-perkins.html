@@ -1,0 +1,166 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Perkins: comer bem e barato em Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../restaurantes.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/028-perkins.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Perkins: comer bem e barato em Orlando</h2>
+
+
+
+
+<p>A gente já falou aqui como é possível comer bem nos parques da Disney sem gastar mais por isso. Mas se pararmos pra pensar, nem metade das refeições da viagem acontecem nos parques, certo? É por isso que vamos começar a postar também sobre bons lugares para comer bem em barato em Orlando. Na verdade, conseguimos pensar numa série de restaurantes para falar, mas para começar, temos que falar do Perkins, um dos nossos restaurantes preferidos em Orlando.</p>
+<div id="attachment_915"><img src="../cont-imgs/restaurantes/028-perkins/p8.jpg" alt="A melhor parte de uma ida ao Perkins: a sobremesa." width="640" height="640">
+  <p>A melhor parte de uma ida ao Perkins: a sobremesa.</p>
+</div>
+<h2><strong>Perkins: o ponto de encontro dos americanos</strong></h2>
+<p>O Perkins não é um destino muito frequentando pelos brasileiros, acredito que é porque lá eles servem comida tipicamente americana. Mas como já falamos, a comida americana é muito mais rica do que a gente pensa, e o cardápio do Perkins é bem completo, servindo desde os famosos hamburguers e panquecas até coisas menos conhecidas como chicken pot pie (o meu prato preferido lá) e ainda comidas que todo mundo gosta como franguinho empanado,um filé com batata e salada ou um salmão grelhado. O cardápio traz muitas opções para café da manhã, almoço, jantar e ainda um lanchinho a qualquer hora do dia. Se quiser conferir, <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/wp-content/uploads/2013/08/menu-perkins.pdf');">baixe o cardápio aqui</a>. Outra coisa boa do Perkins é que ele funciona até tarde. Algumas unidades são 24 horas e outras fecham 1 hora da manhã (<a class="linkvai" href="javascript:loadURL('http://www.perkinsrestaurants.com/locations-results?stateOrZip=32821');">veja todas as unidades de Orlando e região aqui</a>). As vezes, depois de um dia longo, ele acaba sendo a melhor pedida para um jantar mais tarde.</p>
+<div id="attachment_914"><img src="../cont-imgs/restaurantes/028-perkins/p7.jpg" alt="Massa com camarão acompanhada de torrada. " width="584" height="438">
+  <p>Massa com camarão acompanhada de torrada.</p>
+</div>
+<p>Além disso tudo, talvez a parte que eu mais goste do Perkins seja a sua Bakery, a famosa padaria. Sabe aquelas tortas doces americanas altas, lindas, cheias de recheio que vemos nos filmes? Sabe aqueles muffins apetitosos e fofinhos? O Perkins tem tudo isso em vários sabores. É uma perdição. Torta de maça, torta de cereja, torta de limão, de chocolate, de banana…escolha o que te agradar mais. A minha preferida é a Caramel Apple Pie. Peça para servirem &ldquo;warmed with ice cream&rdquo; (morna com sorvete), ou &lsquo;a la mode&rsquo;, que não tem erro!</p>
+<div id="attachment_917"><img src="../cont-imgs/restaurantes/028-perkins/perkins1.jpg" alt="Torta servida morna com sorvete de creme. Uma das minhas sobremesas preferidas." width="584" height="438">
+  <p>Torta servida morna com sorvete de creme. Uma das minhas sobremesas preferidas.</p>
+</div>
+<p>O café da manhã também é delicioso. Panquecas, waffles, omeletes…tudo bem americano mas muito bem feitinho. Eu adoro!</p>
+<div id="attachment_910"><img src="../cont-imgs/restaurantes/028-perkins/p3.jpg" alt="Café da manhã  tipicamente americano. Tem opções mais leves, não se preocupem." width="501" height="376">
+  <p>Café da manhã tipicamente americano. Tem opções mais leves, não se preocupem.</p>
+</div>
+<div id="attachment_913"><img src="../cont-imgs/restaurantes/028-perkins/p6.jpg" alt="Pra quem é fã (eu sou!) as panquecas de lá são deliciosas!" width="584" height="438">
+  <p>Pra quem é fã (eu sou!) as panquecas de lá são deliciosas!</p>
+</div>
+<p>Tudo isso é oferecido por um preço muito justo. A primeira vez que eu fui lá, até achei estranho, pois lembro que um prato com um bife, uma baked potato, brocolis e um pão super gostoso estava 11 dólares (o preço já deve ter sido reajustado, mas não mudou absurdamente não). E tudo veio super bem feitinho. O café da manhã pode não ser mais barato do que comer uma torradinha no hotel, mas aqui você come super bem (a ponto de não ter tanta fome nos parques na hora do almoço) e não gasta tanto por isso. Outra boa alternativa para o café da manha que eu e o Felipe gostamos bastante é, quando vamos ao Perkins para jantar, já pedimos para viagem dois muffins para o cafe da manhã seguinte. Assim gastamos pouco e comemos super bem.</p>
+<div id="attachment_911"><img src="../cont-imgs/restaurantes/028-perkins/p4.jpg" alt="Esse Muffin é mais do tipo sobremesa do que de café da manhã, mas é só para você ter uma idéia de como eles são fofinhos e apetitosos. Eu recomendo muito!" width="730" height="548">
+  <p>Esse Muffin é mais do tipo sobremesa do que de café da manhã, mas é só para você ter uma idéia de como eles são fofinhos e apetitosos. Eu recomendo muito!</p>
+</div>
+<p>Bom é isso. O Perkins é um dos lugares que mais gosto de ir quando estou em Orlando. Se você se interessou, espero que goste tanto quanto eu e minha família. Vá pelo menos para experimentar uma torta, tenho certeza que você não vai se arrepender. Algumas dicas para você se atentar:</p>
+<ul>
+  <li>Só tem uma torta que eu acho ruim no Perkins, a Coconut Cream Pie. O Felipe até gosta, mas eu acho que não tem gosto de nada. Lá tem tanta coisa boa, não perca suas fichas com essa torta não.</li>
+  <li>Tente evitar ir no domingo de manhã, quando muitos americanos vão ao Perkins para um brunch. O lugar fica lotado.</li>
+  <li>Prepare o inglês. Como lá não é um lugar muito frequentado por brasileiros, não espere encontrar funcionários que falem português. Se você der muita sorte encontra alguém que fale espanhol, mas é pouco provável. Lá o inglês costuma imperar mesmo. Mas se você não fala inglês, isso nunca é um impeditivo né? Dá uma olhada no cardápio por aqui, tira suas dúvidas no google tradutor, e quando você chegar lá, é só mostrar o seu pedido no cardápio. Afinal, somos brasileiros e sempre damos um jeito. <img src="../cont-imgs/restaurantes/icon_smile.gif" alt=":)"></li>
+</ul>
+<p><strong>Nome:</strong> Perkins<br>
+  <strong>Endereço:</strong> 12559 State Road 535, Orlando, FL 32836 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/search/Perkins+restaurant/@28.4811689,-81.36875,11z/data=!3m1!4b1!4m5!2m4!3m3!1sPerkins+restaurant!2sOrlando,+FL,+USA!3s0x88e773d8fecdbc77:0xac3b2063ca5bf9e');">Veja todas as lojas no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-827-1060<br>
+  <strong>Preço:</strong> US$10-25 por pessoa (agosto/2013)<br>
+  <strong>Horário de Funcionamento:</strong> 8:30am-11pm<br>
+  <strong>Cardápio:</strong> <a class="linkvai" href="javascript:loadURL('http://www.perkinsrestaurants.com/menu');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong>Avaliação do VPD:</strong> <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

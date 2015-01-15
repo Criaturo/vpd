@@ -1,0 +1,152 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../lojas.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/006-walmarttarget.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Walmart e Target: os supermercados que são shoppings</h2>
+
+
+
+
+<p>Hoje vou contar de mais dois dos nossos lugares preferidos para fazer compras: o Walmart e a Target.  Muita gente subestima o potencial dos supermercados americanos, mas a verdade é que eles são opções super completos e com preços maravilhosos para muitas comprinhas. Eu e o Felipe temos este hábito de ir no Walmart de madrugada, já que algumas lojas são 24h,, assim fazemos um terceiro turno de programações e aproveitamos quando o lugar está um pouco mais tranquilo. Se tiver pique, fica mais esta dica. <img src="../cont-imgs/lojas/icon_smile.gif" alt=":)"></p>
+<p><strong>WALMART</strong></p>
+<p>A maior rede de varejo do mundo que tem como filosofia oferecer preço baixo todo dia. Você pode me dizer  &ldquo;eu já conheço o Walmart aqui do Brasil, não tem nenhuma novidade aí para mim&rdquo;, mas eu te digo que tem muita novidade para você sim. O Walmart dos EUA é completamente diferente do daqui. Para começo de conversa o lugar é completamente repleto de produtos americanos, com preços baixos para os padrões americanos. Quer dizer, os preços são realmente maravilhosos para nós brasileiros. Fora que, se você passear pelo local com calma, vai achar produtos muito legais que você nem sabia que existiam, mas que estão disponíveis para facilitar a vida dos americanos. Eu compro muitos e muitos cacarecos interessantes por lá. Mil produtos que facilitam sua vida na cozinha, organizam seu escritório e enfeitam a sua casa, todos muitos baratos. Só cuidado para não se empolgar demais. Uma vez entramos no Walmart para comprar uma mala e o Felipe saiu com um móvel! hahaha</p>
+<p>Se você acompanha o blog, você já deve ter notado que eu sou uma entusiasta da gastronomia e adoro ir em restaurantes, mas talvez não saiba que eu adoro cozinhar também. Existem vários produtos legais no Walmart para quem gosta de cozinhar. Aliás, existem várias coisas legais para facilitar a vida de quem também não gosta de cozinhar. Os americanos vendem mil comidas semi prontas.</p>
+<p>Passando pela parte de cozinha, ainda existe uma ala de eletrônicos muito interessante e com preços muito bons, apesar de ter uma limitação maior de marcas e modelos. Pertinho desta ala, há algumas cestas enormes, com DVDs em promoção. Se dedique ao momento de procurar dvds legais. Eu sempre saio muito feliz carregando filmes que eu nem lembrava que eu amava.</p>
+<div id="attachment_1202"><img alt="Departamento de eletônicos do Walmart. Não é uma BestBuy, mas é possível encontrar diversos produtos em promoção" src="../cont-imgs/lojas/006-walmarttarget/compras-walmart-eletronicos-800x533.jpg" width="640" height="426">
+  <p>Departamento de eletônicos do Walmart. Não é uma BestBuy, mas é possível encontrar diversos produtos em promoção</p>
+</div>
+<p>Outra parte que nós adoramos é a de produtos de cuidados pessoais e de remédios. Peço por favor que não me julguem, mas eu fico super maravilhada com a seção de produtos em miniatura (que na verdade é um quinto da mesma seção na Bed Bath and Beyond) e a de band-aids. Tem band-aid para tudo! Tem band-aid líquido, band-aid com antibiótico, band-aid flexível e tem o meu preferido: um band-aid diferente que você passa no pé e ele impede que o sapato te machuque. Mulheres do meu Brasil, tenho certeza que vocês vão amar este último band-aid, como eu amo.</p>
+<div id="attachment_1201"><img alt="Band-aid para quem sofre com o sapato machucando os pés. Depois que comprei isso no Walmart não senti mais dor" src="../cont-imgs/lojas/006-walmarttarget/compras-walmart-bandaid-sapato.jpg" width="260" height="450">
+  <p>Band-aid para quem sofre com o sapato machucando os pés. Depois que comprei isso no Walmart não senti mais dor</p>
+</div>
+<p>Sério, você acha de um tudo no Walmart e por isso ele é tão maravilhoso. Toda a família vai se entreter lá dentro. Quem gosta de esportes, de jardinagem, de cosméticos, de cozinha. Ah! E se você tem filhos pequenos, não subestime o poder da ala de brinquedos do Walmart. É gigante e capaz de distrair as crianças por um bom tempo.</p>
+<p><strong>TARGET</strong></p>
+<p>A Target é um Walmart mais selecionado e melhorado em muitos sentidos. A variedade de cosméticos é muito maior e com produtos mais legais. Se você pretende comprar alguma coisa fresca (frutas, carne, essas cosias) dê preferências a outros lugares que não o Walmart, pois a qualidade é melhor. Walmart é para coisas embaladas e industrializadas.</p>
+<div id="attachment_1200"><img alt="Super Target, que não é 24 horas, mas fica aberta até tarde para fazer uma sessão de compras depois do jantar" src="../cont-imgs/lojas/006-walmarttarget/compras-super-target-orlando-800x800.jpg" width="640" height="640">
+  <p>Super Target, que não é 24 horas, mas fica aberta até tarde para fazer uma sessão de compras depois do jantar</p>
+</div>
+<p>É muito difícil estabelecer uma comparação entre Walmart e Target pois eu acho que os dois se complementam em todos os sentidos e ambos possuem seu espaço no meu coração. Eu realmente recomendo fortemente que você conheça as duas redes. Isso dito, em uma comparação entre essas lojas, eu diria que o Walmart tem os melhores preços e a Target maior qualidade. Na Target, você encontra marcas mais legais (ou maior variedade de produtos das marcas legais) de cosméticos, de produtos de cozinha, de coisas para a casa, eletrônicos e tudo o mais.  Para produtos encontrados em ambas as lojas, é muito provável que o Walmart te ofereça o melhor preço. Entretanto, é bem possível que a Target te ofereça mais variedade de alguns produtos. Então a conclusão é: visite as duas lojas e tire o melhor proveito dos seus dólares!</p>
+<p>Ah! Existem lojas Target e lojas Super Target, sendo que as últimas são lojas maiores e consequentemente mais completas. Existem 2 Super Target em Orlando e eu recomento você dar preferência a estas unidades, pois nelas você vai poder ter contato com uma variedade maiores de produtos.</p>
+<div id="attachment_1204"><img alt="Batatinhas Pringles por U$1,5 no Walmart! Aqui no Brasil pode chegar a R$10. Ótima pedida para levar aos parques e economizar um pouco." src="../cont-imgs/lojas/006-walmarttarget/compras-walmart-pringles-barata-800x447.jpg" width="640" height="358">
+  <p>Batatinhas Pringles por U$1,5 no Walmart! Aqui no Brasil pode chegar a R$10. Ótima pedida para levar aos parques e economizar um pouco</p>
+</div>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

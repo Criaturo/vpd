@@ -1,0 +1,335 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+
+
+body{
+   -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: url("../images/background.jpg") repeat;
+}
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{background-color: transparent !important;}
+
+#colorlist li {
+  cursor: pointer;
+  padding-bottom: 0.7em;
+  padding-top: 0.7em;
+  padding-left: 30px;
+  text-shadow: none;
+}
+#colorlist li a {
+  position: absolute;
+}
+#colorlist li .ui-li {
+  border-top: 0;
+}
+
+.placeholder {
+  color: #999;
+}
+.ui-field-contain {
+  border: none;
+  padding: 0.5em;
+}
+
+
+
+/*tira borda header*/
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit{border:none;}
+
+.ui-page-theme-a .ui-btn, .ui-page-theme-a .ui-btn{ background: transparent !important; border: none; }
+
+
+/*HOME*/
+#vpdheader{
+  position: fixed;
+  background: url('../images/bg-header.png') repeat-x;
+  height: 45px;
+  z-index: 100;
+  }
+.ui-bar-a{border: none;}
+.ui-content{
+  padding: 0 !important;
+  margin-top: 40px;
+}
+
+a.btn-home{
+  width:100%;
+  height: 100%;
+  min-height: 0;
+  display: block;
+  text-align: center;
+  padding:33px 0;
+}
+a {text-decoration: none;}
+
+a.btn-home span{
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  height: 40px;
+  text-shadow: -1px 0px 2px rgba(150, 150, 150, 0.79);
+  font-family: 'PT Sans Narrow', sans-serif;
+  }
+  
+.ui-body-c{text-shadow: none;  }
+  
+a.btn-home img{ height: 70px; }
+
+
+
+.bg-roteiros-parques{background: url('../images/bg-roteiros-parques.jpg') repeat;  }
+.bg-melhoresdicas{background: url('../images/bg-melhoresdicas.jpg') repeat;}
+.bg-lojas-recomendadas{background: url('../images/bg-lojas-recomendadas.jpg') repeat;}
+.bg-ajustes{background: url('../images/bg-ajustes.jpg') repeat;}
+.bg-acessar-vai-disney{background: url('../images/bg-acessar-vai-disney.jpg') repeat;}
+.bg-restaurantes-recomendados{background: url('../images/bg-restaurantes-recomendados.jpg') repeat;}
+
+
+.bg-limpar-favoritos{background: url('../images/bg-restaurantes-recomendados.jpg') repeat;}
+
+
+.btn-logo img{ height: 30px; padding: 7px 0 0 7px !important;}
+#vpdheader .btn-logo{
+  float: left;
+  width: 150px;
+  height: 39px;
+  
+  }
+ .ui-header .ui-title, .ui-footer .ui-title{  margin: 0;}
+  
+  .btn-favoritos img{
+    width: 18px;
+    padding: 7px 7px 0 0 !important;
+  }
+#vpdheader .btn-favoritos{
+  float: right;
+  width: 25px;
+  height: 25px;
+  top: 7px;
+  left: -7px;
+  }
+  
+  #vpdheader .btn-favoritos2{
+    float: right;
+  width: 25px;
+  height: 25px;
+  top: 8px;
+  }
+  .btn-favoritos2 img{
+    width: 18px;
+    padding: 7px 7px 0 0 !important;
+  }
+  
+  .ui-btn-up-a{border: none !important; background: none !important; background-image: none !important; }
+  .ui-btn-inner{border-top: none;}
+  .ui-bar-a .ui-shadow, .ui-bar-b .ui-shadow, .ui-bar-c .ui-shadow{-webkit-box-shadow: none!important;}
+  .ui-shadow{box-shadow: none !important;}
+  
+  
+.ui-header .ui-btn-left{ position: relative; left: 0; top: 0;}
+.ui-header .ui-btn-inner, .ui-footer .ui-btn-inner, .ui-bar .ui-btn-inner{padding: .4em 0px .5em;}
+
+
+
+/*Internas*/
+.content_internas p, .content_internas h2{
+   padding: 0 20px !important;
+   
+}
+.content_internas .titulo_internasposts{
+   color: #314559;
+}
+.content_internas img{
+   max-width: 100%;
+   height: auto;
+   
+}
+ .ui-header .ui-title{
+   top: -7px !important;
+}
+
+.btn-ico-logo img{ height: 30px; }
+#vpdheader .btn-ico-logo{
+  float: left;
+  width: 40px;
+  height: 39px;
+  margin: 7px 0 0 7px;
+  display: block;
+  }
+
+#vpdheader .titulocenter{
+  width:70%;
+  float: left;
+  text-align: center;
+}
+#vpdheader .titulocenter h2{
+  margin: 10px 0 0;
+  font-size: 20px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #fff;
+}
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit{text-shadow: none !important;}
+/*List posts*/
+#vpdlistposts{
+  margin: 40px 10px 0;
+}
+#vpdheader .ui-btn{margin: 0px !important; padding: 0px !important;}
+.ui-btn-icon-right:after{
+  right: 0px !important;
+}
+.ui-btn-icon-notext:after, .ui-btn-icon-left:after, .ui-btn-icon-right:after{
+  top: 0 !important;
+}
+
+
+/*CORES DAS LISTAGENS*/
+.content_roteiros-parques .ui-btn-icon-right:after{
+  background-color: #1abc9c !important;
+  height: 120px !important;
+  width: 27px !important;
+   -webkit-border-radius: 0px !important;
+   border-radius: 0px !important;
+}
+
+
+.content_melhoresdicas .ui-btn-icon-right:after{
+  background-color: #2471a5 !important;
+  height: 120px !important;
+  width: 27px !important;
+   -webkit-border-radius: 0px !important;
+   border-radius: 0px !important;
+}
+
+.content_restaurantes .ui-btn-icon-right:after{
+  background-color: #e7756a !important;
+  height: 120px !important;
+  width: 27px !important;
+   -webkit-border-radius: 0px !important;
+   border-radius: 0px !important;
+}
+.content_lojas .ui-btn-icon-right:after{
+  background-color: #ffcd06 !important;
+  height: 120px !important;
+  width: 27px !important;
+   -webkit-border-radius: 0px !important;
+   border-radius: 0px !important;
+}
+
+
+
+/*CORES THUMBS POSTS*/
+.thumbsPosts{
+ height: 159px;
+ width: auto;
+}
+
+
+.thumbsborder-roteiros{
+   border-bottom: solid 15px #1abc9c;
+}
+.thumbsborder-melhoresdicas{
+   border-bottom: solid 15px #2471a5;
+}
+
+.thumbsborder-restaurantes{
+   border-bottom: solid 15px #e7756a;
+}
+
+.thumbsborder-lojas{
+   border-bottom: solid 15px #ffcd06;
+}
+
+#vpdlistposts ul li{
+  margin: 20px 0;
+  background:#fff;
+  min-height:3.625em !important;
+  
+ 
+}
+
+
+.ui-listview>.ui-li-has-thumb>.ui-btn{
+  padding-left: 5em !important;
+ 
+}
+
+.ui-listview>li p{
+   color: #a6a6a6;
+   font-size: .90em !important;
+    font-size: 1.5em ;
+   
+}
+.ui-btn-icon-notext:after, .ui-btn-icon-left:after, .ui-btn-icon-right:after{
+   margin-top: 0 !important;
+}
+
+
+.ui-page-theme-a .ui-btn{
+   border-color: #fff !important;
+   color: #314559 !important; 
+}
+
+
+
+.ui-listview .ui-li-has-thumb>img:first-child{
+   left: 7px !important;
+   top: 12px !important;
+}
+
+.ui-content ul li a h3{
+    white-space:normal !important;
+}
+
+.ui-content ul li a{
+    font-size: 1.3em ;
+   font-family: 'PT Sans Narrow', sans-serif;
+  
+}
+.ui-content ul li p{
+    font-size: 0.75em !important;
+   font-family: 'PT Sans Narrow', sans-serif;
+}
+
+
+
+
+/*Favoritos*/
+
+#myPanel{
+  background: url("../images/background.jpg") repeat;
+}
+.tabela tr td{
+   padding-bottom:10px !important; 
+}
+.tabela tr td a{
+   color: #416989 !important;  
+}
+.click_favoritos{
+   background:url('../images/icon-favoritos.png') no-repeat;
+   height: 40px;
+   width: 40px;
+   display: block;
+   position: fixed;
+   left: 89%;
+   top: 92%;
+}
+
+
+
+/*LoadPage*/
+.content{display:none;}
+.preloadBg{
+	width: 100%; height: 100%;
+	background-color: #314f66 !important;
+	z-index: 1000;
+	position: absolute;
+	}
+.preload {
+	width: 100px; height: 100px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -50px 0 0 -50px;
+	background-color: #314f66;
+	z-index: 1000;
+    }

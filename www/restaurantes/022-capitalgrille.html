@@ -1,0 +1,161 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Capital Grille: onde carne é coisa séria</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../restaurantes.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/022-capitalgrille.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Capital Grille: onde carne é coisa séria</h2>
+
+
+
+
+<p>A dica de hoje é especialmente dedicada aos carnívoros de plantão que estão dispostos em investir algum dinheiro para comer uma carne preparada com todo o capricho, depois de ter recebido um tratamento super especial. Eu estou aqui para levantar a bandeira de que carne não é tudo igual.</p>
+<p>Tem gente que acha que carne tem sempre o mesmo gosto não importa o tipo. Gente, como assim?? É totalmente diferente. Se você acha que carne é tudo igual e não vê muita graça num bifão, tudo bem.  Temos várias dicas de restaurantes ótimos para vocês também. Agora, se você gosta de apreciar uma carne preparada de forma especial, depois de um tratamento todo especial, considere o Capital Grille na sua próxima viagem. Digo isso apenas porque, apesar de ser um restaurante MUITO bom, ele não é barato, e por isso, eu acho que só vale a pena para quem gosta mesmo de carne.</p>
+<h2>Capital Grille em Orlando</h2>
+<p>Lá no The Capital Grille eles levam o tratamento da carne muito a sério. Elas passam por um processo de envelhecimento e fica ótima (pois é, eu sei que parece estranho, mas é bom. Eu também achava que carne velha era carne podre, mas do jeito que eles fazem dá super certo). Não é só frescura deles não, o The Capital Grille tem até um vídeo falando desse processo de preparo da carne, se você ficou curioso, olha o vídeo ai embaixo.</p>
+
+Presente em alguns estados americanos, o The Capital Grille possui duas unidades em Orlando, uma na International Drive e outra no Mall at Millenia. Em todas as cidades em que está presente o restaurante é sempre muito bem avaliado pelos críticos e pela opinião popular. Tudo lá é muito caprichado e feito com ingredientes de muita qualidade, como deu para notal.  Além disso, os garçons costumam ser sempre muito simpáticos e prestativos, o que faz a experiência do almoço ou jantar ainda mais positiva.
+<div id="attachment_1300"><img src="../cont-imgs/restaurantes/022-capitalgrille/paes.jpg" alt="" width="373" height="497">
+  <p>Cestinha de pães que chegou quentinha na nossa mesa.</p>
+</div>
+<p>No The Capital Grille, a maioria dos pratos consistem unicamente na carne que você escolheu, sem nenhum acompanhamento. No final do cardápio, existe uma parte nomeada de &ldquo;To Share&rdquo; (&ldquo;Para dividir&rdquo;) onde você encontra opções de acompanhamentos que você pode pedir para todos na mesa. Eu acho que um acompanhamento dá legal para duas ou três pessoas, viu? O difícil é sempre chegar num consenso de qual será o acompanhamento escolhido.</p>
+<div id="attachment_1301"><img src="../cont-imgs/restaurantes/022-capitalgrille/tcg-b.jpg" alt="" width="344" height="458">
+  <p>A batata gratinada foi o acompanhamento escolhido.</p>
+</div>
+<p>Observe que se você for para o almoço, poderá encontrar um cardápio diferente e mais limitado do que o oferecido no jantar. Minha sugestão é dar uma bisbilhotada no site do restaurante para ver se você gosta das alternativas do almoço e se gostar, vá no almoço. Normalmente, quando oferecem um cardápio diferente no almoço e no jantar, os restaurantes cobram mais caro no jantar. Além da possibilidade de economizar um pouco, eu pessoalmente acho melhor comer carne no almoço do que no jantar, vocês não acham?</p>
+<p>Algumas opções do cardápio são bem grandes, então se atente em quantos ounces (oz – uma medida de peso) tem o prato que você tá pensando em pedir. Sério, tem uns pratos que acho que só o Fred Flintstones comeria! Tem um prato de 24 oz, ou seja, quase 700 gramas de bife! É muito bife! Estou dizendo isso porque você pode cogitar dividir um prato, se optar por algumas dessas alternativas mais pesadas.</p>
+<div id="attachment_1302"><img src="../cont-imgs/restaurantes/022-capitalgrille/tcg.jpg" alt="Este foi o meu 'pratinho' e ele tinha 10 oz. Agora, imagina o tamanho do prato de 24 oz??" width="611" height="458">
+  <p>Este foi o meu &ldquo;pratinho&rdquo; e ele tinha 10 oz. Agora, imagina o tamanho do prato de 24 oz??</p>
+</div>
+<p>Dito isso,  eu sei que é difícil, mas tente guardar lugar para a sobremesa. O restaurante tem opções ótimas, a começar pelo maravilhoso cheesecake com frutas vermelhas. É uma pedida tão popular que eu ainda não comi, pois quando pedi, já tinha acabado. Mas eu espero resolver este problema muito em breve. E se você experimentar antes de mim, volta para contar pra gente se é tudo isso que dizem mesmo.</p>
+<div id="attachment_1299"><img src="../cont-imgs/restaurantes/022-capitalgrille/chtcg-800x636.jpg" alt="Foto do cheesecake retirada da Fanpage do The Capital Grille. Só de ver a foto eu fico aqui sofrendo de vontade. " width="648" height="515">
+  <p>Foto do cheesecake retirada da <a class="linkvai" href="javascript:loadURL('https://www.facebook.com/thecapitalgrille');">Fanpage do The Capital Grille</a>. Só de ver a foto eu fico aqui sofrendo de vontade.</p>
+</div>
+<p>Só para ninguém ser pego desprevenido e depois jogar a culpa em mim, fica aqui o aviso mais uma vez: este restaurante é bem caro. Eu diria que é bem difícil ir lá e gastar menos que 70 dólares por pessoa (talvez no almoço você consiga) e muito fácil de gastar mais do que isso. Mas como você pode ver, ele não é um restaurante para você ir todo dia. É uma experiência especial e super legal se você aprecia carne, como eu aprecio. Talvez seja um restaurante para ocasiões especiais, mas com certeza é um lugar muito legal que já entrou para a minha listinha de onde comer em Orlando e não sairá tão cedo.</p>
+<p><strong>Nome:</strong> The Capital Grille<br>
+  <strong>Endereço:</strong> 4200 Conroy Road, Orlando, FL 32839 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/4200+Conroy+Rd,+Orlando,+FL+32839,+USA/@28.485565,-81.4315497,17z/data=!3m1!4b1!4m2!3m1!1s0x88e77ea8f2b0a973:0xdb7da569593d5143');">Veja no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-351-2210<br>
+  <strong>Referência:</strong> Dentro do shopping Mall At Millenia<br>
+  <strong>Preço:</strong> US$30-50 por pessoa (novembro/2013)<br>
+  <strong>Horário de Funcionamento:</strong> 11:30am–9:00pm<br>
+  <strong>Cardápio:</strong> <a class="linkvai" href="javascript:loadURL('https://www.thecapitalgrille.com/pages/menu/dinner.aspx?id=8054');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong>Avaliação do VPD:</strong>  <img src="../cont-imgs/restaurantes/estrelas-avaliacao_4.png" alt="Nota 4 de 5" width="138" height="22"></p>
+<br>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

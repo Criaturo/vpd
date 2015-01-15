@@ -16,6 +16,8 @@
     <content src="index.html" />
     
     <preference name="permissions" value="none" />
+
+    <preference name="loadUrlTimeoutValue" value="60000" />
     
     <preference name="phonegap-version" value="3.5.0" />
     <preference name="orientation" value="default" />
@@ -33,16 +35,7 @@
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
     
-    <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.device-motion" />
-    <gap:plugin name="org.apache.cordova.device-orientation" />
-    <gap:plugin name="org.apache.cordova.dialogs" />
-    
     <gap:plugin name="org.apache.cordova.inappbrowser" />
-
-    <gap:plugin name="org.apache.cordova.network-information" />
-    <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="org.apache.cordova.vibration" />
     
     <icon src="icon.png" />
     

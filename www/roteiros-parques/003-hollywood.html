@@ -1,0 +1,203 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Hollywood Studios</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  
+  <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   navigator.app.loadUrl(url, { openExternal:true });
+		   return false;
+		} 
+	</script>
+  
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../roteiros-parques.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Roteiros dos parques</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/roteiros/thumbs/003hollywood.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-roteiros"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Disney’s Hollywood Studios</h2>
+
+
+
+
+
+  <p style="text-align:center;"><img src="../cont-imgs/roteiros/003-hollywood/logo-hollywood-studios.jpg" alt="logo-hollywood-studios" width="139" height="71"></p>
+  
+  <p>&nbsp;</p>
+ 
+  <p><strong>ROTEIRO DO HOLLYWOOD STUDIOS PARA FAMÍLIAS SEM CRIANÇAS</strong>  </p>
+  <p><strong>DICA PARA ANTES DE IR AO PARQUE<br>
+</strong>Antes do dia da visita ao parque, é muito recomendado que você agende os seus Fastpass+ com a máxima antecedência possível. Este benefício é de graça e te poupa tempo na fila, então não deixe de fazer uso. No nosso roteiro indicamos as atrações que indicamos usar Fastpass+ com dois símbolos:  <img src="../cont-imgs/roteiros/icone-fast-pass-azul.jpg" alt="Fastpass+ disponível e recomendado" width="14" height="14">(azul, quando o Fastpass+ é recomendado) <img src="../cont-imgs/roteiros/icone-fast-pass-vermelho.jpg" alt="Fastpass+ disponível e altamente recomendado" width="14" height="14"> (vermelho, quando o Fastpass+ é <em>altamente</em> recomendando ou indispensável). Para usar os seus 3 Fastpass+ que podem ser agendados com antecedência, foque nas atrações que possuem o símbolo vermelho. </p>
+  <p><strong>1. CHEGANDO NO PARQUE</strong><br>
+    Assim como em todos os parques a dica é chegar e pegar um mapa (disponível em português na entrada) e um time guide (guia de horários) dos shows, que no Hollywood Studios são muitos e todos muito bons! Se por acaso você tiver comido bola e não tiver agendado os Fastpass+, vá até um quiosque (ou kiosk, como eles chama lá) de agendamento antes de qualquer outra coisa.</p>
+  <p><strong><img src="../cont-imgs/roteiros/icone-tire-fotos.png" alt="icone-tire-fotos" width="14" height="14"> TIRAR FOTOS</strong><br>
+    Sempre respeitando os horários agendados para o Fastpass+, comece o seu dia na Hollywood Blvd e aproveite o parque logo que abre (quando ainda é mais vazio) para tirar algumas fotos em frente ao chapéu do Mickey. É bem provável que você encontre alguns personagens clássicos por lá também. Depois das fotos, siga para Sunset Blvd onde ficam as atrações mais populares do parque.</p>
+  
+  <p><img src="../cont-imgs/roteiros/icone-food-tip.png" alt="icone-food-tip" width="14" height="14"><strong> FOOD TIP</strong><br>
+    Se ainda não tiver tomado café da manhã, na entrada da Sunset Boulevard, meio escondinha, fica a Starring Rolls Cafe, com excelentes opções para matar sua fome.<br>
+    Se você retornar a Sunset mais tarde para mais uma voltinha nas atrações, vale a pena entrar na Villains in Vogue para comer um docinho, ou dar uma olhada nos sorvetes que são vendidos em uma daquelas barraquinhas de comida na rua.</p>
+  <p><strong>2. SUNSET BLVD</strong><br>
+    Ao chegar, verifique o tempo de fila da Rock &lsquo; n&rsquo; Roller Coaster e da Tower of Terror. Se a fila estiver insuportavelmente longa, você terá que voltar mais tarde fazendo uso de Fastpass+, mas se o tempo de espera for menor que 30 minutos, acho que vale a pena encarar a fila.  Fique atento também aos horários do show Beauty and the Beast para garantir que você não vai perder, já que são poucas apresentações ao longo do dia.</p>
+  
+  <p><img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações que achamos imperdíveis" width="14" height="14"> <strong>IMPERDÍVEIS</strong><br>
+    – <strong>Rock&rsquo;n Roller Coaster Starring Aerosmith</strong><img src="../cont-imgs/roteiros/icone-fast-pass-vermelho.jpg" alt="Fastpass+ disponível e altamente recomendado" width="14" height="14">: se a montanha russa já é boa, com a trilha sonoro do Aerosmith fica ainda melhor! Se não ligar muito para ir junto com uma pessoa do seu grupo, você pode entrar na fila de &ldquo;Single Riders&rdquo; que basicamente é a fila que eles usam para ir preenchendo grupos com números impares. Por exemplo, se um grupo na fila normal tem 3 pessoas, o funcionário da montanha russa irá &ldquo;completar&rdquo; esse grupo no carrinho com uma pessoa da fila &ldquo;Single Rider&rdquo;. É uma ótima maneira de entrar na montanha russa bem rápido, mas lembre-se, você não poderá andar junto com seus amigos e família se entrar nessa fila.<br>
+    – <strong>The Twilight Zone Tower of Terror</strong><img src="../cont-imgs/roteiros/icone-fast-pass-vermelho.jpg" alt="Fastpass+ disponível e altamente recomendado" width="14" height="14">: até se você tem medo de montanha russa e não gosta dos brinquedos mais radicais, eu acho que vale dar uma chance para a Tower.<br>
+    – <strong>Beauty and the Beast live on stage</strong><img src="../cont-imgs/roteiros/icone-fast-pass-azul.jpg" alt="Fastpass+ disponível e recomendado" width="14" height="14">: musical ao vivo que conta uma versão resumida da história da Bela e a Fera. Lindo!</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá nessas atrações se tiver tempo de sobra" width="14" height="14"> <strong>SE TIVER TEMPO</strong><br>
+    – <strong>Teatrinhos na rua: </strong>em diferentes momentos do dia acontecem alguns teatrinhos de rua na Sunset. A Disney sabem muito bem fazer um show e esses teatrinhos são sempre bem divertidos.</p>
+  <p><strong>3. HOLLYWOOD BLVD + ECHO LAKE</strong><br>
+    Se trata da região central e o canto esquerdo do parque, de quem olha para a frente do chapéu.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações que achamos imperdíveis" width="14" height="14"> <strong>IMPERDÍVEL</strong><br>
+    – <strong>The Great Movie Ride</strong>: talvez você não conheça metade dos filmes, mas o show aqui fica a cargo do guia que te acompanha dirigindo o carrinho. Se ele for bom, o passeio vai ser bem divertido.<br>
+    <strong>- Star Tours<img src="../cont-imgs/roteiros/icone-fast-pass-azul.jpg" alt="Fastpass+ disponível e recomendado" width="14" height="14">: </strong>Star Wars é um clássico do cinema e não podia estar fora deste parque. O simulador possui algumas variações e cada vez que você vai, pode ver a atração de forma diferente. Se você é fã dos filmes, não deixe de conhecer.<br>
+    – <strong>Indiana Jones Epic Stunt Spectacular!</strong>: ninguém dá nada para o show do Indiana Jones mas ele é sempre uma agradável surpresa para quem vai pela primeira vez. Muito bem feito e divertido.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá nessas atrações se tiver tempo de sobra" width="14" height="14"> <strong>SE TIVER TEMPO</strong><br>
+    – <strong>Teatrinhos na rua: </strong>assim como a Sunset Blvd, a Hollywood Blvd também possui teatrinhos de rua tão bem feitos e divertidos quanto os da rua vizinha.<br>
+    – <strong>Passeio pelas lojinhas: </strong>a Disney tem lojinhas legais em todos os cantos, mas essa região possui várias diferentes, que fogem do padrão clássico, então não deixe de visitá-las.<br>
+    – <strong>Mulch, Sweat &amp; Shears</strong>: banda muito legal que se apresenta em frente ao chapéu umas 4 vezes ao dia.</p>
+  <p><img src="../cont-imgs/roteiros/icone-food-tip.png" alt="icone-food-tip" width="14" height="14"> <strong>FOOD TIP</strong><br>
+    O maravilhoso Funnel Cake com calda de morango que é vendido no Magic Kingdom, também é vendido numa barraquinha próximo ao Indiana Jones. Detalhe: aqui no Studios, você tem a opção de comer o seu Funnel Cake com adição de sorvete de baunilha! Uma delícia!! Compre o seu Funnel Cake e se quiser evitar a bagunça na hora de comê-lo, você ir até o Backlot Express que fica ali pertinho e comer sentada.</p>
+  
+  <p><strong>4. ANIMATION COURTYARD / PIXAR PLACE / MICKEY&rsquo;S AVENUE</strong><br>
+    <img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações que achamos imperdíveis" width="14" height="14"> <strong>IMPERDÍVEIS</strong><br>
+    – <strong>Voyage of the Little</strong> <strong>Mermaid<img src="../cont-imgs/roteiros/icone-fast-pass-azul.jpg" alt="Fastpass+ disponível e recomendado" width="14" height="14"></strong>: mais uma atração teatral com um musical ao vivo que conta a história da Pequena Sereia. Muito bonito!<br>
+    – <strong>One Man&rsquo;s Dream</strong>: Se você não é fã da Disney, talvez não considere esta atração tão imperdível assim, mas eu AMO. Basicamente conta toda a trajetória do Walt Disney e tem um filminho muito bacana no final.<br>
+    – <strong>Toy Story Mania</strong><img src="../cont-imgs/roteiros/icone-fast-pass-vermelho.jpg" alt="Fastpass+ disponível e altamente recomendado" width="14" height="14">: é sim a maior fila do parque e uma das maiores da Disney, mas vale a pena. Da fila linda ao brinquedo em si, tudo é imperdível!</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá nessas atrações se tiver tempo de sobra" width="14" height="14"> <strong>SE TIVER TEMPO</strong><br>
+    – <strong>The Magic of Disney Animation: </strong>atração interessante que ensina como os personagens animados são feitos.</p>
+  <p><img src="../cont-imgs/roteiros/icone-tire-fotos.png" alt="icone-tire-fotos" width="14" height="14"> <strong>TIRAR FOTOS</strong></p>
+  <p>O The Magic of Disney Animation vale a pena não só pela atração, mas também é um ótimo ponto para encontrar personagens e tirar muitas fotos. Entre os personagens que você pode encontrar lá estão Os Incríveis, Minnie e Mickey, entre outros. Se não estiver afim de ver o filminho e aprender como os desenho animados são criados, você pode pular essa parte e ir direto encontrar os personagens. Só não esqueça de checar o Time Guide que você pegou no começo do dia, na entrada do parque, para garantir que eles estarão por lá na hora que você visitar a atração.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-naorecomendo.jpg" alt="Atrações que não recomendamos" width="14" height="14"> <strong>NÃO VÁ MESMO</strong><br>
+    – <strong>Disney Junior live on stage:</strong> essa atração é 100% voltada para crianças pequenas, então se você escolheu o roteiro para adultos, acredito que não vai querer visitá-la.<br>
+    – <strong>The Legend of Captain Jack Sparrow:</strong> quase tão ruim quanto a antiga atração de Nárnia.</p>
+  <p><strong>5. STREETS OF AMERICA<br>
+    </strong><img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações que achamos imperdíveis" width="14" height="14"> <strong>IMPERDÍVEIS<br>
+      </strong>- <strong>Lights, Motors, Action! Extreme Stunt Show</strong>: essa atrações mostra como são feitas cenas com carros nos filmes e o trabalho dos dublês para criá-las. Eu nem AMO carros e essa é uma das minhas atrações preferidas mesmo assim.<br>
+    – <strong>The Osborne Family Spectacle of Dancing Lights</strong> (apenas se você for na época do natal): eu não tenho palavras para descrever quão incrível e lindo é este espetáculo onde milhões de luzinhas de Natal &ldquo;dançam&rdquo; músicas típicas dessa festividade. Eu sei que eu sou suspeita para falar, pois eu trabalhava na rua desse show, mas garanto que todo mundo que assiste este espetáculo (ou mesmo quem só pisa na rua enquanto ela está iluminada) fica maravilhado.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá nessas atrações se tiver tempo de sobra" width="14" height="14"> <strong>SE TIVER TEMPO</strong><br>
+    – <strong>Muppets Vision 3D</strong>: é um filme 3D antigo pra caramba e deveria ser atualizado (ainda mais após os novos filmes dos Muppets) mas mesmo velhinho, é um clássico do parque. Além disso, os Muppets são sempre os Muppets e são engraçadinhos. Eu amo o Fozzie. waka waka waka</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-naorecomendo.jpg" alt="Atrações que não recomendamos" width="14" height="14"> <strong>NÃO RECOMENDO, OU VÁ SÓ PARA TIRAR FOTOS<br>
+  </strong><strong>- Honey I Shrunk the Kids Movie Set Adventure:</strong> se você gostava do filme &ldquo;Querida, encolhi as crianças&rdquo; é legal ir para tirar fotos, mas é um playground bem infantil, então além das fotos, não vai ter nada para você ali. Ah! Este playground costuma fechar mais cedo do que o restante do parque então se fizer questão de tirar suas fotos se programe para visitá-lo antes do fim da tarde.</p>
+ 
+  <p><img src="../cont-imgs/roteiros/icone-tire-fotos.png" alt="icone-tire-fotos" width="14" height="14"> <strong>TIRAR FOTO</strong><br>
+    Essa é uma das melhores regiões do parque para se encontrar personagens. Primeiro, em horários selecionados durante o dia (confira o seu Time Guide), você pode encontrar os personagens de Monstros S.A. bem próximos ao Backlot Tours (fundo da Mickey&rsquo;s Ave. e próximo a Streets of America). Em segundo lugar, a Street of Americas é inteira decorada para representar diversas regiões dos Estados Unidos justamente para você tirar muitas fotos por lá. Além disso, muitos personagens ficam por ali para tirar foto com os visitantes. Phineas &amp; Ferb e os personagens de Carros possuem um espaço bem próximo a rua (perto do Lights, Motors, Action!) para receberem os visitantes para as fotos. Por fim, também na Streets of America, de tempos em tempos a Disney &ldquo;solta&rdquo; um monte de personagens na rua para mais fotos com os visitantes. São personagens que vão participar de outros shows e a Disney faz isso para dispersar mais a lotação das atrações (quanto mais gente tirando foto, menos gente nas filas), então fique de olho principalmente se você for em um período de parques cheios.</p>
+ 
+  <p><img src="../cont-imgs/roteiros/icone-food-tip.png" alt="icone-food-tip" width="14" height="14"> <strong>FOOD TIP</strong><br>
+    No fim (ou começo?) da Streets of America, logo na &ldquo;esquina&rdquo; com a Commissary Lane, existe uma lojinha chamada &ldquo;Writer&rsquo;s Stop&rdquo; onde são vendidos vários docinhos maravilhosos. Recomendo especialmente o Carrot Cookie Cake.</p>
+
+<p>
+<strong>6. SUNSET BLVD</strong> – Final do dia<br>
+						
+    <img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações que achamos imperdíveis" width="14" height="14"> <strong>IMPERDÍVEIS<br>
+  </strong>-<strong>Fantasmic!</strong><img src="../cont-imgs/roteiros/icone-fast-pass-azul.jpg" alt="Fastpass+ disponível e recomendado" width="14" height="14">: Como o parque é pequeno, nos dias menos cheios, as pessoas que conseguem gabaritar as atrações antes do final da tarde e muitas vezes optam por ir embora antes do parque fechar. Meu conselho, de coração é: não vá embora sem assistir o Fantasmic, o &quot;show de fogos&quot; do Studios que conta com a performance de vários personagens. Ele é bem diferente de tudo que a gente tá acostumado a ver e é simplesmente lindo e emocionante. Aliás, programe-se para ir para o Hollywood Studios num dia em que terá apresentação do Fantasmic, pois em algumas épocas do ano, o show não acontece todos os dias da semana.</div>
+</p>	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+
+
+</body>
+</html>

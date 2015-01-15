@@ -1,0 +1,160 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Earl of Sandwich: comer bem e barato em Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../restaurantes.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/027-earlofsandwich.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Earl of Sandwich: comer bem e barato em Orlando</h2>
+
+
+
+
+<p>Dando continuidade a série de posts sobre comida boa e barata em Orlando, hoje vamos falar do Earl of Sandwich. Este restaurante é uma ótima opção de comida rápida, bem feita e deliciosa.  Minha família é apaixonada por ele e até que não sou fã de sanduíches aprendi a amar este lugar. A regra é clara: quem vai, se apaixona, não tem jeito.  Não dá para falar do Earl of Sandwich sem contar sua origem que está relacionada a invenção do próprio sanduíche, então senta que lá vem história.</p>
+<div><img src="../cont-imgs/restaurantes/027-earlsandwich/earl-of-sandwich.jpg" alt="" width="550" height="412">
+  <p>Quando for a Downtown Disney, procure esta placa e tenha a certeza de uma refeição gostosa.</p>
+</div>
+<h2><strong>Earl of Sandwich: do café da manhã ao jantar</strong></h2>
+<p>Lá em 1762, John Montagu, o quarto Conde de Sandwich (uma região do Reino Unido) era um cara muito ocupado que dividia seu tempo entre muitas atividades incluindo comandar a Marinha Britânca e jogar um carteado. Entre a Marinha, a jogatina, e todo o resto, sobrava pouco tempo para se preocupar com comida e por isso, ele teve a brilhante idéia de colocar um pedaço de carne no meio de duas fatias de pão. Assim ele tinha uma refeição rápida sem muita bagunça. Essa invenção, em sua homenagem, foi chamada de sandwich (em português, nosso bom e velho sanduíche) e 250 anos depois, o seu descendente, o décimo primeiro Conde de Sandwich junto com os fundadores do Planet Hollywood, resolveu abrir uma casa dedicada a esta maravilhosa invenção. Eu não sei se esta história é verdadeira porque eu custo a acreditar que não existia uma pessoa trabalhando para o conde que pudesse fazer a comida dele, mas esta é a história do restaurante que vamos falar hoje, o Earl of Sandwich (que em inglês significa Conde de Sandwich).</p>
+<div><img src="../cont-imgs/restaurantes/027-earlsandwich/earl-of-sandwich-2.jpg" alt="" width="440" height="330">
+  <p>A imagem do quarto Earl of Sandwich (Conde de Sandwich) virou logo e marca registrada do restaurante.</p>
+</div>
+<p>O Earl of Sandwich fica em Downtown Disney, sendo uma ótima alternativa para refeição após um dia de parque ou um dia de comprar neste complexo que já falamos com mais detalhe <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/downtown-disney-diversao-fora-parques/');">em outro post</a>.  Como eu já disse, eu não sou fã de sanduíche (sou estranha) e a primeira vez que fui ao Earl of Sandwich, confesso que estava com o maior pre conceito. Mas é impossível não se apaixonar por lá, o lugar é tudo que o Subway deveria ser e nunca será: pães fresquinhos da melhor qualidade, ingredientes selecionados, tudo preparado no maior capricho e ainda super em conta (cada sanduíche quente custa US$6,00 + taxas).</p>
+<div><img src="../cont-imgs/restaurantes/027-earlsandwich/earl-of-sandwich-3.jpg" alt="" width="337" height="450">
+  <p>Close em um dos sanduíches. Dá pra ver como é bem feitinho né?</p>
+</div>
+<p>O cardápio conta com diversas opções de sanduíches para todos os gostos: de roast beef, de peru, atum, almôndegas, frango, bacon, mussarela de búfala, entre muitos outros. Para os mais saudáveis, a lista de wraps e saladas no cardápio também é bem longa e tudo feito no mesmo capricho.  Além disso, você também pode pedir um dos acompanhamentos deliciosos (a minha mãe ama a salada de macarrão deles) ou uma das sopas incríveis. Eu sou super fã das sopas do Earl e as vezes vou lá só pela sopa mesmo. A de tomate e a de batata são as mais gostosas, fica a dica. Das sobremesas, a mais aclamada de todas é o brownie, que tem uma versão simples e uma recheada de sorvete.</p>
+<div><img src="../cont-imgs/restaurantes/027-earlsandwich/Brownie-Sandwich-Earl-of-Sandwich-out-of-package-600x469.jpg" alt="" width="480" height="375">
+  <p>O brownie recheado de sorvete de creme. Tão bom que ganhou um post só dele no <a class="linkvai" href="javascript:loadURL('http://www.disneyfoodblog.com/2013/08/07/review-vanilla-ice-cream-brownie-sandwich-at-downtown-disneys-earl-of-sandwich/');">Disney Food Blog</a> (site que recomendamos muito).</p>
+</div>
+<p>O Earl of Sandwich é um restaurante fast food com um esquema um pouquinho diferente dos outros. Funciona assim: você entra na fila, faz o seu pedido do sanduíche, salada e de sopa se quiser. É provável que algumas batatas chips e brownies estejam do lado do atendente, então você já pode pegar se quiser também. Depois de anotarem o seu pedido, você segue na fila para pagar. Esta segunda fila fica do lado de um balcão com a maioria das opções de acompanhamentos e sobremesas e você pega o que quiser para incluir no seu pedido na hora de pagar. A parte difícil é se segurar nesta etapa para não pegar de tudo. Chegando no caixa, peça também as bebidas, pague e esperem te chamarem para entregar o seu pedido. Fácil né?</p>
+<div><img src="http://media-cdn.tripadvisor.com/media/photo-s/04/1f/24/47/earl-of-sandwich.jpg" alt="" width="550" height="309">
+  <p>Parte da fila. No cantinho inferior esquerdo dá pra ver uma parte do balcão resfriado de sobremesas e acompanhamentos que fica te tentando até você chegar ao caixa.</p>
+</div>
+<p>Ah! Eles servem café da manhã também, mas honestamente, este não é o forte da casa. A nossa recomendação é mesmo para almoço e jantar. De qualquer forma, se você passar lá de manhã, conte para a gente o que você achou.</p>
+<p><strong>Nome:</strong> Earl of Sandwich<br>
+  <strong>Endereço:</strong> 1750 E Buena Vista Dr – Lake Buena Vista, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/search/earl+of+sandwich+orlando/@28.4811689,-81.36875,11z/data=!3m1!4b1');">Veja todas as lojas no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-938-1762<br>
+  <strong>Referência:</strong> Dentro do Downtown Disney<br>
+  <strong>Preço:</strong> US$10-25 por pessoa (agosto/2013)<br>
+  <strong>Horário de Funcionamento:</strong> 8:30am-11pm<br>
+  <strong>Cardápio:</strong> <a class="linkvai" href="javascript:loadURL('http://www.earlofsandwichusa.com/media/531374/13-eos-0912_catering_menu_for_website-resort.pdf');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong>Avaliação do VPD:</strong> <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+<p>OBS: como ainda não temos fotos boas do Earl of Sandwich, as imagens usadas neste post são de autoria do <a class="linkvai" href="javascript:loadURL('http://www.disneyfoodblog.com/');">Disney Food Blog</a> (foto do brownie) e do <a class="linkvai" href="javascript:loadURL('http://www.tripadvisor.com.br/Restaurant_Review-g34515-d547881-Reviews-Earl_of_Sandwich-Orlando_Florida.html');">Trip Advisor</a>  (todas as outras). A dica é boa demais e simplesmente não poderíamos esperar tirar fotos próprias para dividir com vocês.</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

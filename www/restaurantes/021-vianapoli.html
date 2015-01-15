@@ -1,0 +1,159 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Via Napoli: a pizzaria italiana do Epcot</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../restaurantes.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/021-vianapoli.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Via Napoli: a pizzaria italiana do Epcot</h2>
+
+
+
+
+<p>Quando a gente vai pros Estados Unidos, o que mais se vê de comida é hambúrguer e pizza. Mas a pizza americana é bem diferente do que a gente tá acostumado aqui no Brasil. É massuda, com um molho que de tão temperado, você nem sente o gosto de tomate. Recheio? Só queijo, pepperoni ou umas coisas mais estranhas tipo pimentão e carnes. Nada contra, eu adoro pizza americana, mas tem horas que uma pizza mais tradicional é super bem vinda né? Se por um lado não encontramos pizza brasileira na Disney, por outro, encontramos pizza italiana, ou melhor ainda, napolitana! É esta pizza que eu procuro quando estou em Orlando e quero uma massa fininha, com um molho de tomate fresco e um recheio de primeira.</p>
+<div id="attachment_1384"><img src="../cont-imgs/restaurantes/021-vianapoli/pizza.jpg" alt="Isso sim é uma bela pizza de verdade!" width="339" height="508">
+  <p>Isso sim é uma bela pizza de verdade!</p>
+</div>
+<p>Há alguns anos, a Disney inaugurou um segundo restaurante no pavilhão da Itália para fazer companhia ao <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/tutto-italia-restaurante-epcot/');">Tutto Itália</a>. Este segundo restaurante é o Via Napoli, que serve alguns tradicionais pratos italianos mas foca mesmo em pizzas. Fazendo jus ao nome que remete as origens napolitanas, o restaurante é um pouquinho mais desorganizado, então eu recomendo fortemente fazer reservas caso queira muito ir lá. O esquema de dar o nome e esperar por uma mesa na hora pode ser bagunçado e algumas vezes simplesmente inviável. Se o restaurante estiver minimamente cheio eles já não vão te deixar esperar por uma mesa se você não tiver reserva, então fica a dica de garantir a sua mesa seguindo as dicas <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">desse post aqui</a>.</p>
+<h2>Via Napoli – a pizzaria da Disney</h2>
+<p>Voltando ao Via Napoli, o restaurante é grande e possui mesas normais e mesas comunitárias, onde você pode sentar com um desconhecido e bater o maior papo enquanto come. Cada um com suas preferências. Não deixe de prestar atenção nos fornos a lenha que são usados para fazer as pizzas. Cada um tem a cara de um homem, é um detalhe bem bonitinho na minha opinião.</p>
+<div id="attachment_1383"><img src="../cont-imgs/restaurantes/021-vianapoli/mesacumita.jpg" alt="" width="610" height="407">
+  <p>No fundo dá para ver a mesa comunitária (lado direito, atrás do homem de blusa verde) e mais ao dundo (centro da foto) os 3 fornos a lenha em formato de homens.</p>
+</div>
+<p>Enquanto escolhe sua pizza ou o seu prato, minha dica é pedir alguma das entradinhas pois todas que eu já experimentei são bem gostosas. Na hora da pizza você verá que existem algumas opções bem gourmets com alcachofras ou cogumelos. Eu mesma gosto mesmo da pizza napolitana, que vem só massa, molho e a mussarela de búfala e manjericão. Tudo isso regado com uma dose de azeite extra virgem. Um espetáculo! Escolha o tamanho que você quer (são bem fartos) e seja feliz. Infelizmente eu tenho o olho maior que a barriga e sempre como vários pedaços de pizza até não aguentar mais. Resultado: nunca experimentei uma sobremesa do Via Napoli. Se você for mais comedido do que eu e experimentar alguma, depois me diga o que achou. <img src="../cont-imgs/restaurantes/icon_smile.gif" alt=":)"></p>
+<div id="attachment_1382"><img src="../cont-imgs/restaurantes/021-vianapoli/arancini-800x533.jpg" alt="Uma das opções de entrada é o Arancini, uma espécie de bolinho de de risoto recheado com carne. Delícia!" width="640" height="426">
+  <p>Uma das opções de entrada é o Arancini, uma espécie de bolinho de de risoto recheado com carne. Delícia!</p>
+</div>
+<p>Dicas gerais sobre o Via Napoli:</p>
+<ul>
+  <li>Este restaurante é uma boa opção para sentar e comer sem demorar tanto quanto a maioria dos restaurantes, o que pode ser um ponto positivo para garantir que você não vai perder o Illuminations (show de fogos do Epcot). Mas ainda assim, eu não arriscaria perder o show, então prefiro sempre fazer minhas reservas de jantar no Epcot para, no mais tardar, 1h30 ou 1h15 antes do show.</li>
+  <li>Preço: outro ponto positivo do Via Napoli é que, como toda pizzaria, ele não sai tão caro quanto outros restaurantes. Uma pizza grande custa em torno de 30 dólares e uma pizza gigante (meio metro de pizza!) custa 40 dólares e dá para bastante gente dividir.</li>
+  <li>Como eu disse, eles possuem algumas opções de pratos além de pizzas, mas vamos deixar uma coisa clara: o forte da casa é a pizza mesmo. Se você quer uma bela macarronada italiana, a minha principal dica continua sendo o <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/tutto-italia-restaurante-epcot/');">Tutto Itália</a>.</li>
+  <li>Sei que a gente é super acostumado a comer pizza só no jantar, mas considere quebrar este padrão e cogitar o Via Napoli também no almoço.</li>
+</ul>
+<p><strong>Nome:</strong> Via Napoli<br>
+  <strong>Endereço:</strong> 1510 Avenue of the Stars, Orlando, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Via+Napoli/@28.367244,-81.54823,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0xe10ac6f808bd19b3');">Veja no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-939-3463<br>
+  <strong>Referência:</strong> Dentro do parque Epcot, no pavilhão da Itália<br>
+  <strong>Preço:</strong> US$15-30 por pessoa (março/2014)<br>
+  <strong>Horário de Funcionamento:</strong> depende do horário de funcionamento do Epcot<br>
+  <strong>Cardápio:</strong> <a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/epcot/via-napoli/menus/');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong><strong>Disney Dining Plan: </strong></strong>Sim<br>
+  <strong>Avaliação do VPD:</strong>  <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

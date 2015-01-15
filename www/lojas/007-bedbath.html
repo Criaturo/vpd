@@ -1,0 +1,148 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Bed Bath &amp; Beyond: o paraíso das compras para a casa</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../lojas.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/007-bedbath.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Bed Bath & Beyond: o paraíso das compras para a casa</h2>
+
+
+
+
+<p>Como todo mundo já sabe, nem só de parque se faz uma viagem a Orlando. Recentemente falamos bastante sobre restaurantes,  parques,  festas e agora quero começar a dar mais dicas sobre compras. Afinal, nós queremos mesmo é lotar as malas e ficar muito feliz de não ter pago o preço absurdo que cobram no Brasil pelas mesmas mercadorias. Este é só mais um dos muitos posts que escreveremos sobre dicas de compras,  pois são inúmeros os lugares que queremos dividir com vocês. Hoje vamos falar de um lugar que amamos, a Bed Bath &amp; Beyond (BBB).<span id="more-1013"> </span></p>
+<div id="attachment_1019"><img src="../cont-imgs/lojas/007-bedbath/bath-bad-beyond-fachada-loja-orlando-e1378142673418.jpg" alt="Bed Bath & Beyond, o supermercado dos utensílios domésticos" width="640" height="366">
+  <p>Bed Bath &amp; Beyond, o supermercado dos utensílios domésticos</p>
+</div>
+<h2></h2>
+<h2>Bed Bath &amp; Beyond em Orlando</h2>
+<p>A BBB é uma rede de lojas com artigos para a casa, presente em todo os Estados Unidos. Se você está pensando em comprar um edredom, algum item para a sua cozinha, toalhas novas ou absolutamente qualquer coisa para sua casa, vale a pena fazer uma visita a Bed Bath &amp; Beyond. Eles tem absolutamente tudo para você montar sua casa, dos pratos aos lençóis, dos talheres às assadeiras, de edredom até aos panos de prato, enfim, tudo! Ah, e claro, tudo com aquele preço de Estados Unidos, bem mais em conta que no Brasil. Se você não acredita, <a class="linkvai" href="javascript:loadURL('http://www.bedbathandbeyond.com/');">dê uma olhada nos site deles</a> para tirar a dúvida. Eu montei boa parte do meu enxoval na  Bed Bath &amp; Beyond de NYC e estamos muito felizes com as compras. Na nossa Lua de Mel, demos mais uma passada na  Bed Bath &amp; Beyond de Orlando e compramos mais um moooonte de coisa (no meu chá de cozinha, em vez ganhar presentinhos, as minhas amigas que muito me conhecem, me deram gift card da BBB. Lindas, né?).</p>
+<div id="attachment_1017"><img src="../cont-imgs/lojas/007-bedbath/bath-bad-beyond-cama-mesa-banho.jpg" alt="Setor de roupas de cama da Bed Bath & Beyond em Orlando" width="460" height="285">
+  <p>Setor de roupas de cama da Bed Bath &amp; Beyond em Orlando</p>
+</div>
+<p>Na euforia dos outlets e dos shoppings, muitas pessoas acabam esquecendo da Bed Bath &amp; Beyond e deixam muitas oportunidades legais de compras passar. O mais divertido de ir lá é que você acaba achando produtos que você simplesmente PRECISA e nunca soube que existiam. Quer um exemplo? Você sabia que existe um robô que pode aspirar a sua casa sozinho? Sim, você liga o robô, ele aspira a casa toda e depois volta sozinho pro carregador. Isso existe e em Orlando, eu só encontrei na  Bed Bath &amp; Beyond (e chama Roomba para quem se interessar. Eu recomendo!). Não tá bom o suficiente? Tem outro robô que passa pano no chão. E outro ainda que limpa a piscina. É claro que não são baratos, mas são incríveis!</p>
+<p>
+  <iframe src="http://www.youtube.com/embed/4fzNe48Wn9Y" width="420" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+</p>
+<p>Se você gosta de cozinhar como eu, vai encontrar uma série de produtos que vai facilitar a sua vida na cozinha. Passeie por esta ala da loja com muita calma e faça a festa, pois se existe uma categoria de produtos que nos EUA é MUITO mais barata do que no Brasil, essa categoria é Utensílios Domésticos. A diferença de preço acaba sendo ainda maior do que a dos eletrônicos em muitos casos. Um item que eu comprei e amo é o ralador de queijo elétrico. <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"> </p>
+<div id="attachment_1018"><img src="../cont-imgs/lojas/007-bedbath/bath-bad-beyond-produtos-miniaturas-orlando.jpg" alt="Setor de produtos em miniatura da Bed Bath & Beyond em Orlando" width="640" height="480">
+  <p>Setor de produtos em miniatura</p>
+</div>
+<p>Outra coisa que eu amo da Bed Bath &amp; Beyond é que eles tem uma prateleira só de produtos em miniaturas para facilitar a sua vida. Pasta de dente, desodorante, sabonete, escova de cabelo, enxaguante bucal, potinhos de shampoo para viagem, etc, etc, etc. É muito fofo e muito prático. Gostou? Tá pensando em compra qualquer item para sua casa? Vai pra Orlando fazer seu enxoval? Então vai lá conhecer <a class="linkvai" href="javascript:loadURL('http://goo.gl/maps/OswAl');">uma das 7 lojas da Bed Bath &amp; Beyond</a> na região de Orlando e boas compras!</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

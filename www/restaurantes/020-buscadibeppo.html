@@ -1,0 +1,161 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Buca di Beppo: restaurante barato para a família</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../restaurantes.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/020-bucadibeppo.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Buca di Beppo: restaurante barato para a família</h2>
+
+
+
+
+<p>Pra quem procura um restaurante em Orlando que seja bom, barato e que não sirva somente cheeseburguer ou hotdog, acaba de encontrar uma ótima opção. A dica de hoje é um restaurante que experimentei junto com a minha família na minha última viagem a Orlando e que foi 100% de aprovação entre todos (e eram 12 pessoas!).</p>
+<p>O Buca di Beppo é uma rede de restaurantes que serve comida italiana e está presente em várias cidades dos EUA. Em Orlando, ele fica no shopping Florida Mall, perto de uma das saídas para o estacionamento.</p>
+<div id="attachment_1623"><img src="../cont-imgs/restaurantes/020-bucadibeppo/restaurante-orlando-buca-di-beppo-entrada-800x533.jpg" alt="Entrada do Buca di Beppo no Florida Mall" width="640" height="426">
+  <p>Entrada do Buca di Beppo no Florida Mall</p>
+</div>
+<p>O grande barato do Buca di Beppo é que ele serve pratos para toda a família. As porções deles são as maiores que eu já vi na vida. Para vocês terem uma idéia, em uma mesa de 12 pessoas, só pedimos dois pratos, uma lasanha e um spaghetti com almôndegas. Foi o suficiente para fazer a festa e ainda levar uma sobra de volta pro hotel. Quando a garçonete me falou que dois pratos eram o suficiente, eu não acreditei, mas depois que ela me levou até a cozinha e me mostrou o tamanho dos pratos, fui convencido. São realmente enormes!</p>
+<p>A cozinha do Buca di Beppo é um capitulo a parte. Aberta e no centro do restaurante, todos podem ir dar uma olhada na preparação dos alimentos.  Se você estiver em um grupo menor (de até 6 pessoas, se eu não me engano), você pode pedir para sentar em uma das mesas que ficam no meio da cozinha. Bem no estilo caseiro italiano.</p>
+<p>E o melhor de tudo: o preço é super honesto. Pedindo dois pratos e mais uma porção de pão com alho, além das bebidas, nosso grupo pagou em média 11 dólares por pessoa! Bem em conta considerando a qualidade do restaurante.</p>
+<div id="attachment_1625"><img src="../cont-imgs/restaurantes/020-bucadibeppo/restaurante-orlando-buca-di-beppo-macarrao-800x533.jpg" alt="Buca di Beppo - Veja bem o tamanho do prato de spaghetti e da almôndega em cima" width="560" height="373">
+  <p>Veja bem o tamanho do prato de spaghetti e da almôndega em cima</p>
+</div>
+<p> </p>
+<div id="attachment_1624"><img src="../cont-imgs/restaurantes/020-bucadibeppo/restaurante-orlando-buca-di-beppo-lasanha-800x533.jpg" alt="Lasanha da perfeição: molho, massa e queijo em sintonia" width="560" height="373">
+  <p>Lasanha da perfeição: molho, massa e queijo em sintonia</p>
+</div>
+<p>A comida é basicamente italiana e além de grande, todas as porções são muito bem preparadas. As almôndegas que acompanhavam o macarrão eram suculentas e a lasanha tinha a combinação perfeita de massa, molho e queijo. Os dois pratos eram deliciosos.<br>
+  E a variedade também é bem grande. Além das massas, o Buca di Beppo serve (em porções gigantes) aperitivos diversos, saladas, pizzas e pratos com frango, carne e peixe. É para agradar a família toda, mesmo os mais criteriosos.<br>
+  Quem quiser ver o menu completo do restaurante e os preços, <a class="linkvai" href="javascript:loadURL('http://www.bucadibeppo.com/menu/dinner/');">clique aqui</a> para ir ao site do restaurante.</p>
+<p>Depois de tudo o que eu falei, ainda vale mencionar que o atendimento é nota 10 e todos os funcionários são bem &ldquo;italianões&rdquo;: tentam conversar por mais que você não fale inglês e se divertem com toda a bagunça. Sem encheção de saco.</p>
+<p>Parece até que o restaurante me pagou para escrever essa matéria (eu prometo que não! rsrs) mas eu realmente gostei de lá e quis compartilhar essa dica com todos.</p>
+<div id="attachment_1626"><img src="../cont-imgs/restaurantes/020-bucadibeppo/restaurante-orlando-buca-di-beppo-salao-800x533.jpg" alt="Um dos salões do Buca di Beppo em Orlando. Decoração italiana" width="640" height="426">
+  <p>Um dos salões do Buca di Beppo em Orlando. Decoração italiana</p>
+</div>
+<p><strong>Nome:</strong> Buca di Beppo<br>
+  <strong>Endereço:</strong> 8001 South Orange Blossom Trail, Orlando, FL 32809 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/8001+S+Orange+Blossom+Trail,+Florida+Mall,+Orlando,+FL+32809,+USA/@28.4462521,-81.3979227,17z/data=!3m1!4b1!4m2!3m1!1s0x88e77dad18df1f75:0xb77ac121d6a27e9a');">Veja no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-859-7844<br>
+  <strong>Referência:</strong> Dentro do shopping Florida Mall<br>
+  <strong>Preço:</strong> US$10-20 por pessoa (janeiro/2014)<br>
+  <strong>Horário de Funcionamento:</strong> Seg-Qui das 11am-10pm / Sex-Sab das 11am-11pm / Dom das 11am-9pm<br>
+  <strong>Cardápio:</strong> <a class="linkvai" href="javascript:loadURL('http://www.bucadibeppo.com/menu/dinner/');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong>Avaliação do VPD:</strong> <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+<br>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Premium Outlet Orlando: dicas para aproveitar as compras</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../lojas.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/012-premiumoutlet.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Premium Outlet Orlando: dicas para aproveitar as compras</h2>
+
+
+
+
+<p>O assunto de hoje é um lugar de Orlando praticamente tão importante para os brasileiros quanto os parques da Disney: o Premium Outlet. Esse que é o principal outlet de Orlando ganhou fama não só na cidade, mas em todo o país e possui até uma unidade no Brasil (não tão boa quanto as americanas, né?). A gente considera o Premium algo tão primordial em uma viagem a Orlando que tanto eu como o Felipe tínhamos a mais absoluta certeza de que eu já tinha escrito sobre esse outlet aqui no Vai pra Disney. Foi só quando eu fui procurar a matéria aqui que me dei conta de que ela não existia!!Estou chocada até agora. Já não sem tempo, hoje vamos corrigir este lapso do blog e contar tudo para vocês sobre um dos melhores locais de compras em Orlando, com todas as dicas para você tirar o melhor proveito das suas compras por lá.</p>
+<p><img src="../cont-imgs/lojas/012-premiumoutlet/premium-orlando-outlet-800x533.jpg" alt="premium orlando outlet" width="600" height="400"></p>
+<h2>Premium Outlet em Orlando</h2>
+<p>Quando eu morava em Orlando, morava em um condomínio chamado Chatham Square só com funcionários da Disney. Esse condomínio fica bem próximo do fundo do estacionamento do Premium, o que me permitia ir a pé da minha casa até o Premium. Contando isso você consegue entender o motivo de eu ter aprendido tantas dicas de como viver em Orlando com pouco dinheiro (como eu contei <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/orlando-pouco-dinheiro/');">aqui</a>) , né? Meu salário era rapidinho direcionado ao Premium e ao <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/walmart-orlando-dicas-compras/');">Walmart</a>, mas quer saber? Não me arrependo! Dá gosto fazer compras quando a gente tem aquela sensação de estar fazendo um bom negócio e o Premium está sempre lotado de boas promoções para quem estiver afim de procurar. Enfim, neste tempo que tive a felicidade de ser vizinha do Premium conheci bem este local e aprendi algumas dicas que quero dividir com vocês.</p>
+<p>Antes de mais nada, vamos ao básico. O Outlet Premium é o outlet mais famoso de Orlando e hoje possui duas unidades na cidade, uma na Vineland (que ficava perto da minha antiga casa) e uma na International Drive (que antigamente chamava Prime). Antes que você me pergunte <strong><em>&ldquo;Qual é o melhor Premium Outlet para eu visitar?&rdquo;</em></strong> eu já respondo: os dois valem e muito a sua visita. Eu na verdade costumo ir mais de uma vez em ambas unidades durante uma viagem a Orlando. Digo isso porque em uma mesma loja, você poderá encontrar um sortimento de produtos um pouco diferente em cada unidade do Premium. Além disso, há lojas que você só encontra no Premium Outlet da Vineland e lojas que você só encontra no Premium Outlet da International Drive. Por exemplo, algumas lojas de itens de cozinha que mencionei na matéria sobre esse tema (que você encontra <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/compras-em-orlando-itens-de-cozinha/');">aqui</a>) você só acha no Premium Outlet da International Drive.</p>
+<p>Se sua viagem vai ser curtinha e você só terá tempo de escolher uma unidade do Premium, também não precisa se preocupar. Se você estiver buscando algum produto específico, dê uma olhada na lista de lojas de cada unidade do Premium e verifique qual possui as lojas mais interessantes para completar sua listinha de compras. A lista de lojas é encontrada no site, separadas inclusive por categoria (o que facilitia bastante). Se não, tenho certeza que qualquer uma das duas unidades vai te atender bem. Todas as principais lojas estão presentes tanto no Pemium da International Drive como no Premium da Vineland.</p>
+<div id="attachment_5003"><img src="../cont-imgs/lojas/012-premiumoutlet/premium-outlet-michael-kors-200x300.jpg" alt="Uma das lojas preferidas dos brasileiros que visitam o Premium." width="300" height="450">
+  <p>Uma das lojas preferidas dos brasileiros que visitam o Premium.</p>
+</div>
+<p>Mesmo se você não vai viajar com pressa, se você for meio louco por planejamento como eu, vai achar uma boa idéia explorar o site do Premium e já dar uma olhada no mapa de cada unidade com a lista de lojas existentes. Assim você consegue tanto escolher o Outlet que mais te atende como planejar a sua rota quando estiver por lá para não se sentir perdido. Todas as unidades do Premium são bem grandes e sem um mapinha é fácil fácil se perder. Se você não quiser se planejar com tanta antecedência, não precisa imprimir o mapa do Premium no site não. Cada unidade também oferece o mapa em papel gratuitamente para os visitantes, basta pedir um no Guest Service.</p>
+<div id="attachment_5012"><img src="../cont-imgs/lojas/012-premiumoutlet/Mapa-Premium-Outlet-site.png" alt="Mapa Premium Outlet - site" width="600" height="407">
+  <p>Mapa do Premium Outlet com a lista de lojas. Pode ser impresso no site ou retirado no Guest Services de cada unidade.</p>
+</div>
+<p> </p>
+<h2>Maximizando os Descontos no Premium Outlet</h2>
+<p>Antes mesmo de ir para Orlando, você já pode começar a se preparar para as compras com algumas medidas para garantir descontos ainda maiores dos praticados normalmente. Primeiramente, não deixe de se inscrever no site do Premium Outlet para poder imprimir um caderno de <strong>cupons de descontos</strong> para a grande maioria das lojas deste centro comercial. Não é cupom que nem a gente vê as vezes aqui no Brasil, é cupom com desconto de verdade! Eu já me dei muito bem com essa história de imprimir cupom do Premium em casa, então recomendo demais (até porque é de graça então não custa levar, né?)!</p>
+<p>A gente até já escreveu uma matéria só sobre cupons de desconto (que você encontra <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/cupons-melhores-descontos-compras/');">aqui</a>), mas vale destacar bem este ponto aqui porque o Premium é provavelmente o lugar em Orlando onde você mais pode se beneficiar com o uso de cupons! Note que existe um caderno de cupons para cada unidade do Premium Outlet, então imprima os cupons tanto para o Premium da Vineland como para o da International Drive e se organize bem para não confundir um com o outro. Em geral eu gosto de deixar todos os cupons de cada unidade do Premium cortados em ordem alfabética e separados com um clipe por shopping. Assim fico com um bloquinho de cupons fácil de usar e de achar quando chego em qualquer loja de qualquer uma das duas unidades. É importante destacar que os cupons tem validade então deixe sempre para imprimir o mais próximo possível da sua viagem (de preferência no dia do seu embarque para Orlando).</p>
+<p>Algumas pessoas falam <em>&ldquo;Não preciso imprimir os cupons com antecedência pois posso comprar o caderninho por 5 dólares no Guest Service do shopping&rdquo;</em> mas muito se enganam. É verdade sim que você pode comprar um caderninho de descontos no Guest Services do shopping mas que compra esses cupons e acha que se deu bem não sabe de 2 coisas:</p>
+<ol>
+  <li> Os cupons comprados por 5 dólares são diferentes dos oferecidos pela internet</li>
+  <li>Além de todos os outros cupons oferecidos adicionalmente, o caderninho de cupons da internet traz um cupom que te dá direito à esse caderninho de descontos do Guest Service (que normalmente custa 5 dólares) de graça. Ou seja, imprimindo os cupons da internet você consegue o caderninho de graça e muitos outros descontos que só quem entrou no site e se cadastrou terá direito.</li>
+</ol>
+<p>Te convenci né? Então veja o passo a passo para se cadastrar e imprimir seus cupons no vídeo abaixo onde o Felipe explicou tudinho.</p>
+<p>Outra dica que descobri recentemente é que a Fanpage do Premium Outlet no facebook de vez em quando oferece alguma promoção especial por lá. Vale muito a pena você curtir a página e ficar de olho nas vésperas da sua viagem.</p>
+
+<p> </p>
+<h2>Horário de Funcionamento do Premium Outlet em Orlando</h2>
+<p>Recebemos muitas perguntas buscando informação sobre o horário de funcionamento do Premium, principalmente em datas especiais como Natal, Ano Novo e outros feriados. Realmente o horário de funcionamento do Premium muda em algumas datas importantes, mas eles sempre notificam essas alterações no site de cada unidade com bastante antecedência. Abaixo você encontra o link para o site de cada loja do Premium em Orlando e uma imagem indicando onde verificar o horário de funcionamento.</p>
+<ul>
+  <li><a class="linkvai" href="javascript:loadURL('http://www.premiumoutlets.com/outlets/outlet.asp?id=96');">Clique aqui</a> para entrar no site do Premium da International Drive</li>
+  <li><a class="linkvai" href="javascript:loadURL('http://www.premiumoutlets.com/outlets/outlet.asp?id=17');">Clique aqui </a>para entrar no site do Premium da Vineland</li>
+</ul>
+<div id="attachment_5001"><img src="../cont-imgs/lojas/012-premiumoutlet/Premium-Outlet-Orlando-Hor%C3%A1rio.png" alt="É fácil verificar o horário de funcionamento do Premium." width="600" height="377">
+  <p>É fácil verificar o horário de funcionamento do Premium.</p>
+</div>
+<h2>Pontos importantes para aproveitar as compras no Premium</h2>
+<p>Eu poderia finalizar a matéria aqui mas acho extremamente importante destacar alguns pontos para quem está planejando fazer compras no Premium ou em qualquer grande centro de Orlando, para garantir que vocês aproveitem e não caiam em nenhuma furada. Para não ser repetitiva, vou dar minhas recomendações indicando alguns links BEM úteis para quem se interessar no assunto, tá?</p>
+<ul>
+  <li>Fazer compras em Orlando (seja no Premium Outlet, em outros outlets ou em qualquer ponto comercial) é sempre uma delícia ainda mais quando comparamos com os preços praticados no Brasil. Apesar disso, algumas pessoas estão bem mais preparadas do que outras para tirar o melhor proveito das ofertas das lojas. Para que você se enquadre no grupo dos que sabem aproveitar as compras, recomendo fortemente que veja <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/5-dicas-compras-em-orlando/');">aqui</a> a matéria com 5 dicas básicas para você tirar o melhor proveito dos seus suados dólares nas suas compras em Orlando.</li>
+  <li>Além disso, não é novidade para ninguém em Orlando que os brasileiros estão lá para encher as malas com produtos novos, o que acaba chamando atenção de muitos malandros. Muita gente têm dado a devida atenção para o fator<strong>segurança</strong> na hora de escolher um hotel (como ensinamos <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/hotel-como-escolher-com-seguranca/');">aqui</a>), mas ainda dá bobeira na hora que vai às compras. Veja <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/dicas-de-seguranca-nas-compras-em-orlando/');">aqui</a> 3 dicas rápidas e práticas para garantir a sua segurança na hora das compras e evitar problemas na sua viagem.</li>
+</ul>
+<p>Espero que com estas informações, você consiga aproveitar ainda mais a sua viagem. Meus votos são de que as malas cheguem em Orlando bem leves e voltem bem pesadas. <img src="../cont-imgs/lojas/icon_smile.gif" alt=":)"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

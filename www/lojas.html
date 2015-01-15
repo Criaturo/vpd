@@ -1,0 +1,175 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+	<meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+  <script src="js/jquery/jquery-1.11.1.min.js"></script>
+ 
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+
+	
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="index.html" data-transition="flip"><img src="images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar2').click(function(){
+					var lS = prompt("De um nome ao resultado para salvar.","");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults8").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults8").rows.length; t > 1; t--){
+				document.getElementById("tableResults8").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults8").rows[document.getElementById("tableResults8").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults8").insertRow(document.getElementById("tableResults8").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults8" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>   
+	
+	
+  <div data-role="main" class="ui-content content_lojas" id="vpdlistposts">
+    <ul data-role="listview" data-inset="true">    
+      <li>
+	<img src="images/lojas/001-walmartemorlando.jpg" style="float:left;" />
+	<a href="lojas/001-walmartemorlando.html"  data-transition="slide"><h3 style="margin-top:8px;">Walmart em Orlando: dicas para as compras</h3></a>
+      </li>
+      
+        <li>
+	<img src="images/lojas/002-containerstore.jpg" style="float:left;" />
+	<a href="lojas/002-containerstore.html"  data-transition="slide"><h3 style="margin-top:8px;">Container Store: o paraíso da organização em Orlando</h3></a>
+      </li>
+	
+	<li>
+	<img src="images/lojas/003-totalwine.jpg" style="float:left;" />
+	<a href="lojas/003-totalwine.html"  data-transition="slide"><h3 style="margin-top:8px;">Total Wine: o shopping dos vinhos</h3></a>
+	</li>
+	  
+	<li>
+	<img src="images/lojas/004-rossdress.jpg" style="float:left;" />
+	<a href="lojas/004-rossdress.html"  data-transition="slide"><h3 style="margin-top:8px;">Ross Dress For Less: grandes descontos em Orlando</h3></a>
+	</li>
+      
+	
+	
+	<li>
+	<img src="images/lojas/005-macys.jpg" style="float:left;" />
+	<a href="lojas/005-macys.html"  data-transition="slide"><h3 style="margin-top:8px;">Macy’s: onde você compra de tudo</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/lojas/006-walmarttarget.jpg" style="float:left;" />
+	<a href="lojas/006-wlamarttarget.html"  data-transition="slide"><h3 style="margin-top:8px;">Walmart e Target: os supermercados que são shoppings</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/lojas/007-bedbath.jpg" style="float:left;" />
+	<a href="lojas/007-bedbath.html"  data-transition="slide"><h3 style="margin-top:8px;">Bed Bath & Beyond: o paraíso das compras para a casa</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/lojas/008-itensdecozinha.jpg" style="float:left;" />
+	<a href="lojas/008-comprasitenscozinha.html"  data-transition="slide"><h3 style="margin-top:8px;">Compras em Orlando: Itens de Cozinha</h3></a>
+	</li>
+	
+	
+	
+	
+	<li>
+	<img src="images/lojas/009-eletronicos.jpg" style="float:left;" />
+	<a href="lojas/009-compraseletronicos.html"  data-transition="slide"><h3 style="margin-top:8px;">Compras em Orlando: Eletrônicos</h3></a>
+	</li>
+	
+	
+	
+	<li>
+	<img src="images/lojas/010-cosmeticos.jpg" style="float:left;" />
+	<a href="lojas/010-compras-cosmeticos.html"  data-transition="slide"><h3 style="margin-top:8px;">Compras em Orlando: Cosméticos</h3></a>
+	</li>
+	
+	<li>
+	<img src="images/lojas/011-complexoloop.jpg" style="float:left;" />
+	<a href="lojas/011-theloop.html"  data-transition="slide"><h3 style="margin-top:8px;">The Loop: o complexo de compras de Kissimmee</h3></a>
+      </li>
+      
+        <li>
+	<img src="images/lojas/012-premiumoutlet.jpg" style="float:left;" />
+	<a href="lojas/012-premiumoutlet.html"  data-transition="slide"><h3 style="margin-top:8px;">Premium Outlet Orlando: dicas para aproveitar as compras</h3></a>
+      </li>
+	
+	<li>
+	<img src="images/lojas/013-enxovalbebe.jpg" style="float:left;" />
+	<a href="lojas/013-enxavalbebe.html"  data-transition="slide"><h3 style="margin-top:8px;">Enxoval de bebê em Orlando</h3></a>
+	</li>
+	  
+	<li>
+	<img src="images/lojas/014-mallatmillenia.jpg" style="float:left;" />
+	<a href="lojas/014-mallatmillenia.html"  data-transition="slide"><h3 style="margin-top:8px;">Shopping em Orlando: Mall at Millenia e Florida Mall</h3></a>
+	</li>
+    </ul>
+  </div>
+
+
+</div><!-- /page -->
+
+
+ 	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	
+
+	<script type="text/javascript" src="cordova.js"></script>
+ 
+</body>
+</html>

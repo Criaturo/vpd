@@ -1,0 +1,186 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Mythos: uma deliciosa opção no Islands of Adventures</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../restaurantes.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/006-mythos.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Mythos: uma deliciosa opção no Islands of Adventures</h2>
+
+
+
+
+<p>Sempre disse por aí que as opções para comer dentro dos <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/parques-entendendo-orlando/');">parques da Universal</a> não eram incríveis, como as encontradas nos da Disney, até que em minha última viagem a Orlando, fui apresentado ao <strong>Mythos</strong>, e digo que paguei a língua.</p>
+<p>O Mythos fica em uma área meio perdida do <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/roteiro-islands-of-adventure/');">Islands of Adventure</a>, que abraça a causa e é chamada de <em>The Lost Continent</em>. Essa parte do parque é mais famosa por ficar antes da vila de Hogsmeade, do Harry Potter e por isso todo mundo passa por ali sem prestar atenção.<br>
+  Em Julho, decidi conhecer o Mythos, já que eu sempre passava ali em frente sem dar muita bola, mesmo tendo uma placa grande na frente dizendo que ele já foi eleito por vários anos, o melhor restaurante dentro de um parque de diversões dos EUA.</p>
+<div id="attachment_4424"><img src="../cont-imgs/restaurantes/006-mythos/mythos-restaurante-universal-orlando-islands-of-adventure-01.jpg" alt="Plaquinha que aponta a direção do Mythos, no The Lost Continent" width="640" height="427">
+  <p>Plaquinha que aponta a direção do Mythos, no The Lost Continent</p>
+</div>
+<div id="attachment_4423"><img src="../cont-imgs/restaurantes/006-mythos/mythos-restaurante-universal-orlando-islands-of-adventure-02.jpg" alt="O Mythos foi eleito por seis anos consecutivos com o melhor restaurante dentro de um parque de diversão nos EUA" width="640" height="427">
+  <p>Eleito por seis anos consecutivos com o melhor restaurante dentro de um parque de diversão nos EUA</p>
+</div>
+<h2>Reservar ou não reservar o Mythos?</h2>
+<p>Ao entrar, me deparei com uma fila razoavelmente grande. Eu não tinha reserva e coloquei o meu nome da lista de espera normal. 40 minutos, o que não foi tão difícil esperar, já que lá fora fazia um calor escaldante e além do ar condicionado, a recepção do restaurante servia uma água saborizada muito boa e refrescante.</p>
+<p>Agora, pra quem planeja ir no Mythos, eu recomendo fazer a reserva através do famoso site americano, Open Table. A reserva é gratuita e você não precisa nem colocar o cartão de crédito, mas você só consegue fazer com 30 dias de antecedência a data que quer reservar.<br>
+  <a class="linkvai" href="javascript:loadURL('http://www.opentable.com/mythos-at-universals-islands-of-adventure-reservations-orlando');">Clique aqui</a> para reservar uma refeição no Mythos no Open Table.</p>
+<h2>Atmosfera do Mythos</h2>
+<p>Seguindo o tema da região do parque em que está localizado, o Mythos tem um clima de caverna, com algumas pequenas grutas onde as mesas ficam localizadas, além de um salão bem grande.<br>
+  O dia estava lindo, o que fez o restaurante parecer ainda mais bonito por dentro. Naquela correria do verão americano com filas gigantescas para as atrações do Harry Potter, foi uam grata surpresa dar uma pausa no dia em um restaurante com um clima tão legal.</p>
+<p>O engraçado é que apesar da fila de 40 minutos, muitas mesas do restaurante estavam vazias. Concluí que se tinha fila e lugar vazia, devia estar faltando garçon naquele dia.</p>
+<div id="attachment_4422"><img src="../cont-imgs/restaurantes/006-mythos/mythos-restaurante-universal-orlando-islands-of-adventure-03.jpg" alt="O Mythos tem um visual bem bacana e clima de caverna subaquática" width="640" height="427">
+  <p>Visual bem bacana e clima de caverna subaquática</p>
+</div>
+<h2>A comida do Mythos</h2>
+<p>Aqui tivemos uma boa surpresa e finalmente o restaurante começou a se revelar, de fato, com um dos melhores dentro dos parques de diversão. O menu era muito variado e era divido em 5 seções: aperitivos, saladas, pratos principais, sanduíches e sobremesas.</p>
+<p>Logo que sentamos, a não tão simpática garçonete nos serviu uns pãezinhos com manteiga, que nos EUA são quase sempre gratuitos. Ataquei o couvert enquanto ela não voltava para anotar os pedidos.</p>
+<div id="attachment_4419"><img src="../cont-imgs/restaurantes/006-mythos/mythos-restaurante-universal-orlando-islands-of-adventure-06.jpg" alt="Cardápio do Mythos" width="640" height="427">
+  <p>Cardápio do Mythos</p>
+</div>
+<div id="attachment_4418"><img src="../cont-imgs/restaurantes/006-mythos/mythos-restaurante-universal-orlando-islands-of-adventure-07.jpg" alt="Pães com manteiga no Mythos, na faixa" width="640" height="427">
+  <p>Pães com manteiga, na faixa</p>
+</div>
+<p>O menu tem algumas saladas bem servidas e pratos &ldquo;de verdade&rdquo;. Como estávamos em 3 pessoas, cada um pediu um prato diferente para experimentar. Eu, como um bom gordinho, pedi o tradicional cheeseburger. E estava MUITO BOM! Aqui entre nós, bem mais gostoso do que muito cheeseburger que já comi nos restaurantes e lanchonetes da Disney.</p>
+<div id="attachment_4417"><img src="../cont-imgs/restaurantes/006-mythos/mythos-restaurante-universal-orlando-islands-of-adventure-08.jpg" alt="Cheeseburger do Mythos. Meus amigos me zoam, mas fazer o que? Eu gosto!" width="640" height="427">
+  <p>Cheeseburger do Mythos. Meus amigos me zoam, mas fazer o que? Eu gosto!</p>
+</div>
+<p>Alem dele, pedimos um Pad Thai, que é um prato bem tradicional na Tailândia que mistura macarrão semi-frito com frutos do mar, frango e vegetais. Eu que não gosto de frutos do mar, curti bastante a preparação do prato.</p>
+<div id="attachment_4416"><img src="../cont-imgs/restaurantes/006-mythos/mythos-restaurante-universal-orlando-islands-of-adventure-09.jpg" alt="Mythos Pad Thai, pra quem curte frutos do mar" width="640" height="427">
+  <p>Mythos Pad Thai, pra quem curte frutos do mar</p>
+</div>
+<p>O terceiro prato que pedimos foi um Wild Mushroom Meatloaf, que é uma espécie de rocambole de carne, servido purê de batatas, cebola fritas e cogumelos. Estava realmente muito bom e eu me arrependi de não ter pedido ele.</p>
+<div id="attachment_4415"><img src="../cont-imgs/restaurantes/006-mythos/mythos-restaurante-universal-orlando-islands-of-adventure-10.jpg" alt="E quem não curte uma carne com purê de batatas? Só la no Myhtos" width="640" height="427">
+  <p>E quem não curte uma carne com purê de batatas?</p>
+</div>
+<p>Além desses pratos, você encontra coisas mais normais e que as crianças vão gostar, como carne (medalhão) com purê de batatas, risotto, massa e até salmão grelhado. Na área de sanduíches, além dos tradicionais, o Mythos oferece algumas opções interessantes como wrap de frango, panini de rosbife, tacos e casquinha de siri (não sei porque essas duas últimas opções estavam no menu de sanduíches, mas fingi que não liguei).</p>
+<p>O menu de sobremesas não nos chamou a atenção e já tínhamos comido tanto, que não deu nem vontade de pedir. Mas eram somente duas opções: a primeira era coletânea de &ldquo;shots&rdquo; de sobremesas como mousse de chocolate, torta de limão, creme brule, tiramissu e cheesecake. A segunda sobremesa oferecida pelo Mythos era um bolo de chocolate e banana.</p>
+<div id="attachment_4420"><img src="../cont-imgs/restaurantes/006-mythos/mythos-restaurante-universal-orlando-islands-of-adventure-05.jpg" alt="Eu bem feliz depois de comer como se não houvesse amanhã depois do Mythos" width="640" height="427">
+  <p>Eu bem feliz depois de comer como se não houvesse amanhã</p>
+</div>
+<p>Apesar da comida gostosa, bem preparada e diferente, o mais legal do Mythos eram os preços. Cada um dos pratos que pedimos custaram entre $11 e $16 dólares cada. Ainda tinham opções que ficavam abaixo dos $10 dólares. Ou seja, considerando que estamos dentro de um parque de diversão onde qualquer comidinha custa uma fortuna, achei o custo benefício do Mythos muito legal.</p>
+<p><strong>Minha conclusão sobre o Mythos</strong>: ainda que o atendimento não tenha sido o mais simpático do mundo (quer simpatia? vá pra Disney não pra Universal! hehe) a comida do Mythos estava deliciosa e mais gostoso ainda foi fazer uma pausa naquela dia cansativo e de muito calor. Pra quem está buscando um lugar legal pra comer depois de enfrentar as longas fila nas atrações do Harry Potter, recomendo bastante o Mythos.</p>
+<p><strong>Nome</strong>: Mythos<br>
+  <strong>Endereço</strong>: 6000 Universal Studios Plaza, Orlando, FL 32819 <a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Mythos/@28.472422,-81.471446,15z/data=!4m2!3m1!1s0x0:0xf7ca59196df158ec?sa=X&ei=wVBAVNOQJ4XPggSP4YGYCw&ved=0CJABEPwSMA0');">Veja no Google Maps</a>).<br>
+  <strong>Telefone</strong>: +1 407-224-4534<br>
+  <strong>Referência</strong>: dentro Islands of Adventure<br>
+  <strong>Preço</strong>: entre US$15 e US$25 por pessoa.<br>
+  <strong>Horário de Funcionamento</strong>: das 11:00 as 16:00. Só abre para o almoço.<br>
+  <strong>Cardápio</strong>:<a class="linkvai" href="javascript:loadURL('https://www.universalorlando.com/Images/Mythos%20Menu%205-27-2013_tcm13-28313.pdf');">clique aqui</a> para visualizar o cardápio e os preços (em inglês).<br>
+  <strong>Disney Dining Plan</strong>: Não pois não faz parte do complexo Disney.<br>
+  <strong>Avaliação do VPD</strong>: <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

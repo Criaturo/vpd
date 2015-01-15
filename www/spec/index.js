@@ -21,7 +21,6 @@ describe('app', function() {
         it('should bind deviceready', function() {
             runs(function() {
                 spyOn(app, 'onDeviceReady');
-                app.initialize();
                 helper.trigger(window.document, 'deviceready');
             });
 

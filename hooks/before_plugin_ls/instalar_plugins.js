@@ -4,18 +4,18 @@
 
 // add your plugins to this list--either the identifier, the filesystem location or the URL
 var pluginlist = [
-  	"org.apache.cordova.device",
-    "org.apache.cordova.device-motion",
-    "org.apache.cordova.device-orientation",
-  	"org.apache.cordova.dialogs",
-  	"org.apache.cordova.network-information",
-  	"org.apache.cordova.splashscreen",
-  	"org.apache.cordova.vibration",
-    "org.apache.cordova.inappbrowser",
+  	// "org.apache.cordova.device",
+   //  "org.apache.cordova.device-motion",
+   //  "org.apache.cordova.device-orientation",
+  	// "org.apache.cordova.dialogs",
+  	// "org.apache.cordova.network-information",
+  	// "org.apache.cordova.splashscreen",
+  	// "org.apache.cordova.vibration",
+    "org.apache.cordova.inappbrowser"
 
     //terceiros
-    "nl.x-services.plugins.toast",
-    "https://github.com/Paldom/SpinnerDialog.git"
+    // "nl.x-services.plugins.toast",
+    // "https://github.com/Paldom/SpinnerDialog.git"
 ];
 
 // no need to configure below

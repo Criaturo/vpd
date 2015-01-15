@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Big River Grille: restaurante e cervejaria artesanal na Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../restaurantes.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/013-bigrivergrille.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Big River Grille: restaurante e cervejaria artesanal na Disney</h2>
+
+
+
+
+<p>Hoje vamos falar de um dos nossos mais novos restaurantes queridinhos de Orlando, o Big River Grille &amp; Brewing Works. Sabe aqueles dias que a gente faz mil planos e nenhum dá certo? Pois é, na nossa última viagem á Disney tivemos uma situação dessas. Fizemos mil planos para o jantar mas não estávamos com vontade de ir em nenhuma das opções. Depois de tentar reprogramar a refeição umas 4 vezes, desistimos e resolvemos voltar para o hotel. A nossa sorte é que estávamos hospedados <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/disney-boardwalk/');">Disney&rsquo;s Boardwalk</a>, onde claro, nos deparamos com opções incríveis de restaurante, incluindo o Big River Grille.</p>
+<div id="attachment_3352"><img src="../cont-imgs/restaurantes/013-bigriver/13578787503_247d0acd09_z.jpg" alt="Essa placa pode parecer meio escondidinha no meio das outras opções que o Boardwalk oferece, mas já se tornou um dos meus pontos preferidos do local." width="640" height="427">
+  <p>Essa placa pode parecer meio escondidinha no meio das outras opções que o Boardwalk oferece, mas já se tornou um dos meus pontos preferidos do local.</p>
+</div>
+<p>Não é segredo para ninguém que acompanha o blog o quanto eu amo o <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/disney-boardwalk/');">Boardwalk</a>. Em março eu realizei um sonho de muitos anos me hospedando lá dentro, mas passear por este lugar é programa obrigatório de qualquer viagem à Disney que eu faça, mesmo se eu me hospedar do outro lado da cidade. O engraçado é que dentre todas as opções disponíveis no Boardwalk, o Big River Grille sempre foi o que menos me chamou atenção. Só fomos jantar lá porque o Fe estava com vontade de comer um hambúrguer (que ele acabou não comendo), mas agora dou o braço a torcer e confesso que a casa foi uma surpresa extremamente positiva e já se tornou um dos meus pontos prediletos dentro do Disney&rsquo;s Boardwalk. Ponto para o Fe que tinha razão e ponto para o Boardwalk que nunca me decepciona. <img src="../cont-imgs/restaurantes/icon_smile.gif" alt=":)"></p>
+<p>Eu não sabia até esta última viagem, mas o Big River Grille tem uma história super legal. Primeiramente, o Big River Grille é original do Tenesse e sua única unidade fora do estado é esta dentro da Disney&rsquo;s. Em segundo lugar, o local não é apenas um simples restaurante, mas é uma cervejaria artesanal também. Se de cara o local aparenta ser um restaurante tradicional, basta dar uma olhada para os copos na mesa ou para o cardápio para ver a importância da cervejaria no Big River Grille.</p>
+<div id="attachment_3354"><img src="../cont-imgs/restaurantes/013-bigriver/13578692935_a900a4c619_z.jpg" alt="Parte do cardápio dedicada a explicar sobre as cervejas do Big River Grille. Eu não entendo nada de cerveja, mas gostei muito das que experimentei. " width="640" height="427">
+  <p>Parte do cardápio dedicada a explicar sobre as cervejas do Big River Grille. Eu não entendo nada de cerveja, mas gostei muito das que experimentei.</p>
+</div>
+<p>Além de um cardápio com opções variadas de cervejas, você ainda pode pedir um menu degustação com 6 pequenos shots de cervejas bem diferentes, desde as mais leves até as mais fortes. Como sou muito curiosa para escolher uma só, eu e o Fe pedimos esse menu degustação, que na minha opinião é a maior pechincha do restaurante. Custava só 8 dólares, algo que eu nunca esquecerei já que verifiquei umas 4 vezes com o garçom antes de pedir. Eu achei tão barato que estava com medo dele me cobrar 80 em vez de 8 dólares, mas deu tudo certo. Nós optamos por começar a noite com as cervejas, mas as opções de bebidas iam muito além. Lembro de também ver sangrias passando nas bandejas do garçom, uma excelente pedida para uma tarde ensolarada no Boardwalk.</p>
+<div id="attachment_3357"><img src="../cont-imgs/restaurantes/013-bigriver/13579042734_1b9743304a_z.jpg" alt="Sample Menu, com 6 opções de cerveja em tamanho para degustação. Excelente pedida para os curiosos como eu. " width="640" height="427">
+  <p>Sample Menu, com 6 opções de cerveja em tamanho para degustação. Excelente pedida para os curiosos como eu.</p>
+</div>
+<p>Eu que rapidamente aderi o clima da cervejaria, quis pedir uma entrada com cerveja também e comi uma sopa feita com a bebida e com queijo. Eu não sei qual era o queijo nem qual era a cerveja usada no prato, mas sei que estava tudo delicioso. O Felipe que estava com vontade de ter uma verdadeira refeição americana, pediu nachos. Fica aqui um alerta: os nachos do Big River Grille são BEM apimentados. O problema é que eles são super saborosos mesmo assim, então é meio difícil não continuar comendo apesar de saber que sua boca vai ficar queimando depois. Se você não é fã de pimenta e tem zero controle próprio diante de uma comida gostosa (como a gente) pense bem antes de pedir esses nachos.</p>
+
+<p>Vale dizer que o Big River Grille é um restaurante com opções bem típicas americanas, algo que sabemos que muitos brasileiros tem preconceito então aqui fica a nossa mensagem mais uma vez: nem só de hambúrguer e pizza vivem os americanos e sua cozinha tradicional é repleta de excelentes pedidas. O Big River Grille é a prova disso, trazendo em seu menu apenas comidas bem americanas e todas deliciosas. Até o Fe que chegou no restaurante com vontade de comer hamburguer, acabou mudando de idéia diante de tantas outras opções gostosas e tradicionais americanas. Eu pedi uma carne com purê de batata e legumes e o Fe pediu uma meatloaf ( tipo um bolo de carne) que estava linda. Nós adoramos os dois pratos, mas a meatloaf foi o destaque da mesa.</p>
+<div id="attachment_3361"><img src="../cont-imgs/restaurantes/013-bigriver/13578707673_0b780280a9_z.jpg" alt="Meatloaf, bem mais bonito que os 'bolos de carne'do Brasil, para provar de vez que a comida dos EUA também é muito boa. " width="640" height="427">
+  <p>Meatloaf, bem mais bonito que os &ldquo;bolos de carne&rdquo;do Brasil, para provar de vez que a comida dos EUA também é muito boa.</p>
+</div>
+<p>Além da comida muito boa, o Big River Grille (assim como todos os restaurantes do Boardwalk) trazem uma atmosfera super charmosa para tornar toda a experiência ainda mais gostosa. Nada como sentar de cara para o calçadão e ficar vendo o movimento nos diferentes pontos do Boardwalk enquanto admira a vista linda daquele lugar. Como se este cenário já não bastasse, no meio da nossa refeição começamos a avistar de longe os fogos do Epcot, benefício de todos que escolhem bem o horário da sua visita ao Boardwalk. Tá certo que os fogos estavam bem longe, mas foram bonitos mesmo assim.</p>
+<p>Considerando que eu já tinha desistido dos planos para o meu jantar, este foi o fim de noite foi perfeito para mim, mas você pode curtir a atmosfera gostosa do Big River Grille a qualquer hora do dia, visto que o restaurante fica aberto direto desde a hora do almoço até o fim da noite e sempre tem algo legal acontecendo pelo Boardwalk para servir de &ldquo;cenário de fundo&rdquo; da sua refeição..</p>
+<div id="attachment_3355"><img src="../cont-imgs/restaurantes/013-bigriver/13579052374_9c9a76153a_z.jpg" alt="A atmosfera é um dos pontos altos do Big River Grille. Enquanto você come, admira toda a movimentação e a linda vista do Boardwalk. E dependendo da hora, ainda pode ver os fogos do Epcot por um ângulo bem diferente." width="640" height="427">
+  <p>A atmosfera é um dos pontos altos do Big River Grille. Enquanto você come, admira toda a movimentação e a linda vista do Boardwalk. E dependendo da hora, ainda pode ver os fogos do Epcot por um ângulo bem diferente.</p>
+</div>
+<p>A gente não comeu nenhum doce lá para poder comentar a respeito das sobremesas, mas a julgar por tudo que experimentamos, não acredito que devem decepcionar. De qualquer forma, se quiser um doce e não gostar das opções oferecidas no restaurante, lembre-se que o Big River Grille fica bem pertinho da Boardwalk Bakery, onde você encontra alguns dos meus doces preferidos da Disney ( como eu já comentei na lista dos Top 10 doces da Disney que você encontra aqui). Fica a dica de aproveitar a visita ao Boardwalk e já dar uma passadinha nessa Bakery depois do seu jantar, tenho certeza que não vai se arrepender.</p>
+<div id="attachment_2052"><img src="http://www.vaipradisney.com/blog/wp-content/uploads/2014/03/DSC_0288-2-800x533.jpg" alt="Uma das muitas delícias da Boardwalk Bakery: torta de manteiga de amendoim, chocolate, banana e bacon. Pode me julgar se quiser, mas é o meu doce preferido. Eles oferecem outras opções mais normais e igualmente deliciosas para quem preferir." width="600" height="400">
+  <p>Uma das muitas delícias da Boardwalk Bakery (que fica do ladinho do Big River Grille): torta de manteiga de amendoim, chocolate, banana e bacon. Pode me julgar se quiser, mas é o meu doce preferido. Eles oferecem outras opções mais normais e igualmente deliciosas para quem preferir.</p>
+</div>
+<p>Acho que o Big River Grille é a prova de que não importa quantas vezes você vá a Disney, sempre tem algo novo para você conhecer e se surpreender. Eu que sempre esnobei este restaurante, hoje venho aqui contar para vocês o quanto gostei de lá e dizer que já estou louca para fazer uma nova visita. Recomendo demais que você o considere na sua programação. E claro, depois me conte o que achou, tá?</p>
+<p><strong>Nome</strong>: Big River Grille &amp; Brewing Works<br>
+  <strong>Endereço</strong>: 2101 N. Epcot Resort Blvd, Lake Buena Vista, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Big+River+Grille+and+Brewing+Works/@28.362295,-81.5542715,14z/data=!4m5!1m2!2m1!1s2101+N.+Epcot+Resort+Blvd,+Lake+Buena+Vista,+FL+32830!3m1!1s0x88dd7faa49a2a4ff:0xab6e8692655cc24b');">Veja no Google Maps</a>) <br>
+  <strong>Telefone</strong>: +1 407-560-0253<br>
+  <strong>Referência</strong>: Dentro do Disney&rsquo;s Boardwalk<br>
+  <strong>Preço</strong>: US$30 a US$40 dólares por pessoa em média, podendo variar muito dependendo do pedido. Veja o cardápio com os preços para mais detalhes.<br>
+  <strong>Horário de Funcionamento</strong>: Dom a Qui: 11am -11pm – Sex e Sáb: 11am-12am (meia noite) – sujeito a alterações.<br>
+  <strong>Cardápio</strong>: <a class="linkvai" href="javascript:loadURL('http://gbarchive.gordonbiersch.com/resources/pdf/BRDI_0114_Core_DINNER_lo.pdf');">clique aqui</a> para visualizar o cardápio (em inglês)<br>
+  <strong>Disney Dining Plan</strong>: Sim, vale um crédito de Table Service.<br>
+  <strong>Avaliação do VPD</strong>: <img src="../cont-imgs/restaurantes/estrelas-avaliacao_4.png" alt="Nota 4 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

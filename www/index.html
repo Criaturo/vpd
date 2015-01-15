@@ -1,46 +1,153 @@
-<!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+	<meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+  
+    <script src="js/jquery/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- debug -->
+    <script type="text/javascript" src="http://192.168.0.101:8080/target/target-script-min.js#anonymous"></script>
+
+</head> 
+<body>
+	
+
+<div data-role="page" class="content">
+
+	
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="index.html" class="btn-logo"><img src="images/logo-vai-pra-disney.png" /></a>
+		<a href="#myPanel" class="btn-favoritos2" id="viewfovoritos" ><img src="images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+
+		$(document).ready(function(){
+			$('.btnSalvar2').click(function(){
+				var lS = prompt("De um nome ao resultado para salvar.","");
+				localStorage.setItem(lS, $(location).attr('href'));
+			}) 				
+			  
+			$('.btn-favoritos2').click(function(){
+				var tamanho = localStorage.length;
+				var chave = '';
+				var valor = '';
+				
+				if(document.getElementById("tableResults").rows.length > 1)	{
+					for(var t = document.getElementById("tableResults").rows.length; t > 1; t--){
+					document.getElementById("tableResults").deleteRow(1);
+					}
+				}
+									
+				var numOfCols = document.getElementById("tableResults").rows[document.getElementById("tableResults").rows.length-1].cells.length;
+					
+				for(var c = 0; c < tamanho;c++){
+					chave = localStorage.key(c);
+					valor = localStorage.getItem(chave);
+					
+					
+					var newRow = document.getElementById("tableResults").insertRow(document.getElementById("tableResults").rows.length);
+						
+						for (var j = 0; j < numOfCols; j++) {
+						
+						newCell = newRow.insertCell(j);
+						
+						if(j==0){
+							
+							}else if(j == 1){
+								newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+							} } }	
+				});
+
+
+		});
+
+		$('.link').on('tap', function() {
+		    url = $(this).attr("rel");   
+		    loadURL(url);
+		});
+			
+		function loadURL(url){
+				    navigator.app.loadUrl(url, { openExternal:true });
+				    return false;
+		}
+		</script>
+			
+			<table id="tableResults" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>   
+
+ 
+
+	<div data-role="main" class="ui-content">
+		
+		<div class="ui-grid-a">
+			
+			<div class="ui-block-a bg-roteiros-parques">
+				<a href="roteiros-parques.html" class="btn-home" id="analyticsbutton"  data-transition="flip">
+						<img src="images/ico-roteiros-parques.png" />
+						<span>Roteiros <br/>dos parques</span>
+				</a>
+			</div>
+			
+			<div class="ui-block-b bg-melhoresdicas">
+				<a href="melhores-dicas.html" class="btn-home" data-transition="flip">
+					<img src="images/ico-melhores-dicas.png" />
+					<span>Melhores <br/>dicas</span>
+				</a>
+			</div>
+		
+			
+			<div class="ui-block-a bg-restaurantes-recomendados">
+				<a href="restaurantes.html" class="btn-home" data-transition="flip">
+					<img src="images/ico-restaurantes-recomendados.png" />
+					<span>Restaurantes <br/>recomendados</span>
+				</a>
+			</div>
+			
+			<div class="ui-block-b bg-lojas-recomendadas">
+				<a href="lojas.html" class="btn-home" data-transition="flip">
+					<img src="images/ico-lojas-recomendadas.png" />
+					<span>Lojas <br/>recomendadas</span>
+				</a>
+			</div>
+		
+			<div class="ui-block-a bg-acessar-vai-disney">
+				<a href="javascript:loadURL('http://www.vaipradisney.com');" class="link btn-home">
+					<img src="images/ico-acessar-vaipradisney.png" />
+					<span>Acessar o <br/>VPD Online</span>
+				</a>
+			</div>
+			
+			<div class="ui-block-b bg-ajustes">
+				<a href="ajustes.html" class="btn-home"   data-transition="flip">
+				
+					<img src="images/ico-ajustes.png" />
+					<span>Ajustes</span>
+				</a>
+			</div>
+		
+		</div>
+	
+	 </div>
+	
+	
+	
+</div><!-- /page -->
+
+	<script type="text/javascript" src="cordova.js"></script>
+</body>
 </html>

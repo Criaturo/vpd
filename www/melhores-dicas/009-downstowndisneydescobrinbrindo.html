@@ -1,0 +1,170 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   navigator.app.loadUrl(url, { openExternal:true });
+		   return false;
+		} 
+	</script>
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../melhores-dicas.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Melhores dicas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/dicas/thumbs/009-downtown.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-melhoresdicas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Downtown Disney: descobrindo a diversão fora dos parques</h2>
+
+
+
+
+
+  <p><img src="../cont-imgs/dicas/009-downtowndisney/lego-downtown-disney-199x300.jpg" alt="As impressionantes esculturas de lego espalhadas por Downtown Disney" width="199" height="300"></p>
+  <p>As impressionantes esculturas de lego espalhadas por Downtown Disney</p>
+  <p>Como eu já disse no post sobre o <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/disney-boardwalk/');">Boardwalk</a>, a Disney World vai muito além dos parques. Um dos pontos mais populares do complexo é o Downtown Disney,  que seria equivalente ao centrinho da &ldquo;cidade Disney&rdquo;.  Muita gente não dá nada pra Downtown Disney, achando que lá só tem um monte de loja com as mesmas coisas que são vendidas nos parques, mas aparências enganam, sabia? Além das muitas lojinhas, Downtown Disney possui uma baladinha, um Cirque de Soleil, cinemas e diversas opções de alimentação para todos os gostos e bolsos.</p>
+  <p><span id="more-738"> </span></p>
+  <p>E mesmo quando falamos das lojas, em Downtown Disney você encontra muito mais do que nos parques. Além de ter a maior loja do complexo todo, a World of Disney, lá você encontra lojas super específicas: uma só de pins, outra só de coisas de Natal, uma só com artigos esportivos, uma outra de itens de cozinha, de doces…bom, já estou entregando tudo de bandeja, né?  A verdade é que o complexo é bem maior do que aparenta ser, por isso, aqui vai uma lista dos pontos que se destacam, aos meus olhos,  nas categorias compras, alimentação e entretenimento.</p>
+  <p>Se você quiser fazer o download desse post em PDF para imprimir, <a class=“linkvai" href="javascript:loadURL('http://goo.gl/Kd0IGI');">clique aqui</a>.</p>
+  <p><img src="http://www.vaipradisney.com/blog/wp-content/uploads/2013/06/icone-food-tip.png" alt="icone-food-tip" width="14" height="14"><strong>ALIMENTAÇÃO</strong></p>
+  <p><strong>Rainforest Cafe</strong>: é um restaurante todo ambientado como uma floresta. De tempos em tempos os animais começam a fazer barulho e fica tudo uma loucura. É bem divertido (principalmente se tiver crianças no seu grupo) e a comida é gostosa.</p>
+  <p><strong>Planet Hollywood</strong>: Famoso em todo mundo, o Planet Hollywood de Downtown Disney fica dentro de um globo e como em outras cidades, possuí vários figurinos de filmes famosos espalhados pelo restaurantes. Lá você come de tudo, mas o forte são os drinks e os sanduíches. Vale a pena experimentar.</p>
+  <p><strong>Earl of Sandwich</strong>: minha família é APAIXONADA por este lugar. Os sanduíches são maravilhosos, muito caprichados e de um bom tamanho. Além disso,as sopas e as sobremesas também valem muito a pena.</p>
+  <p><strong>T-Rex</strong>: assim como o Rainforest, o T-Rex é um restaurante completamente tematizados, mas o assunto aqui é a pré-história. São vários dinossauros espalhados pelo salão e a criançada se diverte.</p>
+  <p><img src="../cont-imgs/dicas/009-downtowndisney/trex-downtown-disney-restaurant-web.jpg" alt="Restaurante T-Rex em Orlando" width="640" height="426"></p>
+  <p><strong>Wolfgang Puck Express</strong>: restaurante bem variado, tanto no cardápio como no preço.</p>
+  <p><strong>Ghirardelli Ice Cream &amp; Chocolate Shop</strong>: na loja da famosa marca originária de São Francisco, você vai encontrar sundaes incríveis e chocolates maravilhosos…valem cada caloria ingerida!</p>
+  <p><strong>Goofy&rsquo;s Candy Company</strong>: Loja de docinhos bem bons. Experimente os mini pretzels cobertos de chocoalte! Eu adoro!</p>
+  <p><img src="http://www.vaipradisney.com/blog/wp-content/uploads/2013/05/icone-criancas.gif" alt="icone-dicas" width="14" height="14"><strong>ENTRETENIMENTO</strong></p>
+  <p><strong>DisneyQuest</strong>: um lugar cheio de jogos para todos os gostos. Eu mesma que não sou fã dessas coisas já me diverti bastante no DisneyQuest.</p>
+  <div id="attachment_746"><img src="../cont-imgs/dicas/009-downtowndisney/atracao-piratas-disney-quest-downtown-disney-orlando-800x604.jpg" alt="Não tem brincadeira para adulto e para criança. Todo mundo se diverte nos jogos e simuladores do Disney Quest" width="640" height="483">
+    <p>Não tem brincadeira para adulto e para criança. Todo mundo se diverte nos jogos e simuladores do Disney Quest</p>
+  </div>
+  <p><strong>House of Blues</strong>: é um bar/baladinha muito frequentado pelos próprios funcionários da Disney no tempo livre, principalmente aos domingos.</p>
+  <p><strong>AMC Movies</strong>: É um cinema. Bom, para quem adora filmes e quer ver um antes de ser lançado no Brasil. Além de ser um bom descanso entre os parques e compras, passando a tarde em Downtown Disney.</p>
+  <p><strong>La Nouba By Cirque du Soleil</strong>: Cirque du Soleil dispensa apresentações, né?</p>
+  <p><strong>Passeio de Balão</strong>: eu ainda não fui, mas dizem que é um passeio bem bonito, com uma vista maravilhosa.</p>
+ 
+  <p><img src="http://www.vaipradisney.com/blog/wp-content/uploads/2013/05/icone-compras.png" alt="icone-compras" width="14" height="14"><strong>COMPRAS</strong></p>
+  <p><strong>World of Disney</strong>: simplesmente a maior loja de todo o complexo Disney. Tem diversos departamentos como meninos, meninas, artigos de cozinha, ursinhos de pelúcia, doces e lá dentro você também encontra uma unidade da Bibbidi Bobbidi Boutique, o salão de beleza que as meninas se arrumam como uma princesa. A outra unidade desse salão fica dentro do castelo da Cinderella, no Magic Kingdom.</p>
+  <p><strong>Once Upon a Toy</strong>: uma loja enorme de brinquedos que vão de bonecas a video games.</p>
+  <p><strong>Disney&rsquo;s Days of Christmas</strong>: especializada em decoração de natal que fica aberta o ano inteiro. Vale a pena dar uma passadinha para comprar um item para a decoração do seu próximo natal.</p>
+  <p><strong>Disney&rsquo;s Pin Traders</strong>: muita gente acha que Pin é uma coisa meio sem sentido mas as vezes a gente sente um impulso de comprá-los mesmo assim. Aqui é o lugar certo para você escolher o que mais combina com você e encontrar algumas coleções exclusivas.</p>
+  <p><strong>Lego Imagination Center</strong>: loja da Lego que fica em Downtown Disney.</p>
+  <div id="attachment_749"><img src="../cont-imgs/dicas/009-downtowndisney/World-of-Disney-Shopping-Downtown-Disney.jpg" alt="World of Disney em Downtown Disney. A loja é tão grande que é bem fácil se perder." width="500" height="375">
+    <p>World of Disney em Downtown Disney. A loja é tão grande que é bem fácil se perder.</p>
+  </div>
+  <p><strong>Marketplace Fun Finds</strong>: essa loja tem uma proposta muito legal e principalmente quando você quer comprar uma lembrancinha pra alguém mas não quer gastar demais. Aqui, eles dividem os produtos por preço, ajudando você fazer compras mais direcionadas.</p>
+  <p><strong>Mickey&rsquo;s Pantry</strong>: loja de itens de cozinha. Eu que amo cozinhar, fico doida nessa loja, mas cuidado! Nem tudo que a Disney vende de cozinha é bom. Já me queimei tirando bolo do forno com a luva porcaria deles. Compre itens mais básicos e decorativos.</p>
+  <p><strong>Team Mickey</strong>: loja de itens esportivos muito grande, com artigos de diversos esportes e também, produtos da Disney.</p>
+  <p><strong>Orlando Harley-Davidson</strong>: loja da marca Harley-Davidson para os fãs exclusiva de Downtown Disney.</p>
+ 
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

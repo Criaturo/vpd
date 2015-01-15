@@ -1,0 +1,200 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Garden Grill: comida fresquinha com personagens da Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../restaurantes.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/019-gardengrill.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Garden Grill: comida fresquinha com personagens da Disney</h2>
+
+
+
+
+<p>Você sabe onde na Disney você pode encontrar o Mickey enquanto come uma comida super fresquinha em um restaurante que gira (devagarzinho, prometo)? É no Garden Grill, restaurante tema do post de hoje.</p>
+<p><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_07441-800x533.jpg" alt="Garden Grill - Entrada" width="640" height="426"></p>
+<p> </p>
+<p>Faz tempo que eu escuto muita gente falando para eu conhecer o Garden Grill, mas eu nunca dava muita bola. Simplesmente não estava nas minhas prioridades. Sempre havia tantos lugares legais para conhecer que eu deixava o Garden Grill de lado. Bom, depois da minha irmã (do <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/garden-grill/desfazendoasmalas.com');">Desfazendo as Malas</a>) e da minha mãe falarem tanto, eu e o Felipe finalmente fomos conferir este restaurante. Como resultado da experiência, eu preciso dar o braço a torcer: eu não devia ter demorado tanto para ir lá. Nós simplesmente ADORAMOS o lugar e esta é uma das dicas que a gente está mais ansioso para dividir com vocês. Finalmente entendi os motivos da fama do Garden Grill e espero que este post te ajude a ser menos mané que eu e conhecer logo o local! <img src="../cont-imgs/restaurantes/icon_razz.gif" alt=":P"></p>
+<div id="attachment_1899"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_07481-800x533.jpg" alt="Garden Grill - Detalhe fofo: os pratos formando a cabeça do Mickey. :)" width="640" height="426">
+  <p>Detalhe fofo: os pratos formando a cabeça do Mickey. :)</p>
+</div>
+<p><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_07471-800x533.jpg" alt="Garden Grill - O cardápio, mesmo que sem muita escolha" width="640" height="426"></p>
+<p>O Garden Grill fica no Epcot, no Future World, bem pertinho do popular Soarin&rsquo; e do nem tão popular &ldquo;Living with the Land&rdquo;, atração que possui grande influencia na cozinha deste restaurante . Para quem não conhece, o Living with the Land basicamente consiste em um passeio que mostra a relação do homem com a terra, cultivo de plantas e tudo o mais. O passeio da atração passa por várias estufas e hortas da Disney e é de lá que sai parte dos ingredientes que vão para a mesa de quem visita o Garden Grill. Mais fresquinho impossível! Boa parte da refeição é definida de acordo com os ingredientes (folhas, frutas, legumes e vegetais) mais frescos nas hortas. Todo esse cuidado faz a maior diferença na sua mesa, pois a qualidade dos alimentos é incrível.</p>
+<div id="attachment_1918"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0767-800x533.jpg" alt="Garden Grill - Parte do Living with the Land que fica visível do restaurante,." width="640" height="426">
+  <p>Parte do Living with the Land que fica visível do restaurante,.</p>
+</div>
+<div id="attachment_1897"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_07461-800x533.jpg" alt="Garden Grill - Você senta e vê o restaurante girar, mas é bem devagarzinho, tá?" width="640" height="426">
+  <p>Você senta e vê o restaurante girar, mas é bem devagarzinho, tá?</p>
+</div>
+<p>Além disso, lembra que eu comentei que o restaurante gira? Pois é, parte do tempo você vai dar de cara com um pedaço da atração Living with The Land. Se essa história de restaurante que gira não está te parecendo uma boa idéia, não se preocupe. Eu tinha receio de que fosse ficar tonta, mas o local gira SUPER lentamente, você nem nota que tá girando pra te falar a verdade. Bom, chega de blá blá blá, vamos ao que interessa: a comida?Não! Os personagens! <img src="../cont-imgs/restaurantes/icon_smile.gif" alt=":)"></p>
+<div id="attachment_1912"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0761-800x533.jpg" alt="No Garden Grill você pode tirar sua foto com o Pluto, Tico, Teco e Mickey." width="640" height="426">
+  <p>No Garden Grill você pode tirar sua foto com o Pluto, Tico, Teco e Mickey.</p>
+</div>
+<p>O Garden Grill além de delicioso, é um ótimo local para interação com personagens, todos bem populares: Tico, Teco, Pluto e Mickey. Sim, lá você encontra o Mickey, o que pode significar uma bela economia de tempo para conseguir um autógrafo e uma foto com ele. O Mickey ainda vem super fofo com roupa de fazendeiro. Olha, para os interessados em refeição com personagens eu dou o meu depoimento aqui: eu já fui em quase todos os restaurantes que o Mickey aparece (só falta Tusker House) e até agora o Garden Grill é o meu preferido!</p>
+<div id="attachment_1916"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0765-800x533.jpg" alt="DSC_0765" width="640" height="426">
+  <p>Mickey fazendeiro no Garden Grill, para mim um dos melhores lugares para tirar foto com este personagem.</p>
+</div>
+<p>Bom, mas estamos falando de um restaurante e no fundo a comida é mesmo o que importa, certo? O Garden Grill funciona no estilo &ldquo;all you can eat&rdquo;(tudo que você consegue comer), ou seja, você paga um preço fixo e come o quanto quiser. Se você vai com um grupo grande, com várias famílias, restaurantes deste tipo podem ser uma boa alternativa, pois fica bem mais fácil na hora de dividir a conta. O legal aqui é que, diferente da maioria dos restaurantes deste estilo, o Garden Grill não é estilo buffet, em que você tem que se levantar e se servir. Aqui, você fica sentadinho e a comida vem até você em porções de acordo com o tamanho do seu grupo. Você pode pedir novas porções do que quiser quantas vezes quiser: está tudo incluído no preço.</p>
+<div id="attachment_1903"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0752-e1395078800874-533x800.jpg" alt="Pão perfeito do Garden Grill, já estou com saudades!" width="533" height="800">
+  <p>Pão perfeito do Garden Grill, já estou com saudades!</p>
+</div>
+<div id="attachment_1904"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0753-800x533.jpg" alt="Garden Grill - Salada super fresquinha diretamente da horta para a nossa mesa! " width="640" height="426">
+  <p>Salada super fresquinha diretamente da horta para a nossa mesa!</p>
+</div>
+<p>A refeição no Garden Grill começa com um pãozinho maravilhoso acompanhado de uma manteiga com maple (para quem não conhece, é tipo um mel só que mais gostoso). Eu não vou ficar me prolongando aqui no meu amor por este pão, mas queria dizer que eu poderia viver dele! Sim, eu estava com fome quando cheguei lá, mas o pão era perfeito. Enquanto você come este pãozinho, o garçom trará uma salada que como eu disse antes, é super fresquinha, feita com as folhas mais bonitas da horta da Disney. Depois disso, ele trará um pratão realmente muito comprido contendo 3 tipos de refeição: uma carne vermelha com um molho de vinho, acompanhada de purê de batatas; um peru com molho de limão e alcaparras, acompanhando de um stuffing, ou seja, o que teoricamente devia ser um recheio de pão com temperos para acompanhar o peru (nem me pergunte, é coisa de americano. Eu achei que tinha gosto de torta de liquidificador) e um peixe do dia com legumes mais frescos disponíveis.</p>
+<div id="attachment_1908"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0757-800x533.jpg" alt="No Garden Grill as comidas vem até sua mesa nessas travessas. Você pode repetir quantas vezes quiser!" width="640" height="426">
+  <p>No Garden Grill as comidas vem até sua mesa nessas travessas. Você pode repetir quantas vezes quiser!</p>
+</div>
+<div id="attachment_1910"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0759-800x533.jpg" alt="Garden Grill - Peru com molho de limão e alcaparras com stuffing de pão." width="640" height="426">
+  <p>Peru com molho de limão e alcaparras com stuffing de pão.</p>
+</div>
+<p> </p>
+<p>Como eu disse você como o quanto quiser: se acabar, é só pedir que o garçom traz mais. Como o Felipe e eu não gostamos de peixe, já pedimos pro garçom nem trazer. Já a carne vermelha, pedimos para repetir. Ah! E se os seus filhos não gostarem das opções, existe um menu infantil. A gente tentou tirar discretamente uma foto do Mac n Cheese (macarrão com queijo) de uma criança na mesa do lado. A foto não tá perfeita dada a distância, mas dá para ver que é um belo prato também.</p>
+<div id="attachment_1917"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0766-800x533.jpg" alt="Garden Grill - Como a gente pediu mais carne e batata, o garçom trouxe uma nova travessa menor só com estes alimentos." width="640" height="426">
+  <p>Como a gente pediu mais carne e batata, o garçom trouxe uma nova travessa menor só com estes alimentos.</p>
+</div>
+<div id="attachment_1911"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0760-800x533.jpg" alt="Garden Grill - Macarrão com queijo da mesa vizinha: está é uma das alternativas do menu infantil." width="640" height="426">
+  <p>Macarrão com queijo da mesa vizinha: está é uma das alternativas do menu infantil.</p>
+</div>
+<p>Por fim, a sobremesa é um bolinho quente feito com frutas da estação acompanhado de um chantilly de baunilha. Eu sou acostumada a pensar que frustas da estação sempre significam abacaxi, mas não é não. O meu bolinho veio com framboesa e eu acho que quase sempre ele é feito com alguma fruta vermelha, pois todo mundo que eu conheço que foi lá comeu exatamente a mesma sobremesa que eu. Ah! E é claro que entre um pão e outro, entre uma carne ou um peixe do dia, os personagens passam lá para interagir com o seu grupo e tirar fotos.</p>
+<div id="attachment_1920"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0769-800x533.jpg" alt="Garden Grill - Berry Cobbler, sobremesa que chega quentinha na mesa com chantilly de baunilha. " width="640" height="426">
+  <p>Berry Cobbler, sobremesa que chega quentinha na mesa com chantilly de baunilha.</p>
+</div>
+<div id="attachment_1921"><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0770-800x533.jpg" alt="Garden Grill - Berry Cobbler segundos depois." width="640" height="426">
+  <p>Berry Cobbler segundos depois.</p>
+</div>
+<p>Para você que tem preconceito ou já teve experiências não tão legais com restaurantes &ldquo;all you can eat&rdquo; fica aqui o meu recado: o Garden Grill pode varrer os seus traumas ou paradigmas. Ele não é barato, mas a qualidade é indiscutível! Eu não sou uma pessoa que gosta de pagar pra comer qualquer coisa e não indicaria um restaurante que não tivesse me servido uma comida que valesse o preço e olha, o Garden Grill valeu demais.</p>
+<p><img src="../cont-imgs/restaurantes/019-gardengrill/DSC_0771-800x533.jpg" alt="Garden Grill - Conta final. O valor por pessoa e o preço total" width="640" height="426"></p>
+<p>Se você está se perguntando sobre o valor da refeição lá, nós gastamos cerca de 45 dólares por pessoa (incluindo bebida e gorjeta). O valor não é pequeno, mas quando você pensa na quantidade e qualidade de tudo que foi disponibilizado, eu acho honesto. A dica para quem quer ir lá sem pesar tanto no bolso, é fazer uma refeição única, um &ldquo;almoço/jantar&rdquo;no restaurante. O Garden Grill só abre para o jantar, mas começa esta refeição às 16h. Se você comer qualquer bobagem na hora do almoço, consegue esperar até às 16he fazer uma única refeição cara no dia. É uma alternativa para quem quer conhecer o local e economizar, mas também para quem não quer exagerar. Uma refeição lá é o suficiente para matar a sua fome para o resto do dia.</p>
+<p>Gostou? Então aqui vão algumas informações adicionais para aproveitar o Garden Grill:</p>
+<ul>
+  <li>Como todo restaurante com personagens, reservas são altamente recomendáveis. Sem reserva dificilmente você conseguirá uma mesa. Não sabe como fazer a sua reserva? <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">Clique aqui</a>.</li>
+  <li>Como eu disse anteriormente, o Garden Grill só serve jantar. O horário para as reservas vai das 16h às 20h.</li>
+  <li>Como todo restaurante dentro do Epcot, você precisa de ingresso de admissão no parque para comer no Garden Grill</li>
+</ul>
+<p>Pronto! Agora corre lá e faz a sua reserva. Depois conta para a gente o que achou.</p>
+<p><strong>Nome:</strong> The Garden Grill (jantar)<br>
+  <strong>Endereço:</strong> 1510 North Cove Road, Lake Buena Vista, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/The+Garden+Grill+Restaurant/@28.373863,-81.552325,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x71d5dbc5aa1f4b3e');">Veja no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-560-6071<br>
+  <strong>Referência:</strong> Dentro do parque Epcot, no pavilhão The Land<br>
+  <strong>Preço:</strong> US$30-50 por pessoa (março/2014)<br>
+  <strong>Horário de Funcionamento:</strong> depende do horário de funcionamento do Epcot<br>
+  <strong>Cardápio:</strong> <a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/epcot/garden-grill-restaurant/menus/');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong><strong>Disney Dining Plan: </strong></strong>Sim<br>
+  <strong>Avaliação do VPD:</strong> <img src="../cont-imgs/restaurantes/estrelas-avaliacao_4.png" alt="Nota 4 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

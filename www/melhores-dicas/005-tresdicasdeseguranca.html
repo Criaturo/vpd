@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>3 dicas de segurança nas compras em Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../melhores-dicas.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Melhores dicas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/dicas/thumbs/005-3dicas.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-melhoresdicas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">3 dicas de segurança nas compras em Orlando</h2>
+
+
+
+
+
+  <p>Gente, Orlando é uma delícia mas tem muito malandro que sabe como a brasileirada adora fazer compras. Temos que ter muito cuidado com a violência e principalmente com os assaltos lá. Aqui vou dividir algumas dicas maravilhosas que aprendi com uma vendedora da Banana Republic e que podem ajudar você a não dar bobeira por ai. Com pequenas ações como as listadas abaixo você garante uma viagem mais segura.<span id="more-231"> </span></p>
+  <p><strong>1. Faça suas compras, entre no carro e vá direto para o hotel</strong><br>
+    Ir do shopping direto para o hotel é a melhor forma de evitar que te sigam e te abordem na sua próxima parada. Esse é um golpe muito comum dos ladrões em Orlando. Se não tiver jeito de ir pro hotel, tenha atenção redobrada para garantir que não está sendo seguido e coloque TODAS as compras no porta-malas. Assim pelo menos você chama menos atenção, né?<br>
+    O ideal é que você também leve todas as compras para o carro de uma vez só. Quando as pessoas guardam um bando de sacolas no carro para aliviar o peso e voltam para o shopping, correm o risco dos malandros que cercam os shoppings assistirem essa cena e roubarem as compras no momento que você voltar para fazer mais compras.</p>
+  <p><strong>2. Atenção também com as compras no hotel, mantenha os itens de maior valor trancados nos cofres ou nas malas</strong><br>
+    Mesmo nos hotéis é melhor não dar bobeira. Se você tem muito apego pelas suas aquisições, não deixe nada tão à vista. Não é tão incomum ver pessoas reclamando de roubo dentro do hotel. É mais difícil de acontecer, mas não custa se precaver. Se puder, evite ficar nas regiões onde mais são registrados crimes, como hotéis próximos ou na International Drive. Clique aqui para ver como escolher um hotel com segurança.<br>
+    E mesmo nos hotéis seguros, não custa nada tomar algumas medidas para garantir a segurança. Guarde os itens de maior valor trancados no cofre do hotel ou (na ausência de um cofre) dentro da mala. Também é bastante aconselhável não deixar muitas sacolas e embalagens de produtos de valor no lixo do quarto ou na porta do seu quarto. Pode parecer bobagem mas excesso de sacolas e embalagens de produtos caros valem como um letreiro para os malandros dizendo &ldquo;Aqui dentro tem itens bons recém comprados para serem roubados&rdquo;. Não custa nada se desfazer dessas coisas em um lixo mais central, né?</p>
+  <p><strong>3. Tente estacionar o carro próximo dos guardas dos shoppings ou perto das portas das lojas.</strong><br>
+    Sei que nem sempre isso é possível, mas com certeza vale a pena o esforço extra para garantir que ninguém vai te abordar quando você estiver guardando as suas comprinhas. Se o ladrão puder escolher, ele vai roubar o cara que estiver com o carro mais longe do shopping, onde é mais difícil dele ser pego em flagrante. Além de tudo, se você decidir guardar as sacolas e voltar pro shopping (como recomendo não fazer no item 1) o seu risco é sempre menor se o carro estiver bem ao lado dos seguranças.</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

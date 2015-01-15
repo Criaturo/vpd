@@ -1,0 +1,195 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Blizzard Beach</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  
+  <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   navigator.app.loadUrl(url, { openExternal:true });
+		   return false;
+		} 
+	</script>
+  
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../roteiros-parques.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Roteiros dos parques</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/roteiros/thumbs/005blizzardbeach.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-roteiros"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Blizzard Beach</h2>
+
+
+<p style="text-align:center;"><img src="../cont-imgs/roteiros/005-blizzard/parques_blizzard-beach.png" alt="Entrada do Blizzard Beach, meu parque aquático favorito em Orlando">
+    </p>
+
+
+  <p>O Blizzard Beach é o meu parque aquático preferido em Orlando. Inaugurado em 1995, ele é o parque aquático mais novo da Disney World ainda em funcionamento e por ser menor que o irmão Typhoon Lagoon, eu acho que ele reserva um clima muito mais tranquilo que os outros parques aquáticos da cidade. É o parque perfeito para tirar férias no meio das suas férias!</p>
+  
+
+  <h2>Atmosfera</h2>
+  <p>A lenda que é tema do parque é a seguinte: em uma área desconhecida da Flórida, havia nevascas recorrentes que levaram a construção de um parque de esqui. Por se localizar em um estado onde faz muito calor na maior parte do ano, a neve eventualmente derreteu deixando as pistas de esqui e um teleférico abandonados. Um dia um grupo de pessoas passando por ali, viu um crocodilo (animal símbolo da Flórida e mascote do parque) escorregando no que antes devia ser uma pista de esqui, e decidiram de lá um parque aquático, dando origem ao Blizzard Beach.</p>
+  <p>Dando apoio à historinha criada pela Disney, o parque revela uma atmosfera muito diferente da paisagem de Orlando, com montanhas cobertas de neve e os chalés de madeira típicos das estações de esqui.</p>
+ 
+  <p>O Blizzard Beach fica aberto todos os anos entre o começo de Abril e o final de Dezembro. Entre Janeiro e Março, o parque fecha para manutenção enquanto o Typhoon Lagoon continua aberto para visitação.<br>
+    A água das piscinas do parque é levemente aquecida (em torno dos 27ºC) com exceção a água do Cross Country Creek, que na lenda do parque é a água que vem da neve derretida. Isso significa que é tranquilo ir no parque nos dias mais frios? Não necessariamente, pois além da água não ser quente no nível de águas termais, eu sempre penso como deve ser difícil sair das piscinas e encarar o vento frio e gelado de Orlando em Dezembro. Mas como eu sempre digo: vá por sua conta em risco.</p>
+  <h2>Alimentação</h2>
+  <p>Existem 7 lanchonetes e trailers dentro do Blizzard Beach para você comer durante o dia e são váras as opções para todos os gostos: desde os tradicionais cheeseburguer, pizza, hot dog até saladas e pratos mais lights como wraps. O legal é que espalhados ao redor do parque, você encontra placas com os cardápios de todos os locais para poder escolher e não ficar caçando as comidas por ai.</p>
+  <p>No Blizzard Beach você também encontra canecas que dão direito a refill de refrigerante por todo o parque durante o dia inteiro. Por US$9,99 você compra a caneca, pode recarregar com refri quantas vezes quiser e depois leva pra cada como lembrança.</p>
+  
+  <h2>Aluguel: toalhas, armários e cabanas</h2>
+  <p>Como é de praxe em todos os parques aquáticos, no Blizzard Beach você pode alugar toalhas e armários para deixar os seus pertences. São dois locais para locação, a The Beach Haus, que é a loja principal do parque e costuma ficar sem filas, e a Snowless Joe&rsquo;s que fica ao lado dos armários e vestiários e por isso, fica sempre lotada de gente.</p>
+  <p>Em Julho/2014, o aluguel da toalha saía por US$2, o do armário grande por US$10 e do pequeno por US$8, isso para o dia todo. Além disso, para os armários você precisa deixar um caução de US$5 que é devolvido quando você entregar a chave de volta no final do dia. Vale dizer que se você for para o Typhoon Lagoon no mesmo dia, não é preciso pagar o armário de novo: basta mostrar o recibo do aluguel no Blizzard Beach, deixar o depósito de $5 e pegar uma nova chave.<br>
+    Dica: eu sempre levo uma toalha do hotel que estou ficando (e claro levo de volta!) para não precisar alugar toalha no parque.</p>
+  <p>Para quem procura um ambiente mais privativo para passar o dia, o Blizzard Beach aluga cabanas, chamadas de Polar Patios, para até 6 pessoas que incluí armários, toalhas, água e um serviço de garçon que serve comidas compradas separadamente. O aluguel custa entre US$215 e US$315 para o grupo e pessoas adicionais podem ser incluídas por US$25 cada.</p>
+  
+  <h2>Ingresso</h2>
+  <p>Para entrar no Blizzard Beach você precisa ter um ingresso base para os parques da Disney com a opção Water Park Fun and More (WPFM), como <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/ingressos-parques-orlando/');">explicamos aqui</a>. Para quem não vai para os outros parques da Disney, os ingressos só para o Blizzard Beach podem ser comprados na entrada por $56.45 por adulto ou $47.93 para crianças de 3-9 anos (preços com imposto de julho/2014) ou no site da Disney. Crianças até 3 anos entram sem pagar.</p>
+  <h2>Localização, estacionamento e horários</h2>
+  <p>O Blizzard Beach fica entre o Disney&rsquo;s Hollywood Studios e os hotéis Disney&rsquo;s All Star, e ao contrário do que ocorre nos parques temáticos, o estacionamento é gratuito. Apesar de ser um estacionamento pequeno, aconselho que chegue cedo para não acabar parando o carro muito longe da entrada. O endereço para quem estiver com GPS é: <a href="javascript:loadURL('https://www.google.com.br/maps/place/Disney's+Blizzard+Beach+Water+Park/@28.351751,-81.575184,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x54e478051f8eb070');" class="linkvai">1534 Blizzard Beach Dr, Lake Buena Vista, FL 32830</a>.<br>
+    Além disso, se você estiver hospedado em um hotel da Disney ou estiver indo para o Blizzard Beach de algum outro parque do complexo, pode usar os ônibus internos da Disney que também são gratuitos e saem de todos os hotéis e parques do complexo.<br>
+    O parque funciona quase sempre entre as 10:00 e as 17:00, mas no verão americano, acaba abrindo mais cedo e fechando mais tarde: em geral entre 9:00 e 20:00. Apesar de haver este padrão, os horários podem variar eventualmente então aconselho que consulte o horário programado para o dia da sua visita pelo site da Disney como <a title="Horários dos parques da Disney" href="javascript:loadURL('http://www.vaipradisney.com/blog/horarios-dos-parques-da-disney/');" class="linkvai">ensinamos aqui</a>.</p>
+  
+  <h2>O mapa do Blizzard Beach</h2>
+  <p>O parque está dividido em três regiões principais, chamadas de slopes, ou algo como &ldquo;encosta&rdquo; se fossemos traduzir para o português. São elas o Green Slope, Purple Slope e Red Slope. Além disso, outras atrações ficam no &ldquo;térreo&rdquo; do parque, onde as atrações que começam no alto dos slopes, terminam.</p>
+ 
+  <p><a href="javascript:loadURL('http://www.vaipradisney.com/blog/wp-content/uploads/2014/08/Blizzard-Beach-mapa.jpg');" class="linkvai">Clique aqui</a> para abrir o mapa do Blizzard Beach enquanto lê o roteiro.</p>
+  <p><strong>GREEN SLOPES</strong><br>
+    – <strong>Summit Plummet</strong>: esse é o toboágua mais importante do parque. Com mais de 36 metros de altura, o Summit Plummet é bem radical e confesso que me deu um frio na barriga antes de despencar dali. Ele é tão alto, que uma pessoa pode chegar a 97 km/h ao escorregar nesse toboágua. Para os curiosos, esse é o segundo mais rápido e alto toboágua do mundo, só perdendo para o &ldquo;Insano&rdquo; que fica no Beach Park em Fortaleza. Eu gosto dele e recomendo para os corajosos.</p>
+ 
+  – <strong>Slush Gusher</strong>: ao lado do Summit Plummet, fica o Slush Gusher (as filas dois dois inclusive começam juntas) que pode ser considerada uma versão mais tranquila do toboágua radical. Ele tem pouco mais de 27 metros de altura e a velocidade pode chegar a 56 km/h.
+  
+  <p>– <strong>Teamboat Springs</strong>: esse é pra família toda! No Teamboat Springs, você e todo o seu grupo entra em uma bóia gigante e despenca por uma montanha cheia de curvas. Na bóia cabem até 6 pessoas (e deve ter no mínimo 4) e todos seguram em alças que ficam instaladas no fundo dela. O passeio é tranquilo e sem fortes emoções.</p>
+  <p><strong>PURPLE SLOPES</strong><br>
+    – <strong>Downhill Double Dipper</strong>: esse toboágua é divertido pois é uma competição lado a lado com outra pessoa. Eles medem o tempo em que você demora pra descer e chegar na piscina lá embaixo. Apesar da competição não é um toboágua com muita adrenalina não.</p>
+  
+  <p>– <strong>Snow Stormers</strong>: esse é um toboágua cheio de curvas em que você deita em um tapetinho e despenca montanha abaixo. Prepare-se pra levar muita água na cara e sem dúvida, sentir frio na barriga. Ele me lembra muito as pistas das competições de bobsleigh, aquele esporte de trenó de gelo, do filme Jamaica Abaixo de Zero. Não que eu tenha experiência com esse esporte, né? hehehe<br>
+    – <strong>Toboggan Racers</strong>: outra atração de competição, no Toboggan Racers 8 toboáguas ficam lado a lado e as pessoas se alinham e despencam usando os mesmos tapetinhos do Snow Stormers. Como não existe um controle muito cerrado, nunca dá pra saber quem ganhou porque as pessoas acabam saindo em momentos diferentes. Mas pra quem tiver em um grupo grande dá pra se divertir.</p>
+ 
+  <p><strong>RED SLOPE</strong><br>
+    – <strong>Runoff Rapids</strong>: localizado bem nos fundos do Blizzard Beach o Runoff Rapids é um conjunto de toboáguas abertos e fechados onde você pode descer em bóias com uma ou duas pessoas. Ele desce bem rapidamente e apesar de ser curtinho (na minha opinião), dá pra aproveitar o frio na barriga provocado pelas curvas acentuadas. Cada um dos escorregadores tem um percurso diferente, então se você gostar, vale a pena ir de novo para conhecer os outros caminhos.</p>
+  <p><strong>OUTRAS ATRAÇÕES</strong><br>
+    – <strong>Melt-Away Bay</strong>: piscina de ondas que fica na base da montanha principal do parque. Ela é bem tranquila e da pra passar boas horas ali curtindo o &ldquo;balanço do mar&rdquo; <img src="../cont-imgs/roteiros/icon_smile.gif" alt=":)"></p>
+ 
+  <p>– <strong>Cross Country Creek</strong>: o tradicional rio de correnteza, tem um leve movimento que empurra as pessoas ao redor de todo o perímetro do parque. Você pode entrar e sair em 7 pontos e só é permitido ficar ali dentro com as bóias, que você pega gratuitamente ao entrar na piscina. Eu deito ali e se deixar, durmo boiando pelo parque.</p>
+ 
+  <p>– <strong>Ski Patrol:</strong> aqui é o playground para crianças de até 12 anos. É composto por algumas pequenas atrações<br>
+    Leisure Pool – são icebergs flutuantes que as crianças podem andar (e cair na piscina, que deve ser a parte mais legal).<br>
+    Fahrenheit Drops – a famosa tiroleza para as crianças despecarem e depois se jogarem na piscina.<br>
+    Freezin&rsquo; Pipe Springs – toboágua pequenininho e fechado que desemboca na mesma piscina da tiroleza.<br>
+    Cool Runners – toboágua um pouco maior para as crianças mais &ldquo;radicais&rdquo;.</p>
+  
+  <p>– <strong>Tike&rsquo;s Peak</strong>: um conjunto de pequenos escorregadores para as crianças menores se divertirem junto com seus pais<br>
+    – <strong>The Chairlift</strong>: mais um meio de transporte do que uma atração em si, o teleférico é usado para se chegar mais rápido no topo do Green Slopes e leva até 3 pessoas por banquinho. Não se pode subir com nenhum objeto solto (toalha, câmera…). Para quem quer chegar no topo da montanha mas não quer usar o teleférico, existe uma escada que também leva ao Green Slopes.</p>
+ 
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+
+
+
+</body>
+</html>

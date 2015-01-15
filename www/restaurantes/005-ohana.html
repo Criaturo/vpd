@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Ohana: café da manhã com o Mickey e Stitch</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../restaurantes.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/005-ohana.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Ohana: café da manhã com o Mickey e Stitch</h2>
+
+
+
+
+<p>Refeições com personagens são sempre uma ótima pedida para a programação da viagem a Orlando, independente da idade das pessoas do seu grupo. A Disney em especial oferece uma infinidade de opções de refeições com os mais diversos personagens dos filmes e com cardápios para todos os gostos. Hoje vou contar um pouquinho sobre a minha experiência em um restaurante que traz personagens hiper populares em um ambiente bem tematizado, e ainda fica ao ladinho do Magic Kingdom. Se você pensou Chef Mickey&rsquo;s, errou! Hoje vamos falar do Ohana!</p>
+<div id="attachment_4472"><img src="../cont-imgs/restaurantes/005-ohana/DSC001429.jpg" alt="" width="576" height="432">
+  <p>Entrada do Ohana: eu, Alan e Donan, amigos que trabalharam na Disney comigo e que me acompanharam nesse café da manhã.</p>
+</div>
+<h2>A atmosfera do Ohana</h2>
+<div id="attachment_4485"><img src="../cont-imgs/restaurantes/005-ohana/vpd-polynesian-3.jpg" alt="vpd polynesian 3" width="640" height="360">
+  <p>Disney&rsquo;s Polynesian Village Resort, pouco maravilhoso, né? Foto: Divulgação Disney</p>
+</div>
+<p>O Ohana é um restaurante com uma temática meio havaiana, que fica dentro de um restaurante conhecido por trazer um pouquinho Polinésia para a Flórida, o Disney&rsquo;s Polynesian Village Resort, que aqui chamarei intimamente de Polynesian apenas. Nunca é demais destacar: este é sem sombra de dúvidas um dos hotéis mais lindos da Disney, é um dos meus sonhos de consumo dentro do complexo e com certeza vale a visita. Eu mesma só estou esperando eles terminarem a reforma do hotel e eu ganhar a loteria do fim do ano para me hospedar lá. rs</p>
+<div id="attachment_4484"><img src="../cont-imgs/restaurantes/005-ohana/bpd-polynesian-4.jpg" alt="Além de lindo, o Polynesian fica pertinho do Magic Kingdom. Uma ótima parada antes de um dia no parque." width="640" height="360">
+  <p>Além de lindo, o Polynesian fica pertinho do Magic Kingdom. Uma ótima parada antes de um dia no parque.</p>
+</div>
+<p>O lado bom é que você não precisa ser hóspede de lá para conhecer o Polynesian, pois ele traz algumas excelentes opções gastronômicas que podem ser visitadas por qualquer interessado. Esta com certeza é a primeira de algumas matérias que pretendo escrever sobre os restaurantes do Polynesian, e resolvi começar justamente com o Ohana. O Ohana, como eu disse, é um restaurante no estilo havaiano, conhecido por seu excelente jantar (que qualquer dia com certeza vai merecer um post à parte) e pelo café da manhã com personagens, tema de hoje. Os personagens do café do Ohana fazem jus ao tema do restaurante e aparecem caracterizados no estilo havaiano. E olha que não estamos falando de qualquer personagem não, são alguns dos mais queridos pelos turistas: Mickey, Pluto, Stitch e Lilo (a Disney sempre avisa que pode haver alteração sem aviso, mas estes são os tradicionais e eu nunca vi nenhum outro por lá). Boa seleção, né? Uma ótima oportunidade de conseguir ótimas fotos, sem enfrentar as filas que você enfrentaria nos parques. E para não fazer feio, você também ganha um colar havaiano para entrar no clima.</p>
+<div id="attachment_4476"><img src="../cont-imgs/restaurantes/005-ohana/Ohanas-7a.jpg" alt="Ohanas (7a)" width="600" height="450">
+  <p>Só hoje, anos depois, eu reparei que só eu entrei no clima e usei o colar havaiano.</p>
+</div>
+<p> </p>
+<div id="attachment_4488"><img src="../cont-imgs/restaurantes/005-ohana/Ohanas-111-450x800.jpg" alt="Stitch! :)" width="400" height="711">
+  <p>Stitch! :)</p>
+</div>
+<div id="attachment_4480"><img src="../cont-imgs/restaurantes/005-ohana/Ohanas-13-800x450.jpg" alt="Ohanas (13)" width="600" height="338">
+  <p>Lilo e eu, e um pedacinho do Mickey lá no fundo.</p>
+</div>
+<p>Como a Lilo fala no filme Lilo &amp; Stitch <em>&ldquo;Ohana quer dizer família&rdquo; </em>o que é lembrado o tempo todo neste restaurante. Para começar, você pode perceber que todo mundo lá se chama de primo (&ldquo;cousin&rdquo; em inglês), para dar esse clima de família. Além disso, a refeição é servida no chamado &ldquo;family style&rdquo; (estilo família), explicada melhor na seção abaixo do post. O café da manhã deste restaurante é chamado de &ldquo;Best Friends Breakfast featuring Lilo &amp; Stitch&rdquo;, ou seja, Café da Manhã dos Melhores Amigos estrelando Lilo &amp; Stitch, algo para dar um tom mais intimista também. E por fim, de tempos em tempos, os personagens convidam os visitantes (em especial as crianças) para participar da Ohana Family Parade (parada da família), um pequeno desfile com música em torno do restaurante. As crianças adoram mais essa baguncinha que nada mais é do que uma chance adicional de interação com os personagens.</p>
+<p>Outro ponto que gosto de destacar do Ohana é o atendimento, que pelo menos em minha experiência, foi algo fora da curva. É claro que dei sorte, mas lá fui atendida por um dos funcionários da Disney mais simpáticos que tive o prazer de conhecer (e olha que já conheci muitos). Como eu ainda trabalhava na Disney na época dessa visita ao Ohana e estava acompanhada de outros funcionários da Disney, até fizemos questão de dar um cartão de reconhecimento que um funcionário da Disney pode dar para outro quando o mesmo faz algo legal. Ele ganhou este reconhecimento nosso dado ao atendimento extraordinário. Espero que você também possa encontrar um &ldquo;primo&rdquo;/garçom tão legal quanto eu encontrei.</p>
+<div id="attachment_4477"><img src="../cont-imgs/restaurantes/005-ohana/Ohanas-9a.jpg" alt="Garçom hiper simpático, fizemos questão de tirar foto com ele." width="600" height="450">
+  <p>Garçom hiper simpático, fizemos questão de tirar foto com ele.</p>
+</div>
+<h2>A comida do Ohana</h2>
+<p>Como vocês podem ver pelas fotos, este é praticamente um post escrito direto do túnel do tempo, porque todas as fotos são de alguns anos atrás, da época que eu ainda trabalhava na Disney. É engraçado porque fui nesse restaurante com dois amigos do trabalho e foi uma programação marcada super espontaneamente: decidimos um belo dia enquanto conversávamos no ônibus indo para o trabalho, marcamos e pá! Alguns dias depois já estávamos curtindo o nosso café da manhã (com desconto de funcionário da Disney…bons tempos!). Vale dizer que apesar do passar do tempo, o café da manhã do Ohana aqui descrito é exatamente o mesmo dos dias de hoje. Apesar dos cardápios das outras refeições sofrerem pequenas alterações ao logo do tempo, os cafés da manhã da Disney raramente mudam. Por que mudar o que funciona tão bem, não é mesmo?</p>
+<p>As refeições do Ohana são sempre servidas no Family Style, ou seja, são no estilo &ldquo;all you can eat&rdquo; (coma à vontade por um preço fixo) mas você não precisa ficar indo até um buffet para buscar as comidas. Elas são servidas em porções na sua mesa, de acordo com o tamanho da sua família. Se você quiser mais de qualquer item, basta pedir para o garçom que ele te servirá quantas vezes vocês quiser. É um dos estilos de refeição da Disney que eu mais gosto, pois você come à vontade como nos buffets, mas vem tudo fresquinho e quentinho na sua mesa, como nos restaurantes a la carte. A combinação do melhor dos outros estilos. <img src="../cont-imgs/restaurantes/icon_smile.gif" alt=":)"></p>
+<div id="attachment_4474"><img src="../cont-imgs/restaurantes/005-ohana/Ohanas-3a.jpg" alt="Minha foto com o Mickey havaiano. Dá para ver um pouco da comida que foi servida na minha mesa. " width="450" height="600">
+  <p>Minha foto com o Mickey havaiano. Dá para ver um pouco da comida que foi servida na minha mesa.</p>
+</div>
+<p>Quanto ao cardápio em si, é importante dizer que o café da manhã do Ohana é um dos mais básicos dentre os oferecidos pela Disney. As opções são bem limitadas, mas super bem preparadas como sempre. A oferta do café da manhã aqui consiste em algumas frutas, waffles do mickey, alguns poucos tipo de pães (com toques havaianos como coco e abacaxi no sabor), bacon, batatas, uma espécie de linguiça diferente e ovos, além de suco, café e essas coisas básicas de beber. Para um americano que costuma comer ovo e bacon no café da manhã, pode parecer uma refeição super clássica. Para o nosso paladar, pode ficar faltando algo a mais.</p>
+<div id="attachment_4473"><img src="../cont-imgs/restaurantes/005-ohana/DSC004135.jpg" alt="Um pouquinho da travessa de comidas quentes que serviram para a nossa mesa: waffles, bacon, ovos, batatas e uma espécie de linguiça. " width="576" height="432">
+  <p>Um pouquinho da travessa de comidas quentes que serviram para a nossa mesa: waffles, bacon, ovos, batatas e uma espécie de linguiça.</p>
+</div>
+<p>Apesar disso, o Ohana pode ser uma ótima opção, tudo depende de entender o seu objetivo com a refeição. Se o objetivo maior for encontrar personagens legais e comer alguma coisa antes de seguir para o Magic Kingdom (que fica ali do lado), você pode se sair super bem no Ohana e salvar um bom tempo que gastaria em filas para conseguir autográfos e fotos com estes personagens. Adicionalmente, se houver crianças no grupo, ainda vão se divertir com o colar havaiano e com o desfile com personagens que acontece no entorno do restaurante, Além disso, claro, ainda vão comer uma boa refeição com waffles, algumas frutas e tudo o mais, por um preço levemente menor do que a média dos cafés similares oferecidos pela Disney.</p>
+<p>Se a alimentação for o ponto prioritário na sua escolha do café da manhã e você fizer questão de tirar o máximo de proveito (em alimentos) do dinheiro que gastou por esta refeição, talvez outros restaurantes (com ou sem personagens) possam ser alternativas mais acertadas- e nesse caso, não deixe de ver nossas <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/category/comida/recomendacao-de-restaurantes/');">recomendações de restaurantes</a>para outras opções. É tudo questão de gosto. Para o meu gosto, o café do Ohana foi super legal que pretendo voltar, mas muito mais pelo ambiente e ótimo atendimento do que pela comida em si. Além disso, acho que é uma ótima maneira de começar o dia antes de seguir para o Magic Kingdom, marcando o café da manhã bem cedinho para não perder a abertura do parque, claro! <img src="../cont-imgs/restaurantes/icon_wink.gif" alt=";)"></p>
+<div id="attachment_4481"><img src="../cont-imgs/restaurantes/005-ohana/Ohanas-1.jpg" alt="Eu não podia deixar de colocar essa foto que tirei no Ohana é uma das minhas preferidas dos tempos que trabalhei na Disney. O Mickey aceitou nossa brincadeira e pousou fazendo sinal de dinheiro enquanto a gente (que trabalhava pra ele) mostrava os bolsos vazios! rs :P" width="450" height="600">
+  <p>Eu não podia deixar de colocar essa foto que tirei no Ohana é uma das minhas preferidas dos tempos que trabalhei na Disney. O Mickey aceitou nossa brincadeira e pousou fazendo sinal de dinheiro enquanto a gente (que trabalhava pra ele) mostrava os bolsos vazios! rs :P</p>
+</div>
+<p>Gostou? Então faça a sua reserva para garantir que conseguirá uma mesa. Veja o passo a passo de como reservar um restaurante da Disney <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">clicando aqui</a>.</p>
+<p><strong>Nome</strong>: Ohana Best Friends Breakfast<br>
+  <strong>Endereço</strong>: 1600 Seven Seas Dr Orlando, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Ohana/@28.405434,-81.585223,17z/data=!3m1!4b1!4m2!3m1!1s0x88dd7e19169ceacb:0x2ae595c39f04165c');">Veja no Google Maps</a>)<br>
+  <strong>Telefone</strong>: +1 407-939-3463<br>
+  <strong>Referência</strong>: Dentro do Disney&rsquo;s Polynesian Village Resort (próximo ao <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/roteiro-magic-kingdom/');">Magic Kingdom</a>)<br>
+  <strong>Preço</strong>: café da manhã entre US$22-US$27 por adulto e US$13-US$15 por criança<br>
+  <strong>Horário de Funcionamento</strong>: o café da manhã costuma ser das 7h30-11:00am.<br>
+  <strong>Cardápio</strong>: <a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/polynesian-resort/ohana/menus/breakfast/');">clique aqui</a> para visualizar os cardápios de todas as refeições (em inglês).<br>
+  <strong>Disney Dining Plan</strong>: Sim, vale um crédito de Table Service.<br>
+  <strong>Avaliação do VPD</strong>: <img src="../cont-imgs/restaurantes/estrelas-avaliacao_2.png" alt="Nota 2 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

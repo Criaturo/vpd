@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../lojas.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/005-macys.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Macy’s: onde você compra de tudo</h2>
+
+ 
+<div id="social4ivtop"></div>
+<p>Hoje vou falar sobre uma das minhas lojas preferidas dos Estados Unidos: a Macy&rsquo;s. Talvez seja pelo fato de eu ter sido criada por uma fãzona da Macy&rsquo;s, mas a meu ver, é impossível uma mulher entrar nessa loja e não gostar de nada. Acho que está na genética feminina, deve ser… se bem que mesmos os homens sempre encontram algo legal por lá. Na verdade, a proposta da Macy&rsquo;s é essa mesmo: ser uma loja onde todo mundo encontra o que procura.</p>
+<p><span id="more-1271"> </span></p>
+<div id="attachment_1274"><img alt="Entrada da Macy's no Mall at Millenia, do lado de fora do shopping. Você também encontra Macy's no Florida Mall" src="../cont-imgs/lojas/005-macys/macys-orlando-compras-baratas-viagem-millenia-800x489.jpg" width="640" height="391">
+  <p>Entrada da Macy&rsquo;s no Mall at Millenia, do lado de fora do shopping. Você também encontra Macy&rsquo;s no Florida Mall</p>
+</div>
+<p>Uma das maiores (se não a maior) loja multimarcas dos Estados Unidos, a Macy&rsquo;s está presente em praticamente qualquer cidade do país. E em toda viagem a Orlando, quando até os outlets estão meio sem graça, uma certeza conforta o meu coração consumista: na Macy&rsquo;s, quem procura sempre acha sempre coisas legais para comprar.</p>
+<p>Essa loja reúne as principais marcas de roupas, sapatos, maquiagens, vestidos de festa, pijama…tudo isso separado por no máximo algumas escadas rolantes. E não pára por aí. A Macy&rsquo;s conta também com muitos produtos de cama, mesa e banho, de cozinha. Tem também enfeites para a casa entre outras muitas coisas. Eu mesma comprei uns bons 60% do meu enxoval numa Macy&rsquo;s e garanto a qualidade de tudo que eu adquiri. E olha que comprei de edredom a potinhos para cozinha!</p>
+
+<p>E aqui vai uma notícia boa para vocês: na Macy&rsquo;s, nós brasileiros SEMPRE temos desconto. Se não tiver uma promoção maior acontecendo (fique atento ao site deles pois sempre disponibilizam cupons sazonais) pelo menos os 10% de desconto de cidadão internacional nos é garantido. Não tem como não amar uma loja que realmente oferece um benefício legal aos turistas, né? Para conseguir o seu desconto, não esqueça de levar o seu passaporte quando for a loja, e faça o seu cartão de visitante internacional.</p>
+<div id="attachment_1277"><img alt="Cartão de desconto de 10% para brasileiros na Macy's. Vale bastante a pena!" src="../cont-imgs/lojas/005-macys/macys-orlando-compras-baratas-viagem-desconto-brasileiros-800x600.jpg" width="640" height="480">
+  <p>Cartão de desconto de 10% para brasileiros na Macy&rsquo;s. Vale bastante a pena!</p>
+</div>
+<p>Como eu disse, a Macy&rsquo;s está presente na maioria das cidades dos Estados Unidos e em Orlando, existe uma loja em cada um dos dois shoppings: o Florida Mall e o Mall at Millenia. A minha dica é sempre fazer uma pesquisinha nas duas lojas antes de fazer suas aquisições. Além de as vezes você encontrar produtos diferentes entre as lojas, as vezes você encontra produtos com preços diferenciados também. Por exemplo, em maio, eu queria comprar facas novas para minha casa. Queria facas boas MESMO. Olhei na loja do Florida Mall e encontrei um conjunto de facas de qualidade nota 8 por um determinado preço. Como eu sempre gosto de dar uma olhada nas duas lojas antes de decidir, fui a Macy&rsquo;s do Mall at Millenia e lá encontrei um conjunto de qualidade nota 10 por um preço menor do que a do conjunto nota 8! Sai feliz da vida da loja com minhas facas! <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"></p>
+<p>Se você quiser realmente se dedicar a sua pesquisa e a suas compras na Macy&rsquo;s, outra dica válida é ir até um shopping nas cidades próximas. Não só a Macy&rsquo;s mas todas as lojas populares são bem mais vazias em cidades adjacentes a Orlando e por isso você pode encontrar uma variedade maior de produtos. Eu vou ser bem honesta: eu tenho preguiça de viajar para as compras e em geral, compro tudo em Orlando mesmo. Mas se você for menos preguiçoso, leve em consideração essa alternativa.</p>
+<p>Bom é isso! Espero que gostem da dica e saiam da Macy&rsquo;s, como eu sempre saio: com um sorriso no rosto e trocentas sacolas no braço.</p>
+<p>&nbsp;</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

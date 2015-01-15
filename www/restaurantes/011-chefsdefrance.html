@@ -1,0 +1,165 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Chefs de France: restaurante francês no Epcot</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+  navigator.app.loadUrl(url, { openExternal:true });
+  return false;
+} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../restaurantes.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/011-chefsdefrance.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Chefs de France: restaurante francês no Epcot</h2>
+
+
+
+
+<p>O Epcot é sem sombra de dúvidas o parque com mais opções gastronômicas para os seus visitantes. Tem restaurante de todo tipo lá dentro, em especial no World Showcase, que traz representações da alimentação de diferentes culturas do mundo. Dentre todas as opções, uma das mais populares é o Chefs de France, restaurante do pavilhão da França e assunto do post de hoje.</p>
+<div id="attachment_3534"><img src="../cont-imgs/restaurantes/011-chefesdefrance/13581395974_c328ab9a0d_z.jpg" alt="Entrada do Chefs de France: você dá o seu nome e espera por ali para ser chamado pelo garçom." width="600" height="400">
+  <p>Entrada do Chefs de France: você dá o seu nome e espera por ali para ser chamado pelo garçom.</p>
+</div>
+<p>A popularidade do Chefs de France não veio a toa: este restaurante conseguiu unir em seu cardápio opções bem variadas, agradando tanto os paladares mais simples como os mais sofisticados. De escargot à massinha simples com queijo, ou de uma costela a um sanduíche de presunto e queijo, de tudo se encontra por lá. Quando a gente viaja em grupos grandes, ou principalmente com crianças pequenas, é difícil achar um restaurante em que se possa comer algo diferente e ainda assim agradar todo mundo. Se você se identifica com essa situação, o Chefs de France pode ser uma boa pedida para você. Outra boa (até melhor na minha opinião) pedida seria o <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/tutto-italia-restaurante-epcot/');">Tutto Itália</a>, mas já falamos dele em outra ocasião, então vamos voltar para o terreno francês que é o assunto do dia.</p>
+<p>Apesar da alta aceitação e popularidade, o Chefs de France não é desses restaurantes que esgotam as reservas com 6 meses de antecedência. O local é relativamente grande e apesar das reservas continuarem sendo muito recomendadas (e na maioria das vezes essenciais para poder visitar este restaurante), mesmo que sua viagem esteja próxima, suas chances de conseguirem uma vaga para comer lá ainda são bem altas. Uma boa alternativa para quem está planejando sem muita antecedência.</p>
+<div id="attachment_3532"><img src="../cont-imgs/restaurantes/011-chefesdefrance/13581383134_97cb0eba6e_z.jpg" alt="O Chefs de France é um restaurante grande e por isso, costuma ter vagas para reservas até pouco tempo antes de sua visita. Sempre uma boa opção para quem está planejando sem muita antecedência." width="640" height="427">
+  <p>O Chefs de France é um restaurante grande e por isso, costuma ter vagas para reservas até pouco tempo antes de sua visita. Sempre uma boa opção para quem está planejando sem muita antecedência.</p>
+</div>
+<p>Apesar de eu já ter ido no Chefs de France algumas vezes, o Felipe ainda não conhecia a casa e por isso fizemos uma nova visita a este restaurante em uma de nossas últimas viagens a Orlando. Conseguimos uma reserva com apenas alguns dias de antecedência. Chegamos no restaurante, demos o nosso nome e ficamos esperando o garçom nos chamar pelo sobrenome. Para mim é sempre um esforço muito grande entender o que eles falam nessa hora, o sotaque francês as vezes é tão forte que você não entende mesmo que eles estejam pronunciando o SEU nome. Pessoalmente, eu acho que eles dão uma forçada no sotaque nessa hora, só para você entrar no clima francês. Enfim, depois umas duas tentativas, a gente notou um garçom tentando chamar pela família Almeida e fomos até ele, que prontamente nos deu boas vindas e nos levou até a nossa mesa. Se você tiver sorte, conseguirá uma mesa na varanda, com vista para o exterior do restaurante. Eu não sei você, mas eu adoro ficar observando o movimento das ruas dos parques enquanto espero ser atendida, então sempre fico feliz quando pego uma mesa na varanda. <img src="../cont-imgs/restaurantes/icon_smile.gif" alt=":)"></p>
+
+<p>Como eu já disse acima, o legal do Chefs de France é que o menu é bem variado. Um dos pontos altos do cardápio deles é que tanto no almoço como no jantar, existe uma espécie de combo, com preço fixo, chamado Prix Fixe Menu (&ldquo;menu preço fixo&rdquo; em francês). Neste Prix Fixe Menu você paga um valor determinado (US$25,99 no almoço e US$39,99 no jantar – preços de março/2014 sem gorjeta ou bebidas) e poderá escolher uma entrada, prato principal e sobremesa, dentre as opções (mais limitadas) oferecidas neste pacote. Não dá para trocar um prato desse menu por pratos de fora dele e manter o preço, mas as opções mais populares já são contempladas no Prix Fixe Menu, então grandes são as chances de você achar algo que goste por ali. Eu já comi esse menu fechado algumas vezes e é uma ótima alternativa mesmo. Dessa vez, como eu queria começar com uma tábua de queijos (fora do prix fixe menu) e nós dois já fomos almoçar com planos de comer sobremesa em outro lugar (na sorveteria L&rsquo;Artisian des Glaces que já citei <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/top-10-melhores-doces-disney/');">aqui</a>), descartamos o menu fixo, mas ressalto que ele é uma ótima pedida para não perder o controle da conta e fazer uma refeição super completa.</p>
+<div id="attachment_3531"><img src="../cont-imgs/restaurantes/011-chefesdefrance/13581051373_98a897c00e_z.jpg" alt="O Fixe Prix Menu é uma ótima alternativa para uma refeição completa sem perder o controle da conta. E os pratos mais populares estão contemplados nesse menu fixo. " width="640" height="427">
+  <p>O Fixe Prix Menu é uma ótima alternativa para uma refeição completa sem perder o controle da conta. E os pratos mais populares estão contemplados nesse menu fixo.</p>
+</div>
+<p>Enquanto eu experimentava a tábua de queijos, o Felipe tomou uma tradicional sopa de cebola gratinada, que para mim é uma das melhores entradas oferecias no Chefs de France. Depois, o Fe pediu um Croque Monsieur, que para quem não sabe, nada mais é do que um sanduíche de presunto e queijo (nesse caso gruyère) com um pouco de molho branco gratinado, e eu pedi uma massa gratinada também com molho branco e queijo gruyère – o prato mais italiano do menu, como o garçom meio contrariado fez questão de pontuar. Fazer o que, não nego minhas raízes ué. Independente do gosto do garçom, o importante é que os nossos pratos chegaram direitinho e como sempre, estavam muito gostosos.</p>
+<div id="gallery-3522-2-slideshow" data-width="760" data-height="410" data-trans="fade" data-gallery="[{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/08\/13581016683_02f84af004_z.jpg','id':'3536','title':'13581016683_02f84af004_z','alt':'','caption':'Croque Monsieur'},{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/08\/13581336594_0a7b9d512d_z.jpg','id':'3526','title':'13581336594_0a7b9d512d_z','alt':'','caption':'Massa gratinada com molho branco e queijo gruy\u00e8re'}]">
+  <div><img src="../cont-imgs/restaurantes/011-chefesdefrance/13581336594_0a7b9d512d_z.jpg?w=527" title="13581336594_0a7b9d512d_z" alt="" align="middle"> 
+    <div>Massa gratinada com molho branco e queijo gruyère</div>
+  </div>
+  <div></div>
+</div>
+<p>Como eu já adiantei, a gente já entrou no restaurante sem intenção nenhuma de comer a sobremesa por lá, mas já tive oportunidade de experimentar os doces do Chefs de France em outras oportunidades e quase todos são bem gostosos. O único que eu realmente não curti muito foi o créme brûlée, que é uma das minhas sobremesas favoritas, mas que nesse restaurante me pareceu artificial e gelationoso demais. A Disney tem melhores ofertas de créme brûlée em outros locais, então se quiser minha opinião, recomendo que escolha outra coisa nesse restaurante. No final gastamos 60 dólares (fora a gorjeta), o que é um valor mediano para duas pessoas que pediram duas entradas, dois pratos e nenhuma sobremesa. Nem hiper caro, nem hiper barato para um Table Service da Disney.</p>
+<div id="attachment_3525"><img src="../cont-imgs/restaurantes/011-chefesdefrance/13581007233_ac604a3762_z.jpg" alt="É um restaurante de preço mediano. Pedimos duas entradas, dois pratos e nenhuma sobremesa e ficou 60 dólares sem gorjeta." width="640" height="427">
+  <p>É um restaurante de preço mediano. Pedimos duas entradas, dois pratos e nenhuma sobremesa e ficou 60 dólares sem gorjeta.</p>
+</div>
+<p>Para mim uma ida ao Epcot é sempre mais completa com uma experiência gastronômica legal. Sendo bem crítica aqui, o Chefs de France não é o meu restaurante preferido quando comparado com as outras alternativas similares na proposta ou na faixa de preço (por uma preferência 100% pessoal minha). Apesar disso, a casa é uma constante em qualidade e variedade. Ali você entra com a certeza de que vai encontrar uma comidinha bem feita com opções para agradar a família toda. Por esse motivo, o Chef&rsquo;s de France já foi a minha escolha certeira em diversas viagens a Orlando e pode ser uma boa opção para a sua próxima viagem também. E se gostou desse restaurante, veja como fazer a sua reserva <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">clicando aqui</a>.</p>
+<p><strong>Nome</strong>: Chefs de France<br>
+  <strong>Endereço</strong>: 1830 Avenue of the Stars, Lake Buena Vista, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Les+Chefs+de+France/@28.36917,-81.552431,17z/data=!4m2!3m1!1s0x88dd7fa93faed21f:0xf84ba660e1660032');">Veja no Google Maps</a>)<br>
+  <strong>Telefone</strong>: +1 407-827-8709<br>
+  <strong>Referência</strong>: Dentro do Epcot<br>
+  <strong>Preço</strong>: US$30 a US$45 dólares por pessoa em média, podendo variar muito dependendo do pedido. Veja o cardápio com os preços para mais detalhes.<br>
+  <strong>Horário de Funcionamento</strong>: varia de acordo com o horário do parque. <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/horarios-dos-parques-da-disney/');">Veja aqui</a> como verificar o horário para o dia da sua visita.<br>
+  <strong>Cardápio</strong>:<a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/epcot/chefs-de-france/menus/');">clique aqui</a> para visualizar os cardápios do almoço e jantar (em inglês)<br>
+  <strong>Disney Dining Plan</strong>: Sim, vale um crédito de Table Service.<br>
+  <strong>Avaliação do VPD</strong>: <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>

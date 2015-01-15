@@ -1,0 +1,192 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+	<meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+  <script src="js/jquery/jquery-1.11.1.min.js"></script>
+ 
+ 
+  <script>
+	var _gaq = _gaq || [];
+	   _gaq.push(['_setAccount', 'UA-33289558-2']);
+	   _gaq.push(['_setDomainName', 'none']);
+	   _gaq.push(['_trackPageview', 'NAME_OF_PAGE']);
+    </script>
+ 
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	
+	
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="index.html" data-transition="flip"><img src="images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Roteiros dos parques</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar2').click(function(){
+					var lS = prompt("De um nome ao resultado para salvar.","");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults2").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults2").rows.length; t > 1; t--){
+				document.getElementById("tableResults2").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults2").rows[document.getElementById("tableResults2").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults2").insertRow(document.getElementById("tableResults2").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults2" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>   
+	
+	
+  <div data-role="main" class="ui-content content_roteiros-parques" id="vpdlistposts">
+    <ul data-role="listview" data-inset="true">    
+      <li>
+	<img src="images/roteiros/001img_magicKingdom.jpg" style="float:left;" />
+	<a href="roteiros-parques/001-magickingdom.html"  data-transition="slide" ><h3 style="margin-top:22px;">Magic Kingdom</h3></a>
+      </li>
+      
+      <li>
+	<img src="images/roteiros/001img_magicKingdom.jpg" style="float:left;" />
+	<a href="roteiros-parques/001-2-magickingdom-criancas.html"  data-transition="slide" ><h3 style="margin-top:8px;">Magic Kingdom - Famílias com Crianças</h3></a>
+      </li>
+      
+      
+        <li>
+	<img src="images/roteiros/002img_epcot.jpg" style="float:left;" />
+	<a href="roteiros-parques/002-epcot.html"  data-transition="slide"><h3 style="margin-top:22px;">Epcot</h3></a>
+      </li>
+	
+	<li>
+	<img src="images/roteiros/003img_hollywoodstudios.jpg" style="float:left;" />
+	<a href="roteiros-parques/003-hollywood.html"  data-transition="slide"><h3 style="margin-top:8px;">Disney’s Hollywood Studios</h3></a>
+	</li>
+	  
+	 <li>
+	<img src="images/roteiros/003img_hollywoodstudios.jpg" style="float:left;" />
+	<a href="roteiros-parques/003-hollywood.html"  data-transition="slide"><h3 style="margin-top:8px;">Disney’s Hollywood Studios -  Famílias com Crianças</h3></a>
+	</li>
+	  
+	  
+	<li>
+	<img src="images/roteiros/004img_animalkingdom.jpg" style="float:left;" />
+	<a href="roteiros-parques/004-animalkingdom.html"  data-transition="slide"><h3 style="margin-top:8px;">Disney’s Animal Kingdom</h3></a>
+	</li>
+      
+	<li>
+	<img src="images/roteiros/005img_blizzardbeach.jpg" style="float:left;" />
+	<a href="roteiros-parques/005-blizzardbeach.html"  data-transition="slide"><h3 style="margin-top:22px;">Blizzard Beach</h3></a>
+	</li>
+	
+	
+	<li>
+	<img src="images/roteiros/006img_typhoonlagoon.jpg" style="float:left;" />
+	<a href="roteiros-parques/006-typhoon.html"  data-transition="slide"><h3 style="margin-top:22px;">Typhoon Lagoon</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/roteiros/007img_universal.jpg" style="float:left;" />
+	<a href="roteiros-parques/007-universal.html"  data-transition="slide"><h3 style="margin-top:22px;">Universal Studios</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/roteiros/009img_islandadventure.jpg" style="float:left;" />
+	<a href="roteiros-parques/008-islandadventure.html"  data-transition="slide"><h3 style="margin-top:22px;">Islands of Adventure</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/roteiros/010img_seaworld.jpg" style="float:left;" />
+	<a href="roteiros-parques/009-seaworld.html"  data-transition="slide"><h3 style="margin-top:22px;">Sea World</h3></a>
+	</li>
+	
+	
+	
+	<li>
+	<img src="images/roteiros/011img_bushgardens.jpg" style="float:left;" />
+	<a href="roteiros-parques/010-bushgardens.html"  data-transition="slide"><h3 style="margin-top:22px;">Busch Gardens</h3></a>
+	</li>
+	
+	
+	
+	<li>
+	<img src="images/roteiros/008img_aquatica.jpg" style="float:left;" />
+	<a href="roteiros-parques/011-aquatica.html"  data-transition="slide"><h3 style="margin-top:22px;">Aquatica Orlando</h3></a>
+	</li>
+	
+	
+	
+	<li>
+	<img src="images/roteiros/012img_cove.jpg" style="float:left;" />
+	<a href="roteiros-parques/012-cove.html"  data-transition="slide"><h3 style="margin-top:22px;">Discovery Cove</h3></a>
+	</li>
+	
+	<li>
+	<img src="images/roteiros/013img_legoland.jpg" style="float:left;" />
+	<a href="roteiros-parques/013-legoland.html"  data-transition="slide"><h3 style="margin-top:22px;">Legoland Florida</h3></a>
+	</li>
+	
+	
+	
+    </ul>
+  </div>
+
+
+</div><!-- /page -->
+
+
+ 	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	
+
+	<script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>

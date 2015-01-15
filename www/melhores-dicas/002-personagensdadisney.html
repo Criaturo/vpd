@@ -1,0 +1,822 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   navigator.app.loadUrl(url, { openExternal:true });
+		   return false;
+		} 
+	</script>
+  
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<div  class="btn-ico-logo"><a href="../melhores-dicas.html" data-transition="flip"><img src="../images/ico-logo-vai-pra-disney.png" /></a></div> 
+		<div class="titulocenter"><h2>Melhores dicas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					var lS = prompt("Dê um Nome ao seu favorito :).","Favorito");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/dicas/thumbs/002-personagens.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-melhoresdicas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Personagens da Disney: onde encontrar</h2>
+
+
+
+
+
+  <p>Um grande componente da magia que existe nos parques da Disney é sem dúvida encontrar os personagens dos desenhos e filmes e ter a chance de interagir com eles, tirar fotos, pedir um autógrafo, comer junto e em alguns casos, até mesmo dançar com eles. Pode parecer coisa de criança, mas não conheço um adulto que nunca tenha acenado ou abraçado algum personagem quando cruza com ele no parque, então não vou entrar aqui no mérito de &ldquo;eu não acredito nisso&rdquo;. Personagem é personagem e se você está na Disney, vai entrar no clima.</p>
+  <p>Lembro da minha primeira vez na Disney, quando eu tinha 7 anos e o primeiro personagem que encontrei foi o Balu, o urso do filme Mogli. Foi tão marcante, que até hoje quando eu vejo o Balu por ai lembro desse dia. Mesmo que hoje ele tenha recebido um downgrade do Magic Kingdom e quase sempre apareça meio escondido nos fundos do Animal Kingdom.</p>
+  <div id="attachment_2575"><img src="../cont-imgs/dicas/002-personagensdadisney/13578384283_e322fc5563_c-e1400007846680.jpg" alt="Com o Tico ou o Teco, fazendo pose no paruqe" width="600" height="400">
+    <p>Eu ainda faço pose com os personagens</p>
+  </div>
+  <p>Hoje em dia, os personagens não ficam mais andando livremente pelo parque como era antigamente, naquela época que visitei a Disney pela primeira vez e como muita gente imagina que vai encontrar. Isso porque com a &lsquo;muvuca&rsquo; que se forma ao redor deles, a segurança dos personagens e também dos visitantes não pode ser deixada de lado. Com isso, existem quatro maneiras de encontrar os personagens atualmente:</p>
+  <ul>
+    <li>Em lugares fechados e fixos que são dedicados para o encontro dos personagens, chamados de Meet &amp; Greet. Em geral esses servem para os personagens mais costumeiros como o Mickey e a sua turma e as princesas.</li>
+    <li>Em pontos abertos e randômicos espalhados por todos os parques. Nesses locais, o personagem fica &ldquo;quase&rdquo; livre, mas sempre há uma fila e um ou dois funcionários da Disney que cuidam da segurança do personagem e dos visitantes, da organização da fila e até mesmo auxilia para tirar uma foto ali e outra aqui.</li>
+    <li>Andando livremente pelos restaurantes, para os famosos cafés da manhã, almoços e jantares dentro dos parques ou nos hotéis do complexo Disney. <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">Veja aqui</a> como fazer a sua reserva para uma refeição com personagens.</li>
+    <li>Dançando e interagindo com todos nas &ldquo;dance party&rdquo; que agora acontecem nos parques. Essa é a mais nova modalidade introduzida pela Disney e está se tornando cada vez mais comum pois chega bem próximo ao que os visitantes esperam ao encontrar os personagens livres, poder abraçados e dançar com eles. Nessas &lsquo;baladinhas&rsquo; os personagens ficam &ldquo;soltos&rdquo; para brincar com todos e é muito divertido, só que há sempre um ou dois funcionários na escolta.</li>
+  </ul>
+  <p>Além disso, não posso esquecer de dizer que o lugar onde você mais facilmente encontrará os personagens são nas paradas e shows que existem em todos os parques. Só não irei inclui-los nessa lista, pois nos desfiles você não terá a chance de tirar uma foto junto com o personagem.</p>
+  <div id="attachment_2571"><img src="../cont-imgs/dicas/002-personagensdadisney/13574483613_54b9d5e786_c-e1400007925431.jpg" alt="Entrada do Akershus, o restaurante no Epcot onde você encontra uma grande concentração de princesas por metro quadrado :)" width="600" height="400">
+    <p>Entrada do Akershus, o restaurante no Epcot onde você encontra uma grande concentração de princesas por metro quadrado :)</p>
+  </div>
+  <p>Vale dizer que a Disney nunca garante que um personagem X vá aparecer no lugar Y todos os dias do ano, porém, pela nossa experiência trabalhando nos parques, conhecendo o sistema de entretenimento da Disney e com base em levantamentos feitos por diversos fan sites na internet, elaboramos as chances que você tem de encontrar casa personagem da lista abaixo. <em>Como a Disney não garante, nós também não garantimos então não fique decepcionado se por ventura, não encontrar o seu personagem favorito no lugar de costume.</em></p>
+  <p>Uma dica é sempre perguntar para alguns funcionários da Disney onde você pode encontrar aquele personagem que está procurando. Os funcionários que trabalham na entrada dos parques, os que trabalham na limpeza e os que ficam próximo aos personagens são sempre os mais informados, e te conto o porque isso funciona: existe um telefone interno da Disney para que seus funcionários liguem e se informem sobre a posição de um personagem específico. Algumas vezes, quando uma criança perguntava pra mim, que trabalhava nas catracas do Magic Kingdom, onde ela poderia encontrar a Cinderella naquele dia, eu &ldquo;ligava para o castelo&rdquo; e perguntava onde ela poderia estar.</p>
+  <p>Abaixo você encontra a (longa) lista de personagens, os prováveis locais onde você poderá encontra-los e com qual frequência eles aparecem. Como disse anteriormente, existe sim a probabilidade do personagem não aparecer no local apontado ou ainda, aparecer em um local diferente, então não vale vir atrás de mim depois cobrando uma explicação tá? kkkk <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"><br>
+    Criei uma classificação de probabilidade de encontrar cada personagem que funciona da seguinte maneira:</p>
+  <ul>
+    <li><strong>Personagem muito raro</strong>: chances de encontrar o personagem variam de 0 a 20% – faça promessas ou vá nas datas que tem mais chances, como são as festas de Natal e Halloween.</li>
+    <li><strong>Personagem raro</strong>: chances de encontrar o personagem variam de 20 a 50% – não perca as esperanças, mas não fique chateado se ele não estiver por lá.</li>
+    <li><strong>Personagem frequente</strong>: chances de encontrar o personagem variam de 50 a 80% – boas chances desse personagem estar quase no local apontado ou aparecer em outros locais do complexo Disney.</li>
+    <li><strong>Personagem muito frequente</strong>: chances de encontrar o personagem variam de 80 a 99% – seria muito difícil considerar que esse personagem não estaria em um dos locais apontados, mas como a Disney nunca promete, não vou colocar 100% aqui <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"></li>
+  </ul>
+  <p>Ah, um último detalhe antes de irmos para a lista: abreviei os nomes dos parques para que você consiga identificar de bate e pronto onde encontrar cada personagem, então para quem não conhece MK é o Magic Kingdom, EC o Epcot, HS é o Hollywood Studios e o AK o Animal Kingdom. Essa lista vai ser atualizada, sempre que formos informados de alguma mudança nos personagens e locais. <strong>Última atualização dessa lista foi em Junho/2014</strong>.</p>
+  <h2><strong>PERSONAGENS WALT DISNEY WORLD – ORLANDO</strong></h2>
+  <center>
+    Se quiser buscar pelo nome do personagem ou filme, pressione CRT + F ou selecione a opção para &ldquo;pesquisar nesta página&rdquo; do seu navegador
+  </center>
+  7 ANÕES<br>
+  <em>Famoso quem?</em> Vale dizer que são os melhores amigos da Branca de Neve<br>
+  <em>Onde aparece?</em><br>
+  – MK / Fantasyland ou Frontierland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+  – MK / Fantasyland, durante a Mickey&rsquo;s Very Merry Christmas Party<br>
+  <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong>
+  <div id="attachment_2512"><img src="../cont-imgs/dicas/002-personagensdadisney/0423ZW_1581MS1-e1400007959181.jpg" alt="Pegar autógrafo dos 7 deve ser demorado. Foto de divulgação da Disney" width="600" height="399">
+    <p>Pegar autógrafo dos 7 deve ser demorado. Foto de divulgação da Disney</p>
+  </div>
+  <p>ABU<br>
+    <em>Famoso quem?</em> O macaquinho do Aladdin<br>
+    <em>Onde aparece?</em><br>
+    – MK / Adventureland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – MK / Adventureland, durante a Mickey&rsquo;s Very Merry Christmas Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>ALADDIN<br>
+    <em>Famoso quem?</em> Um certo plebeu que conquista uma certa princesa com nome de flor em algum lugar do oriente médio. Aparece no filme de mesmo nome.<br>
+    <em>Onde aparece?</em><br>
+    – MK / Adventureland Varhand<br>
+    – MK / Adventureland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – MK / Adventureland, durante a Mickey&rsquo;s Very Merry Christmas Party<br>
+    – EC / Marrocos<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>ALICE<br>
+    <em>Famosa quem?</em> Aquela do país das maravilhas<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, próximo ao Mad Tea Party, atração das xícaras<br>
+    – MK / Fantasyland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – EC / Inglaterra<br>
+    – Grand Floridian Resort / Café da manhã no 1900 Park Fare<br>
+    – Grand Floridian Resort / Wonderland Tea Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>ANAKIN SKYWALER<br>
+    <em>Famoso quem?</em> Um dos heróis do filme Star Wars também conhecido como Guerra nas Estrelas<br>
+    <em>Onde aparece?</em><br>
+    – HS / Star Wars Weekends<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>ANASTASIA<br>
+    <em>Famosa quem?</em> Uma das irmãs chatas da Cinderella.<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, quase sempre atrás do Castello da Cinderella<br>
+    – MK / Em frente ao castelo da Cinderella, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – Grand Floridian Resort / Jantar no 1900 Park Fare<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>ANNA<br>
+    <em>Famosa quem?</em> Famosa princesa do filme Frozen<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, no Princess Fairytale Hall<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <div id="attachment_2580"><img src="../cont-imgs/dicas/002-personagensdadisney/Anna_Frozen_meet-and-greets_at_Disneyland_November_2013-e1400008068812.jpg" alt="Anna, uma das princesas do filme Frozen. Dica: pegue Fastpass+ se quiser muito conhece-la" width="399" height="600">
+    <p>Anna, uma das princesas do filme Frozen. Dica: pegue Fastpass+ se quiser muito conhece-la</p>
+  </div>
+  <p>ARIEL<br>
+    <em>Famosa quem?</em> Princesa conhecida como A Pequena Sereia<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, no Ariel&rsquo;s Grotto<br>
+    – MK / Fantasyland, café da manhã, almoço ou jantar no Cinderella&rsquo;s Royal Table<br>
+    – MK / Fantasyland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – MK / Fantasyland, durante a Mickey&rsquo;s Very Merry Christmas Party<br>
+    – EC / Noruega, café da manhã, almoço ou jantar no Akershus Royal Banquet Hall<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>AURORA<br>
+    <em>Famosa quem?</em> Também conhecida como a Bela Adormecida<br>
+    – MK / Fantasyland, no Princess Fairytale Hall<br>
+    – MK / Fantasyland, café da manhã, almoço ou jantar no Cinderella&rsquo;s Royal Table<br>
+    – MK / Town Square Theater ou no Princess Fairytale Hall, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – MK / Town Square Theater ou no Princess Fairytale Hall, durante a Mickey&rsquo;s Very Merry Christmas Party<br>
+    – EC / França<br>
+    – EC / Noruega, café da manhã, almoço ou jantar no Akershus Royal Banquet Hall<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>BALA NO ALVO<br>
+    <em>Famoso quem?</em> Cavalo de brinquedo do filme Toy Story<br>
+    <em>Onde aparece?</em><br>
+    – MK / na festinha de dança do Woody, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – MK / durante a Mickey&rsquo;s Very Merry Christmas Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>BALU<br>
+    <em>Famoso quem?</em> O urso grande do filme Mogli<br>
+    <em>Onde aparece?</em><br>
+    – AK / na África ou na Ásia próximo ao Flights of Wonder<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>BELA<br>
+    <em>Famosa quem?</em> Princesa que dá nome ao filme A Bela e a Fera<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, café da manhã, almoço ou jantar no Cinderella&rsquo;s Royal Table<br>
+    – EC / França<br>
+    – EC / Noruega, café da manhã, almoço ou jantar no Akershus Royal Banquet Hall<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <div id="attachment_2572"><img src="../cont-imgs/dicas/002-personagensdadisney/13577982523_010255ffdc_c.jpg" alt="Bela dentro da sua própria atração que fica na Fantasyland, no Magic Kingdom" width="600" height="401">
+    <p>Bela dentro da sua própria atração que fica na Fantasyland, no Magic Kingdom</p>
+  </div>
+  <p>BISONHO<br>
+    <em>Famoso quem?</em> O burrinho da turma do urso Puff/Pooh<br>
+    <em>Onde aparece?</em><br>
+    – EC / Estados Unidos<br>
+    – MK / Café da manhã, almoço e jantar no Crystal Palace<br>
+    – MK / Fantasyland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>BRANCA DE NEVE<br>
+    <em>Famosa quem?</em> Princesa cantora, amiga dos animais e que aceita comida de estranhos do filme de mesmo nome<br>
+    <em>Onde aparece?</em><br>
+    – MK / Main Street USA<br>
+    – MK / Fantasyland, no Princess Fairytale Hall<br>
+    – MK / no Town Square Theater, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – MK / Fantasyland, café da manhã, almoço ou jantar no Cinderella&rsquo;s Royal Table<br>
+    – EC / Alemanha<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>BOLT<br>
+    <em>Famoso quem?</em> Cachorro que dá nome ao filme<br>
+    <em>Onde aparece?</em><br>
+    – EC / Estados Unidos<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>BOO<br>
+    <em>Famosa quem?</em> Garotinha fofa do filme Monstros S/A<br>
+    <em>Onde aparece?</em><br>
+    – MK / Tomorrowland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>BUZZ LIGHTYEAR<br>
+    <em>Famoso quem?</em> Brinquedo do guerreiro interestelar do filme Toy Story<br>
+    <em>Onde aparece?</em><br>
+    – MK / Tomorrowland<br>
+    – MK / Tomorrowland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – HS / Pixar Place<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>C3-PO<br>
+    <em>Famoso quem?</em> Robô nerd do filme Star Wars também conhecido como Guerra nas Estrelas<br>
+    <em>Onde aparece?</em><br>
+    – HS / Star Wars Weekends, no Darth&rsquo;s Mall<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>CAPITÃO GANCHO<br>
+    <em>Famoso quem?</em> O pirata vilão do filme Peter Pan<br>
+    <em>Onde aparece?</em><br>
+    – MK / Adventureland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>CHAPELEIRO MALUCO<br>
+    <em>Famoso quem?</em> Personagem do filme Alice no País das Maravilhas<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, próximo ao Mad Tea Party, atração das xícaras<br>
+    – Grand Floridian Resort / Café da manhã no 1900 Park Fare<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>CHEWBACCA<br>
+    <em>Famoso quem?</em> Urso/ogro/animal do filme Star Wars também conhecido como Guerra nas Estrelas<br>
+    <em>Onde aparece?</em><br>
+    – HS / Star Wars Weekends<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>CINDERELLA<br>
+    <em>Famosa quem?</em> Princesa desastrada que tropeça quando corre e deixa um sapato de cristal por aí<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, no Princess Fairytale Hall<br>
+    – MK / no Town Square Theater, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – MK / Fantasyland, café da manhã, almoço ou jantar no Cinderella&rsquo;s Royal Table<br>
+    – EC / Noruega, café da manhã, almoço ou jantar no Akershus Royal Banquet Hall<br>
+    – Grand Floridian Resort / Jantar no 1900 Park Fare<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>CLAUDE FROLLO<br>
+    <em>Famoso quem?</em> Vilão do filme O Corcunda de Notre Dame<br>
+    <em>Onde aparece?</em><br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>CLARABELA<br>
+    <em>Famosa quem?</em> Vaquinha que todo mundo conhece mas ninguém lembra<br>
+    <em>Onde aparece?</em><br>
+    – MK / Frontierland<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>COELHO BRANCO<br>
+    <em>Famoso quem?</em> É o coelho que leva a Alice para o país das maravilhas no desenho e no filme<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, próximo ao Mad Tea Party, atração das xícaras<br>
+    – MK / Fantasyland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>CRUELLA DE VIL<br>
+    <em>Famosa quem?</em> Vilã com cabelo bi-color do filme 101 Dálmatas<br>
+    <em>Onde aparece?</em><br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>DARTH VADER<br>
+    <em>Famoso quem?</em> Vilão do filme Star Wars também conhecido como Guerra nas Estrelas<br>
+    <em>Onde aparece?</em><br>
+    – HS / Star Wars Weekends<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>DR. FACILIER<br>
+    <em>Famoso quem?</em> Vilão magrelo do filme A Princesa e O Sapo<br>
+    <em>Onde aparece?</em><br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>DRIZELLA<br>
+    <em>Famosa quem?</em> A outra irmã chata da Cinderella.<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, quase sempre atrás do Castello da Cinderella<br>
+    – MK / em frente ao castelo da Cinderella, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>DUFFY<br>
+    <em>Famoso quem?</em> Ursinho de pelúcia do Mickey, personagem relativamente desconhecido a não ser que você esteja na Disney de Tóquio<br>
+    <em>Onde aparece?</em><br>
+    – EC / World Showcase<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>DUG E RUSSELL<br>
+    <em>Famosos quem?</em> Escoteiro do filme Up! e seu cachorro<br>
+    <em>Onde aparecem?</em><br>
+    – AK / Discovery Island, em frente a atração It&rsquo;s Tough to Be a Bug<br>
+    <em>Quais as minhas chances?</em> <strong>Personagens frequentes</strong></p>
+  <p>ELSA<br>
+    <em>Famosa quem?</em> A outra princesa famosa do filme Frozen<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, no Princess Fairytale Hall<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <div id="attachment_2581"><img src="../cont-imgs/dicas/002-personagensdadisney/ElsaFrozen-533x800.jpg" alt="Elsa, a outra princesa do filme Frozen. Filas que chegam a 3 horas para o Meet & Greet das duas personagens" width="400" height="600">
+    <p>Elsa, a outra princesa do filme Frozen. Filas que chegam a 3 horas para o Meet &amp; Greet das duas personagens</p>
+  </div>
+  <p>FADA MADRINHA<br>
+    <em>Famosa quem?</em> A do filme da Cinderella, que transforma a gata borralheira<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>FERA<br>
+    <em>Famoso quem?</em> Príncipe transformado em monstro do filme A Bela e A Fera<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, jantar no restaurante Be Our Guest<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>FERB<br>
+    <em>Famoso quem?</em> Personagem do seriado Phineas and Ferb<br>
+    <em>Onde aparece?</em><br>
+    – HS / Streets of America, próximo a saída da atração dos Muppets<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>FLIK<br>
+    <em>Famoso quem?</em> Formiga do filme Vida de Inseto<br>
+    <em>Onde aparece?</em><br>
+    – AK / Dinoland USA<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>FLYNN RIDER<br>
+    <em>Famoso quem?</em> Principe/rei do filme Enrolados<br>
+    <em>Onde aparece?</em><br>
+    – MK / no Town Square Theater, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>GASTÃO<br>
+    <em>Famoso quem?</em> Vilão e pretendente a mão da Bela no filme A Bela e a Fera<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, próximo a lanchonete dele mesmo, a Gaston&rsquo;s Tavern<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>GELADO<br>
+    <em>Famoso quem?</em> Personagem do filme da Os Incriveis<br>
+    <em>Onde aparece?</em><br>
+    – HS / Animation Courtyard<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>GÊNIO<br>
+    <em>Famoso quem?</em> O gênio da lâmpada do filme Aladdin<br>
+    <em>Onde aparece?</em><br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>GEPETTO<br>
+    <em>Famoso quem?</em> Velinho entalhador que cria o Pinóquio<br>
+    <em>Onde aparece?</em><br>
+    – HS / Hollywood Boulevard<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>GREEN ARMY MEN<br>
+    <em>Famoso quem?</em> Outro brinquedo do filme Toy Story, o soldadinho de plástico verde<br>
+    <em>Onde aparece?</em><br>
+    – HS / Pixar Place<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>GRILO FALANTE<br>
+    <em>Famoso quem?</em> O grilo que narra a história do Pinóquio<br>
+    <em>Onde aparece?</em><br>
+    – MK / Main Street USA<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>JACK SPARROW<br>
+    <em>Famoso quem?</em> O personagem do Jhonny Depp do filme Pirata do Caribe<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>JAFFAR<br>
+    <em>Famoso quem?</em> O vilão do filme Aladdin<br>
+    <em>Onde aparece?</em><br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – HS / Hollywood Boulevard<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>JANE<br>
+    <em>Famosa quem?</em> Mocinha do filme Tarzan<br>
+    <em>Onde aparece?</em><br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>JASMINE<br>
+    <em>Famosa quem?</em> Princesa do filme Aladdin<br>
+    <em>Onde aparece?</em><br>
+    – MK / Adventureland<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – EC / Marrocos<br>
+    – EC / Noruega, Café da manhã, almoço ou jantar no Akershus Royal Banquet Hall<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>JESSIE<br>
+    <em>Famosa quem?</em> A boneca namorada do Buzz no filme Toy Story<br>
+    <em>Onde aparece?</em><br>
+    – MK / Frontierland, do lado de fora da Splash Mountain<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>LEITÃO<br>
+    <em>Famoso quem?</em> Porquinho rosa da turma do urso Puff/Pooh<br>
+    <em>Onde aparece?</em><br>
+    – MK / Café da manhã, almoço e jantar no Crystal Palace<br>
+    – MK / Fantasyland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>LILO<br>
+    <em>Famosa quem?</em> Garotinha do filme Lilo e Stitch<br>
+    <em>Onde aparece?</em><br>
+    – Polynesian Resort / refeições no restaurante Ohana<br>
+    – Typhoon Lagoon<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>LUKE SKYWALKER<br>
+    <em>Famoso quem?</em> Outro herói do filme Star Wars também conhecido como Guerra nas Estrelas<br>
+    <em>Onde aparece?</em><br>
+    – HS / Star Wars Weekends<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>MADRASTA<br>
+    <em>Famosa quem?</em> A vilã do filme Cinderella<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland<br>
+    – MK / em frente ao castelo, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – Grand Floridian Resort / Jantar no 1900 Park Fare<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>MARGARIDA<br>
+    <em>Famosa quem?</em> Patinha namorada do Pato Donald<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland<br>
+    – MK / Fantasyland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – HS / Hollywood Boulevard<br>
+    – AK / Dinoland USA<br>
+    – AK / Café da manhã no Tusker House<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <div id="attachment_2529"><img src="../cont-imgs/dicas/002-personagensdadisney/0903AS_0070KP-532x800.jpg" alt="Donald e Margaridas, a carater para a festa de Halloween do Magic Kingdom. Foto de divulgação Disney" width="399" height="600">
+    <p>Donald e Margaridas, a carater para a festa de Halloween do Magic Kingdom. Foto de divulgação Disney</p>
+  </div>
+  <p>MADAME CARLOTTA<br>
+    <em>Famosa quem?</em> Personagem do filme Pequena Sereia II<br>
+    <em>Onde aparece?</em><br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>MALÉFICA<br>
+    <em>Famosa quem?</em> Bruxa má do filme A Bela Adormecida<br>
+    <em>Onde aparece?</em><br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>MARIE<br>
+    <em>Famosa quem?</em> Gatinha do filme Aristogatos<br>
+    <em>Onde aparece?</em><br>
+    – MK / Main Street USA<br>
+    – EC / França<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>MARY POPPINS<br>
+    <em>Famosa quem?</em> Afamada babá com poderes mágicos do filme de mesmo nome<br>
+    <em>Onde aparece?</em><br>
+    – MK / Main Street USA<br>
+    – EC / Inglaterra<br>
+    – Grand Floridian Resort / Café da manhã no 1900 Park Fare,<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>MATE<br>
+    <em>Famoso quem?</em> Personagem que é um reboque e amigo do McQueendo filme Carros<br>
+    <em>Onde aparece?</em><br>
+    – HS / Streets of America<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>MEEKO<br>
+    <em>Famoso quem?</em> Guaxinim amigo da Pocahontas<br>
+    <em>Onde aparece?</em><br>
+    – AK / na entrada do parque (dica do Doug Santos)<br>
+    – HS / no Animation Courtyard<br>
+    – HS / Character Palooza<br>
+    – MK / Próximo a estação de trem que fica na Fantasyland<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>MÉRIDA<br>
+    <em>Famosa quem?</em> Princesa do filme Valente<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fairytale Garden na Fantasyland<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>MICKEY MOUSE<br>
+    <em>Famoso quem?</em> Ah vá!<br>
+    <em>Onde aparece?</em><br>
+    – MK / Town Square Theater na Main Street USA<br>
+    – EC / Future World, no character spot<br>
+    – EC / Jantar no Garden Grill<br>
+    – HS / Animation Courtyard<br>
+    – HS / Star Wars Weekends<br>
+    – AK / Adventurers Outpost<br>
+    – AK / Café da manhã no Tusker House<br>
+    – Polynesian Resort / refeições no restaurante Ohana<br>
+    – Contemporary Resort / refeição no Chef&rsquo;s Mickey<br>
+    – Fort Wilderness / Backyard BBQ<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <div id="attachment_2573"><img src="../cont-imgs/dicas/002-personagensdadisney/13578258405_a2a7c58c3e_c.jpg" alt="Mickey vestido de fazendeiro para o jantar no Garden Grill, que fica no Epcot" width="600" height="401">
+    <p>Mickey vestido de fazendeiro para o jantar no Garden Grill, que fica no Epcot</p>
+  </div>
+  <p>MIKE WAZOWSKI<br>
+    <em>Famoso quem?</em> Personagem verde de um olho só do filme Monstros S/A<br>
+    <em>Onde aparece?</em><br>
+    – HS / Streets of America<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>MINNIE MOUSE<br>
+    <em>Famoso quem?</em> Ah vá!<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland<br>
+    – MK / no Town Square Theater durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – EC / Future World, no character spot<br>
+    – HS / Animation Courtyard<br>
+    – HS / Star Wars Weekends<br>
+    – AK / Adventurers Outpost<br>
+    – Contemporary Resort / refeição no Chef&rsquo;s Mickey<br>
+    – Beach Club Resort / café da manhã no Cape May Cafe<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>MULAN<br>
+    <em>Famosa quem?</em> Princesa guerreira do filme de mesmo nome<br>
+    <em>Onde aparece?</em><br>
+    – EC / China<br>
+    – EC / Noruega, Café da manhã, almoço ou jantar no Akershus Royal Banquet Hall<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <div id="attachment_2576"><img src="../cont-imgs/dicas/002-personagensdadisney/13578440435_eb8b1a2db8_c.jpg" alt="Foto que eu tirei da Mulan, no pavilhão da China no Epcot, posando com uma família" width="600" height="401">
+    <p>Foto que eu tirei da Mulan, no pavilhão da China no Epcot, posando com uma família</p>
+  </div>
+  <p>PATETA<br>
+    <em>Famoso quem?</em> Ah vá!<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – EC / Future World, no character spot ou em um ponto próximo ao Spaceship Earth<br>
+    – EC / Estados Unidos<br>
+    – HS / Hollywood Boulevard<br>
+    – HS / Start Wars Weekend<br>
+    – AK / Dinoland U.S.A.<br>
+    – AK / Café da manhã no Tusker House<br>
+    – Contemporary Resort / refeição no Chef&rsquo;s Mickey<br>
+    – Beach Club Resort / café da manhã no Cape May Cafe<br>
+    – ESPN Wide World of Sports / Entrada<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>PATO DONALD<br>
+    <em>Famoso quem?</em> Ah vá<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland<br>
+    – MK / Fantasyland, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – EC / Mexico<br>
+    – HS / Hollywood Boulevard<br>
+    – HS / Star Wars Weekends<br>
+    – AK / Dinoland USA<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>PETER PAN<br>
+    <em>Famoso quem?</em> Menino que não cresce e vooa para a terra do nunca no filme com seu próprio nome<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, ao lado da sua própria atração<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <div id="attachment_2578"><img src="../cont-imgs/dicas/002-personagensdadisney/13580357773_99931debe8_c.jpg" alt="Outra foto que tirei no Magic Kingdom, de uma pessoa tirando foto com Peter Pan e Wendy" width="600" height="401">
+    <p>Outra foto que tirei no Magic Kingdom, de uma pessoa tirando foto com Peter Pan e Wendy</p>
+  </div>
+  <p>PHINEAS<br>
+    <em>Famoso quem?</em> Personagem do seriado Phineas and Ferb<br>
+    <em>Onde aparece?</em><br>
+    – HS / Streets of America, próximo a saída da atração dos Muppets<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>PINÓQUIO<br>
+    <em>Famoso quem?</em> Boneco de madeira criado pelo entalhador Gepetto e que ganhou vida pela Fada Azul<br>
+    <em>Onde aparece?</em><br>
+    – HS / Hollywood Boulevard<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>PLUTO<br>
+    <em>Famoso quem?</em> Ah vá.<br>
+    <em>Onde aparece?</em><br>
+    – MK / Main Street USA<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – EC / Estados Unidos<br>
+    – EC / Jantar no Garden Grill<br>
+    – HS / Hollywood Boulevard<br>
+    – AK / Dinoland USA<br>
+    – ESPN Wide World of Sports / Entrada<br>
+    – Polynesian Resort / refeições no restaurante Ohana<br>
+    – Contemporary Resort / refeição no Chef&rsquo;s Mickey<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p><img src="../cont-imgs/dicas/002-personagensdadisney/13578344383_67458b19f4_c.jpg" alt="13578344383_67458b19f4_c" width="600" height="401"></p>
+  <p>POCAHONTAS<br>
+    <em>Famosa quem?</em> A princesa índia powhatan do filme de mesmo nome.<br>
+    <em>Onde aparece?</em><br>
+    – AK / no Rafiki&rsquo;s Planet Watch (dica da Juliana Lodi)<br>
+    – AK / na entrada do parque<br>
+    – EC / Noruega, Café da manhã, almoço ou jantar no Akershus Royal Banquet Hall<br>
+    – ST / no Animation Courtyard<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>PRÍNCIPE ENCANTADO<br>
+    <em>Famoso quem?</em> Príncipe do filme Cinderella<br>
+    <em>Onde aparece?</em><br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – Grand Floridian Resort / Jantar no 1900 Park Fare<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>PRÍNCIPE NAVEEN<br>
+    <em>Famoso quem?</em> Príncipe do filme A Princesa e o Sapo<br>
+    <em>Onde aparece?</em><br>
+    – MK / na Liberty Square durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>PRÍNCIPE FELIPE<br>
+    <em>Famoso quem?</em> Príncipe do filme A Bela Adormecida<br>
+    <em>Onde aparece?</em><br>
+    – MK / no Town Square Theater durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>PRINCESA LÉIA<br>
+    <em>Famosa quem?</em> Heroína do filme Star Wars também conhecido como Guerra nas Estrelas<br>
+    <em>Onde aparece?</em><br>
+    – HS / Star Wars Weekends<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>PUFF<br>
+    <em>Famoso quem?</em> Ursinho amigo que é bem chegado num mel<br>
+    <em>Onde aparece?</em><br>
+    – MK / na Fantasyland ao lado da atração Many Adventures of Winnie the Pooh<br>
+    – MK / na Fantasyland durante a Mickey&rsquo;s Very Merry Christmas Party<br>
+    – MK / Café da manhã, almoço e jantar no Crystal Palace<br>
+    – EC / Inglaterra<br>
+    – AK / Discovery Island<br>
+    – Grand Floridian Resort / Café da manhã no 1900 Park Fare<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>R2-D2<br>
+    <em>Famoso quem?</em> Robozinho do filme Star Wars também conhecido como Guerra nas Estrelas<br>
+    <em>Onde aparece?</em><br>
+    – HS / Star Wars Weekends<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>RAFIKI<br>
+    <em>Famoso quem?</em> Macaco &ldquo;feiticeiro&rdquo; do filme Rei Leão<br>
+    – MK / no Adventureland durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – AK / no Rafiki&rsquo;s Planet Watch<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>RAINHA AMIDALA<br>
+    <em>Famosa quem?</em> Rainha do filme Star Wars também conhecido como Guerra nas Estrelas<br>
+    <em>Onde aparece?</em><br>
+    – HS / Star Wars Weekends<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>RAINHA DE COPAS<br>
+    <em>Famosa quem?</em> Vilã do filme Alice no País das Maravilhas<br>
+    <em>Onde aparece?</em><br>
+    – MK / em frente ao castelo ou na Fantasyland durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>RAINHA MÁ<br>
+    <em>Famosa quem?</em> Vilã do filme Branca de Neve<br>
+    <em>Onde aparece?</em><br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>RALPH<br>
+    <em>Famoso quem?</em> Personagem do filme Detona Ralph<br>
+    <em>Onde aparece?</em><br>
+    – HS / Animation Courtyard<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>RAPUNZEL<br>
+    <em>Famosa quem?</em> Princesa com longas tranças do filme Enrolados<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland, no Princess Fairytale Hall<br>
+    – MK / no Town Square Theater, durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>REI LOUIE<br>
+    <em>Famoso quem?</em> Orangotango rei do filme Mogli<br>
+    <em>Onde aparece?</em><br>
+    – AK / próximo a entrada do Flights of Wonder (dica do Doug Santos)<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>RELÂMPAGO McQUEEN<br>
+    <em>Famoso quem?</em> Personagem principal do filme Carros<br>
+    <em>Onde aparece?</em><br>
+    – HS / Streets of America<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>SENHOR INCRÍVEL<br>
+    <em>Famoso quem?</em> Pai da família de super heróis do filme Os Incríveis<br>
+    <em>Onde aparece?</em><br>
+    – HS / Animation Courtyard<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>SENHORA INCRÍVEL<br>
+    <em>Famosa quem?</em> Mãe da família de super heróis do filme Os Incríveis<br>
+    <em>Onde aparece?</em><br>
+    – HS / Animation Courtyard<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>SININHO<br>
+    <em>Famosa quem?</em> Fadinha do filme Peter Pan<br>
+    <em>Onde aparece?</em><br>
+    – MK / no Tinker Bell&rsquo;s Magical Nook na Adventureland<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>SMEE<br>
+    <em>Famoso quem?</em> Pirata ajudante do Capitão Gancho no filme Peter Pan<br>
+    <em>Onde aparece?</em><br>
+    – MK / Adventureland<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – EC / Estados Unidos<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem raro</strong></p>
+  <p>STITCH<br>
+    <em>Famoso quem?</em> Extraterrestre bagunceiro do filme Lilo e Stich<br>
+    <em>Onde aparece?</em><br>
+    – MK / Tomorrowland<br>
+    – HS / Hollywood Boulevard<br>
+    – Polynesian Resort / refeições no restaurante Ohana<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>SULLEY<br>
+    <em>Famoso quem?</em> Monstro grande, azul e bonzinho do filme Monstros S/A<br>
+    <em>Onde aparece?</em><br>
+    – HS / Streets of America<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>TARZAN<br>
+    <em>Famoso quem?</em> O homem da selva do filme de mesmo nome<br>
+    <em>Onde aparece?</em><br>
+    – MK / na Adventureland durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances? <strong>Personagem muito raro</strong></em></p>
+  <p>TERK<br>
+    <em>Famosa quem?</em> Macaca engraçada amiga do Tarzan<br>
+    <em>Onde aparece?</em><br>
+    – MK / na Adventureland durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito raro</strong></p>
+  <p>TIANA<br>
+    <em>Famosa quem?</em> Princesa do filme A Princesa e o Sapo<br>
+    <em>Onde aparece?</em><br>
+    – MK / na Liberty Square<br>
+    – MK / na Liberty Square durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <div id="attachment_2577"><img src="../cont-imgs/dicas/002-personagensdadisney/13579996343_a0f14f6061_c.jpg" alt="Princesa Tiana e seu príncipe tirando fotos com visitantes no seu ponto que fica na Liberty Square, no Magic Kingdom" width="600" height="401">
+    <p>Princesa Tiana e seu príncipe tirando fotos com visitantes no seu ponto que fica na Liberty Square, no Magic Kingdom</p>
+  </div>
+  <p>TIMÃO<br>
+    <em>Famoso quem?</em> Suricata cantor amigo do javali que forma a dupla Timão e Pumba do filme O Rei Leão .<br>
+    <em>Onde aparece?</em><br>
+    – AK / na entrada do parque<br>
+    – MK / Adventureland (dica da Juliana Lodi)<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>TICO E TECO<br>
+    <em>Famosos quem?</em> Os esquilos irmãos que eu nunca sei quem é quem. Sei que um tem o nariz vermelho e o outro preto.<br>
+    <em>Onde aparecem?</em><br>
+    – MK / manhãs e tardes na Main St. USA<br>
+    – MK / Frontierland, próximo ao Shootin&rsquo; Arcade<br>
+    – EC / Future World<br>
+    – EC / Jantar no Garden Grill<br>
+    – HS / Star Wars Weekends<br>
+    – HS / Hollywood Boulevard<br>
+    – Fort Wilderness / Backyard BBQ<br>
+    <em>Quais as minhas chances?</em> <strong>Personagens muito frequentes</strong></p>
+  <p>TIGRÃO<br>
+    <em>Famoso quem?</em> Tigre laranja fluorescente amigo do ursinho Puff/Pooh<br>
+    – MK / Fantasyland ao lado da atração do Puff<br>
+    – MK / na Fantasyland durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – MK / Café da manhã, almoço e jantar no Crystal Palace<br>
+    – EC / Inglaterra<br>
+    – Grand Floridian Resort / Café da manhã no 1900 Park Fare<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>TWEEDLEDEE E TWEEDLEDUM<br>
+    <em>Famosos quem?</em> Os personagens gêmeos do filme Alice no Pais das Maravilhas<br>
+    <em>Onde aparecem?</em><br>
+    – MK / na Fantasyland durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    <em>Quais as minhas chances?</em> <strong>Personagens muito raros</strong></p>
+  <p>VANELLOPE<br>
+    <em>Famoso quem?</em> Personagem do filme Detona Ralph<br>
+    <em>Onde aparece?</em><br>
+    – HS / Animation Courtyard<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  <p>WENDY<br>
+    <em>Famosa quem?</em> Personagem do filme Peter Pan<br>
+    <em>Onde aparece?</em><br>
+    – MK / Fantasyland ao lado do Peter Pan&rsquo;s Flight<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem frequente</strong></p>
+  <p>WOODY<br>
+    <em>Famoso quem?</em> O boneco de cowboy engraçado do filme Toy Story<br>
+    <em>Onde aparece?</em><br>
+    – MK / Frontierland ao lado da Splash Mountain<br>
+    – MK / durante a Mickey&rsquo;s Not So Scary Halloween Party<br>
+    – HS / Pixar Place<br>
+    <em>Quais as minhas chances?</em> <strong>Personagem muito frequente</strong></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+</body>
+</html>
