@@ -43,6 +43,12 @@
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.vibration" />
+
+    <gap:plugin name="com.adobe.plugins.gaplugin" />
+
+    <feature name="GAPlugin" >
+        <param name="android-package" value="com.adobe.plugins.GAPlugin"/>
+    </feature>
     
     <icon src="icon.png" />
     
@@ -62,13 +68,14 @@
         <splash src="www/res/screen/android/screen-ldpi-landscape.png" density="land-ldpi"/>
         <splash src="www/res/screen/android/screen-mdpi-landscape.png" density="land-mdpi"/>
         <splash src="www/res/screen/android/screen-xhdpi-landscape.png" density="land-xhdpi"/>
-        <splash src="www/res/screen/android/screen-xxhdpi-landscape.png" density="land-xxhdpi"/>
 
         <splash src="www/res/screen/android/screen-hdpi-portrait.png" density="port-hdpi"/>
         <splash src="www/res/screen/android/screen-ldpi-portrait.png" density="port-ldpi"/>
         <splash src="www/res/screen/android/screen-mdpi-portrait.png" density="port-mdpi"/>
         <splash src="www/res/screen/android/screen-xhdpi-portrait.png" density="port-xhdpi"/>
-        <splash src="www/res/screen/android/screen-xxhdpi-portrait.png" density="port-xxhdpi"/>
+
+        <!-- 9-patch apenas para altas resoluções -->
+        <splash src="www/res/screen/android/9-patch.9.png" density="xxhdpi"/>
     </platform>
 
     <platform name="ios">
