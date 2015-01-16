@@ -44,30 +44,18 @@ var app = {
         
         if( plataforma.toLowerCase() == 'android' )
         {
-            // window.analytics.startTrackerWithId('UA-41359132-2');
-            // window.analytics.trackView(titulo);
-            
-            gaPlugin.init(app.successHandlerGA, app.errorHandlerGA, "UA-41359132-2", 10);
+            window.analytics.startTrackerWithId('UA-41359132-2');
+            window.analytics.trackView(titulo);
 
             analyticsIniciado = true;
         }
         else if( plataforma.toLowerCase() == 'ios' )
         {
-            // window.analytics.startTrackerWithId('UA-41359132-3');
-            // window.analytics.trackView(titulo);
-            
-            gaPlugin.init(app.successHandlerGA, app.errorHandlerGA, "UA-41359132-3", 10);
+            window.analytics.startTrackerWithId('UA-41359132-3');
+            window.analytics.trackView(titulo);
 
             analyticsIniciado = true;
         }
-    },
-    //sucesso no carregamento do GA
-    successHandlerGA: function(){
-        alert('Sucesso GA');
-    },
-    //erro no carregamento do GA
-    errorHandlerGA: function(){
-        alert('Erro GA');
     },
     //verificar conexão
     checkConnection: function(){
@@ -96,17 +84,13 @@ var app = {
             
             if( plataforma.toLowerCase() == 'android' )
             {
-                // window.analytics.startTrackerWithId('UA-41359132-2');
-                // window.analytics.trackView(titulo);
-                
-                gaPlugin.init(app.successHandlerGA, app.errorHandlerGA, "UA-41359132-2", 10);
+                window.analytics.startTrackerWithId('UA-41359132-2');
+                window.analytics.trackView(titulo);
             }
             else if( plataforma.toLowerCase() == 'ios' )
             {
-                // window.analytics.startTrackerWithId('UA-41359132-3');
-                // window.analytics.trackView(titulo);
-                
-                gaPlugin.init(app.successHandlerGA, app.errorHandlerGA, "UA-41359132-3", 10);
+                window.analytics.startTrackerWithId('UA-41359132-3');
+                window.analytics.trackView(titulo);
             }
         }
     }

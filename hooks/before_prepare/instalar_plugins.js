@@ -11,9 +11,10 @@ var pluginlist = [
   	"org.apache.cordova.network-information",
   	"org.apache.cordova.splashscreen",
   	"org.apache.cordova.vibration",
-    "org.apache.cordova.inappbrowser"
+    "org.apache.cordova.inappbrowser",
 
     //terceiros
+    "https://github.com/danwilson/google-analytics-plugin.git"
     // "nl.x-services.plugins.toast",
     // "https://github.com/Paldom/SpinnerDialog.git"
 ];

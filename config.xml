@@ -43,12 +43,6 @@
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.vibration" />
-
-    <gap:plugin name="com.adobe.plugins.gaplugin" />
-
-    <feature name="GAPlugin" >
-        <param name="android-package" value="com.adobe.plugins.GAPlugin"/>
-    </feature>
     
     <icon src="icon.png" />
     
