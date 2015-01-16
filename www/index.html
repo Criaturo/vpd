@@ -164,9 +164,6 @@ jQuery(document).ready(function () {
     alturaBloco = $(".ajusteDeAltura").eq(0).height();
     alturaJanela = window.innerHeight - 38;
 
-    console.log('alturaBloco :' + alturaBloco);
-    console.log('alturaJanela :' + alturaJanela);
-
     //apenas se mais da metade do bloco está oculto
     if( Math.abs( ( alturaJanela - ( alturaBloco * 2 ) ) ) < alturaBloco )
     {
