@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.creaturo.vpd" version="1.0.0" 
+<widget id="com.vpddebolso" version="1.0.0" 
         xmlns="http://www.w3.org/ns/widgets" 
         xmlns:gap="http://phonegap.com/ns/1.0">
     
-    <name>VPD</name>
+    <name>VPD de Bolso</name>
     
     <description>
-        App VPD.
+        VPD de Bolso
     </description>
     
     <author href="https://www.criaturo.com" email="criaturo@criaturo.com">
@@ -59,11 +59,13 @@
         <splash src="www/res/screen/android/screen-ldpi-landscape.png" density="land-ldpi"/>
         <splash src="www/res/screen/android/screen-mdpi-landscape.png" density="land-mdpi"/>
         <splash src="www/res/screen/android/screen-xhdpi-landscape.png" density="land-xhdpi"/>
+        <splash src="www/res/screen/android/screen-xxhdpi-landscape.png" density="land-xxhdpi"/>
 
         <splash src="www/res/screen/android/screen-hdpi-portrait.png" density="port-hdpi"/>
         <splash src="www/res/screen/android/screen-ldpi-portrait.png" density="port-ldpi"/>
         <splash src="www/res/screen/android/screen-mdpi-portrait.png" density="port-mdpi"/>
         <splash src="www/res/screen/android/screen-xhdpi-portrait.png" density="port-xhdpi"/>
+        <splash src="www/res/screen/android/screen-xxhdpi-portrait.png" density="port-xxhdpi"/>
     </platform>
 
     <platform name="ios">
