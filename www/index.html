@@ -90,47 +90,59 @@
 		
 		<div class="ui-grid-a">
 			
-			<div class="ui-block-a bg-roteiros-parques">
+			<div class="ui-block-a bg-roteiros-parques ajusteDeAltura">
 				<a href="roteiros-parques.html" class="btn-home" id="analyticsbutton"  data-transition="flip">
-						<img src="images/ico-roteiros-parques.png" />
-						<span>Roteiros <br/>dos parques</span>
+						<div class="centralizarVertical">
+							<img src="images/ico-roteiros-parques.png" />
+							<span>Roteiros <br/>dos parques</span>
+						</div>
 				</a>
 			</div>
 			
-			<div class="ui-block-b bg-melhoresdicas">
+			<div class="ui-block-b bg-melhoresdicas ajusteDeAltura">
 				<a href="melhores-dicas.html" class="btn-home" data-transition="flip">
-					<img src="images/ico-melhores-dicas.png" />
-					<span>Melhores <br/>dicas</span>
+					<div class="centralizarVertical">
+						<img src="images/ico-melhores-dicas.png" />
+						<span>Melhores <br/>dicas</span>
+					</div>
 				</a>
 			</div>
 		
 			
-			<div class="ui-block-a bg-restaurantes-recomendados">
+			<div class="ui-block-a bg-restaurantes-recomendados ajusteDeAltura">
 				<a href="restaurantes.html" class="btn-home" data-transition="flip">
-					<img src="images/ico-restaurantes-recomendados.png" />
-					<span>Restaurantes <br/>recomendados</span>
+					<div class="centralizarVertical">
+						<img src="images/ico-restaurantes-recomendados.png" />
+						<span>Restaurantes <br/>recomendados</span>
+					</div>
 				</a>
 			</div>
 			
-			<div class="ui-block-b bg-lojas-recomendadas">
+			<div class="ui-block-b bg-lojas-recomendadas ajusteDeAltura">
 				<a href="lojas.html" class="btn-home" data-transition="flip">
-					<img src="images/ico-lojas-recomendadas.png" />
-					<span>Lojas <br/>recomendadas</span>
+					<div class="centralizarVertical">
+						<img src="images/ico-lojas-recomendadas.png" />
+						<span>Lojas <br/>recomendadas</span>
+					</div>
 				</a>
 			</div>
 		
-			<div class="ui-block-a bg-acessar-vai-disney">
+			<div class="ui-block-a bg-acessar-vai-disney ajusteDeAltura">
 				<a href="javascript:loadURL('http://www.vaipradisney.com');" class="link btn-home">
-					<img src="images/ico-acessar-vaipradisney.png" />
-					<span>Acessar o <br/>VPD Online</span>
+					<div class="centralizarVertical">
+						<img src="images/ico-acessar-vaipradisney.png" />
+						<span>Acessar o <br/>VPD Online</span>
+					</div>
 				</a>
 			</div>
 			
-			<div class="ui-block-b bg-ajustes">
+			<div class="ui-block-b bg-ajustes ajusteDeAltura">
 				<a href="ajustes.html" class="btn-home"   data-transition="flip">
 				
-					<img src="images/ico-ajustes.png" />
-					<span>Ajustes</span>
+					<div class="centralizarVertical">
+						<img src="images/ico-ajustes.png" />
+						<span>Ajustes</span>
+					</div>
 				</a>
 			</div>
 		
@@ -147,6 +159,34 @@
 <script>
 jQuery(document).ready(function () {
     app.initialize();
+
+    //calculo para ajuste de altura dos blocos
+    alturaBloco = $(".ajusteDeAltura").eq(0).height();
+    alturaJanela = window.innerHeight - 38;
+
+    console.log('alturaBloco :' + alturaBloco);
+    console.log('alturaJanela :' + alturaJanela);
+
+    //apenas se mais da metade do bloco está oculto
+    if( Math.abs( ( alturaJanela - ( alturaBloco * 2 ) ) ) < alturaBloco )
+    {
+    	//calculando nova altura
+    	novaAltura = Math.abs(alturaJanela * .5);
+
+    	//aplicar apenas se a nova altura não for igual a soma das alturas da imagem e texto
+    	somaAlturas = $(".ajusteDeAltura .centralizarVertical").eq(0).height();
+
+    	if( somaAlturas < novaAltura )
+    	{
+    		$(".ajusteDeAltura").css({"height":novaAltura+"px"});
+
+    		//ajustando ícones sempre ao centro
+		    altura = $(".ajusteDeAltura .centralizarVertical").eq(0).height() + 66; //acrescentando diferença pelo padding
+		    altura = Math.abs(altura * .5);
+
+		    $(".ajusteDeAltura .centralizarVertical").css({"top":"50%","margin-top":-altura+"px","position":"relative"});
+    	}
+    }
 });
 </script>
 </body>
