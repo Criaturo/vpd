@@ -17,6 +17,9 @@
  * under the License.
  */
 
+var possuiConexao = false;
+var analyticsIniciado = false;
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -28,14 +31,67 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('online', this.checkConnection, false);
+        document.addEventListener('offline', this.checkConnection, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        //window.analytics.startTrackerWithId('UA-41359132-2');
+        plataforma = device.platform;
+        titulo     = document.getElementsByTagName("title")[0].innerHTML;
         
-        //alert(device.platform);
+        if( plataforma.toLowerCase() == 'android' )
+        {
+            window.analytics.startTrackerWithId('UA-41359132-2');
+            window.analytics.trackView(titulo);
+
+            analyticsIniciado = true;
+        }
+        else if( plataforma.toLowerCase() == 'ios' )
+        {
+            window.analytics.startTrackerWithId('UA-41359132-3');
+            window.analytics.trackView(titulo);
+
+            analyticsIniciado = true;
+        }
+    },
+    //verificar conexão
+    checkConnection: function(){
+        var networkState = navigator.connection.type;
+
+        var states = {};
+        states[networkState.UNKNOWN]  = 'Unknown connection';
+        states[networkState.ETHERNET] = 'Ethernet connection';
+        states[networkState.WIFI]     = 'WiFi connection';
+        states[networkState.CELL_2G]  = 'Cell 2G connection';
+        states[networkState.CELL_3G]  = 'Cell 3G connection';
+        states[networkState.CELL_4G]  = 'Cell 4G connection';
+        states[networkState.NONE]     = 'No network connection';
+
+        if( networkState == 'unknown' || networkState == 'none' )
+            possuiConexao = false;
+        else
+            possuiConexao = true;
+    },
+    //função para enviar o trackview da página atual, apenas se tiver conexão e o plugin for iniciado
+    sendTrackPacgeView: function(){
+        if( analyticsIniciado == true && possuiConexao == true )
+        {
+            plataforma = device.platform;
+            titulo     = document.getElementsByTagName("title")[0].innerHTML;
+            
+            if( plataforma.toLowerCase() == 'android' )
+            {
+                window.analytics.startTrackerWithId('UA-41359132-2');
+                window.analytics.trackView(titulo);
+            }
+            else if( plataforma.toLowerCase() == 'ios' )
+            {
+                window.analytics.startTrackerWithId('UA-41359132-3');
+                window.analytics.trackView(titulo);
+            }
+        }
     }
 };
