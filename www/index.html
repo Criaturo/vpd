@@ -14,6 +14,8 @@
     <script src="js/jquery/jquery-1.11.1.min.js"></script>
     <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
 
+    <script src="js/lib/GALocalStorage.js"></script>
+
 </head> 
 <body>
 	
@@ -160,9 +162,17 @@
 jQuery(document).ready(function () {
     app.initialize();
 
-    //calculo para ajuste de altura dos blocos
+    verificarAjusteLayout();
+
+    $(window).bind('resize', function(){
+    	verificarAjusteLayout();
+    });
+});
+
+function verificarAjusteLayout(){
+	//calculo para ajuste de altura dos blocos
     alturaBloco = $(".ajusteDeAltura").eq(0).height();
-    alturaJanela = window.innerHeight - 38;
+    alturaJanela = window.innerHeight - $("#vpdheader").height();
 
     //apenas se mais da metade do bloco está oculto
     if( Math.abs( ( alturaJanela - ( alturaBloco * 2 ) ) ) < alturaBloco )
@@ -171,7 +181,7 @@ jQuery(document).ready(function () {
     	novaAltura = Math.abs(alturaJanela * .5);
 
     	//aplicar apenas se a nova altura não for igual a soma das alturas da imagem e texto
-    	somaAlturas = $(".ajusteDeAltura .centralizarVertical").eq(0).height();
+    	somaAlturas = $(".ajusteDeAltura .centralizarVertical").eq(0).height() + 30;
 
     	if( somaAlturas < novaAltura )
     	{
@@ -184,7 +194,28 @@ jQuery(document).ready(function () {
 		    $(".ajusteDeAltura .centralizarVertical").css({"top":"50%","margin-top":-altura+"px","position":"relative"});
     	}
     }
-});
+    //quando a tela for bem maior que os blocos
+    else if( alturaJanela > ( alturaBloco * 3 ) )
+    {
+    	//calculando altura por bloco
+    	novaAltura = Math.abs( ( alturaJanela + $("#vpdheader").height() ) / 3 );
+    	$(".ajusteDeAltura").css({"height":novaAltura+"px"});
+
+    	//aplicar apenas se a nova altura não for igual a soma das alturas da imagem e texto
+    	somaAlturas = $(".ajusteDeAltura .centralizarVertical").eq(0).height() + 30;
+
+    	if( somaAlturas < novaAltura )
+    	{
+    		$(".ajusteDeAltura").css({"height":novaAltura+"px"});
+
+    		//ajustando ícones sempre ao centro
+		    altura = $(".ajusteDeAltura .centralizarVertical").eq(0).height() + 66; //acrescentando diferença pelo padding
+		    altura = Math.abs(altura * .5);
+
+		    $(".ajusteDeAltura .centralizarVertical").css({"top":"50%","margin-top":-altura+"px","position":"relative"});
+    	}
+    }
+}
 </script>
 </body>
 </html>

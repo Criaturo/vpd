@@ -47,12 +47,18 @@ var app = {
             window.analytics.startTrackerWithId('UA-41359132-2');
             window.analytics.trackView(titulo);
 
+            // ga_storage._setAccount('UA-41359132-2');
+            // ga_storage._trackPageview(titulo);
+
             analyticsIniciado = true;
         }
         else if( plataforma.toLowerCase() == 'ios' )
         {
             window.analytics.startTrackerWithId('UA-41359132-3');
             window.analytics.trackView(titulo);
+            
+            // ga_storage._setAccount('UA-41359132-3');
+            // ga_storage._trackPageview(titulo);
 
             analyticsIniciado = true;
         }
@@ -75,9 +81,9 @@ var app = {
         else
             possuiConexao = true;
     },
-    //função para enviar o trackview da página atual, apenas se tiver conexão e o plugin for iniciado
+    //função para enviar o trackview da página atual, apenas se tiver conexão
     sendTrackPacgeView: function(){
-        if( analyticsIniciado == true && possuiConexao == true )
+        if( possuiConexao == true )
         {
             plataforma = device.platform;
             titulo     = document.getElementsByTagName("title")[0].innerHTML;
@@ -86,11 +92,21 @@ var app = {
             {
                 window.analytics.startTrackerWithId('UA-41359132-2');
                 window.analytics.trackView(titulo);
+
+                // ga_storage._setAccount('UA-41359132-2');
+                // ga_storage._trackPageview(titulo);
+
+                analyticsIniciado = true;
             }
             else if( plataforma.toLowerCase() == 'ios' )
             {
                 window.analytics.startTrackerWithId('UA-41359132-3');
                 window.analytics.trackView(titulo);
+                
+                // ga_storage._setAccount('UA-41359132-3');
+                // ga_storage._trackPageview(titulo);
+
+                analyticsIniciado = true;
             }
         }
     }
