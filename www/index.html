@@ -178,7 +178,7 @@ function verificarAjusteLayout(){
     if( alturaJanela > ( alturaBloco * 3 ) )
     {
     	//calculando altura por bloco
-    	novaAltura = Math.abs( ( alturaJanela + $("#vpdheader").height() ) / 3 );
+    	novaAltura = Math.abs( ( alturaJanela + ( $("#vpdheader").height() - 40 ) ) / 3 );
     	$(".ajusteDeAltura").css({"height":novaAltura+"px"});
 
     	//aplicar apenas se a nova altura não for igual a soma das alturas da imagem e texto
