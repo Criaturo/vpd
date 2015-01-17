@@ -44,9 +44,11 @@ var app = {
         
         if( plataforma.toLowerCase() == 'android' )
         {
+            //utilizando analytics sdk
             window.analytics.startTrackerWithId('UA-41359132-2');
             window.analytics.trackView(titulo);
 
+            //utilizando o analytics "convencional", para isso a conta deve ser configurada como website
             // ga_storage._setAccount('UA-41359132-2');
             // ga_storage._trackPageview(titulo);
 
@@ -54,9 +56,11 @@ var app = {
         }
         else if( plataforma.toLowerCase() == 'ios' )
         {
+            //utilizando analytics sdk
             window.analytics.startTrackerWithId('UA-41359132-3');
             window.analytics.trackView(titulo);
             
+            //utilizando o analytics "convencional", para isso a conta deve ser configurada como website
             // ga_storage._setAccount('UA-41359132-3');
             // ga_storage._trackPageview(titulo);
 
@@ -90,9 +94,11 @@ var app = {
             
             if( plataforma.toLowerCase() == 'android' )
             {
+                //utilizando analytics sdk
                 window.analytics.startTrackerWithId('UA-41359132-2');
                 window.analytics.trackView(titulo);
 
+                //utilizando o analytics "convencional", para isso a conta deve ser configurada como website
                 // ga_storage._setAccount('UA-41359132-2');
                 // ga_storage._trackPageview(titulo);
 
@@ -100,9 +106,11 @@ var app = {
             }
             else if( plataforma.toLowerCase() == 'ios' )
             {
+                //utilizando analytics sdk
                 window.analytics.startTrackerWithId('UA-41359132-3');
                 window.analytics.trackView(titulo);
                 
+                //utilizando o analytics "convencional", para isso a conta deve ser configurada como website
                 // ga_storage._setAccount('UA-41359132-3');
                 // ga_storage._trackPageview(titulo);
 

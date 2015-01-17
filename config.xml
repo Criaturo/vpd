@@ -70,6 +70,9 @@
 
         <!-- 9-patch apenas para altas resoluções -->
         <splash src="www/res/screen/android/9-patch.9.png" density="xxhdpi"/>
+        <splash src="www/res/screen/android/9-patch.9.png" density="xxxhdpi"/>
+        <splash src="www/res/screen/android/9-patch.9.png" density="tvdpi"/>
+        <splash src="www/res/screen/android/9-patch.9.png" />
     </platform>
 
     <platform name="ios">
