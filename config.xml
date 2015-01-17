@@ -43,14 +43,6 @@
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.vibration" />
-
-    <feature name="UniversalAnalytics">
-        <param name="ios-package" value="UniversalAnalyticsPlugin" />
-    </feature>
-    
-    <feature name="UniversalAnalytics">
-        <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
-    </feature>
     
     <icon src="icon.png" />
     
