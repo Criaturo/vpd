@@ -7,7 +7,7 @@ var pluginlist = [
   	"org.apache.cordova.device",
    //  "org.apache.cordova.device-motion",
    //  "org.apache.cordova.device-orientation",
-  	// "org.apache.cordova.dialogs",
+  	"org.apache.cordova.dialogs",
   	"org.apache.cordova.network-information",
   	"org.apache.cordova.splashscreen",
   	"org.apache.cordova.vibration",
