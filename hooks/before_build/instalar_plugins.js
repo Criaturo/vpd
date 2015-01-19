@@ -12,6 +12,7 @@ var pluginlist = [
   	"org.apache.cordova.splashscreen",
   	"org.apache.cordova.vibration",
     "org.apache.cordova.inappbrowser",
+    "org.apache.cordova.statusbar",
 
     //terceiros
     "https://github.com/danwilson/google-analytics-plugin.git"
