@@ -63,7 +63,7 @@ function loadURL(url){
 			function salvarFavorito(results){
 				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
 				{
-					alert(results.input1);
+					
 					localStorage.setItem(results.input1, $(location).attr('href'));
 				}
 			} 				
