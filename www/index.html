@@ -76,9 +76,8 @@
 			});
 				
 			function loadURL(url){
-					    navigator.app.loadUrl(url, { openExternal:true });
-					    return false;
-			}
+			   window.open(url, "_system");
+			} 
 		</script>
 			
 			<table id="tableResults" class="tabela" border="0">
@@ -197,7 +196,7 @@ function verificarAjusteLayout(){
     }
 
     //ocultando splash screen
-    navigator.splashscreen.hide();
+    //navigator.splashscreen.hide();
 }
 </script>
 </body>

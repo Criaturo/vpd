@@ -39,7 +39,7 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        plataforma = device.platform;
+        plataforma = window.device.platform;
         titulo     = document.getElementsByTagName("title")[0].innerHTML;
         
         if( plataforma.toLowerCase() == 'android' )
@@ -89,7 +89,7 @@ var app = {
     sendTrackPacgeView: function(){
         if( possuiConexao == true )
         {
-            plataforma = device.platform;
+            plataforma = window.device.platform;
             titulo     = document.getElementsByTagName("title")[0].innerHTML;
             
             if( plataforma.toLowerCase() == 'android' )
