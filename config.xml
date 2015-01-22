@@ -49,8 +49,6 @@
     <gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
     <gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
     
-    <gap:plugin name="com.danielcwilson.plugins.googleanalytics" />
-    
     <icon src="icon.png" />
     
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
