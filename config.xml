@@ -48,10 +48,8 @@
     <gap:plugin name="org.apache.cordova.splashscreen" version="0.3.4" />
     <gap:plugin name="org.apache.cordova.statusbar" version="0.1.4" />
     <gap:plugin name="org.apache.cordova.vibration" version="0.3.11" />
-
-    <feature name="UniversalAnalytics">
-        <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
-    </feature>
+    
+    <gap:plugin name="com.danielcwilson.plugins.googleanalytics" version="0.6.1" />
     
     <icon src="icon.png" />
     
