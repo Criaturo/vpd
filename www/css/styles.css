@@ -185,7 +185,7 @@ a.btn-home img{ height: 70px; }
 /*CORES DAS LISTAGENS*/
 .content_roteiros-parques .ui-btn-icon-right:after{
 	background-color: #1abc9c !important;
-	height: 120px !important;
+	height: 100% !important;
 	width: 27px !important;
 	 -webkit-border-radius: 0px !important;
 	 border-radius: 0px !important;
@@ -194,7 +194,7 @@ a.btn-home img{ height: 70px; }
 
 .content_melhoresdicas .ui-btn-icon-right:after{
 	background-color: #2471a5 !important;
-	height: 120px !important;
+	height: 100% !important;
 	width: 27px !important;
 	 -webkit-border-radius: 0px !important;
 	 border-radius: 0px !important;
@@ -202,14 +202,14 @@ a.btn-home img{ height: 70px; }
 
 .content_restaurantes .ui-btn-icon-right:after{
 	background-color: #e7756a !important;
-	height: 120px !important;
+	height: 100% !important;
 	width: 27px !important;
 	 -webkit-border-radius: 0px !important;
 	 border-radius: 0px !important;
 }
 .content_lojas .ui-btn-icon-right:after{
 	background-color: #ffcd06 !important;
-	height: 120px !important;
+	height: 100% !important;
 	width: 27px !important;
 	 -webkit-border-radius: 0px !important;
 	 border-radius: 0px !important;
