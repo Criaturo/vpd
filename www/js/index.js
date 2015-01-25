@@ -46,11 +46,17 @@ var app = {
         //window.plugin.statusbarOverlay.show();
         
         //removendo a status bar
-        window.plugin.statusbarOverlay.isVisible( function (isVisible) {
-            //console.log('status bar is visible');
-            //para ocultar a barra de suatus
-            window.plugin.statusbarOverlay.hide();
-        });
+        try{
+            window.plugin.statusbarOverlay.isVisible( function (isVisible) {
+                //console.log('status bar is visible');
+                //para ocultar a barra de suatus
+                window.plugin.statusbarOverlay.hide();
+            });
+        }
+        catch(error){
+            console.log('error status bar:');
+            console.log(error);
+        }
         
         if( plataforma.toLowerCase() == 'android' )
         {
@@ -97,10 +103,16 @@ var app = {
     },
     //função para enviar o trackview da página atual, apenas se tiver conexão
     sendTrackPacgeView: function(){
+        possuiConexao = true;
+        
+        console.log('conexao: ' + possuiConexao);
+        
         if( possuiConexao == true )
         {
             plataforma = window.device.platform;
             titulo     = document.getElementsByTagName("title")[0].innerHTML;
+            
+            console.log('plataforma: ' + plataforma);
             
             if( plataforma.toLowerCase() == 'android' )
             {
@@ -129,3 +141,24 @@ var app = {
         }
     }
 };
+
+$(document).ready(function(){
+    var processado = false;
+    
+    $('*').bind('pageload', function(){
+        if( processado == false ){
+            
+            processado = true;
+            
+            try{
+                app.initialize();
+                app.sendTrackPacgeView();
+            }
+            catch(error){
+                console.log(error);
+            }
+        }
+        
+        return true;
+    });
+});
