@@ -119,6 +119,11 @@
         <!-- iPad Spotlight and Settings Icon -->
         <icon src="www/res/icon/ios/icon-50.png" width="50" height="50" />
         <icon src="www/res/icon/ios/icon-100.png" width="100" height="100" />
+
+        <icon src="www/res/icon/ios/icon-48.png" width="48" height="48" />
+        <icon src="www/res/icon/ios/icon-64.png" width="64" height="64" />
+        <icon src="www/res/icon/ios/icon-320.png" width="320" height="320" />
+        <icon src="www/res/icon/ios/icon-1024.png" width="1024" height="1024" />
     </platform>
     
     <access origin="*" />
