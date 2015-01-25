@@ -90,9 +90,19 @@
 	<script>
 		
 		$('.btnApagar').click(function(){
-			localStorage.clear();
-			alert( "Pronto! Favoritos Limpo. :)");  
-			})	
+				localStorage.clear();
+				
+				navigator.notification.alert(
+					"Pronto! Favoritos Limpo. :)", //mensagem
+					okAlert(), //callback
+					"Sucessp!", //titulo
+					"Ok" //buttonName
+				);
+			});
+
+		function okAlert(){
+			console.log("Usuário clicou em ok.");
+		}
 		
 	</script>
 				
