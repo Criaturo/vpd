@@ -43,11 +43,13 @@ var app = {
         titulo     = document.getElementsByTagName("title")[0].innerHTML;
         
         //para mostrar a barra de suatus
-        window.plugin.statusbarOverlay.show();
+        //window.plugin.statusbarOverlay.show();
         
         //removendo a status bar
         window.plugin.statusbarOverlay.isVisible( function (isVisible) {
-            console.log('status bar is visible');
+            //console.log('status bar is visible');
+            //para ocultar a barra de suatus
+            window.plugin.statusbarOverlay.hide();
         });
         
         if( plataforma.toLowerCase() == 'android' )
