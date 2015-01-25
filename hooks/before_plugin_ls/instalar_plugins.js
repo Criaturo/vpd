@@ -12,7 +12,7 @@ var pluginlist = [
   	"org.apache.cordova.splashscreen",
   	"org.apache.cordova.vibration",
     "org.apache.cordova.inappbrowser",
-    "org.apache.cordova.statusbar",
+    "de.appplant.cordova.plugin.hidden-statusbar-overlay",
 
     //terceiros
     "https://github.com/danwilson/google-analytics-plugin.git"
@@ -32,5 +32,5 @@ function puts(error, stdout, stderr) {
 }
 
 pluginlist.forEach(function(plug) {
-    exec("cordova plugin add " + plug, puts);
+    exec("phonegap plugin add " + plug, puts);
 });

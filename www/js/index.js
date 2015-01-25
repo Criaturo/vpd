@@ -42,6 +42,14 @@ var app = {
         plataforma = window.device.platform;
         titulo     = document.getElementsByTagName("title")[0].innerHTML;
         
+        //para mostrar a barra de suatus
+        window.plugin.statusbarOverlay.show();
+        
+        //removendo a status bar
+        window.plugin.statusbarOverlay.isVisible( function (isVisible) {
+            console.log('status bar is visible');
+        });
+        
         if( plataforma.toLowerCase() == 'android' )
         {
             //utilizando analytics sdk
