@@ -41,7 +41,7 @@ body{
 /*HOME*/
 #vpdheader{
 	position: fixed;
-	background: url('../images/bg-header.png') bottom repeat-x #314f66;
+	background: url('../images/bg-header.png') bottom repeat-x;
 	z-index: 100;
 	overflow: hidden;
 }
@@ -104,7 +104,6 @@ a.btn-home img{ height: 70px; }
 	width: 25px;
 	height: auto;
 	top: 2px !important;
-	left: -10px !important;
 }
 	
 	#vpdheader .btn-favoritos2{
@@ -154,6 +153,15 @@ a.btn-home img{ height: 70px; }
 	margin: 7px 0 0 7px;
 	display: block;
 }
+
+#vpdheader .btn-ico-logo a{
+	display: block;
+        height:100%;
+        width: 100%;
+        
+}
+
+
 
 #vpdheader .titulocenter{
 	width: 95%;
@@ -314,6 +322,12 @@ a.btn-home img{ height: 70px; }
 	 top: 92%;
 }
 
+/*Alinhamento Imagens*/
+
+
+.content_internas img{
+         margin:0 auto; display: block;
+}
 
 
 /*LoadPage*/
