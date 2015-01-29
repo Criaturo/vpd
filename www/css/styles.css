@@ -145,21 +145,23 @@ a.btn-home img{ height: 70px; }
 	 top: -7px !important;
 }
 
-.btn-ico-logo img{ height: auto; width: 100%; }
+
+.btn-ico-logo img{ height: auto; width: auto; }
+
 #vpdheader .btn-ico-logo{
 	float: left;
 	width: 48px;
 	height: auto;
-	margin: 7px 0 0 7px;
+	margin: 5px 0;
 	display: block;
 }
 
-#vpdheader .btn-ico-logo a{
+#vpdheader .btn-ico-logo{
 	display: block;
-        height:100%;
-        width: 100%;
-        
+        height:39px;
+        width: 59px;
 }
+
 
 
 
@@ -181,7 +183,7 @@ a.btn-home img{ height: 70px; }
 #vpdlistposts{
 	margin: 40px 10px 0;
 }
-#vpdheader .ui-btn{margin: 0px !important; padding: 0px !important;}
+#vpdheader .ui-btn{padding: 0px !important;}
 .ui-btn-icon-right:after{
 	right: 0px !important;
 }
