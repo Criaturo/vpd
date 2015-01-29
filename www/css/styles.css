@@ -151,7 +151,7 @@ a.btn-home img{ height: 70px; }
 #vpdheader .btn-ico-logo{
 	float: left;
 	width: 48px;
-	height: auto;
+	z-index: 1000;
 	margin: 5px 0;
 	display: block;
 }
