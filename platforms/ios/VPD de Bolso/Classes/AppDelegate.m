@@ -30,6 +30,8 @@
 
 #import <Cordova/CDVPlugin.h>
 
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
 @implementation AppDelegate
 
 @synthesize window, viewController;
@@ -87,8 +89,11 @@
 
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-
-    return YES;
+    
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                    didFinishLaunchingWithOptions:launchOptions];
+    
+    // return YES;
 }
 
 // this happens while we are running ( in the background, or from within our own app )
@@ -104,7 +109,12 @@
     // all plugins will get the notification, and their handlers will be called
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginHandleOpenURLNotification object:url]];
 
-    return YES;
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
+    
+    // return YES;
 }
 
 // repost all remote and local notification using the default NSNotificationCenter so multiple plugins may respond
@@ -145,6 +155,10 @@
 - (void)applicationDidReceiveMemoryWarning:(UIApplication*)application
 {
     [[NSURLCache sharedURLCache] removeAllCachedResponses];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [FBSDKAppEvents activateApp];
 }
 
 @end
