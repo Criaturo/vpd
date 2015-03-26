@@ -1,0 +1,225 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Container Store: o paraíso da organização em Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../lojas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/002-containerstore.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Container Store: o paraíso da organização em Orlando</h2>
+
+
+
+
+<p>O assunto da matéria de hoje é uma das minhas lojas preferidas dos EUA, capaz de fazer a pessoa mais bagunceira do mundo ter vontade de se organizar um pouco mais: é a <strong>Container Store</strong>. Essa loja é o paraíso da organização, oferecendo diversas soluções de compartimentos, caixinhas modulares e divisores, coisas simples e criativas que te fazem questionar &ldquo;<em>como ninguém pensou nisso antes?</em>&ldquo;. Além disso, eles também oferecem diversos produtos para facilitar a organização da casa e também para enfeitá-la. É uma loja até difícil de descrever porque eu não conheço nenhuma parecida aqui no Brasil. Talvez ela seja uma versão melhorada da parte de decoração da Tok Stok ou Etna, é a comparação mais próxima que consigo pensar.</p>
+<div id="attachment_4307"><img src="../cont-imgs/lojas/002-container/container-store-loja-orlando-eua-07.jpg" alt="Container Store, o paraíso da organização" width="640" height="427">
+  <p>Container Store, o paraíso da organização</p>
+</div>
+<h2>Organizando a vida com a Container Store</h2>
+<p>Confesso que eu não sou assim nenhuma paranóica em organização (e já to até imaginando mil respostas da minha mãe se ela ler isso) como o Felipe é, mas até eu piro na Container Store. O fato é que sou um pouquinho consumista então o consumo organizado que a Container Store oferece me faz achar que ela é tudo que me faltava para organizar minha vida.  Não gosto de fazer propaganda nem nada, então nas imagens vou mostrar alguns dos produtos deles que eu foram um adianto na minha vida, tá?</p>
+<p>Eu conheci a Container Store em Nova York e viciei na loja. Quando eu e o Felipe casamos (e claro que demos um pulinho em Orlando na lua de mel) eu fui pesquisar para ver se tinha alguma loja dessa rede em Orlando e por coincidência acabamos indo na semana da inauguração de sua primeira (e única até agora) unidade na cidade. Acho que o Felipe até ficou mais tranquilo de ter casado comigo depois que passou nessa loja. Vale dizer que essa não é o tipo de loja que você vai querer passar o dia inteiro (não é TÃO grande assim), mas ela com certeza vale perder umas horinhas, viu? Ela fica bem próxima ao Mall at Millenia então minha recomendação é incluí-la no itinerário no dia programado para visitar esse shopping.</p>
+<div id="attachment_4316"><img src="../cont-imgs/lojas/002-container/container-store-loja-orlando-eua-16.jpg" alt="Container Store ao lado do Mall at Millenia" width="640" height="427">
+  <p>Container Store ao lado do Mall at Millenia. Única loja em Orlando</p>
+</div>
+<p>A loja tem coisas para facilitar sua vida em todos os ambientes: cozinha, escritório, quarto, armário, lavanderia, jardim, etc. Eu poderia ficar aqui listando várias coisas legais que já vi lá mas acho que ia acabar ficando chato, então vou apenas mostrar alguns dos produtos que eu gosto e outros que já comprei. Nas legendas de cada imagem vou comentando os produtos. Antes das fotos, só duas dicas finais. Primeira dica: comprou potes, caixas ou coisas do tipo? Pense como vai enfiar isso na mala depois. Eu sempre abro todas as caixas e potes e coloco um monte de coisa dentro para economizar espaço na mala. <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"></p>
+<p>Segunda e última dica: se você está com falta de espaço na sua casa para guardar seus pertences e acha que pode encontrar coisas interessantes nessa loja, não deixe dar uma olhada no <a class="linkvai" href="javascript:loadURL('http://www.containerstore.com/');">site dela</a> primeiro e separar alguns itens que te interessam.Digo isso porque para algumas soluções da Container Store, pode ser preciso medir alguma porta, algum armário ou espaço da sua casa. Eu e o Felipe compramos um negócio para o armário da cozinha sem medir e é uma solução realmente incrível – mas que não cabe no armário de casa. Cuidado com essas compras por impulso porque você pode acabar com uns trambolhos na sua casa (nossa especialidade. Aprendemos do pior jeito). Então faça a sua lição de casa e não deixe de medir todos os espaços que podem comportar produtos interessantes.</p>
+<div id="attachment_4318"><img src="../cont-imgs/lojas/002-container/organizador-armario-baixo.jpg" alt="Prateleira móvel na Container Store" width="400" height="400">
+  <p>Prateleiras móveis que ajudam a pegar objetos nos armários mais baixos. O item que eu comprei na Container Store e não coube no meu armário. Foto: divulgação (já que né? No meu armário não rolou).</p>
+</div>
+<p>Isso dito, fica o meu convite para você explorar tudo que a Container Store oferece no <a class="linkvai" href="javascript:loadURL('http://www.containerstore.com/welcome.htm');">site dela</a> (que agora também entrega no Brasil), e aqui você encontra alguns dos itens que eu já comprei, quero comprar, ou simplesmente acho curioso.</p>
+<h2>Itens de Cozinha da Container Store</h2>
+<div id="attachment_4299"><img src="../cont-imgs/lojas/002-container/organizador-atras-da-porta.png" alt="Falta espaço nos armários e você anda amontoando tudo de qualquer jeito? Olha esses organizadores para você encaixar atrás da porta. Bem interessante." width="392" height="399">
+  <p>Falta espaço nos armários e você anda amontoando tudo de qualquer jeito? Olha esses organizadores para você encaixar atrás da porta. Bem interessante.</p>
+</div>
+<div id="attachment_4298"><img src="../cont-imgs/lojas/002-container/organizador-prateleira-com-muitos-objetos-no-fundo.png" alt="Esse eu me arrependi muito de não comprar. Uma solução simples para você conseguir enxergar tudo que está na sua dispensa/armário sem ter que ficar levantando vários potinhos para ver qual é o que você quer. Tá na minha listinha para a próxima" width="400" height="369">
+  <p>Esse eu me arrependi muito de não comprar. Uma solução simples para você conseguir enxergar tudo que está na sua dispensa/armário sem ter que ficar levantando vários potinhos para ver qual é o que você quer. Tá na minha listinha para a próxima</p>
+</div>
+<div id="attachment_4302"><img src="../cont-imgs/lojas/002-container/container-store-loja-orlando-eua-02.jpg" alt="Alguém precisa de potes?" width="500" height="334">
+  <p>Alguém precisa de potes?</p>
+</div>
+<p> </p>
+<h2>Itens de Escritório da Container Store</h2>
+<div id="attachment_4297"><img src="../cont-imgs/lojas/002-container/organizador-de-cabos.jpg" alt="Para quem odeia quando os fios ficam todos embolados. Uma solução super simples e barata, ao mesmo tempo hiper efetiva. Felipe gostou mais disso do que de ir nos parques. " width="400" height="400">
+  <p>Para quem odeia quando os fios ficam todos embolados. Uma solução super simples e barata, ao mesmo tempo hiper efetiva. Felipe gostou mais disso do que de ir nos parques.</p>
+</div>
+<div id="attachment_4309"><img src="../cont-imgs/lojas/002-container/container-store-loja-orlando-eua-09.jpg" alt="Coisinhas de escritório." width="500" height="334">
+  <p>Coisinhas de escritório.</p>
+</div>
+<p> </p>
+<h2>Itens de Armários da Container Store</h2>
+<div id="attachment_4296"><img src="../cont-imgs/lojas/002-container/organizador-embaixo-de-prateleira-300x300.jpg" alt="Solução para guardar alguma coisa quando acaba o espaço da prateleira." width="300" height="300">
+  <p>Solução para guardar alguma coisa quando acaba o espaço da prateleira.</p>
+</div>
+<div id="attachment_4295"><img src="../cont-imgs/lojas/002-container/organizador-coisas-embaixo-da-cama.jpg" alt="Organização nível hard: compartimento para você guardar organizadamente as coisas no armário ou debaixo, gaveta ou até debaixo da cama." width="400" height="400">
+  <p>Organização nível hard: compartimento para você guardar organizadamente as coisas no armário ou debaixo, gaveta ou até debaixo da cama.</p>
+</div>
+<div id="attachment_4300"><img src="../cont-imgs/lojas/002-container/organizador-embaixo-da-pia-com-sifao.png" alt="Organizador para armário. Pode ser pra aquele armárinho debaixo da pia, do tanque que nada mais encaixa direito." width="400" height="425">
+  <p>Organizador para armário. Pode ser pra aquele armárinho debaixo da pia, do tanque que nada mais encaixa direito.</p>
+</div>
+<div id="attachment_4312"><img src="../cont-imgs/lojas/002-container/container-store-loja-orlando-eua-12.jpg" alt="container-store-loja-orlando-eua-12" width="334" height="500">
+  <p>Eles tem diversas soluções para guardar sapatos, pena que a grande maioria é grande demais para trazer para o Brasil.</p>
+</div>
+<p> </p>
+<h2>Outros itens interessantes da Container Store</h2>
+<div id="attachment_4301"><img src="../cont-imgs/lojas/002-container/container-store-loja-orlando-eua-01.jpg" alt="container-store-loja-orlando-eua-01" width="334" height="500">
+  <p>Diversos pequenos itens para facilitar a vida. Entre os itens está uma caneta que tira aquela cola da etiqueta que vem com produtos novos. A gente comprou! :)</p>
+</div>
+<div id="attachment_4313"><img src="../cont-imgs/lojas/002-container/container-store-loja-orlando-eua-13.jpg" alt="Caixas com divisórias de diversos jeitos. É a minha parte preferida! Comprei minha caixa de jóias (ok, de bijus) aí. " width="400" height="267">
+  <p>Caixas com divisórias de diversos jeitos. É a minha parte preferida! Comprei minha caixa de jóias (ok, de bijus) aí.</p>
+</div>
+<div id="attachment_4327"><img src="../cont-imgs/lojas/002-container/caixas.jpg" alt="Eu tenho TODAS essas caixas. Elas são demontáveis e ficam bem pequenas, mas aqui em casa elas moram 'montadas' mesmo. Eu tenho muita quinquilharia de cozinha porque adoro cozinhar e andava meio difícil de organziar as coisas. Agora na minha dispensa tem uma caixa de itens de confeitaria, uma de assadeiras e uma para meus acessórios de fazer macarrão caseiro. O Felipe tem uma pequena no armário da sala também mas eu nem sei o que ele guarda lá dentro (acho que fita de vídeo game). Além disso, comprei uma bolsinha térmica muito fofa (no formato de bolsa de sair mesmo, mas é térmica) com a mesma estampa! " width="312" height="312">
+  <p>Eu tenho TODAS essas caixas. Elas são demontáveis e ficam bem pequenas, mas aqui em casa elas moram &ldquo;montadas&rdquo; mesmo. Eu tenho muita quinquilharia de cozinha porque adoro cozinhar e andava meio difícil de organziar as coisas. Agora na minha dispensa tem uma caixa de itens de confeitaria, uma de assadeiras e uma para meus acessórios de fazer macarrão caseiro. O Felipe também tem uma pequena no armário da sala (com outra estampa) mas eu nem sei o que ele guarda lá dentro (acho que fita de vídeo game). Além disso, comprei uma bolsinha térmica muito fofa (no formato de bolsa de sair mesmo, mas é térmica) com a mesma estampa! É linda!</p>
+</div>
+<div id="attachment_4311"><img src="../cont-imgs/lojas/002-container/container-store-loja-orlando-eua-11.jpg" alt="Saboneteiras, e outras coisinhas do tipo de diversos modelos. Comprei um joguinho para o meu banheiro aí. Bem mais bonitos do que os da Bed, Bath and Beyond." width="400" height="267">
+  <p>Saboneteiras, e outras coisinhas do tipo de diversos modelos. Comprei um joguinho para o meu banheiro aí. Bem mais bonitos do que os da Bed, Bath and Beyond.</p>
+</div>
+<div id="attachment_4331"><img src="../cont-imgs/lojas/002-container/cesto-de-brinquedos.jpg" alt="São trocentos tipos de cestos de guardar brinquedos. Esse é um que vi no site mas lembro que na loja vi outros ainda mais legais. Foi mal, gente, não tirei foto disso lá, mas pra quem tem filho é ótimo.  =/" width="400" height="400">
+  <p>São trocentos tipos de cestos de guardar brinquedos. Esse é um que vi no site mas lembro que na loja vi outros ainda mais legais. Foi mal, gente, não tirei foto disso lá, mas pra quem tem filho é ótimo. =/</p>
+</div>
+<div id="attachment_4329"><img src="../cont-imgs/lojas/002-container/lixo-reciclavel.jpg" alt="Lixeiras de recicláveis. Sei que é difícil trazer isso pro Brasil, mas quis mostrar só porque achei muito legal." width="312" height="312">
+  <p>Lixeiras de recicláveis. Sei que é difícil trazer isso pro Brasil, mas quis mostrar só porque achei muito legal.</p>
+</div>
+<div id="attachment_4306"><img src="../cont-imgs/lojas/002-container/container-store-loja-orlando-eua-06.jpg" alt="Essa não tanto para sua casa, mas para suas compras da viagem: muito plástico bolha e outras soluções para garantir que nada vai quebrar. Só uma dica: verifique se você não encontra esses itens mais baratos no Walmart antes, tá?" width="267" height="400">
+  <p>Essa não tanto para sua casa, mas para suas compras da viagem: muito plástico bolha e outras soluções para garantir que nada vai quebrar. Só uma dica: verifique se você não encontra esses itens mais baratos no Walmart antes, tá?</p>
+</div>
+<p> </p>
+<p>Espero que tenham gostado da dica que vale para todo mundo: desde quem está montando a casa até pra quem está passeando em Orlando e quer conhecer uma loja diferente. Abaixo os dados da loja para quem quiser colocar no GPS:</p>
+<p><strong>The Container Store Orlando</strong><br>
+  Endereço: 4088 Millenia Blvd, Orlando, FL 32839, Estados Unidos (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/The+Container+Store/@28.489675,-81.428467,15z/data=!4m2!3m1!1s0x0:0x30b9e7fb1f589803?sa=X&ei=hIg0VNT8CYyrggSahIGoAQ&ved=0CJkBEPwSKAAwCg');">ver no Google Maps</a>)<br>
+  Telefone: +1 407-956-2980<br>
+  Horário de funcionamento: 09:00 – 21:00</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

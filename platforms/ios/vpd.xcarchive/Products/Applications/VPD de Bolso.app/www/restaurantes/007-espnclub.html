@@ -1,0 +1,208 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>ESPN Club: o restaurante dos esportes em Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/007-espnclub.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">ESPN Club: o restaurante dos esportes em Orlando</h2>
+
+
+
+
+<p>Que o <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/disney-boardwalk/');">Disney&rsquo;s BoardWalk</a> é um dos nossos lugares preferidos em Orlando, ninguém discorda, mas na nossa última viagem conhecemos um restaurante que fez a gente gostar ainda mais de lá: é o <strong>ESPN Club</strong>, que fica em cima do muro entre restaurante, bar e central de entretenimento.</p>
+<div id="attachment_4358"><img src="../cont-imgs/restaurantes/007-espn/espn-club-orlando-restaurante-bar-boardwalk-06.jpg" alt="Cadeiras presas na parede do ESPN Club" width="640" height="427">
+  <p>Cadeiras presas na parede do ESPN Club</p>
+</div>
+<h2>A atmosfera do ESPN Club</h2>
+<p>O tema do ESPN Club é <strong>esporte</strong>, como já diz o nome seguindo o canal de TV a cabo (que pra quem não sabe é uma das empresas da Disney). Por isso, não se assuste ao entrar no banheiro e encontrar televisores ligados e transmitindo jogos de basquete, baiseball, futebol americano e até mesmo o nosso futebol. Em qualquer canto do restaurante que você olhar, vai encontrar uma TV passando algum jogo – dizem que são mais de 100 telas ligadas ao mesmo tempo.</p>
+<div id="attachment_4362"><img src="../cont-imgs/restaurantes/007-espn/espn-club-orlando-restaurante-bar-boardwalk-02.jpg" alt="Vai acompanhando a quantidade de TVs ligadas espalhadas pelo ESPN Club" width="640" height="427">
+  <p>Vai acompanhando a quantidade de TVs ligadas espalhadas pelo ESPN Club</p>
+</div>
+<div id="attachment_4355"><img src="../cont-imgs/restaurantes/007-espn/espn-club-orlando-restaurante-bar-boardwalk-09.jpg" alt="Pia no banheiro com uma TV para você não perder nenhum lance nem quando está lavando as mãos no ESPN Club" width="427" height="640">
+  <p>Pia no banheiro com uma TV para você não perder nenhum lance nem quando está lavando as mãos</p>
+</div>
+<div id="attachment_4353"><img src="../cont-imgs/restaurantes/007-espn/espn-club-orlando-restaurante-bar-boardwalk-11.jpg" alt="Vale tirar foto no mictório para ver que até ali tem TV? Fiquei esperando o banheiro esvaziar para tirar essa aí no ESPN Club" width="427" height="640">
+  <p>Vale tirar foto no mictório para ver que até ali tem TV? Fiquei esperando o banheiro esvaziar para tirar essa aí :)</p>
+</div>
+<p>A atmosfera do ESPN Club é completamente informal, descolada, com música no fundo, grupos de amigos fazendo um happy hour, gente assistindo os jogos e famílias cheias de crianças falando alto. Em Junho e Julho desse ano, o ESPN Club virou a central oficial da copa do mundo lá em Orlando. Os jogos eram transmitidos inclusive com narração em português.</p>
+<p>Apesar de não aparentar por fora, o ESPN Club é muito grande e tem 2 salões principais: um mais tranquilo na entrada ao lado do bar e outro em uma espécie de arena com vários telões no teto. Além dos televisores todos, as paredes do restaurante são forradas com camisetas, bolas, tacos, troféus e diversos outros itens esportivos autografados por estrelas do esporte americano. É realmente muita informação rolando o tempo todo.</p>
+<div id="attachment_4352"><img src="../cont-imgs/restaurantes/007-espn/espn-club-orlando-restaurante-bar-boardwalk-12.jpg" alt="Salão bem grande no ESPN Club que vira um ninho de gente em dia de jogo" width="640" height="427">
+  <p>Salão bem grande no ESPN Club que vira um ninho de gente em dia de jogo</p>
+</div>
+<p>Dentro do ESPN Club, você também encontra o ESPN Zone, um estúdio de onde é transmitido um programa de rádio nacional sobre esportes em algumas noites (não existe uma agenda pré definida). Quando a transmissão acontece dali, as pessoas podem fazer perguntas, pedir músicas e participar do programa. Imagine a bagunça!</p>
+<h2>A comida do ESPN Club</h2>
+<p>O ESPN Club não é somente um restaurante diferente e divertido, mas também serve uma comida muito boa e variada. A base do cardápio é a culinária americana, então você encontra sanduiches e pratos bem típicos como o Grilled Chicken Sandwich, que é um sanduíche de peito de frango grelhado, os Pub Nachos, que são os famosos &ldquo;doritos&rdquo; com molho de carne e uma variedade imensa de hambúrgueres. O restaurante também serve algumas criações interessantes como o Salmon BLT (sanduiche de salmão com bacon, alface e tomate) e o Center-Cut Top Sirloin (um contra filé alto, servido com macarrão com queijo e um molho de manteiga cítrico).</p>
+<p>Eu fui no tradicional e comi um dos melhores Philly Cheesesteak da minha vida. Pra quem não conhece, esse famoso sanduíche típico da Filadélfia nos EUA é feito com uma espécie de carne de panela desfiada, servida dentro de um baguete com queijo e fritas acompanhando. Estava incrível e só de escrever esse texto minha boca já está salivando.<br>
+  Junto, pedi uma das minhas cervejas preferidas nos EUA, a Samual Adams (SamAdams para os íntimos! kkk).</p>
+<div id="attachment_4359"><img src="../cont-imgs/restaurantes/007-espn/espn-club-orlando-restaurante-bar-boardwalk-05.jpg" alt="Meu extraordinário Philly Cheesesteak no ESPN Club. Estava no ponto." width="640" height="427">
+  <p>Meu extraordinário Philly Cheesesteak no ESPN Club. Estava no ponto.</p>
+</div>
+<div id="attachment_4360"><img src="../cont-imgs/restaurantes/007-espn/espn-club-orlando-restaurante-bar-boardwalk-04.jpg" alt="Essa aí é uma das minhas preferidas nos EUA, mas pra quem curte uma cerveja, recomendo experimentar as mais exóticas que o ESPN Club oferece" width="427" height="640">
+  <p>Essa aí é uma das minhas preferidas nos EUA, mas pra quem curte uma cerveja, recomendo experimentar as mais exóticas que o ESPN Club oferece</p>
+</div>
+<p>Falando em cervejas, o cardápio do ESPN Club não deixa a desejar: são mais de 35 rótulos diferentes que vão das cervejas locais como a Orlando Brewing Blonde Ale, até as importadas, como o chopp da Islândia Einstök White Ale. Pra quem curte, vale a pena experimentar algumas cervejas diferentes. Na minha opinião, uma bela interrupção na rotina de parques e compras.</p>
+<p>Se por um lado as comidas e bebidas servidas no ESPN Club são muito boas, as sobremesas também não deixam a desejar. São muitas opções simples e mais elaboradas para todos os tips de gostos. Eu pedi o carro chefe da casa, chamado de Vanilla-Sour Cream Cheesecake and Graham Cracker Crust, que brinca com a receita tradicional de cheesecake servindo o doce com duas coberturas: metade com doce de leite e a outra com uma calda de frutas vermelhas bem amarga. A combinação não poderia ser melhor e tenho certeza que a foto abaixo não representa como o negócio estava bom.</p>
+<div id="attachment_4357"><img src="../cont-imgs/restaurantes/007-espn/espn-club-orlando-restaurante-bar-boardwalk-07.jpg" alt="Vanilla-Sour Cream Cheesecake and Graham Cracker Crust, uma brincadeira com a tradicional sobremesa americana" width="640" height="427">
+  <p>Vanilla-Sour Cream Cheesecake and Graham Cracker Crust, uma brincadeira com a tradicional sobremesa americana</p>
+</div>
+<h2>E as crianças, como ficam?</h2>
+<p>Apesar do ambiente que descrevi acima não parecer muito adequado para os pequenos, a gente deve lembrar que está na Disney e quase tudo lá é feito para as famílias, inclusive as com crianças pequenas.</p>
+<p>Como em quase todos os restaurantes nos EUA, o ESPN Club tem um menu especial para os baixinhos, que oferece desde saladas e frango grelhado, até peixe, cheeseburger e cachorro quente. Aparentemente, tanto o frango como o peixe não são servidos com arroz, mas não custa perguntar se o seu filho ou filha fizer questão. De qualquer maneira eles vem acompanhados por uma seleção de legumes no vapor e batatinha frita <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"></p>
+<p>Ao lado/dentro do restaurante, também tem um Arcade, onde as crianças podem ficar jogando fliperamas e pinballs.</p>
+<h2>Vale a pena ir no ESPN Club?</h2>
+<p>Quem acompanha o Vai Pra Disney, sabe que não recomendamos todos os restaurantes que avaliamos aqui (sempre fiquem ligados na nota que damos no final da matéria), mas o ESPN Club me conquistou, não só pela atmosfera divertida, mas também pela comida muito bem preparada e servida.<br>
+  Não espere um menu gourmet, mas a execução das opções simples oferecidas no cardápio é de primeira linha e entrou no rol dos meus restaurantes preferidos de Orlando. Fui sozinho e comendo um sanduíche, cerveja e mais uma sobremesa, paguei menos de $30 dólares como vocês podem ver abaixo.</p>
+<div id="attachment_4356"><img src="../cont-imgs/restaurantes/007-espn/espn-club-orlando-restaurante-bar-boardwalk-08.jpg" alt="Conta do ESPN Club na noite em que fui tirar fotos. Sanduíche, cerveja e sobremesa por menos de $30 dólares" width="640" height="427">
+  <p>Conta do ESPN Club na noite em que fui tirar fotos. Sanduíche, cerveja e sobremesa por menos de $30 dólares</p>
+</div>
+<p>Além disso, vale a pena citar que o ESPN Club é uma bem-vinda pausa na rotina de parques e shoppings que apesar de eu gostar muito, dá uma cansada depois de vários dias fazendo isso sem parar. O local não aceita reservas, mas dificilmente esse vai ser um restaurante onde você vai ter que ficar esperando mesa por horas, justamente por conta do seu tamanho.</p>
+<p>Espero que curtam tanto o restaurante como eu curti e depois voltem aqui para nos contar!</p>
+<div id="attachment_4364"><img src="../cont-imgs/restaurantes/007-espn/espn-club-orlando-restaurante-bar-boardwalk-14.jpg" alt="Entrada do ESPN Club no Disney's BoardWalk em Orlando" width="650" height="390">
+  <p>Entrada do ESPN Club no Disney&rsquo;s BoardWalk em Orlando</p>
+</div>
+<p><strong>Nome</strong>: ESPN Club<br>
+  <strong>Endereço</strong>: 2101 Epcot Resorts Blvd, Orlando, FL 32836 <a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/ESPN+Club/@28.367938,-81.555032,15z/data=!4m2!3m1!1s0x0:0xba8c2037f698b3e1');">Veja no Google Maps</a>).<br>
+  <strong>Telefone</strong>: +1 407-939-1177.<br>
+  <strong>Referência</strong>: Dentro do Disney&rsquo;s BoardWalk (próximo a entrada dos fundos do Epcot).<br>
+  <strong>Preço</strong>: entre US$25 e US$40 por pessoa.<br>
+  <strong>Horário de Funcionamento</strong>: em geral entre 11:30 da manhã e 01:00 da manhã.<br>
+  <strong>Cardápio</strong>:<a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/boardwalk/espn-club/menus/dinner/');">clique aqui</a> para visualizar os cardápios de todas as refeições (em inglês).<br>
+  <strong>Disney Dining Plan</strong>: Sim, vale um crédito de Table Service.<br>
+  <strong>Avaliação do VPD</strong>: <img src="../cont-imgs/restaurantes/estrelas-avaliacao_4.png" alt="Nota 4 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

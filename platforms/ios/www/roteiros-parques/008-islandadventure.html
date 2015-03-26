@@ -1,0 +1,240 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Islands of Adventure</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  
+  <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   window.open(url, "_system");
+		}
+	</script>
+  
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+	  <a href="../roteiros-parques.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>
+		<div class="titulocenter"><h2>Roteiros dos parques</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/roteiros/thumbs/008islandadventure.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-roteiros"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Islands of Adventure</h2>
+
+
+
+
+
+  <p style="text-align:center;"><img title="Islands of Adventure" src="../cont-imgs/roteiros/008-islands/logo-islands-of-adventure.jpg" alt="Islands of Adventure" width="160" height="138"></p>
+  <p>O Islands of Adventure vem sendo chamado nos últimos anos de &ldquo;o parque do Harry Potter&rdquo;, afinal é neste parque que a Universal transportou o mundo do bruxo conhecido dos livros e cinema para todo mundo se divertir. No entanto, existe muito mais além de Harry Potter neste parque, que pode ser considerado um dos mais radicais da cidade de Orlando.</p>
+ 
+  <p>– <a href="javascript:loadURL('http://www.vaipradisney.com/blog/wp-content/uploads/2014/08/Islands_of_Adventure_Mapa_Ingles_Julho_2014.pdf');" class="linkvai">Clique aqui</a> para abrir o mapa do parque enquanto lê o roteiro.<br>
+    – Se quiser fazer o download deste roteiro para imprimir depois, <a href="javascript:loadURL('http://goo.gl/mshMv');" class="linkvai">clique aqui</a>.</p>
+  <p><strong>Algumas dicas gerais do Islands of Adventure</strong></p>
+  <p><strong>- Corra para o Harry Potter, depois faça o restante do parque</strong><br>
+    Como já é sabido, desde meados de 2010 a área dedicada ao Harry Potter é o hit deste parque, ou seja, não importa o horário que você chegar, corra para esse canto. A fila do &ldquo;Harry Potter and the Forbidden Journey&rdquo;, que é a atração que fica dentro do castelo, tem quase sempre pelo menos 1 hora de espera – e a fila vai crescendo ao longo do dia. O lado bom é que a fila por si só já é uma atração para os fãs de Harry Potter, pois você faz um tour por todo o castelo até chegar na atração. De qualquer maneira, sua melhor chance de não perder muito tempo esperando esta atração é ir o mais cedo possível.</p>
+  <p><strong>- Quantidade de dias</strong><br>
+    Como falei no roteiro do Universal Studios, a febre Harry Potter que se instalou na cidade esse ano está causando um aumento nas filas em geral. Dá pra fazer os dois parques no mesmo dia? Sim, é possível, mas com restrições. Repito o que sugeri no roteiro da Universal:</p>
+  <ul>
+    <li><strong>1 parque por dia</strong>: nós recomendamos essa opção para quem vai na alta temporada dos EUA e pretende curtir muito cada parque. É ideal também pra quem tem uma viagem mais folgada com bastante tempo para conhecer tudo.</li>
+    <li><strong>2 parques em um dia com Universal Express</strong>: recomendado pra quem vai na alta ou na baixa temporada, quer curtir tudo, mas tem pouco tempo para ir a um parque por dia. Com o Universal Express (<a href="javascript:loadURL('http://www.vaipradisney.com/blog/disney-experience-como-utilizar-o-fastpass/#express');" class="linkvai">clique aqui</a> para saber mais sobre ele), você não pode furar a fila nas duas principais atrações do Harry Potter, mas consegue cortar fila em todos os outros brinquedos. Assim você perde bastante tempo nas do Harry Potter, mas consegue completar o resto das atrações bem mais rapidamente.</li>
+    <li><strong>2 parques em um dia sem Universal Express</strong>: recomendado somente para quem vai em baixa temporada (os dias &ldquo;verdes&rdquo; <a href="javascript:loadURL('http://www.vaipradisney.com/blog/qual-a-melhor-epoca-para-ir-a-disney/');" class="linkvai">nesse calendário</a>), tem pouco tempo e quer somente curtir as atrações &ldquo;imperdíveis&rdquo; dos nossos roteiros.</li>
+  </ul>
+  <p><strong>- Evite filas indo sozinho</strong><br>
+    Ao contrário dos parques da Disney que disponibilizam essa opção em pouquíssimos lugares, nos parques da Universal são muitas as atrações com fila para &ldquo;single riders&rdquo;. Isso significa que se você não se importar em sentar com alguém desconhecido dentro de uma atração, você pode entrar nessa fila especial e reduzir para quase nada o tempo de espera. Vale a pena!</p>
+  
+  <h2><strong>ROTEIRO DO ISLANDS OF ADVENTURE</strong></h2>
+  <p><strong>1. CHEGANDO NO ISLANDS OF ADVENTURE</strong><br>
+    Ao cruzar o CityWalk, o Islands of Adventure é o parque que fica a esquerda, mas não vai ser difícil de encontrar se você prestar atenção nas placas pelo caminho.<br>
+    Com o efeito &ldquo;Harry Potter&rdquo;, sempre recomendo chegar na Islands um pouco antes dela abrir. É impressionante como, quando eles abrem os portões e você corre para o castelo, já encontra uma fila de 40 minutos (provavelmente formado pelas pessoas que estão hospedadas nos hotéis da Universal e podem entrar 1 hora antes de todos no parque)!<br>
+    Assim como nos outros parques, faça o movimento anti-horário e caminha à direita assim que passar pelos portões e chegar no lago principal. Vá junto com a multidão para a área do bruxo.</p>
+  
+  <p><strong>2. THE WIZARDING WORLD OF HARRY POTTER – HOGSMEADE</strong><br>
+    Essa área caracteriza o vilarejo Hogsmeade, dos livros e filmes do Harry Potter. São 5 atrações, sendo que a principal é a que se passa dentro do castelo de Hogwarts. Vamos a elas.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações imperdíveis" width="14" height="14"><strong>IMPERDÍVEIS</strong><br>
+    -<strong> Harry Potter and the Forbidden Journey</strong>: a emblemática viagem pela história do Harry Potter é uma das mais impressionantes atrações que eu já fui. Mesmo que você não goste ou conheça a história, vale a pena pelo conjunto de efeitos especiais.<br>
+    – <strong>Dragon Challenge</strong>: essas montanhas russas não são exatamente uma novidade, pois já existem desde que o parque abriu, mas foram reformadas para se adaptarem a temática do Torneio Tribruxo (4 livro/filme da série). Vá para a fila da montanha russa vermelha se você procura uma emoção extra – mas não ache que a azul não é radical também.<br>
+    – <strong>Hogwarts Express</strong>: o trem que liga a vila de Hogsmeade, no Islands of Adventure ao Beco Diagonal no Universal Studios. Mais detalhes sobre ele no roteiro da Universal. E para entrar, o seu ingresso tem que ser &ldquo;park-to-park&rdquo;.</p>
+  <p><strong><img src="http://www.vaipradisney.com/blog/wp-content/uploads/2013/05/icone-criancas.gif" alt="Atrações para as crianças" width="14" height="14">PARA AS CRIANÇAS</strong><br>
+    – <strong>Flight of the Hippogriff</strong>: uma montanha russa bem leve para a família toda se divertir, inclusive levando os pequenos.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-naorecomendo.jpg" alt="Não perca tempo nessas atrações" width="14" height="14"><strong>NÃO PERCA SEU TEMPO</strong><br>
+    – <strong>Frog Choir</strong><br>
+    – <strong>Triwizard Spirit Rally</strong></p>
+  <p><img src="../cont-imgs/roteiros/icone-tire-fotos.png" alt="icone-tire-fotos" width="14" height="14"><strong>TIRE FOTOS</strong><br>
+    Tirar fotos no cenário: verdade seja dita, a Universal caprichou na criação desta área do parque. Como fã de Harry Potter, recomendo tirarem muitas fotos aqui.</p>
+  <p><strong><img src="../cont-imgs/roteiros/icone-food-tip.png" alt="Dica de comida" width="14" height="14">FOOD TIP</strong><br>
+    Experimente a famosa Butter Beer, a cerveja amanteigada: essa dica é só para os fãs de Harry Potter mesmo. Se você gosta dos livros, aposto que já teve curiosidade de saber qual o gosto da famosa cerveja amanteigada. Bom, para dizer a verdade, eu achei muito doce para o meu gosto, mas você pode matar a sua curiosidade e tirar suas próprias conclusões.</p>
+  <p><strong><img src="http://www.vaipradisney.com/blog/wp-content/uploads/2013/05/icone-compras.png" alt="icone-compras" width="14" height="14">DICAS DE COMPRAS</strong><br>
+    Visite as lojas de doces que fica em frente a entrada da montanha russa. Lá você encontra muitos doces diferentes presentes nos filmes. É possível ainda comprar varinhas, vassouras e todos os produtos típicos de Harry Potter.</p>
+ 
+  <p><strong>3. JURASSIC PARK</strong><br>
+    <img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações imperdíveis" width="14" height="14"><strong>IMPERDÍVEL</strong><br>
+    – <strong>Jurassic Park River Adventure</strong>: essa atração é muito legal, mas só recomendo nos dias de calor porque molha bastante. Além de molhar, ela também é uma retratação muito bem feita do filme Jurassic Park.</p>
+  <p><strong><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se sobrar tempo" width="14" height="14">SE SOBRAR TEMPO</strong><br>
+    – <strong>Jurassic Park Discovery Center</strong></p>
+  <p><img src="http://www.vaipradisney.com/blog/wp-content/uploads/2013/05/icone-criancas.gif" alt="Atrações para as crianças" width="14" height="14"><strong>PARA AS CRIANÇAS</strong><br>
+    – <strong>Pteranodon Flyers</strong>: um voo muito divertido que não tem como uma criança ou um adulto (eu!) não amar.<br>
+    – <strong>Camp Jurassic</strong>: que criança que não gosta de um &ldquo;parquinho&rdquo; né? E aqui completamente tematizado com Dinossauros. Para um jovem cientista que um dia eu fui, isso aqui seria o paraíso.</p>
+ 
+  <p><strong>4. TOON LAGOON</strong><br>
+    <strong><img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações imperdíveis" width="14" height="14">IMPERDÍVEIS</strong><br>
+    – <strong>Dudley Do-Right&rsquo;s Ripsaw Falls</strong>: ainda mais do que recomendado no Jurassic Park, a dica para essa montanha russa na água é somente ir nos dias de extremo calor. Ela molha absolutamente tudo!! Se prepare para sair ensopado de lá e não seja doido de ir em dias mais frios.<br>
+    – <strong>Popeye &amp; Bluto&rsquo;s Bilge-Rat Barges</strong>: a mesma recomendação da atração acima vale aqui também. Fuja daí se estiver indo no frio. A impressão que eu tenho é que a Universal é bem sem noção no que se refere a atrações de molhar. Elas sempre molham DEMAIS.</p>
+  <p><strong><img src="http://www.vaipradisney.com/blog/wp-content/uploads/2013/05/icone-criancas.gif" alt="Atrações para as crianças" width="14" height="14">PARA AS CRIANÇAS</strong><br>
+    – <strong>Me Ship, The Olive</strong>: outro playground, agora um pouco mais molhado que o anterior.</p>
+  
+  <p><strong>5. MARVEL SUPER HERO ISLAND</strong><br>
+    <img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações imperdíveis" width="14" height="14"><strong>IMPERDÍVEIS</strong><br>
+    – <strong>The Amazing Adventures of Spider-Man</strong>: esse simulador do Homem Aranha é impressionante. Os efeitos especiais são tão bons, que tem hora que você perde um pouco a noção e se pergunta se está em um filme ou se aquilo é de verdade. Um dos meus preferidos do parque.<br>
+    – <strong>The Incredible Hulk Coaster</strong>: essa é também uma das melhores montanhas russas de Orlando. Super rápida e da mais medo de olhar do que de ir propriamente. Se você topa um pouquinho de emoção, e não se assusta com os loopings, não deixe de ir.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se sobrar tempo" width="14" height="14"><strong>SE SOBRAR TEMPO</strong><br>
+    – <strong>Doctor Doom&rsquo;s Fearfall</strong>: não se compara com o elevador do finado Playcenter em São Paulo. Acho bem mais ou menos. É bem decepcionante, porque ele não tem uma queda rápida. Você sobe rápido e desce devagar. Eu acho que devia ser o oposto, mas quem sou eu, né?</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-naorecomendo.jpg" alt="Não perca tempo nessas atrações" width="14" height="14"><strong>NÃO RECOMENDO</strong><br>
+    – <strong>Storm Force Accelatron</strong><br>
+    Em geral, depois de acabar a área da Marvel, mais ou menos no meio do dia, eu saio em direção ao outro parque para passar o resto da tarde e como por lá mesmo. Mas se quiser continuar no Islands, ainda existem outras duas áreas.</p>
+  
+  <p><strong>6. SEUSS LANDING</strong><br>
+    <img src="http://www.vaipradisney.com/blog/wp-content/uploads/2013/05/icone-criancas.gif" alt="Atrações para as crianças" width="14" height="14"><strong>PARA AS CRIANÇAS</strong><br>
+    – <strong>The Cat in the Hat: </strong>atração do tipo &ldquo;trenzinho&rdquo; que caminha por toda a história do livro The Cat In The Hat.<br>
+    – <strong>The High In The Sky Seuss Trolley Train Ride:</strong> outro trenzinho que passa por cima de toda a Seuss Landing.<br>
+    – <strong>One Fish, Two Fish, Red Fish, Blue Fish: </strong>atração daquelas que &ldquo;gira&rdquo; como o Dumbo do Magic Kingdom.</p>
+  <p><strong><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se sobrar tempo" width="14" height="14">SE SOBRAR TEMPO</strong><br>
+    -<strong> If I Ran the Zoo:</strong> parquinho com muita água para as crianças se refrescarem no verão.<br>
+    – <strong>Caro-Seuss-el: </strong>carrossel com os personagens da área<strong>.</strong></p>
+ 
+  <p><strong>7. THE LOST CONTINENT</strong><br>
+    <img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se sobrar tempo" width="14" height="14"><strong>SE SOBRAR TEMPO</strong><br>
+    – <strong>The Eighth Voyage of Sindbad Stunt Show:</strong> apresentação com dubles bem similar a do Indiana Jones que é exibida no Hollywood Studios da Disney.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-naorecomendo.jpg" alt="Não perca tempo nessas atrações" width="14" height="14"><strong>NÃO RECOMENDO</strong><br>
+    – <strong>Poseidon&rsquo;s Fury:</strong> é um show meio sem pé nem cabeça. Você entra em diversas salas e um ator fica interagindo com projeções e esguichos de água. O espaço é muito legal mas na minha opinião, é uma atração mal executada.</p>
+  <p><strong><img src="../cont-imgs/roteiros/icone-food-tip.png" alt="Dica de comida" width="14" height="14">FOOD TIP</strong><br>
+    Fica nessa área meio abandonada do parque, o eleito por muitos anos como o melhor restaurante de parque temático do mundo, o <strong>Mythos&rsquo;s</strong>. Ele é muito completo e oferece diversas opções de comida de verdade por preços bem interessantes. Vale a pena para um almoço ou um jantar no fim do dia.</p>
+  
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+ 
+
+
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

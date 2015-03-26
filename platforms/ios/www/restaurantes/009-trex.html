@@ -1,0 +1,205 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>T-Rex: comendo no parque dos dinossauros</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/009-trexcomendo.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">T-Rex: comendo no parque dos dinossauros</h2>
+
+
+
+
+<p>Os restaurantes tematizados fazem sucesso no mundo inteiro com adultos e crianças. Lá em Orlando não poderia ser diferente: um dos restaurantes mais procurados pelas famílias na cidade é o T-Rex, que fica no Downtown Disney.</p>
+<div id="attachment_4221"><img src="../cont-imgs/restaurantes/009-tres/trex-restaurante-orlando-dinossauro-01.jpg" alt="Entrada do T-Rex no Downtown Disney. Impossível perder de vista" width="640" height="427">
+  <p>Entrada do T-Rex no Downtown Disney. Impossível perder de vista</p>
+</div>
+<p>No final de Julho fomos almoçar no restaurante, já que muitos visitantes do Vai Pra Disney sempre nos perguntam sobre ele. O T-Rex foi inaugurado em 2008 e desde então é um grande sucesso de público. Muitos o comparam com o Rainforest Café, que também fica no Downtown Disney e tem de fato muitas similaridades que vão desde o cenário até o cardápio hiper variado.</p>
+<h2>Reservar ou não?</h2>
+<p>Como mencionei acima, esse restaurante é um dos mais populares de Orlando no momento, principalmente para aqueles que viajam com crianças. Fiz a reserva para o almoço com umas 3 semanas de antecedência, no site da Disney conforme <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">ensinamos aqui</a>.<br>
+  Não achei difícil encontrar horário visto que eu fui no almoço de uma quinta-feira. Como o Downtown Disney acaba lotando somente a noite, é mais fácil encontrar horários para o almoço do que para o jantar.</p>
+<p>Para quem está encontrando dificuldade em fazer uma reserva, não se desespere. Em geral 70% do restaurante é preenchido com as reservas e o restante é ocupado com os chamados &ldquo;walk ins&rdquo;, a famigerada fila de espera.</p>
+<p>Ao chegar no restaurante, você vai encontrar uma espécie de cabana do lado de fora onde você poderá dar o seu nome e pegar um pager para esperar. Depois pode sentar no bar do restaurante ou dar uma caminhada pelo Downtown (até o limite de alcance do pager) até que o aparelho toque/vibre/acenda para você ser levado a sua mesa.</p>
+<div id="attachment_4215"><img src="../cont-imgs/restaurantes/009-tres/trex-restaurante-orlando-dinossauro-06.jpg" alt="Dinossauros espalhados pelo restaurante T-Rex. Impressiona a primeira vista." width="640" height="427">
+  <p>Dinossauros espalhados pelo restaurante. Impressiona a primeira vista.</p>
+</div>
+<p>Nesse dia, conversei com algumas pessoas que não tinham reserva e ficaram uns 20 minutos esperando para sentar, mas durante o jantar, a fila pode chegar a 1:30h de espera. Então tente fazer a reserva – e se não conseguir, continue tentando pelo site ou app do My Disney Experience.</p>
+<p>Por não ser um restaurante operado Disney, o T-Rex deixa poucas mesas disponíveis no sistema de reserva do My Disney Experience, então se não tiver encontrando lugares, vale a pena ligar no próprio restaurante para fazer a reserva. O telefone é +1 407-828-8739.</p>
+<p>Se não tiver jeito, procure ir ao T-Rex fora dos horários de pico: almoço antes das 12:30 e jantar antes das 17:30 ou depois das 22h. Em geral o restaurante fica aberto das 11 da manhã até as 22:30h ou meia noite as sextas e sábados.</p>
+<h2>Atmosfera do T-Rex</h2>
+<p>Na minha opinião o mais legal do restaurante não é a comida em si, mas o clima e o tema do lugar. Logo na entrada você encontra uma gigantesca ossada do dinossauro que da nome ao restaurante, o Tiranossauro Rex.<br>
+  O restaurante é divido em quatro sessões que simulam diferentes ambientes: uma floresta tropical, o fundo do mar e uma caverna da era glacial e uma área atingida por meteoros. Acho que vale a pena dar uma caminhada pelo restaurante, só para conhecer os cenários.</p>
+<div id="attachment_4225"><img src="../cont-imgs/restaurantes/009-tres/trex-restaurante-orlando-dinossauro-05.jpg" alt="O bar do T-Rex com o aquário que virou cena de filme quando estourou no ano passado." width="640" height="427">
+  <p>O bar do T-Rex com o aquário que virou cena de filme quando estourou no ano passado.</p>
+</div>
+<div id="attachment_4219"><img src="../cont-imgs/restaurantes/009-tres/trex-restaurante-orlando-dinossauro-10.jpg" alt="A área da floresta tropical no T-Rex. Pra mim a mais tranquila e calma do restaurante. Mesmo assim, barulhenta." width="640" height="427">
+  <p>A área da floresta tropical no T-Rex. Pra mim a mais tranquila e calma do restaurante. Mesmo assim, barulhenta.</p>
+</div>
+<p>É claro que estão espalhados pelo restaurante vários dinossauros que se movimentam e fazem barulhos. O bar que fica logo a esquerda de quem entra no restaurante, fica ao redor de um aquário gigantesco com vários peixes ornamentais. Curiosidade: no ano passado esse mesmo aquário trincou e acabou quebrando no meio da noite. A parte boa é que nenhuma pessoa se feriu, mas deve ter dado um baita susto.</p>
+<p>Outro efeito que ajuda a criar o clima pré-histórico do T-Rex é a &ldquo;chuva de meteoros&rdquo; que atinge o restaurante a cada 20 minutos. É obvio que nada cai do teto, mas as luzes piscam e começa um barulho bem alto imitando uma chuva de pedras. Uma observação: o restaurante é bem barulhento, se é que você já não percebeu hehe<br>
+  Os garçons também brincam com o showzinho e falam para todos se protegerem do meteoros. Em tempo, o garçon que nos atendeu nesse dia era brasieliro e falou em português com a gente o tempo todo.</p>
+<p>Além do restaurante, uma lojinha de souvenirs fica na entrada do restaurante e vende de camisetas a brinquedos. Nela tem uma brincadeira famosa no restaurante chamada de &ldquo;Build-A-Dino&rdquo;, em que você monta o seu próprio dinossauro, e lógico, compra no final <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"></p>
+<div id="attachment_4216"><img src="../cont-imgs/restaurantes/009-tres/trex-restaurante-orlando-dinossauro-07.jpg" alt="Mesas grandes que comportam famílias de todos os tamanhos no T-Rex." width="640" height="427">
+  <p>Mesas grandes que comportam famílias de todos os tamanhos.</p>
+</div>
+<p>Acabamos sentando na área da caverna glacial e aqui vai uma dica: se você quer ao menos ver que está comendo, peça para te sentarem em uma das outras sessões. Além de ser escura, a caverna fica mudando de cor de tempos em tempos. Então meu arroz começou azul, ficou rosa, depois verde, depois vermelho… Enfim, foi divertido, mas saí meio atordoado de lá. E as fotos da comida também ficaram feias.</p>
+<div id="attachment_4218"><img src="../cont-imgs/restaurantes/009-tres/trex-restaurante-orlando-dinossauro-09.jpg" alt="Mal dá pra me enxergar aí, quanto mais a comida. Dica: escolha outro ambiente no T-Rex" width="640" height="427">
+  <p>Mal dá pra me enxergar aí, quanto mais a comida. Dica: escolha outro ambiente</p>
+</div>
+<h2>A comida</h2>
+<p>Apesar de ter dito que a atmosfera do T-Rex acaba sobressaindo a comida, gostei bastante do que comi. Não foi uma refeição inesquecível, mas o legal do restaurante é que ele traz uma grande diversidade de opções para você escolher. E são opções relativamente diferentes dos outros restaurantes que frequentamos em Orlando.</p>
+<p>O cardápio é gigante e tem 8 páginas de bebidas, entradas, pratos e sobremesas. É tão grande que passei pelo menos uns 15 minutos escolhendo o que eu ia pedir. O complicador é que eles criam nomes diferentes para tudo, então um simples cheeseburger vira &ldquo;Giganotosaurus Burger&rdquo; no T-Rex. Já o martini, no cardápio de drinks, ganha uma versão chamada &ldquo;My Cotton-Tini&rdquo;, que leva uma bola de algodão doce no topo. É mole? rs</p>
+<p>Eu escolhi um prato chamado &ldquo;Cretaceous Chicken Fried Steak&rdquo;, que apesar de ter chicken no nome, não tem nada de galinha. É na verdade um filet bovino a milanesa servido com dois acompanhamentos a sua escolha. O chicken no nome é só pra fazer uma piada, pois sendo a milanesa, a carne fica mais clara do lado de fora.<br>
+  Eu pedi a carne junto com fritas e o Raptor Rice, que lembra um arroz oriental, bem aromático. O prato é super bem servido. Dá pra dividir? Dá. Está com MUITA fome? Melhor pedir um sozinho.<br>
+  Incluindo os acompanhamentos o prato custou $20 dólares, o que entre as carnes do cardápio era a opção mais barata.</p>
+<div id="attachment_4220"><img src="../cont-imgs/restaurantes/009-tres/trex-restaurante-orlando-dinossauro-11.jpg" alt="O Cretaceous Chicken Fried Steak com batata frita e arroz oriental no T-Rex" width="640" height="480">
+  <p>O Cretaceous Chicken Fried Steak com batata frita e arroz oriental</p>
+</div>
+<p>Além disso você encontra muitas opções de carne bovina, frango, frutos do mar, saladas, sopas, massas e sanduíches. Como eu disse, tem pra todos os gostos.<br>
+  Outro ponto importante é o preço. Não achei o T-Rex um restaurante exatamente econômico. Em uma refeição completa, um adulto gasta entre $30 e $40, o que garante um bom jantar em outros restaurantes de Orlando.</p>
+<p><strong>Minha conclusão sobre o T-Rex</strong>: é um restaurante divertido e diferente. Sem dúvida vale a pena para ter um jantar (ou almoço) fora da rotina durante a viagem. Não é um restaurante gourmet, mas cumpre a sua função e alimenta bem e com criatividade. O preço não é uma maravilha, mas também não é um roubo. Como eu disse, é ideal para uma refeição especial ou na comemoração de algo.</p>
+<p><strong>Nome</strong>: T-Rex<br>
+  <strong>Endereço</strong>:1676 E Buena Vista Dr, Lake Buena Vista, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/T-REX+Cafe/@28.371099,-81.516665,15z/data=!4m2!3m1!1s0x0:0x82c8db0c77d2bda9?sa=X&ei=8AArVKaPHYi2yASywoD4CA&ved=0CKMBEPwSMA4');">Veja no Google Maps</a>)<br>
+  <strong>Telefone</strong>: +1 407-828-8739<br>
+  <strong>Referência</strong>: Dentro do Downtown Disney<br>
+  <strong>Preço</strong>: US$30 a US$40 dólares por pessoa em média, podendo variar muito dependendo do pedido.<br>
+  <strong>Horário de Funcionamento</strong>: sempre abre as 11:00 e fecha entre as 22:30 e 00:00 (Sextas e Sábados)<br>
+  <strong>Cardápio</strong>:<a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/downtown-disney/t-rex/menus/');">clique aqui</a> para visualizar os cardápios do almoço e jantar (em inglês)<br>
+  <strong>Disney Dining Plan</strong>: Sim, vale um crédito de Table Service.<br>
+  <strong>Avaliação do VPD</strong>: <img src="../cont-imgs/restaurantes/estrelas-avaliacao_2.png" alt="Nota 2 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+	<meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+  <script src="js/jquery/jquery-1.11.1.min.js"></script>
+ 
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+
+	
+	<header data-role="header" id="vpdheader"> 
+		
+		<a href="index.html" data-transition="flip" class="btn-ico-logo"><img src="images/ico-logo-vai-pra-disney.png" /></a>
+		
+		
+		<div class="titulocenter"><h2>Melhores Dicas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar2').click(function(){
+					var lS = prompt("De um nome ao resultado para salvar.","");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults2").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults2").rows.length; t > 1; t--){
+				document.getElementById("tableResults2").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults2").rows[document.getElementById("tableResults2").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults2").insertRow(document.getElementById("tableResults2").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults2" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>   
+	
+	
+  <div data-role="main" class="ui-content content_melhoresdicas" id="vpdlistposts">
+    <ul data-role="listview" data-inset="true">    
+      <li>
+	<img src="images/dicas/001-indosemfalaringles.jpg" style="float:left;" />
+	<a href="melhores-dicas/001-semfalaringles.html"  data-transition="slide"><h3 style="margin-top:8px;">Indo pra Disney sem falar inglês</h3></a>
+      </li>
+      
+        <li>
+	<img src="images/dicas/002-personagens.jpg" style="float:left;" />
+	<a href="melhores-dicas/002-personagensdadisney.html"  data-transition="slide"><h3 style="margin-top:8px;">Personagens da Disney: onde encontrar</h3></a>
+      </li>
+	
+	<li>
+	<img src="images/dicas/003-comoevitarroubo.jpg" style="float:left;" />
+	<a href="melhores-dicas/003-comoevitar-roubo.html"  data-transition="slide"><h3 style="margin-top:8px;">Como evitar o furto e roubo na sua bagagem</h3></a>
+	</li>
+	  
+	<li>
+	<img src="images/dicas/004-segurancaemorlando.jpg" style="float:left;" />
+	<a href="melhores-dicas/004-segurancaemorlando.html"  data-transition="slide"><h3 style="margin-top:8px;">Segurança em Orlando: escolhendo o seu hotel</h3></a>
+	</li>
+      
+	<li>
+	<img src="images/dicas/005-3dicas.jpg" style="float:left;" />
+	<a href="melhores-dicas/005-tresdicasdeseguranca.html"  data-transition="slide"><h3 style="margin-top:8px;">3 dicas de segurança nas compras em Orlando</h3></a>
+	</li>
+	
+	
+	<li>
+	<img src="images/dicas/006-medidasderoupas.jpg" style="float:left;" />
+	<a href="melhores-dicas/006-medidasderoupas.html"  data-transition="slide"><h3 style="margin-top:8px;">Medidas de roupas e calçados nos EUA</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/dicas/007-dicascrianca.jpg" style="float:left;" />
+	<a href="melhores-dicas/007-15dicasparairadisneyscomcrianca.html"  data-transition="slide"><h3 style="margin-top:8px;">15 dicas para ir à Disney com crianças pequenas</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/dicas/008-boardwalk.jpg" style="float:left;" />
+	<a href="melhores-dicas/008-disneyboardwalk.html"  data-transition="slide"><h3 style="margin-top:8px;">Disney’s Boardwalk: entretenimento fora dos parques</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/dicas/009-downtown.jpg" style="float:left;" />
+	<a href="melhores-dicas/009-downstowndisneydescobrinbrindo.html"  data-transition="slide"><h3 style="margin-top:8px;">Downtown Disney: descobrindo a diversão fora dos parques</h3></a>
+	</li>
+	
+	
+	
+	
+	<li>
+	<img src="images/dicas/010-levandocomida.jpg" style="float:left;" />
+	<a href="melhores-dicas/010-levandocomidapara-osparques.html"  data-transition="slide"><h3 style="margin-top:8px;">Levando comida para os parques da Disney</h3></a>
+	</li>
+	
+	
+	
+	<li>
+	<img src="images/dicas/011-melhoresdoces.jpg" style="float:left;" />
+	<a href="melhores-dicas/011-top10melhoresdocesda-disney.html"  data-transition="slide"><h3 style="margin-top:8px;">Top 10: melhores doces da Disney</h3></a>
+	</li>
+	
+	
+	
+    </ul>
+  </div>
+
+
+</div><!-- /page -->
+
+
+ 	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	
+
+	<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

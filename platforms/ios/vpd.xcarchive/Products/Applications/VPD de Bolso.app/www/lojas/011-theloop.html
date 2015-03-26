@@ -1,0 +1,217 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>The Loop: o complexo de compras de Kissimmee</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../lojas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/011-complexoloop.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">The Loop: o complexo de compras de Kissimmee</h2>
+
+
+
+
+<p>Quando fui em Janeiro com a minha família para Orlando, uma garçonete muito gente boa do <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/buca-di-beppo-restaurante-barato-para-familia/');">Buca di Beppo</a> nos deu a dica do <strong>The Loop</strong>, onde ela que morava em Orlando há muitos anos, de fato fazia as suas compras.<br>
+  Já tinha passado pelo The Loop algumas vezes, mas com exceção da gigantesca <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/eletronicos-dicas-compras-orlando/');"><strong>Best Buy</strong></a> que fica por lá, nunca tinha parado para conhecer melhor o local.</p>
+<div id="attachment_4837"><img src="../cont-imgs/lojas/011-theloop/the-loop-orlando-kissimmee-01.jpg" alt="The Loop, um dos principais complexos de compras de Orlando e região" width="640" height="427">
+  <p>The Loop, um dos principais complexos de compras de Orlando e região</p>
+</div>
+<p>O The Loop não é um outlet, mas também não é um shopping center. Decidi chamá-lo de complexo de compras, que se estende por alguns quarteirões com grandes lojas espalhadas.</p>
+<p>Esse complexo fica em Kissimee, ao <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-dirigir-em-orlando-eua/');">sul de Orlando</a>, um local onde muitos brasileiros escolhem se hospedar. O The Loop se divide em duas partes: <strong>The Loop</strong> e <strong>The Loop West.</strong><br>
+  Na realidade,os dois &ldquo;shoppings The Loop&rdquo; pertencem à duas empresas diferentes há muitos anos, mas somente em Agosto de 2014 eles decidiram separar a administração, então o site que antes era o mesmo agora só mostra as informações do The Loop West. Mas fiquem tranquilos que as lojas estão todas lá.</p>
+<p>O fato de uma moradora de Orlando ter me indicado o The Loop, não significa que ele é escondido e que os turistas não estão por lá, pelo contrário, cada vez mais gente frequenta o local. Apesar de não ser um local de compras &ldquo;escondido&rdquo;, onde só você e poucos outros terá acesso às ofertas, o The Loop apresenta algumas grandes vantagens, como o fato de reunir no mesmo lugar algumas das principais lojas que os brasileiros procuram ao viajar para os EUA, como a Ross, Best Buy, Bed Bath and Beyond e por ai vai. Uma bela praticidade na hora de planejar sua rota de compras.</p>
+<h2>As lojas do The Loop</h2>
+<p>Entre os dois complexos, o <strong>The Loop West</strong> é mais tranquilo para estacionar o carro e caminhar por entre as lojas a pé, visto que elas ficam todas dispostas ao redor do estacionamento.</p>
+<p>As principais lojas do The Loop West são:</p>
+<ul>
+  <li><strong>JCPenney</strong>: para quem busca uma loja no estilo &ldquo;Mappin&rdquo; e &ldquo;Mesbla&rdquo; (peguei pesado? hehe). Na verdade, a JCPenney é uma opção legal pra quem procura roupas e produtos para casa, mesa e banho por preços bem em conta. É uma das tradicionais e populares lojas de departamento dos EUA.</li>
+</ul>
+<div id="attachment_4845"><img src="../cont-imgs/lojas/011-theloop/the-loop-orlando-kissimmee-03.jpg" alt="JCPenney, umas das lojas favoritas da minha mãe no The Loop" width="640" height="427">
+  <p>JCPenney, umas das lojas favoritas da minha mãe no The Loop</p>
+</div>
+<ul>
+  <li><strong>TJMaxx</strong>: importante loja estilo &ldquo;sacolão&rdquo; exatamente como a <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/ross-descontos-orlando/');">Ross</a>, porém menos conhecida pelos brasileiros. A TJMaxx algumas vezes oferece produtos melhores e levemente mais caros, pois traz coleções e peças de marcas e designers conhecidos. Mesmo assim, absurdamente abaixo das lojas, digamos, normais. Vale a pena conhecer se você tiver paciência para esse tipo de loja.</li>
+  <li><strong>Party City</strong>: não que eu frequente muito, mas bastante gente que nos visita acaba perguntando sobre a Party City, que é uma importante loja de artigos para festa dos EUA. Lá você encontra desde velas, bexigas e apitos até fantasias para adultos e crianças. Lá no The Loop West você encontra uma unidade.</li>
+</ul>
+<div id="attachment_4844"><img src="../cont-imgs/lojas/011-theloop/the-loop-orlando-kissimmee-04.jpg" alt="Party City no The Loop - uma ótima recomendação pra quem vai no Halloween, encontrar fantasias" width="640" height="427">
+  <p>Party City no The Loop – uma ótima recomendação pra quem vai no Halloween, encontrar fantasias</p>
+</div>
+<ul>
+  <li><a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/cosmeticos-orlando/');"><strong>Bath &amp; Body Works</strong></a>: outra queridinha dos brasileiros, vende todo o tipo de cosmético de marca própria, que vai de álcool gel até perfume.</li>
+  <li><strong>Babies R Us</strong>: essa é para quem está a procura de produtos para o bebê e ideal para quem quer montar o seu enxoval em Orlando. Veja outras dicas sobre isso, <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/enxoval-do-bebe-em-orlando/');">clicando aqui</a>.</li>
+</ul>
+<div id="attachment_4846"><img src="../cont-imgs/lojas/011-theloop/the-loop-orlando-kissimmee-02.jpg" alt="O paraíso dos enxovais em Orlando no meio do The Loop" width="640" height="427">
+  <p>O paraíso dos enxovais em Orlando no meio do The Loop</p>
+</div>
+<ul>
+  <li><strong>GameStop</strong>: minha loja favorita de games em Orlando. Sou fã dos jogos usados e do atendimento descolado da rede. Muitas outras lojas são encontradas em qualquer canto da cidade.</li>
+  <li><strong>GNC</strong>: a cada vez mais famosa loja de suplementos alimentares, para os atletas de plantão. Eu como bom sedentário, passo longe <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"></li>
+</ul>
+<p>Vale mencionar que as opções de alimentação no The Loop West não são tão boas do que as do The Loop, que por sinal também não são aquela Brastemp.</p>
+<p>Logo em frente ao The Loop West, do outro lado da estrada (tem faixa de pedestres de qualquer maneira), você encontra o <strong>The Loop</strong>, onde outras lojas bem conhecidas ficam localizadas. Lá você também encontra opções de atividades além das compras, como salas de cinema e algumas opções de comida, melhores do que as do The Loop West, como o <strong>Chilli&rsquo;s</strong> e o <strong>Macaroni Grill</strong>.</p>
+<p>As principais lojas do The Loop são:</p>
+<ul>
+  <li><a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/eletronicos-dicas-compras-orlando/');"><strong>Best Buy</strong></a>: dispensa apresentações né? Simplesmente uma das melhores lojas para comprar eletrônicos dos EUA. Essa loja é uma das maiores da rede que já entrei e é bem menos lotada do que a unidade que fica em frente ao<a title="Shopping em Orlando: Mall at Millenia e Florida Mall" href="http://www.vaipradisney.com/blog/shopping-orlando-millenia-florida-mall/" target="_blank">Florida Mall</a>.</li>
+</ul>
+<p><img src="../cont-imgs/lojas/011-theloop/the-loop-orlando-kissimmee-10.jpg" alt="the-loop-orlando-kissimmee-10" width="640" height="427"></p>
+<ul>
+  <li><strong>CVS</strong>: farmácia naquele estilo americano que é quase um supermercado, assim como o <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/cosmeticos-orlando/');">Wallgreens que já falamos por aqui</a>.</li>
+  <li><a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/ross-descontos-orlando/');"><strong>Ross Dress For Less</strong></a>: uma das mais populares lojas de ofertas onde você encontra roupas a preços inacreditáveis. Tem que ter disposição para caçar boas ofertas, mas já demos várias dicas aqui no site (<a title="Ross Dress For Less: grandes descontos em Orlando" href="http://www.vaipradisney.com/blog/ross-descontos-orlando/" target="_blank">clique aqui para ver</a>).</li>
+  <li><strong>Sports Authority</strong>: outra gigante do varejo no segmento de artigos esportivos. É uma das maiores redes dos EUA e quem está a procura de produtos para a prática de esportes não pode deixar de ir.</li>
+  <li><strong>Michaels</strong>: sabe aquela papelaria que a gente gostava de ir antigamente? A Michaels é isso e muito mais. Vende todo o tipo de artigo escolar, produtos para artesanato e até uma seção bem grande pra quem gosta de montar scrapbook.</li>
+  <li><a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/dicas-compras-orlando-bed-bath-beyond/');"><strong>Bed Bath and Beyond</strong></a>: tem absolutamente tudo para a sua casa, já falamos dela aqui e essa unidade é relativamente mais vazia.</li>
+  <li><strong>Petco</strong>: os apaixonados pelos seus bichinhos de estimação, não podem deixar de ir a esse gigantesco supermercado de artigos para os pets. Comprei um bichinho de pelúcia para a minha cachorrinha/sobrinha e foi $1 dólar (um parecido aqui no Brasil não saía por menos de 10 reais).</li>
+</ul>
+<div id="attachment_4839"><img src="../cont-imgs/lojas/011-theloop/the-loop-orlando-kissimmee-09.jpg" alt="Petco, o paraíso para o seu animal de estimação" width="640" height="427">
+  <p>Petco, o paraíso para o seu animal de estimação</p>
+</div>
+<ul>
+  <li><strong>Old Navy</strong>: eu gosto de dizer que a Old Navy é a C&amp;A americana. Atire a primeira pedra quem nunca comprou muito lá! Eu gosto muito de lá, principalmente para roupas mais sossegadas, como pijamas, meias (são excelentes!) e camisas polo.</li>
+</ul>
+<h2>Cupons no The Loop</h2>
+<p>Com as mudanças societárias e de administração que mencionei acima, os cupons do The Loop desapareceram junto com o site do complexo. Por isso, para comprar aqui, você deve &ldquo;caçar&rdquo; os cupons de cada loja grande nos sites das marcas, como explicamos nessa outra matéria.</p>
+<div id="attachment_4840"><img src="../cont-imgs/lojas/011-theloop/the-loop-orlando-kissimmee-08.jpg" alt="Bed Bath and Beyond a loja que nos faz ter vontade de morar de novo nos EUA para montar uma casa" width="640" height="427">
+  <p>Bed Bath and Beyond a loja que nos faz ter vontade de morar de novo nos EUA para montar uma casa</p>
+</div>
+<h2>Vale a pena ir até o The Loop?</h2>
+<p>Se você está procurando produtos que podem ser encontrados nas lojas acima, vale a pena sim. Especialmente se você considerar que as unidades das mesmas lojas que ficam no centro de Orlando, acabam sendo mais lotadas e tem menos estoque e variedade de produtos. Por isso, eu recomendo ir até o The Loop para dar uma pesquisada, se você tiver tempo em Orlando.</p>
+<p>O endereço do complexo é 2001 W Osceola Parkway, Kissimmee, FL 34741 e pode levar de 10 a 30 minutos dirigindo, dependendo do ponto de Orlando que você está hospedado.</p>
+<div id="attachment_4843"><img src="../cont-imgs/lojas/011-theloop/the-loop-orlando-kissimmee-05.jpg" alt="E que brasileiro que não curte a Ross Dress For Less no The Loop? (entre nós , a Re! hehe)" width="640" height="427">
+  <p>E que brasileiro que não curte a Ross Dress For Less? (entre nós , a Re! hehe)</p>
+</div>
+<p>Espero que tenham aproveitado as dicas e depois contem pra gente o que acharam do The Loop.</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

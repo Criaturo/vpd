@@ -1,0 +1,238 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Busch Gardens</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  
+  <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   window.open(url, "_system");
+		}
+	</script>
+  
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../roteiros-parques.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>
+		<div class="titulocenter"><h2>Roteiros dos parques</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/roteiros/thumbs/010bushgardens.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-roteiros"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Busch Gardens</h2>
+
+
+  <p style="text-align:center;"><img src="../cont-imgs/roteiros/010-bushgardens/logo-busch-gardens-300x120.png" alt="logo-busch-gardens" width="300" height="120"></p>
+  
+  <p><strong>Dicas gerais para se virar bem no Busch Gardens</strong></p>
+  <p>– O Busch Gardens é um parque extremamente grande e cortado por uma enorme Savana Africana, chamada Serengeti Plain, o que deixa as atrações um pouco afastadas entre si. Assim, é aconselhável que esse parque seja realizado por blocos, esgotando-se cada uma das 9 áreas temáticas do parque, quais sejam: Egypt, Congo, Jungala, Stanley Ville, Safari of Fun, Bird Gardens, Marocco, Nairobi e Timbuktu.</p>
+  <p>– Use e abuse do Skyride (uma espécie de teleférico) e do trenzinho (chamado Serengeti Railway), que cortam o parque, para locomoção. Além de serem ótimas oportunidades para visualização dos animais e do belo visual do parque, ainda poupa um pouco suas pernas e, acredite, isso, em uma viagem à Orlando, é uma enorme vantagem.<br>
+    O Skyride possui estações no Egito, bastante próximo à entrada da Cheetah Hunt e em Stanleyville, bem na metade do caminho entre a Kumba e a Sheikra. E pode levar até 4 pessoas, dependendo do peso destas (normalmente autorizam, no máximo, 3 adultos), e é uma das melhores e mais emocionantes oportunidades de visualização dos animais no parque.</p>
+  <p>A outra opção de transporte, para aqueles que não gostam de altura, são as Train Stations, localizadas em diversos pontos do parque, como Stanleyville, Congo e Nairobi e também permite um passeio por todo o Serengeti Plain, local onde ficam inúmeros animais, incluindo girafas, zebras e Leões.</p>
+  <p>– Como na maior parte dos parques, é aconselhável a realização das atrações em sentido anti-horário, ou seja, iniciando pela área Egypt, continuando pelo Congo, Jugala, Stanleyville, Sesame Street, Bird Gardens, Marocco e, finalmente, Nairobi e Timbuktu. Resista a tentação de ir à Cheetah Hunt logo de cara, ao menos que a fila esteja com menos de 10 minutos, e comece pela Montu. No retorno, você será obrigado a parar ao lado da Cheetah Hunt para pegar tanto o teleférico, quanto o trem. E mesmo que você deseje fazer todo o parque à pé, terá de passar novamente em frente a sua entrada.</p>
+  <p>– Se você é um amante de montanhas russas, e pretende usufruir de cada uma delas, aconselhamos tomar cuidado com o horário de almoço. O ideal seria terminar todas as montanhas russas e, só depois, partir para o almoço e para as atrações menos emocionantes. Isso evita enjoos e contratempos durante a visita.</p>
+  <p>– O Busch Gardens tem alguns show interessantes, se você quiser assisti-los, não deixe de se atentar aos horários.  </p>
+  <p><strong>ROTEIRO DO BUSCH GARDENS</strong></p>
+  <p><strong>1. EGYPT</strong><br>
+    <img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações imperdíveis" width="14" height="14"> <strong>IMPERDÍVEIS</strong><br>
+    <strong>- Montu:</strong> batizada com o nome do deus egípcio da guerra, essa atração é uma montanha russa bastante intensa, na qual os visitantes experimentam a sensação de mergulhar em torções, loopings e 7 inversões, à velocidades superiores a 96 km/h, à uma força de 3.85 G. Quando inaugurada, era a montanha russa com o maior número de inversões do mundo (posto perdido para a brasileira Monte Makaya, em 1998). Vencedora de prêmio no ano de sua inauguração, 1996, a Montu é a única montanha russa a permanecer no Ranking das 15 maiores montanhas russas do mundo desde a criação do Ranking, em 1998. A atração aparece, ainda, como uma das 50 melhores atrações em parques temáticos no mundo, nos últimos 15 anos.<br>
+    <strong>- Cheetah Hunt:</strong> inspirada no disparo de Guepardos, a Cheetah Hunt é a primeira montanha russa de três arremessos inaugurada na Flórida, atingindo velocidades de até 100 Km/h, a mais veloz de toda a região. Mais nova montanha russa do parque, também foi premiada no ano de sua inauguração. E, para os que não gostam de ficar de cabeça para baixo, uma boa notícia: essa atração não possui looping. Mas, fiquem tranqüilos, pois isso não afeta em nada a sua emoção. O grande barato está nas incríveis arrancadas e na velocidade atingida pelo carrinho. Outro fator interessante é que, por não ser tão radical quanto as inversões, essa montanha russa permite acesso de qualquer pessoa com mais de 1,20m, sendo um prato cheio para crianças maiores. Justamente por isso, as filas costumam ser maiores e é aconselhável fazer esta atração o mais cedo possível.</p>
+  
+  <p><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se tiver tempo de sobra" width="14" height="14"> <strong>SE SOBRAR TEMPO</strong><br>
+    <strong>- Edge of Africa:</strong> trata-se de um pequeno Safári que os visitantes podem realizar andando , localizado próximo à saída da Montu, onde será possível avistar inúmeros animais como hipopótamos, hienas, leões entre outros animais. Em horários específicos a visita será acompanhada por tratadores, que darão detalhes e responderão perguntas dos visitantes. Vale lembrar que o Busch Gardens, antes de mais nada, é um Zoológico e realiza um trabalho de preservação e cuidado de animais muito interessante. Por isso, existem inúmeras atrações de visitação e observação de animais. É uma atração imperdível para quem gosta adora animais. Para quem busca diversão e atrações radicais, aconselha-se a fazer somente se sobrar tempo, já que o passeio completo costuma durar cerca de 30 minutos. Para quem quiser ir, fica uma dica: Os animais costumam a estar mais ativos pela manhã.</p>
+  <p><strong>2. CONGO</strong><br>
+    <img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações imperdíveis" width="14" height="14"> <strong>IMPERDÍVEL</strong><br>
+    <strong>- Kumba:</strong> uma das mais conhecidas e tradicionais montanhas-russas do mundo, a Kumba oferece uma experiência completa em seu emocionante passeio. Elaborada em estilo clássico, esta montanha russa oferece sensações que variam desde uma queda de quase 40 metros de altura, até loopings e inversões em 360º, à mais de 100 km/h, que prometem fazer desta uma experiência inesquecível. Imperdível.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se tiver tempo de sobra" width="14" height="14"> <strong>SE SOBRAR TEMPO</strong><br>
+    <strong>- Congo River Rapids:</strong> passeio realizado em botes que comportam 12 pessoas, simulando um rafting pelas corredeiras do Congo e seus obstáculos. Se existe algo a ser destacado nessa atração é que ela realmente molha muito. Se as barreiras e ondas inseridas na atração não fossem suficientes para deixar cada um dos visitantes ensopados, o parque disponibiliza um sistema em que outras pessoas, na parte externa da atração possam acertá-lo com pistolas de d&rsquo;água. Não vá se o tempo estiver frio ou se você não possuir uma toalha ou muda de roupa (ao menos que você não tenha problema em ficar caminhando completamente molhado). Entenda apenas uma coisa… não existe a opção de entrar nessa atração e não se molhar muito. O Busch Gardens não dá chance nenhuma para que você tenha a sorte de não se molhar em uma atração como essa.</p>
+  <p><strong>3. JUNGALA</strong><br>
+    Esta área não oferece nenhuma atração imperdível, mas possui inúmeras experiências interessantes envolvendo animais e toda a família. Excelente para pessoas com crianças, ainda que elas sejam maiores.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se tiver tempo de sobra" width="14" height="14"> <strong>SE SOBRAR TEMPO</strong><br>
+    <strong>- Jungle Flyers, Wild Surge &amp; Tree Top Trails:</strong> trata-se de um imenso playground, com inúmeras atrações &ldquo;radicais&rdquo; interligadas, feitas sob medida para crianças e toda a família. Em Jungle Flyers, os pequenos poderão sentir a emoção de fazer uma tirolesa sobrevoando toda a área de Jungala, à 15 metros de altura. Em Tree Top Trails, toda a família poderá ter uma experiência com arvorismo, passando por percursos com redes, pontes, e muito mais. As crianças poderão se divertir, ainda, com jatos d´agua em um enorme Water Playground, localizado ao final da atração. Por fim, em Wild Surge, 14 passageiros são elevados à altura de 11 metros, em uma atração que lembra bastante o antigo Kabum da Terra Encantada (Torre Eiffel, se vc freqüenta o Hopi Hari), só que ao contrário. Ao invés de despencar, a subida é bastante veloz e a descida mais calma. E, claro, em versão para crianças e pessoas menos corajosas.<br>
+    <strong>- Orangotrango Outpost, Tigger Lodge e Tigger Trail:</strong> esta área do parque possui, ainda, inúmeros locais para visualização de animais, destacando-se o Orangatongo Outpost, ponto onde será possível visualizar orangotango, o Tiger Lodge, onde ficam os belos tigres de bengala e, principalmente, o Tiger Trail, onde ficam os ainda mais belos e raros tigres brancos.</p>
+  <p><strong>4. STANLEYVILLE</strong><br>
+    <img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações imperdíveis" width="14" height="14"> <strong>IMPERDÍVEL</strong><br>
+    <strong>- Sheikra:</strong> mais famosa montanha russa do parque, e uma das mais temidas do mundo, a Sheikra justifica toda a expectativa e fama criada em torno dela. Essa amigável atração te levará a uma altura de 61 metros de altura para simplesmente soltá-lo lá de cima, em uma queda livre de 90 graus a mais de 110 Km/h. Mas não sem todos os requintes de crueldade possíveis. Antes de despencar o Carrinho trava por 3 segundos exatamente no ponto da queda criando uma das mais indescritíveis sensações do mundo.<br>
+    Como se não bastasse, a Sheikra é a primeira montanha russa do mundo a incorporar um sistema de inversões em curvas, possuindo 2 emocionantes loopings. Isso tudo com as pernas completamente soltas, graças ao sistema Florless.<br>
+    Não por acaso, é uma das atrações localizadas em parques temáticos e montanha russa mais premiados do mundo.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se tiver tempo de sobra" width="14" height="14"> <strong>SE SOBRAR TEMPO</strong><br>
+    <strong>- Madagascar Live!:</strong> mais nova atração do parque, essa atração é, na realidade, um show estrelado pelos personagens do desenho animado Madagascar, incluindo Alex, Gloria, King Julien e os divertidíssimos pinguins. A Atração é bastante interessante, com muita música e dança. Embora os diálogos sejam, evidentemente, em inglês e isso possa trazer certa dificuldade para pessoas com um pouco de dificuldade de entendimento, a história é bem conhecida pelas crianças e o entendimento é possível. No final, ainda é possível tirar fotografias com os personagens. Para grupos com crianças, é uma atração imperdível.</p>
+  
+  <p><strong>- Stanley Falls Flume:</strong> mais uma das atrações aquáticas do Busch Gardens. Esta ride te convida à um calmo passeio sentado em um pequeno carrinho que lembra um toco de árvore. Até que, ao final, você se depara com uma queda de 12 metros de altura que, sem sombra de dúvidas, deixará todos encharcados. Atração bastante semelhante ao Ripsaw Falls, localizado na universal, só que com uma tematização mais fraca. Semelhante também na falta de noção quanto à capacidade de deixar as pessoas completamente molhadas.<br>
+    <strong>- Tanganyaka Tidal Wave:</strong> a última das atrações envolvendo água localizada no Busch Gardens, não foge à regra das demais: os visitantes que se aventurarem certamente sairão bastante molhados. Como as 3 atrações (Tidal Wave, Stanley Falls e Congo River Rapids) são relativamente próximas aconselha-se que, caso você realmente tenha interesse neste tipo de experiência, que as mesmas sejam feitas em sequência. Tal cuidado evitará perda de tempo desnecessária com trocas de roupas ou, para aqueles que sejam loucos ao ponto de aventurar-se sem uma roupa para trocar, que as roupas sejam molhadas após início do processo de secamento.<br>
+    Nesta atração, os visitantes são conduzidos por um cenário que se assemelha a uma grande floresta, deparando-se com uma queda de 10 metros ao final. Como o barco dessa atração é bastante grande (cabem até 20 passageiros), é uma atração que pode ser aproveitada por toda a família. Mas, cuidado, as ondas criadas pelo movimento do barco são gigantescas e costumam molhar bastante os visitantes desavisados (e muitos avisados) que estão passeando pelo local.</p>
+  <p>Antes de continuarmos, destaco, mais uma vez, que as três atrações não são nada amigáveis com relação à encharcar os passageiros. Ao contrário… foram feitas para encharcar de uma forma completamente indescritível. Portanto, pense bem antes de encarar essas atrações sem uma muda de roupa. Lembre-se que Busch fica à 1:30 de Orlando, e que você terá de voltar bem molhado. A temperatura em Orlando costuma cair bastante com o entardecer, e considere isso antes de optar por fazer essa atração. E não pense que usar uma capa de chuva vai resolver o ser problema. Sem exageros, a quantidade de água é tão absurda, que molhará Tênis, meia, sapatos, e todo o mais. Mas, com os cuidados adequados (uma muda de roupa), são atrações divertidíssimas.</p>
+  <p><strong>5. SAFARI OF FUN</strong><br>
+    Área tematizada com os personagens do programa Vila Sésamo, que fez bastante sucesso na televisão brasileira alguns muitos anos atrás. Este local é completamente destinado ao público infantil. Sendo assim, será Imperdível em grupos com crianças menores e completa perda de tempo para grupos sem crianças ou com pré-adolescentes.</p>
+  <p>As principais atrações existentes nesse local são: Air Groover, uma montanha russa infantil, que lembra bastante aquelas existentes em alguns Shoppings no Brasil, Elmo&rsquo;s Treehouse Trek, a casa na árvore de um dos personagens principais da trupe da Vila Sésamo (bastante semelhante ao Treehouse de Magic Kingdom), 123 Smile with me, local para encontro e fotografias com os personagens da Vila Sésamo, A is for Africa, teatrinho com personagens, Big Bird, uma micro &ldquo;roda gigante&rdquo;, ou uma &ldquo;roda minúscula&rdquo;, como preferirem, Cookie Monster&rsquo;s Canopy Crawl, mais um playground, lembrando um pouco o &ldquo;brinquedão&rdquo;, do antigo Parque da turma da Mônica, entre algumas outras atrações, sempre voltadas à crianças pequenas.</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-naorecomendo.jpg" alt="Atrações que não recomendamos" width="14" height="14"> <strong>NÃO VALE A PENA</strong><br>
+    <strong>- Bird Gardens:</strong> ao menos que você seja um amante de pássaros ou adore vê-los, toda essa área também poderá ser considerada uma grande perda tempo. Trata-se, no entanto, de um gigantesco aviário ao céu aberto (ou quase isso…), onde será possível avistar mais de 500 tipos diferentes de pássaros de todas as partes do mundo, de diferentes tamanhos e cores. Muito bonitinho, mas não merece mais do que uma simples passada. As principais atrações dessa área são (todas consideradas perda de tempo):<br>
+    <strong>- Critter Castway:</strong> show com alguns treinadores do parque, utilizando animais comuns como cachorros, gatos, patos, porcos, pombas. É muito semelhante aos shows encontrados no Sea World e no Universal Studios. E, tanto quanto aqueles, um tanto quando dispensável.<br>
+    <strong>- Lory Land:</strong> um enorme viveiro de pássaros, onde os tratadores dos animais estarão disponíveis para tirar dúvidas sobre as espécies mais raras, alimentação dos animais, permitindo algumas vezes até mesmo certa interação com os pássaros. Ao menos que você seja um amante por pássaros, nos parece uma atração dispensável.<br>
+    <strong>- Walkabout Way:</strong> em pouquíssimas palavras, um local para você conhecer Cangurus e alguns outros animais típicos da Austrália. Nada que tome mais do 10 minutos da sua atenção.</p>
+  <p><strong>6. MAROCCO</strong><br>
+    <img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações imperdíveis" width="14" height="14"> <strong>IMPERDÍVEL</strong><br>
+    <strong>- Gwazi</strong>: montanha russa toda construída em madeira, o que permite atingir a impressionante velocidade de 160 Kh/h. O barulho ensurdecedor e o movimento dos trilhos passa a impressão de que o carrinho vai descarrilhar em qualquer momento. Como se não bastasse, essa montanha russa se divide em duas, a Tiger e a Lion, com caminhos completamente distintos, mas que ficam se cruzando em todo o tempo, passando a impressão que vão colidir em algum momento.</p>
+  
+  <p><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se tiver tempo de sobra" width="14" height="14"> <strong>SE SOBRAR TEMPO</strong><br>
+    <strong>- Iceploration:</strong> apresentação com patinadores no gelo, no melhor estilo &ldquo;Holiday on Ice&rdquo;. Esse show, com duração de 30 minutos, conta a história de uma rapaz e seu avô explorando o mundo, passando pelas Florestas Africanas, Floresta Amazônica, Ártico e pela grande barreira de corais na história. Essa atração foi idealizada por diretores com vasta experiência em musicais da Broadway, sendo, com certeza, o melhor show oferecido por este parque.<br>
+    <strong>-Myombe Reserve:</strong> local destinado à visualização de Gorilas e Chimpanzés</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-naorecomendo.jpg" alt="Atrações que não recomendamos" width="14" height="14"> <strong>NÃO VALE A PENA</strong><br>
+    <strong>-Let´s Get Loud:</strong> show bem fraquinho com músicos e dançarinos, cantando e dançando músicas de origem latina.</p>
+  <p><strong>7. NAIROBI</strong><br>
+    <img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se tiver tempo de sobra" width="14" height="14"> <strong>SE SOBRAR TEMPO</strong><br>
+    <strong>- Rhino Rally</strong>: atração bastante interessante, que te leva a um Safári em um Land Rover, no qual será possível ver Elefantes, Rinocerontes brancos, Búfalos entre inúmeros outros animais. Entretanto, nem sempre as coisas saem da forma esperada e… surpresa. Uma atração bem legal que deve ser considerada a primeira a ser feita caso sobre tempo.<br>
+    <strong>- Animal Care Center:</strong> dentre todas as atrações de interações com animais oferecidas pelo Busch Gardens, sem sombra de dúvidas esta é a mais interessante. Nessa atração os visitantes podem observar e participar de procedimentos médicos que são realizados em animais do próprio parque. O laboratório conta com o mais avançado sistema veterinário existente, o que torna toda a atração extremamente interessante, até mesmo para quem não faz tantas questão de ver animais no parque.<br>
+    <strong>- Curiosity Caverns:</strong> Animal Habitat, onde é possível ver animais típicos das cavernas, como Corujas, Lagartos, Morcegos, entre outros.<br>
+    <strong>- Jambo Junction:</strong> Local destinado á interação com animais, principalmente Flamingos e Lêmures. Em alguns horários é possível alimentá-los. Para saber os horários é necessário verificar nos guias fornecidos na entrada do parque.<br>
+    <strong>- Elephant Interaction Wall:</strong> O nome é quase auto-explicativo. Local que possibilita a visualização de elefantes.</p>
+  <p><strong>8. TIMBUKTU / PANTOPIA<br>
+    <img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="Atrações imperdíveis" width="14" height="14"> <strong>IMPERDÍVEL</strong><br>
+    <strong>- Falcon&rsquo;s Fury</strong>: </strong>depois de muitos testes, o Falcon&rsquo;s Fury abriu recentemente e é a maior torre em parque de diversões dos EUA. A atração leva os visitantes a uma queda livre de 102m. Ao atingir a altura máxima, os bancos giram, inclinando o passageiro de forma a ficar em posição horizontal, e depois despenca. Vai encarar?<br>
+    <img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="Vá se tiver tempo de sobra" width="14" height="14"> <strong>SE SOBRAR TEMPO</strong><br>
+    <strong>- Scorpion:</strong> montanha-russa em estilo clássico, com uma queda de 18 metros de altura, um Looping em 360º e velocidades de até 80 km/h. Perto das demais montanhas russas do parque parece até leve. Mas na hora que o carrinho começa a acelerar, logo é possível perceber que vale a pena mais essa emoção.<br>
+    <strong>- Phoenix:</strong> sabe o famoso barco Viking que sempre fez sucesso em parques localizados em estacionamento de Shoppings ou cidades litorâneas durante às férias? Então… Aqui ele gira em 360º. Gostou?</p>
+  <p><img src="../cont-imgs/roteiros/icone-mickey-naorecomendo.jpg" alt="Atrações que não recomendamos" width="14" height="14"> <strong>NÃO VALE A PENA</strong><br>
+    <strong>- Sandserpent:</strong> há quem diga tratar-se de uma montanha russa para crianças pequenas. Eu prefiro considerar um trenzinho sobre trilhos. Ao menos que você possua crianças em seu grupo, não vale a pena. Atração que lembra um pouco o <a title="Roteiro – Disney’s Animal Kingdom" href="javascript:loadURL('http://www.vaipradisney.com/blog/roteiro-disneys-animal-kingdom/');" class="linkvai">Primaval Whirl do Animal Kingdom</a>.<br>
+    <strong>- Sahara Go-Round:</strong> carrossel. No lugar dos cavalos, camelos.<br>
+    <strong>- Timbuktu Theater:</strong> nesse teatro são passados dois filmes em 4D, o &ldquo;Sesame Street&rdquo; e &ldquo;Pirates 4D&rdquo;. Os dois filmes tentam passar experiências sensoriais junto com filmes em 3D. Embora consigam, com até certa competência, os filmes são consideravelmente mais fracos que as atrações localizadas na Disney e Universal do mesmo tipo. Como atrações baseadas em filmes 3D são muito comuns nos parques e, com a popularização das transmissões com tal tecnologia, esse feito já não chama a atenção anteriormente verificada, na época de inauguração dessas atrações, entendemos que não vale a pena fazê-la.</p>
+  <p><img src="../cont-imgs/roteiros/icone-criancas1.gif" alt="icone-dicas" width="14" height="14"> <strong>PARA CRIANÇAS</strong><br>
+    <strong>- Games Area e Kiddie Rides:</strong> atrações voltadas ao públicos infantil ou jogos típicos de parques de interior, no qual os visitantes pagam valores pelo direito de tentar a sorte em jogos envolvendo determinado objetivo, com prêmios sendo alguns ursos de pelúcia enormes, ou bolas de basquete.</p>
+  
+  <img src="../cont-imgs/roteiros/icone-food-tip.png" alt="Dica para comer" width="14" height="14"><strong>FOOD TIP</strong><br>
+  O Busch Gardens possui alguns bons restaurantes servindo refeições, bem como serviços de fast food e doces. Os melhores são:
+  <p><strong>SULTANS SWEETS</strong> – Localizado logo na entrada do parque, essa confeitaria é simplesmente sensacional. Os Muffins de Banana, os Cinnamon Rolls e os Chocolate Fudges são excelentes pedidas para abrir o dia. E o melhor… o Café é Starbucks.</p>
+  <p><strong>CROWN COLONY HOUSE</strong> – Restaurante excelente, em estilo &ldquo;à la carte&rdquo;, com vista panorâmica para o Serengueti Plain. Vale destacar que os custos nesse restaurante são um pouco mais elevados que os costumeiramente observados nos parques. Fica entre a Cheetah Hunt e a Montu.</p>
+  <p><strong>DINE WITH ELMO AND FRIENDS</strong> – Sinceramente, se você pretende realizar uma refeição com personagens, acreditamos que será mais interessante buscar alguns personagens da Disney ou da Universal. A comida, por si só, não justifica os custos do almoço ou Café da Manhã.</p>
+  <p><strong>ZAGORA CAFE</strong> – Oferece hambúrgueres, Hot-dogs e Batata-frita. Enfim… Fast Food, em geral. Fica localizado próximo a entrada do Parque, na região do Marocco</p>
+  <p><strong>SHEIKRA SWEET TREATS</strong> – Não quis se arriscar na Sheikra, mas o restante do seu grupo foi? Não esquenta… ao lado da entrada da montanha russa existe esse quiosque que vende algumas das melhores sobremesas da Flórida, como os Funnel Cakes ou os Waffle cone Sundaes.</p>
+  <p><strong>SAHARA SNACKS</strong> – O objetivo é comer uma besteirinha até chegar em Orlando? A fome bateu, mas não quer comer nada pesado, para não perder as montanhas russas. Dá para enganar a fome com um frango frito, ou hot dog. Sou fã nº 1 das Loaded Cheese Fries, uma batata frita cortada em rodelas no palito, com muito queijo por cima.</p>
+  <p><strong>DESERT GRILL</strong> – Terminou as montanhas russas, e está morrendo de fome? Quer comer bem e por um preço razoável. Certamente o melhor local para isso é o Desert Grill. Localizado em Timbuktu, esse restaurante oferece excelentes opções, com destaque absoluto para a costelinha ao molho barbecue. Existen outras opções, incluindo sanduíches, macarrão, frango e carne.</p>
+  <p><strong>ZAMBIA SMOKE HOUSE</strong> – Por fim, o meu preferido. Esse restaurante oferece um prato excelente, com um pedaço de carne, um pedaço de frango (coxa e sobrecoxa) e meia costela ao molho barbecue. Excelente pedida por 13 dólares.</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+ 
+
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

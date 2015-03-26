@@ -1,0 +1,206 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Typhoon Lagoon</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   window.open(url, "_system");
+		}
+	</script>
+  
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+	  <a href="../roteiros-parques.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>
+		<div class="titulocenter"><h2>Roteiros dos parques</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/roteiros/thumbs/006typhoon.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-roteiros"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Typhoon Lagoon</h2>
+
+
+
+<p style="text-align:center;"><img src="../cont-imgs/roteiros/006-typhoon/noticias_typhoon-Lagoon.png" alt="Typhoon Lagoon e o barco que simboliza o parque">
+  </p>
+
+  <p>O Typhoon Lagoon é o parque aquático mais antigo da Disney e na minha opinião é um dos mais diferentes. Com 25 anos e dono de uma das maiores piscinas de ondas do mundo, o Typhoon Lagoon é também o parque aquático que mais recebe visitantes: mais de 2 milhões de pessoas todos os anos. Pra se ter uma idéia, a piscina do parque é tão importante, que foi planejada para que se pudesse praticar surfe em suas ondas. O parque inclusive oferece aulas como a Re já contou na página de atividades aquáticas (<a title="Atividades Aquáticas na Disney" href="javascript:loadURL('http://www.vaipradisney.com/blog/atividades-aquaticas-disney/');" class="linkvai">clique aqui</a> para ver).</p>
+  
+  <h2>Atmosfera</h2>
+  <p>A lenda que é tema do parque diz que um tufão gigante assolou um paraíso tropical e deixou por ali muitos rastros espalhados. O principal é navio Miss Tilly que saiu do mar para o topo do monte Mayday e acabou virando o símbolo o Typhoon Lagoon.</p>
+  <p>Diferente do irmão Blizzard Beach, o Typhoon Lagoon é mais cheio mas não menos divertido. As atrações aqui são bem diferentes e seguem mais um estilo de parque de diversões, só que com água dentro. Enquanto o Blizzard Beach é um parque para relaxar, no Typhoon Lagoon a regra talvez seja menos descanso e mais agitação. Mas para aqueles que procuram um dia tranquilo, saibam que vocês também têm lugar no Typhoon Lagoon que oferece espreguiçadeiras por todo o parque.</p>
+  <p>Todos os anos, o parque entra em manutenção entre o começo de Outubro e o final de Dezembro. Enquanto isso o Blizzard Beach continua aberto para quem quiser curtir um dia de parque a
+  <h2>Alimentação</h2>
+  <p>São 8 pontos de alimentação dentro do Typhoon Lagoon. Alguns são apenas quiosques onde você encontra snacks e outros com mesas para você sentar e comer. Da última vez que fomos, comi um chesseburguer muito bom o Leaning Palms. O engraçado é que tinha no cardápio um prato chamado &ldquo;Feijão com Arroz e Galinha&rdquo;, assim mesmo em português. É um prato de frango, arroz, feijão e banana frita que achei uma boa opção para os paladares saudosos do Brasil.</p>
+ 
+  <p>No parque também são oferecidas as All-Day Sports Bottle, umas canecas de plástico que podem ser reabastecidas com refrigerantes durante o dia inteiro nos pontos de refill espalhados pelo Typhoon Lagoon. A caneca custa US$9,99 e você pode usar durante todo o dia e depois levar como souvenir para casa.</p>
+  <p>O Typhoon Lagoon também oferece dois &ldquo;campings&rdquo; para se fazer um pic-nic no parque. Com isso, você pode levar uma geladeirinha com bebidas e comidas, e curtir uma sombra com a família. Os únicos itens que não podem ser levados são bebidas alcoólicas e recipientes (potes, garrafas, etc) de vidro.</p>
+ 
+  <h2>Ingressos</h2>
+  <p>Há duas maneiras de entrar no Typhoon Lagoon: uma é através da opção Water Park, Fun and More que pode ser adicionada ao seu ingresso para os parques temáticos da Disney (<a title="Ingressos para os parques de Orlando" href="javascript:loadURL('http://www.vaipradisney.com/blog/ingressos-parques-orlando/');" class="linkvai">clique aqui</a> para ver os preços), ou ainda através de um ingresso individual que pode ser comprado na bilheteria do parque ou no site da Disney. O ingresso individual custa US$56.45 (adultos) e US$47.93 (crianças de 3 a 9 anos) – preços de julho/2014.</p>
+  <h2>Aluguel: armários, toalhas e cabanas</h2>
+  <p>Como todos os parques aquáticos, no Typhoon Lagoon você pode alugar armários para deixar os seus pertences. Existem dois tamanhos disponíveis: o grande por US$10 e o pequeno por US$8 para o dia todo. Nos dois casos você precisa deixar um caução de US$5 que são retornados quando você devolver a chave do armário.</p>
+  <p>Toalhas estão disponíveis por US$2 cada, mas como eu já disse em outros roteiros, sempre levo uma toalha do hotel em que estou hospedado e depois, obviamente, levo de volta.</p>
+  <p>Os parques aquáticos da Disney também oferecem espaços reservados para quem quer ter um dia mais tranquilo e privativo. No Typhoon Lagoon as cabanas chamadas de Beachcomber Shacks abrigam 6 pessoas e incluem armários, um cooler com garrafas de água, toalhas a vontade, canecas com refil para todos e até um &ldquo;mordomo&rdquo; que serve comidas (cobradas a parte) durante todo o dia. O custo da cabana para 6 pessoas varia entre US$215 e US$315 (preços de julho/2014). Mais pessoas podem ser adicionadas por US$25 cada.</p>
+  <h2>Localização, estacionamento e horários</h2>
+  <p>O Typhoon Lagoon fica quase em frente ao Downtown Disney e o estacionamento do parque é gratuito. Por isso, vale a pena chegar cedo para pegar uma vaga perto da entrada.<br>
+    Os ônibus internos da Disney também incluem o Typhoon Lagoon partindo de todos os hotéis, parques e Downtown Disney.<br>
+    O parque fica aberto todos os dias entre as 10:00 e as 17:00, mas durante o verão americano, chega a abrir entre as 9:00 e as 20:00. De qualquer maneira, antes de ir, confirme o horário de funcionamento no site da Disney conforme <a title="Horários dos parques da Disney" href="javascript:loadURL('http://www.vaipradisney.com/blog/horarios-dos-parques-da-disney/');" class="linkvai">ensinamos aqui</a>.</p>
+  
+  <h2>Mapa do Typhoon Lagoon</h2>
+  <p>Apesar de não ser visível no mapa do parque, o Typhoon Lagoon é dividido em 5 regiões que abrigam as atrações e ficam ao redor do ponto principal do parque que é o navio Miss Tilly. Abaixo, você encontra a lista de todas as atrações com meus comentários sobre cada uma delas. Se quiser acompanhar com o mapa do parque, <a href="javascript:loadURL(‘http://www.vaipradisney.com/blog/wp-content/uploads/2014/08/typhoon-lagoon-mapa.jpg');" class="link">clique aqui</a> para abri-lo</p>
+  <p><strong>MOUNT MAYDAY</strong><br>
+    É nesta região localizada no fundo do parque, que se concentra grande parte das atrações e toboáguas. É onde a maioria dos visitantes passa o dia se divertindo.<br>
+    – <strong>Humunga Kowabunga</strong>: o toboágua mais rápido do parque, é na verdade um conjunto de três escorregadores fechados que levam os visitantes ladeira abaixo a 50 km/h. Eu gostei bastante dele apesar de não conseguir enxergar muito o que estava acontecendo, por conta do volume de água caindo na minha cara.<br>
+    – <strong>Storm Slides</strong>: aqui você encontra três escorregadores abertos repletos de curvas. É sempre uma das atrações mais lotadas do parque e nem acho tudo isso viu. O fato da inclinação dos toboáguas não ser muito grande, faz com que a gente escorregue muito devagar.</p>
+  
+  <p>– <strong>Gang Plank Falls</strong>: esse toboágua é para toda a família. As bóias grandes comportam 4 pessoas que vão girando por um caminho cheio de curvas e cachoeiras. Na minha opinião também acaba sendo um pouco devagar, mas acho que também depende muito do peso dentro da bóia. A diversão vai depender mesmo da animação do seu grupo.<br>
+    – <strong>Mayday Falls</strong>: pra mim essa é a segunda atração mais legal do parque (a primeira vem daqui a pouco). Em cima de uma bóia que mais parece um donut, você desce com uma boa velocidade um escorregador que simula corredeiras até uma piscina no final.<br>
+    – <strong>Keelhaul Falls</strong>: é o toboágua irmão ao Mayday Falls, mas por ter uma inclinação menor, vai um pouco mais devagar. Ela também passa por umas &ldquo;cavernas&rdquo; ao longo do caminho.</p>
+  <p><strong>HIDEAWAY BAY</strong><br>
+    Essa é a área mais &ldquo;escondida&rdquo; do parque e fica localizada atrás dos vestiários. É no Hideway Bay que você encontra uma praia tranquila (e distante da praia principal do parque) e a atração mais nova do Typhoon Lagoon.<br>
+    – <strong>Crush &lsquo;n&rsquo; Gusher</strong>: a Disney criou aqui uma verdadeira montanha russa aquática e ela se tornou a minha atração favorita do Typhoon Lagoon. O Crush &lsquo;n&rsquo;n Gusher é um toboágua com quedas e também subidas. <em>&ldquo;Mas como assim subidas?&rdquo;</em> você pode pensar. Juntando o impulso das quedas e jatos de água muito fortes, as bóias são empurradas para o alto deixando a atração muito mais radical. Aqui é possível ir em bóias de 1, 2 ou 3 pessoas e para cada uma delas existe um caminho diferente. Dá pra experimentar todos eles se quiser.</p>
+ 
+  <p><strong>TYPHOON LAGOON</strong><br>
+    A central e maior área do parque é uma grande praia com areia branca pra quem quer relaxar e descansar das atrações das outras áreas.<br>
+    – <strong>Typhoon Lagoon Surf Pool</strong>: a principal atração do parque é sem dúvida essa piscina que tem ondas que chegam a 2 metros de altura. A piscina tem dois ciclos de funcionamento: ondas de surf e marolas. A cada 30 minutos no ciclo de marola, com ondas menores e mais calmas, dá-se início a 90 minutos no ciclo surf, com ondas gigantes que são disparadas a cada 1 minuto e meio e levam todos para o &ldquo;rasinho&rdquo;. No vídeo abaixo, eu filmei de vários pontos o efeito desse tsunami.</p>
+  
+  <br>
+  – <strong>Bay Slides</strong>: pequenos escorregadores pra criançada que fica no canto esquerdo da piscina de ondas.
+  <p><strong>SHARK REEF</strong><br>
+    Dois recifes de água salgada (e muito gelada!) separados pom um navio naufragado que proporciona experiências dignas de uma viagem ao caribe.<br>
+    – <strong>Shark Reef</strong>: essa é uma das atrações mais diferentes de todos os parques de Orlando, ainda mais dentro da Disney. Com um equipamento de snorkel e colete salva-vidas fornecidos gratuitamente na entrada da atração, você irá nadar nas congelantes águas do recife para encontrar peixes e tubarões. Pra entrar na atração é preciso saber nadar sem auxílio de ninguém, pois essa é uma atração onde você fica livre com os peixes na água. Os tubarões-martelo e tubarões-tigre sempre se mantém distantes: eles não se aproximam das pessoas proativamente e também não é permitido o mergulho dentro do shark reef para se aproximar deles. De qualquer forma, a Disney é super preocupada com segurança então fique tranquilo que todos os animais ali são inofensivos. Para os menos corajosos, há uma ponte que cruza o recife de onde é permitido ver os peixes e as pessoas nadando de uma distância segura.</p>
+  
+  <p>– <strong>S.A.S Adventure</strong>: essa é uma das poucas atrações pagas dentro dos parques da Disney. Em uma experiência de 30 minutos, os visitantes são rapidamente treinados a usar um equipamento de mergulho com tanque de oxigênio e vão no fundo do recife interagir com os peixes. Para participar é necessário pagar US$20. Crianças menores de 5 anos não podem entrar.</p>
+  <p><strong>CASTWAY CREEK</strong><br>
+    – <strong>Castway Creek</strong>: como todo e bom parque aquático, o Typhoon Lagoon não poderia deixar de ter o seu rio de correnteza. O Castway Creek dá a volta em todo o parque e tem vários pontos de saída, além de bóias individuais e para duas pessoas que ficam flutuando e você pode pegar sem pagar nada por elas.<br>
+    – <strong>Ketchakiddee Creek</strong>: playground para crianças com escorregadores e fontes espalhadas além de uma pequena praia para os pequenos se divertirem.</p>
+ 
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+ 
+
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

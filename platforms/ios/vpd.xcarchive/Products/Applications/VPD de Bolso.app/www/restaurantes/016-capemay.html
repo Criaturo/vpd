@@ -1,0 +1,186 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Cape May: café da manhã com personagens da Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/016-capemay.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Cape May: café da manhã com personagens da Disney</h2>
+
+
+
+
+<p>Desde muito antes de visitar o <strong>Cape May Cafe</strong> eu já sabia que ele se tornaria um dos meus restaurantes preferidos para se tomar café da manhã na Disney por tudo que já conhecia da sua fama. Quando finalmente o conheci, com certeza ele não fez por menos e cumpriu com minhas expectativas. Muita gente gosta de marcar refeições com personagens durante uma viagem a Disney e nós não somos diferentes, mas depois de algumas viagens e do tempo que morei em Orlando, percebi que criei naturalmente uma preferência clara por marcar refeições com personagens durante o café da manhã por dois motivos:</p>
+<ol>
+  <li>Como você pode tomar o café da manhã antes do parque abrir, você não perde tempo de parque (quando poderia estar em atrações) para ter essa experiência. Se os personagens que você quer encontrar estão disponíveis nos hotéis, esse pode ser um bom jeito de aproveitar a Disney além das horas de funcionamento dos parques.</li>
+  <li>Quando eu tomo um desses cafés mega completos no estilo americano, eu não sinto fome durante o resto do dia, ele me sustenta para aproveitar o parque praticamente o dia todo.</li>
+</ol>
+<div id="attachment_3045"><img src="../cont-imgs/restaurantes/016-capemay/13581901815_64b4bc3777_z.jpg" alt="Para você ver o porque a gente fica sem fome o dia inteiro. Pães, ovos, waffle e batata...tem de tudo nesses cafés da manhã da Disney." width="600" height="400">
+  <p>Para você ver o porque a gente fica sem fome o dia inteiro. Pães, ovos, waffle e batata…tem de tudo nesses cafés da manhã da Disney.</p>
+</div>
+<p>Dada essa preferência, eu já experimentei quase todos os cafés da manhã da Disney e posso garantir que o Cape May é uma das melhores tanto em cardápio, personagens e atmosfera.</p>
+<h2>Localização do Cape May Cafe</h2>
+<p>O Cape May fica em um dos hotéis mais lindos da Disney na minha opinião, o <strong>Disney&rsquo;s Beach Club</strong>, que o Felipe já escreveu a respeito <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/beach-club-resort-disney/');">aqui</a>. Passear por esse hotel, principalmente pela parte de trás dele bem na orla do lago do <strong><a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/disney-boardwalk/');">Disney&rsquo;s Boardwalk</a>,</strong> já vale a ida ao Cape May por si só.</p>
+<p>Para chegar lá, você pode ir de taxi, de carro e estacionar na área separada para visitantes (você conseguirá entrar se tiver reserva para o restaurante) ou de transporte interno da Disney diretamente do Downtown Disney ou dos parques, dependendo da hora. O transporte interno poderá ser ônibus, barco ou até uma caminhada a pé dependendo da sua origem (<a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/transporte-disney-gratuito/');">clique aqui</a> para mais informações sobre os transportes internos da Disney). Como o tema desse hotel é praia, o Cape May não destoa e também adota o cenário praieiro na sua decoração, trazendo inclusive todos os personagens em trajes especiais, o que é bem fofo.</p>
+<div id="attachment_3047"><img src="../cont-imgs/restaurantes/016-capemay/13581991723_4233c3b202_z.jpg" alt="Felipe na nossa mesa na última visita ao Cape May. Note o castelo de areia atrás dele, como parte da decoração com o tema praia." width="600" height="400">
+  <p>Felipe na nossa mesa na última visita ao Cape May. Note o castelo de areia atrás dele, como parte da decoração com o tema praia.</p>
+</div>
+<h2>Personagens do Cape May</h2>
+<p>Falando em personagens, este restaurante traz alguns dos mais clássicos da Disney para te encontrar na sua mesa enquanto você come. São presenças constantes (porém não garantidas) tanto no café da manhã quanto no jantar o <strong>Donald</strong>, <strong>Pateta</strong> e <strong>Minnie</strong>. Algumas vezes o <strong>Tico e Teco</strong> também dão o ar da graça por ali, mas normalmente o fazem para substituir algum personagem recorrente que não aparecerá naquele dia especificamente. O importante é que são sempre personagens legais e conhecidos, como você pode ver.</p>
+<div id="attachment_3046"><img src="../cont-imgs/restaurantes/016-capemay/13582287324_aec65c8b2f_z.jpg" alt="Pato Donald na versão praia. Muito fofo." width="600" height="400">
+  <p>Pato Donald na versão praia. Muito fofo.</p>
+</div>
+<h2>Comida do Cape May Cafe</h2>
+<p>Atmosfera e personagens são sempre toques muito legais, mas nada disso adianta se a comida não valer a pena, né? E é no quesito cardápio que o Cape May se diferencia da grande maioria dos restaurantes da Disney que oferecem café da manhã. O menu é super completo, executado com capricho e com opções para agradar todos os gostos. De frutas e iogurtes a mingau e aspargos (what?? quem come aspargos de manhã?), de pães e waffles a carnes e ovos, tem de um tudo ali. Para os apaixonados pelo clássico americano bagel com salmão defumado e cream cheese (que eu particularmente não gosto mas vejo todo mundo nas nuvens quando come isso), ele está no cardápio do Cape May e como tudo no buffet, é a vontade. A parte de proteínas como um todo é super completa: vai de carne vermelha, salmão, ovos (com e sem queijo) aos clássicos americanos bacon e salsicha. Dava facilmente para você confundir com um almoço. Tem até batata para acompanhar as carnes.</p>
+<p>Para os mais formiguinhas que curtem os doces, eu já expressei aqui no blog algumas vezes o meu amor pela calda de morango da Disney (que acompanha o Funnel Cake, vencedor do primeiro lugar na nossa lista de <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/top-10-melhores-doces-disney/');">Top 10 doces da Disney</a>). Pois bem, essa calda também está disponível no buffet do Cape May como uma opção de acompanhamento dos waffles do mickey. Eu não tenho palavras para dizer como é boa essa calda, mas fica o meu alerta: cuidado, ela vicia e muito! Se fosse o único item do cardápio do Cape May, acho que eu já estaria feliz. <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"></p>
+<div id="attachment_3041"><img src="../cont-imgs/restaurantes/016-capemay/13582245824_500acb9148_z.jpg" alt="13582245824_500acb9148_z" width="600" height="400">
+  <p>Vamos fazer de conta que eu fui super light e saudável e só comi esse iogurte com frutas. :D</p>
+</div>
+<p>A parte com mais cara de café da manhã para brasileiros, com pães diversos, bolos e frutas também não fica atrás do restante do buffet. Muffins, croissants, pães e bolos também são encontrados em grande variedade. Na parte das frutas, o destaque fica para as frutas vermelhas americanas, que são sempre lindas e docinhas. Morangos enormes e deliciosos, que eu pessoalmente gosto de colocar no meu iogurte com mel. Já no campo das bebidas, o garçom que atender a sua mesa vai te oferecer café, leite, sucos (de laranja ou de maça) e chocolate quente para quem quiser e quanto quiser.</p>
+<p>Como você pode ver, tem tudo para ser uma refeição bem gostosa, envolvida num cenário super legal e trazendo personagens clássicos para participar da bagunça, como a cereja do bolo. E o preço disso tudo acaba sendo bem justo se você considerar que você vai acabar não querendo comer muito o restante do dia (mais detalhes abaixo).</p>
+<p>Gostou? Quer conhecer o Cape May? <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">Veja aqui</a> como fazer a sua reserva. E para tirar melhor proveito dessa experiência, considere marcar esta refeição para o dia que você for visitar o <a href="http://www.vaipradisney.com/blog/roteiro-epcot/" target="_blank">Epcot</a>. Este hotel fica tão próximo do parque que você pode ir a pé ou de barco, como preferir. <a href="http://www.vaipradisney.com/blog/horarios-dos-parques-da-disney/" target="_blank">Veja aqui</a> como verificar o horário de abertura do Epcot no dia da sua visita e reserve o Cape May para uma hora antes. Assim você come com calma e depois caminha para o parque, que possui uma entrada próxima ao pavilhão da Inglaterra para os hóspedes dos hotéis próximos. Com ou sem visita ao Epcot, considere o Cape May na sua programação de café da manhã e tenho certeza que você vai gostar também! <img src="../cont-imgs/restaurantes/icon_smile.gif" alt=":)"></p>
+<p><strong>Nome:</strong> Cape May Cafe (Café da Manhã)<br>
+  <strong>Endereço:</strong> 1800 Epcot Resorts Blvd, Disney&rsquo;s Beach Club Resort, Lake Buena Vista, FL32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Disney's+Beach+Club+Resort/@28.371615,-81.55618,17z/data=!3m1!4b1!4m2!3m1!1s0x88dd7fac3e06c229:0xf888e62fdee747bc');">Veja no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-939-3463<br>
+  <strong>Referência:</strong> Dentro do hotel Disney&rsquo;s Beach Club Resort<br>
+  <strong>Preço:</strong> US$15-29 por pessoa (junho/2014)<br>
+  <strong>Horário de Funcionamento:</strong> 7:30am -11:00am (sujeito a alteração)<br>
+  <strong>Cardápio:</strong> <a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/beach-club-resort/cape-may-cafe/menus/breakfast/');">clique aqui para visualizar o cardápio (em inglês)<br>
+    </a><strong>Disney Dining Plan: </strong>Sim – vale um crédito de Table Service.<br>
+  <strong>Avaliação do VPD:</strong> <img src="../cont-imgs/restaurantes/estrelas-avaliacao_4.png" alt="Nota 4 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

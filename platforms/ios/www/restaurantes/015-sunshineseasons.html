@@ -1,0 +1,194 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Sunshine Seasons: descubra comida saudável na Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/015-sunshuneseasons.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Sunshine Seasons: descubra comida saudável na Disney</h2>
+
+
+
+
+<p>Muita gente nos pergunta sobre comida saudável dentro dos parques da Disney. Já demos muitas dicas sobre o assunto aqui no Vai Pra Disney, inclusive em uma matéria com diversas opções para se comer bem sem gastar muito (que você encontra <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/comidas-disney-alem-do-hamburguer/');">aqui</a>).  Hoje vou falar em mais detalhes sobre um dos melhores locais para quem quer fugir da pizza e do cheeseburger sem gastar muito: o Sunshine Seasons.</p>
+<p>Localizado dentro do pavilhão The Land no Epcot, o mesmo que abriga a popular atração Soarin&rsquo;, o Sunshine Seasons propõe uma alimentação saudável no estilo fast food. São diversas opções de comida, incluindo muitas escolhas saudáveis e até um menu bem completo de sobremesas. O restaurante participa do Disney Dining Plan com 1 crédito de refeição de balcão (quick service) e mesmo pra quem está fora do plano, tem um ótimo custo benefício.</p>
+<p>O Sunshine Seasons não necessita de reservas e abre para café da manhã, almoço e jantar.</p>
+<div id="attachment_3262"><img src="../cont-imgs/restaurantes/015-sunshine/sunshine-seasons-epcot-orlando-07.jpg" alt="Pavilhão The Land, que abriga o Soarin', Garden Grill e o Sunshine Seasons" width="640" height="427">
+  <p>Pavilhão The Land, que abriga o Soarin&rsquo;, Garden Grill e o Sunshine Seasons</p>
+</div>
+<div id="attachment_3261"><img src="../cont-imgs/restaurantes/015-sunshine/sunshine-seasons-epcot-orlando-06.jpg" alt="Praça de alimentação onde fica o Sunshine Seasons" width="640" height="427">
+  <p>Praça de alimentação onde fica o Sunshine Seasons</p>
+</div>
+<h2>Conhecendo o Sunshine Seasons</h2>
+<p>O restaurante se divide em 6 estações: café da manhã, padaria, sanduíches, sopas e saladas, noodles asiáticos e grelhados. A estação do café da manhã fica aberta até as 11 da manhã, quando as outras cinco estações abrem para o almoço e ficam abertas até o fim do dia.</p>
+<p>Cada estação oferece opções de pratos que podem ser combinados com acompanhamentos por um valor adicional. No cardápio de cada estação também são oferecidas opção para as crianças de até 9 anos, as chamadas &ldquo;Kids Picks&rdquo;.</p>
+<div id="attachment_3264"><img src="../cont-imgs/restaurantes/015-sunshine/sunshine-seasons-epcot-orlando-09.jpg" alt="Cardápio do Sunshine Seasons dividido entre as 6 estações" width="640" height="427">
+  <p>Cardápio do Sunshine Seasons dividido entre as 6 estações</p>
+</div>
+<p>Quando fui no começo do ano, escolhi um prato de frango com arroz, o chamado &ldquo;sweet and sour chicken with jasmin rice&rdquo;. O prato eta muito gostoso, com cubos de peito de frango, cobertos bom um molho agridoce e um arroz jasmin, que é bem parecido com o arroz branco que temos aqui no Brasil, com um pouco menos de tempero.</p>
+<p>No meu grupo, também pediram outros dois pratos bem famosos do Sunshine Seasons: a carne com arroz de vegetais, chamada de &ldquo;mongolian beef with vegetable fried rice&rdquo; e o frango assado com arroz e feijão, chamado de &ldquo;oak-grilled rotisserie chicken with black beans and yellow rice&rdquo;. Ambos pratos são levemente picantes, mas bem saborosos e cumprem a função pra quem quer evitar as comidas tradicionais de fast food.</p>
+<div id="attachment_3259"><img src="../cont-imgs/restaurantes/015-sunshine/sunshine-seasons-epcot-orlando-04.jpg" alt="Sweet and sour chicken with jasmin rice. Bem saboroso e sem excesso de tempero." width="640" height="427">
+  <p>Sweet and sour chicken with jasmin rice. Bem saboroso e sem excesso de tempero.</p>
+</div>
+<div id="attachment_3258"><img src="../cont-imgs/restaurantes/015-sunshine/sunshine-seasons-epcot-orlando-03.jpg" alt="Slow Roasted Pork Chop with Cheddar Mashed Potatoes and Barbeque Sauce. Lombo suíno com purê de batatas e molho barbecue." width="640" height="427">
+  <p>Slow Roasted Pork Chop with Cheddar Mashed Potatoes and Barbeque Sauce. Lombo suíno com purê de batatas e molho barbecue.</p>
+</div>
+<div id="attachment_3257"><img src="../cont-imgs/restaurantes/015-sunshine/sunshine-seasons-epcot-orlando-02.jpg" alt="Oak-grilled rotisserie chicken with black beans and yellow rice. O famosos frango de padaria com um arroz e feijão que pouco lembra o brasileiro." width="640" height="427">
+  <p>Oak-grilled rotisserie chicken with black beans and yellow rice. O famosos frango de padaria com um arroz e feijão que pouco lembra o brasileiro.</p>
+</div>
+<div id="attachment_3260"><img src="../cont-imgs/restaurantes/015-sunshine/sunshine-seasons-epcot-orlando-05.jpg" alt="Mongolian beef with vegetable fried rice. O arroz com pouco tempero, compensa a carne apimentada." width="640" height="427">
+  <p>Mongolian beef with vegetable fried rice. O arroz com pouco tempero, compensa a carne apimentada.</p>
+</div>
+<p>Ainda existem outras opções de saladas, sopas, peixes e massas em todas as estações. É realmente muito difícil não achar nada que você goste no Sunshine Seasons, que é provavelmente o quick service mais variado de todo o complexo Disney. Este é de longe um dos nossos restaurantes quick service preferidos da Disney, porque além de trazer toda a variedade e um preço justo, ele não deixa de lado o capricho no preparo dos alimentos. É tudo simples, mas são pratos muito bem executados. Pontos extras por ser um dos poucos locais que oferece um bom arroz dentro dos parques.</p>
+<p>A variedade e qualidade não é diferente quando falamos das sobremesas. Aqui você desde bolo de banana, cupcake de bolo de cenoura até mil folhas de morango e créme brêlée entre muitas outras opções dignas de confeitarias. Esses itens podem variar de acordo com o dia, mas você sempre vai encontrar boas opções para adoçar a refeição.</p>
+<p>Como disse no começo, o Sunshine Seasons é, alem de gostoso e saudável, uma opção amigável para os bolsos mais econômicos. As saladas e sopas custam entre $5 e $12, já os pratos com carne, peixe ou frango, entre $8 e $13. As sobremesas custam entre $3 e $5.</p>
+<p>Já para quem quiser tomar café da manhã, as opções são bem americanas como ovos, bacon, salsicha, mas também é possível encontrar alguns pães e cereais, além de um bom café expresso.</p>
+<div id="attachment_3263"><img src="../cont-imgs/restaurantes/015-sunshine/sunshine-seasons-epcot-orlando-08.jpg" alt="Prateleiras com sobremesas do Sunshine Seasons. O difícil é escolher uma." width="640" height="427">
+  <p>Prateleiras com sobremesas do Sunshine Seasons. O difícil é escolher uma.</p>
+</div>
+<p>É importante ressaltar que assim como muitos outros restaurantes dentro do resort da Disney, o Sunshine Seasons também oferece alimentos sem glúten, vegetarianos e kosher.</p>
+<p><strong>Nome</strong>: Sunshine Seasons<br>
+  <strong>Endereço</strong>: 1510 Avenue of the Stars, Lake Buena Vista, FL 32830, Estados Unidos (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/preview?safe=off&ie=UTF-8&fb=1&gl=br&cid=3133170495405149143&q=Sunshine+Seasons&ei=v_TCU5fiDtHesATF0IDIBg&ved=0CLcBEPwSMA8');">Veja no Google Maps</a>)<br>
+  <strong>Telefone</strong>: +1 407-939-3463<br>
+  <strong>Referência</strong>: Dentro do parque Epcot, no pavilhão The Land<br>
+  <strong>Preço</strong>: até US$15 por pessoa (julho/2014)<br>
+  <strong>Horário de Funcionamento</strong>: 9am -9pm (sujeito a alteração)<br>
+  <strong>Cardápio</strong>:<a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/epcot/sunshine-seasons/menus/');">clique aqui</a> para visualizar o cardápio (em inglês)<br>
+  <strong>Disney Dining Plan</strong>: Sim – vale um crédito de Quick Service.<br>
+  <strong>Avaliação do VPD</strong>: <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

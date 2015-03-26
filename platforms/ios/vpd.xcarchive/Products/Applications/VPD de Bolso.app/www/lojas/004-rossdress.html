@@ -1,0 +1,175 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Ross Dress For Less: grandes descontos em Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../lojas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/004-rossdress.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Ross Dress For Less: grandes descontos em Orlando</h2>
+
+
+
+
+<p>Não somos brasileiros se não nos esbaldarmos nas compras quando viajamos para os EUA. Com inúmeras opções baratas entre shoppings, outlets e até supermercados, a Florida virou um dos principais centros de compras e turismo do mundo. Para os que não se cansam na busca pelos melhores preços e maiores descontos, a Ross se destaca como uma loja que oferece de tudo um pouco por valores bem atraentes. É tudo tão barato que a gente até dúvida que é de verdade!</p>
+<div id="attachment_2288"><img alt="Calçados de crianças e ao fundo a imensa loja Ross" src="../cont-imgs/lojas/004-rossdress/IMG_20140407_172002-2-800x600.jpg" width="640" height="480">
+  <p>Calçados de crianças e ao fundo a imensa loja Ross</p>
+</div>
+<p>Tudo começa com o slogan &ldquo;Ross, dress for less&rdquo; que em português significa algo como &ldquo;Ross, vista-se por menos&rdquo;. O que eles não colocaram na frase, mas caberia muito bem é o MUITO menos. A grande jogada da Ross é revender peças de coleções antigas das marcas mais famosas como Nike, Adidas, Tommy Hilfiger, Ralph Lauren, Levi&rsquo;s e até mesmo a Carter&rsquo;s para roupinhas de bebe e a Fossil para relógios e carteiras. Como se tratam de coleções antigas, eles conseguem fazer preço de saldão todos os dias.</p>
+<div id="attachment_2290"><img alt="Na Ross, detalhe de uma calça jeans por menos de $7 dólares!" src="../cont-imgs/lojas/004-rossdress/IMG_20140407_172114-2-600x800.jpg" width="480" height="640">
+  <p>Detalhe de uma calça jeans por menos de $7 dólares!</p>
+</div>
+<p>Mas como nem tudo são flores e todo mundo quer tirar uma casquinha das promoções da Ross, fazer compras por lá é uma verdadeira aventura. Se você quiser o grande prêmio (roupas baratas) tem que ir preparado para passar um bom tempo por lá. As roupas ficam todas separadas por tamanho e mais ou menos por tipo (calças, camisas, vestidos, bermudas, roupa íntima, etc), mas as lojas da Ross não são muito organizadas e requer paciência e tempo para achar boas ofertas por ali. Além disso, como muitas peças possuem pequenos defeitos e até qualidade duvidosa (que justificam os preços extremamente inferiores ao dos shoppings e outlets), você tem que ir com tempo para experimentar tudo antes de comprar. É preciso ter muita vontade de garimpar por boas aquisições no meio de muitos micos e por isso muita gente (inclusive eu) tem preguiça ou não curte muito fazer compras por lá.</p>
+<p>Na Ross você também encontra produtos para casa como roupas de cama, toalhas, artigos de decoração e até mesmo alguns quadros e relógios. Mas pra mim, as melhores coisas para se comprar em uma loja da Ross são as malas, que além de serem muito baratas, são de marcas conhecidas como a Samsonite. Com as compras que todo mundo faz em Orlando, uma mala a mais é quase sempre necessária.</p>
+<div id="attachment_2293"><img alt="Edredons e cobertas dos mais variados estilos. E os preços quase sempre lá em baixo. A cara da Ross." src="../cont-imgs/lojas/004-rossdress/IMG_20140407_172341-2-800x600.jpg" width="512" height="384">
+  <p>Edredons e cobertas dos mais variados estilos. E os preços quase sempre lá em baixo</p>
+</div>
+<div id="attachment_2294"><img alt="Detalhe para as frigideiras coloridas que encontramos na Ross de uma cidade da Califórnia" src="../cont-imgs/lojas/004-rossdress/IMG_20140407_172508-2-600x800.jpg" width="480" height="640">
+  <p>Detalhe para as frigideiras coloridas que encontramos na Ross de uma cidade da Califórnia</p>
+</div>
+<p><strong>Dicas para aproveitar melhor a Ross</strong><br>
+  – Vá logo que a loja abrir, pois de manhã os produtos estão mais organizados do que no fim do dia, quando todo mundo já revirou as araras e prateleiras. Se puder, procure ir de Terça a Sexta, quando o movimento é menor e em geral quando reabastecem as lojas.<br>
+  – Experimente tudo. Como dissemos anteriormente, algumas peças de roupa podem ter pequenos defeitos ou estar com a marcação do tamanho errada. A Rê diz que a cada 20 roupas que ela experimenta na Ross, leva uma.  Por isso, fica a dica de experimentar tudo para evitar  levar pra casa algo que você não irá usar.<br>
+  – Evite ir a Ross no mesmo dia que tiver planejado ir a um parque. A Ross pede paciência e você vai reparar que se tiver pressa para sair de lá, não vai aproveitar bem as compras.</p>
+<p>Existem diversas lojas da Ross na região de Orlando e todas são super parecidas, então escolha a que for mais perto do seu hotel e aproveite! As quatro principais lojas estão localizadas nos seguintes endereços:</p>
+<p>– 2758 E Colonial Dr, Orlando, FL 32803 (407) 896-8885<br>
+  – 1736 Sand Lake Rd, Orlando, FL 32809 (407) 816-1246<br>
+  – 4661 Millenia Plaza Way, Orlando Millenia, FL 32839 (407) 264-0488 (fica ao lado do Mall at Milenia e bem próximo ao Premium Outlet da International Drive)<br>
+  – 1010 Buenaventura Blvd, Kissimmee, FL 34743 (407) 348-7118</p>
+<p>Outras lojas do mesmo estilo onde você encontra produtos diferentes por preços parecidos aos da Ross são a Marshalls e a TJ Maxx . Pra quem tiver um tempinho, também vale dar uma passada nas duas. Apesar de não gostar muito da TJ Maxx, na Marshalls eu já comprei muita coisa boa, inclusive um terno da Ralph Lauren por menos de 100 dólares.</p>
+<p>Aproveite as dicas e com paciência e perseverança, você vai fazer boas compras na Ross!</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Le Cellier: o restaurante do Canadá no Epcot</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/024-lecellier.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Le Cellier: o restaurante do Canadá no Epcot</h2>
+
+
+
+
+<p>Já falamos de diversos restaurantes de fora da Disney, e agora, atendendo a pedidos de vocês mesmo,  vamos começar a falar de restaurantes dentro do complexo também. Para começar, vamos falar do Le Cellier, você já ouviu falar dele? O Le Cellier fica dentro do <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/roteiro-epcot/');">Epcot</a>,  no World Showcase, mais especificamente, no pavilhão do Canadá. É um restaurante cheio de opções canadenses e olha…nunca ninguém me contou que se comia tão bem no Canadá!</p>
+<h2><strong>Le Cellier: as raízes canadenses na Disney</strong></h2>
+<p>O Le Cellier tem uma decoração bem bonita e para entrar no clima canadense, todo o restaurante é dividido em regiões, cada região representa uma parte do Canadá. O garçom vai te contar alguma curiosidade da região do Canadá representada na parte do restaurante que você for acomodado.  Logo que se sentar, você vai ser recepcionado com uma cestinha de pães maravilhosos. Quentinhos e super saborosos. Eu nunca falo muito do couvert dos restaurantes…mas este pão vale a pena seriamente! Eu sonho em descobrir a receita!</p>
+<div id="attachment_1163"><img src="../cont-imgs/restaurantes/024-lecellie/le-cellier2.jpg" alt="Le Cellier - Pães maravilhosos! Se alguém descobrir a receita, me passa, por favor." width="612" height="408">
+  <p>Pães maravilhosos! Se alguém descobrir a receita, me passa, por favor.</p>
+</div>
+<p>Outra curiosidade interessante do Le Cellier é que os cardápios são super high tech. Eles são digitais, parecem algo como um ipad ou um leitor digital. Acho que a foto explica melhor do que toda descrição que eu possa dar aqui.</p>
+<div id="attachment_1168"><img src="../cont-imgs/restaurantes/024-lecellie/le-cellier7.jpg" alt="Le Cellier - Cardápio todo moderninho. " width="612" height="408">
+  <p>Cardápio todo moderninho.</p>
+</div>
+<p>No Le Cellier, as opção são até que bem variadas, indo de hambúrguer a carnes, peixes, saladas, sopas…só não é muito um lugar para comer massa. Até tem uma opção no cardápio, mas sério,  se você  estiver no Epcot e quiser comer massa, vá no pavilhão da Itália e não no do Canadá, né? O Le Cellier um clássico entre os fãs da Disney e possui alguns pratos super tradicionais. É o caso da maravilhosa Sopa Canadense de Cheddar Branco que nós amamos, ou do Poutine, uma batata frita regada em um tipo de molho (no Canadá, em geral o molho é com base de carne, também chamado de gravy, mas aqui existem diversas opções). Agora existe uma parte do cardápio dedicada só a diferentes opções de poutines. Isso mesmo, é um cardápio de batatas fritas. É muito amor, né?  O filet mignon com risoto de cogumelos e o Creme Brulee de Maple também estão entre nossas indicações. Minha dica é comer carne porque são realmente muito boas, mas a verdade é que eu nunca vi alguém falando que se deu mal no Le Cellier.</p>
+<div id="attachment_1164"><img src="../cont-imgs/restaurantes/024-lecellie/le-cellier3.jpg" alt="Le Cellier - Sopa de Cheddar Branco. É espetacular e esta eu já tenho a receita. :)" width="612" height="408">
+  <p>Sopa de Cheddar Branco. É espetacular e esta eu já tenho a receita. :)</p>
+</div>
+<div id="attachment_1167"><img src="../cont-imgs/restaurantes/024-lecellie/le-cellier6.jpg" alt="Le Cellier - Tudo bem que eu já desmontei a decoração do prato antes da foto, mas dá pra ver como a carne é bonita, não dá?" width="612" height="408">
+  <p>Tudo bem que eu já desmontei a decoração do prato antes da foto, mas dá pra ver como a carne é bonita, não dá?</p>
+</div>
+<div id="attachment_1165"><img src="../cont-imgs/restaurantes/024-lecellie/le-cellier4.jpg" alt="Le Cellier - Felipe que é mais comedido tirou a foto com o prato decorado para vocês poderem ver. :)" width="612" height="408">
+  <p>Felipe que é mais comedido tirou a foto com o prato decorado para vocês poderem ver. :)</p>
+</div>
+<p>Tudo parece muito bonito, mas como tudo na vida, o Le Cellier tem um lado ruim que não podemos deixar de citar. Este restaurante, dada a qualidade da sua comida, sempre foi muito popular e as reservas se esgotavam minutos depois de serem liberadas no sistema da Disney. Como a lei da oferta e da procura não perdoa ninguém, diante de tamanha popularidade, os preços aumentaram. Antes, existia um cardápio com um preço mais amigo no almoço e um cardápio mais fino no jantar. Agora o cardápio é um só e os preços que permaneceram foram os do jantar. A experiência de comer lá é uma delícia, mas vá preparado.</p>
+<p>Abrindo o jogo com vocês, a última vez que nós fomos, gastamos 70 dólares por pessoa! Foi de longe a refeição mais cara que fizemos nesta viagem e, apesar de muito gostosa, eu não afirmaria com toda a certeza que foi a melhor. Faça o seu julgamento e avalie se este restaurante cabe ou não no orçamento da sua viagem.</p>
+<div id="attachment_1169"><img src="../cont-imgs/restaurantes/024-lecellie/le-cellier8.jpg" alt="Le Cellier - Créme Brûlúe de Maple: um nome cheio de frufru e uma sobremesa aparentemente simples, mas na verdade é incrívelmente saborosa." width="640" height="480">
+  <p>Créme Brûlée de Maple: um nome cheio de frufru e uma sobremesa aparentemente simples, mas na verdade é incrivelmente saborosa.</p>
+</div>
+<p><strong>Nome:</strong> Le Cellier Steakhouse<br>
+  <strong>Endereço:</strong> Canada Pavilion, Epcot, Walt Disney World Resort, Orlando, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Le+Cellier+Steakhouse/@28.37158,-81.551646,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x2cb671f79f92e38e?hl=pt-BR');">Veja no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-939-3463<br>
+  <strong>Referência:</strong> Dentro do Epcot, no pavilhão do Canadá<br>
+  <strong>Preço:</strong> US$30-70 por pessoa (outubro/2013)<br>
+  <strong>Horário de Funcionamento:</strong> depende do horário de funcionamento do Epcot<br>
+  <strong>Cardápio:</strong> <a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/epcot/le-cellier-steakhouse/menus/');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong><strong>Disney Dining Plan: </strong></strong>Sim<strong><br>
+    Avaliação do VPD:</strong> <img src="../cont-imgs/restaurantes/estrelas-avaliacao_5.png" alt="Nota 5 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

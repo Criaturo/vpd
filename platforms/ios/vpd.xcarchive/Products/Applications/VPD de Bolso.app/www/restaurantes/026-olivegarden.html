@@ -1,0 +1,181 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Olive Garden: comer bem e barato em Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/026-olivegarden.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Olive Garden: comer bem e barato em Orlando</h2>
+
+
+
+
+<p>Olive Garden já é um grande conhecido dos brasileiros, diferentemente dos outros dois restaurantes que já falamos aqui na série Comendo Bem e Barato em Orlando. Com diversas unidades espalhadas pela cidade, o Olive Garden tem comida excelente por um preço bem mais barato que outros restaurantes a la carte de Orlando.</p>
+<p>O menu é basicamente italiano, mas lá você encontra de tudo: carne, peixe, frango e aperitivos que valem a pena por si só. Se quiserem ver o cardápio de uma das unidades de Orlando, <a class="linkvai" href="javascript:loadURL('http://www.olivegarden.com/Italian-Restaurant/FL/Lake-Buena-Vista/1082/');">clique aqui</a>. Mas o que eu mais gosto do Olive Garden é que ele é sempre uma opção quentinha e gostosa no fim de um dia cansativo de compras ou de parque. A comida lá é bem servida e na última vez que fomos (em Maio), a Re e eu comemos couvert (o maravilhoso pão e manteiga, sempre de graça, já já falo mais dele), entrada, cada um pediu um prato e no final a conta deu $30! E olha que saímos rolando de tanto que comemos (sempre! hehehe)</p>
+<h2><strong>Olive Garden: excelente preço pra quem quer fugir do fast food</strong></h2>
+<div id="attachment_950"><img src="../cont-imgs/restaurantes/026-olivegarden/olive-garden-restaurante-barato-orlando-disney-1.jpg" alt="olive garden restaurante barato orlando disney" width="620" height="412">
+  <p>Olive Garden, a mesma carinha em todo o EUA</p>
+</div>
+<div id="attachment_948"><img src="../cont-imgs/restaurantes/026-olivegarden/olive-garden-restaurante-barato-orlando-disney-3.jpg" alt="Risotto Bites olive garden restaurante barato orlando disney" width="533" height="400">
+  <p>Incríveis bolinhos de risotto com molho de pimenta. Imperdível</p>
+</div>
+<p>De entrada recomendo a Buschetta ou o Arancini, que eles chamam de Risotto Bites, que é tipo um bolinho de arroz feito com risotto. Os bolinhos são incríveis, e para a Re que é uma &ldquo;vera napolitana&rdquo;, o Arancini do Olive Garden é um dos melhores que ela já comeu por Orlando. Acredite, já experimentamos vários.</p>
+<p>Além desses aperitivos, também recomendo pedir a salada. Eu sou desses que gosta de salada picada, temperada e pronta para servir. A do Olive Garden é assim e vem em uma bacia enorme para você ir se servindo. A salada de lá é muito boa.</p>
+<div id="attachment_947"><img src="../cont-imgs/restaurantes/026-olivegarden/olive-garden-restaurante-barato-orlando-disney-4-800x562.jpg" alt="Salada farta - olive garden restaurante barato orlando disney" width="640" height="450">
+  <p>Salada boa é assim: picadinha, temperada e com carboidrato no meio :)</p>
+</div>
+<p>De prato principal, eu sempre peço uma massa que é especialidade da casa. Como gosto de pratos simples, quase sempre vou de Fettuccine Alfredo ou de Spaghetti with Meat Sauce, que é o famoso macarrão a bolognesa de todo o domingo. Dai é só pedir pro garçon trazer &ldquo;parmesan&rdquo; que a festa ta feita.<br>
+  Quem já pediu carne ou peixe também sempre diz que gosta muito.</p>
+<p>Os preços, como eu disse, são sempre bem em conta mas podem variar de restaurante a restaurante. Em geral, eu evito o da International Drive, por motivos que eu já citei várias vezes aqui no blog: tudo lá é sempre mais cheio e por ter muito turista, alvo mais fácil de roubos e assaltos. Também evitamos regiões desertas. Quando vou a um Olive Garden tento ir no da 536, em Lake Buena Vista, ou no que fica no estacionamento do Millenia Mall.</p>
+<div id="attachment_946"><img src="../cont-imgs/restaurantes/026-olivegarden/olive-garden-restaurante-barato-orlando-disney-5-800x533.jpg" alt="Fettuccine Alfredo - olive garden restaurante barato orlando disney" width="640" height="426">
+  <p>Macarrão gostoso e quentinho, principalmente pra quem está indo no inverno em Janeiro</p>
+</div>
+<p>Agora o grande destaque do Olive Garden pra mim são os baldinhos de pão com alho que vem DE GRAÇA na mesa. E eu prometo que eles são bons apesar disso.<br>
+  Da última vez que eu fui, devo ter comido uns 3 baldinhos de pão, sem brincadeira! Devo ter comido sozinho umas 15 baguettes que vem molhadas de tanto alho e azeite. Sabe aqueles pães com alho de churrasco? Então, esses são parecidos só que 1000x melhor. Não deixe de comer, ainda mais porque é de graça. Se não bastasse, você pode pedir para eles trazerem mais manteiga (˜extra butter˜) para você passar no pão, sem pagar nada a mais por isso também.</p>
+<div id="attachment_949"><img src="../cont-imgs/restaurantes/026-olivegarden/olive-garden-restaurante-barato-orlando-disney-2.jpg" alt="Paozinhos com alho de entrada olive garden restaurante barato orlando disney" width="520" height="347">
+  <p>Competição de quem come mais pãozinhos com alho. Alguém vai bater meus 15?</p>
+</div>
+<p>Aproveite então suas férias e vem comigo enfiar o pé na jaca no Olive Garden <img src="../cont-imgs/restaurantes/icon_smile.gif" alt=":)"></p>
+<p><strong>Nome:</strong> Olive Garden<br>
+  <strong>Endereço:</strong> 12361 State Road 535 – Orlando, FL 32836 (<a class="linkvai" href="javascript:loadURL('https://www.google.com/maps/search/Olive+Garden/@28.4811689,-81.36875,11z/data=!3m2!4b1!5s0x88e77c4c65c6ac47:0x7edf0a3a6b14cad5!4m5!2m4!3m3!1sOlive+Garden!2sOrlando,+FL!3s0x88e773d8fecdbc77:0xac3b2063ca5bf9e');">Veja todas as lojas no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407 239-6708<br>
+  <strong>Preço:</strong> US$10-25 por pessoa (agosto/2013)<br>
+  <strong>Horário de Funcionamento:</strong> 11am-10pm<br>
+  <strong>Cardápio:</strong> <a class="linkvai" href="javascript:loadURL('http://www.olivegarden.com/menu-listing/dinner');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong>Avaliação do VPD:</strong> <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

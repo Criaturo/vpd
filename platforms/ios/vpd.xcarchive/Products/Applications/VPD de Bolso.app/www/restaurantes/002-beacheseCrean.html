@@ -1,0 +1,189 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Beaches &amp; Cream: melhor lanchonete da Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+   
+</head>
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/002-beachesecream.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Beaches & Cream: melhor lanchonete da Disney</h2>
+
+
+
+
+<p>A gente sempre fala que a Disney tem muito mais coisas do que as pessoas pensam ao conhecer os parques pela primeira vez. O assunto do post de hoje é mais uma opção de restaurante escondidinho, que quase nenhum brasileiro que visita a Disney conhece: o<strong>Beaches &amp; Cream</strong>. Com uma proposta simples e sempre gostosa, é um dos restaurantes que eu mais gosto de visitar após uma visita ao Epcot ou ao Hollywood Studios. Espero que esta novidade agrade você também! <img src="../cont-imgs/restaurantes/icon_wink.gif" alt=";)"></p>
+
+<h2>A atmosfera do Beaches &amp; Cream</h2>
+<p>O Beaches &amp; Cream é uma lanchonete clássica, que segue o estilo bem tradicional de lanchonete americana de antigamente. Não é o lugar ideal para quem quer um prato refinado ou leve, mas é uma excelente opção para quem quer um sanduíche gostoso, uma sopa rápida ou um sundae gigante após um dia de parque. São pratos simples, descomplicados e sempre deliciosos, o que eu chamo de verdadeira &ldquo;comfort food&rdquo;.</p>
+<p>Como todos os restaurantes da Disney, a decoração e a música são impecáveis em criar o clima proposto para o Baches &amp; Cream, te fazendo se sentir algumas décadas atrás. São os tons pasteis usados, as roupas dos garçons e garçonetes, o formato dos móveis e do menu e até o próprio conteúdo do menu. Outro detalhe que eu adoro é a jukebox. Super vintage!</p>
+<div id="attachment_4889"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/002-beachesecream/foto-2-e1417388029534-597x800.jpg" alt="Jukebox antiga no Beaches & Cream" width="597" height="800">
+  <p>Jukebox antiga no Beaches &amp; Cream</p>
+</div>
+<div id="attachment_4893"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/002-beachesecream/foto-3-1-e1417388267699-800x590.jpg" alt="Máquina de refrigerante antiga no Beaches & Cream" width="640" height="472">
+  <p>Máquina de refrigerante antiga no Beaches &amp; Cream</p>
+</div>
+<p>Se você bobear, pode facilmente passar desapercebido pelo Beaches &amp; Cream, pois ele fica bem escondido no fundo do Disney&rsquo;s Beach Club Resort (hotel que já falamos a respeito aqui), onde também fica o Cape May (que serve refeições com personagens, como já falamos aqui). Eu acho até engraçado um restaurante tão &ldquo;aconchegante&rdquo; como o Beaches &amp; Cream ficar em um dos hotéis mais chiques da Disney, mas não tem estranhamento nenhum: apesar de chique, este hotel é zero esnobe. O Beach Club e em especial o Beaches &amp; Cream é um lugar onde todo mundo se sente bem vindo, mesmo quem está de calça moletom!</p>
+<div id="attachment_4891"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/002-beachesecream/foto-4-3-e1417388080735-800x800.jpg" alt="Beaches & Cream no Disney's Beach Club">
+  <p>Entrada do Beaches &amp; Cream no Disney&rsquo;s Beach Club Resort</p>
+</div>
+<p>Como eu mencionei, o Beaches &amp; Cream tem espaço certo na minha programação em Orlando: sempre que visito este restaurante, vou após um dia no Hollywood Studios ou após um dia no Epcot. Faço isso porque o Beach Club Resort é vizinho destes dois parques. Dá até para ir a pé ou de barco, como já falamos aqui. Como eu vou a noite, sempre prefiro ir de carro, mas é bem prático de qualquer forma, por ser tão pertinho dos parques.</p>
+<h2>A comida no Beaches &amp; Cream</h2>
+<p>Como eu disse, este é um restaurante aconchegante tanto no ambiente, como na alimentação. A comida é de lanchonete e como tal, você não encontra muitos pratos leves. Sanduíches e sorvetes são as especialidades da casa. Comidas sem firulas com opções que todo mundo gosta. Um menu típico de lanchonete, em especial as de antigamente como o lugar busca representar.</p>
+<p>Eu gosto muito de pedir o cachorro quente quando quero algo mais junk food e a sopa de tomate com queijo quente quando quero algo menos pesado (para dar conta de um sorvete depois). Outra boa opção é o chilli. O Felipe quase sempre pede cheeseburger que também é gostoso, mas não muito diferente dos demais encontrados pela Disney. Eu poderia ficar listando os itens, mas você poderá encontrá-los no menu aí embaixo, né?</p>
+<div id="attachment_4885"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/002-beachesecream/beaches-cream.jpg" alt="Pia de sorvetes do Beaches & Cream">
+  <p>Pia de sorvetes do Beaches &amp; Cream, a chamada Kitchen Sink</p>
+</div>
+<p>O maior sucesso da casa é de longe a chamada Kitchen Sink, um sorvete gigante que vem em uma taça em formato de pia. São 8 bolas de sorvete, com todas as caldas e acompanhamentos da casa somando 16 coberturas. Tem calda de chocolate, morango, caramelo, manteiga de amendoim, banana, um brownie picado, outros bolos picados, cookies picados, gotas de chocolates, amendoas, marshmellow e muuuuito mais como você pode ver na foto. A finalização é feita com um tubinho INTEIRO de chantilly em spray. Nem preciso dizer que é um prato para dividir, né? Essa sobremesa foi pensada para ser compatilhada por 4 a 6 pessoas, mas existe um desafio de que se alguém conseguir comer uma sozinha em menos de 30 minutos, não paga pela sobremesa. Eu que demoro praticamente este tempo para dar conta de uma casquinha do McDonalds não sou louca de tentar, né?</p>
+
+<p> </p>
+<p>Com ou sem desafio, toda vez que alguém pede uma Kitchen Sink eles fazem o maior show no restaurante. Algumas sirenes no teto do Beaches &amp; Cream começam a piscar, o garçom faz um auê para chamar atenção para a mesa que vai receber a pia recheada de sorvetes e acompanhamentos e tem até gente que aplaude. Te garanto que todo mundo fica com vontade de pedir uma também. Se o seu grupo for pequeno demais para uma Kitchen Sink ou se você não quiser nada tão grande, eu recomendo bastante as outras taças de sorvetes e sundaes do Beaches &amp; Cream que são deliciosas. Os milkshakes de lá também valem cada caloria.</p>
+<h2>Nossa opinião sobre o Beaches &amp; Cream</h2>
+<p>O Beaches &amp; Cream é uma ótima maneira de curtir uma refeição gostosa e com um preço justo com a família após um dia de parque. Ou até mesmo quebrar a programação do parque para uma parada no meio da tarde para tomar um sundae em um dia de mais calor. É a minha lanchonete preferida dentro da Disney porque é muito fiel ao que se propõe e executa a experiência de lanchonete americana de antigamente muito bem. De um jeito ou de outro, espero que gostem e considerem na sua próxima viagem. E quem aí experimentar a Kitchen Sink, não deixe de contar para a gente o que achou.</p>
+<p><strong>Nome</strong>: Beaches &amp; Cream Soda Shop<br>
+  <strong>Endereço</strong>: 1800 Epcot Resorts Blvd Lake Buena Vista, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Beaches+%26+Cream+Soda+Shop/@28.370435,-81.557275,17z/data=!3m1!4b1!4m2!3m1!1s0x88dd7fac66426717:0xea687a8ac5159ee2?hl=pt-BR');">Veja no Google Maps</a>)<br>
+  <strong>Telefone</strong>: +1 407-939-3463<br>
+  <strong>Referência</strong>: Dentro do <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/beach-club-resort-disney/');">Disney&rsquo;s Beach Club Resort</a><br>
+  <strong>Preço</strong>: algo entre US$15-US$25<br>
+  <strong>Horário de Funcionamento</strong>: em geral, entre as 11 da manhã às 11 da noite.<br>
+  <strong>Cardápio</strong>:<a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/pt/dining/beach-club-resort/beaches-and-cream-soda-shop/menus/');">clique aqui.</a><br>
+  <strong>Disney Dining Plan</strong>: Sim, vale um crédito de Table Service.<br>
+  <strong>Avaliação do VPD</strong>: <img src="http://www.vaipradisney.com/blog/wp-content/uploads/2014/06/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+<div id="attachment_4886"><img style="margin:0 auto; display: block;"  src="../cont-imgs/restaurantes/002-beachesecream/beaches-533x800.jpg" alt="Beaches & Cream, uma lanchonete vintage na Disney" width="533" height="800">
+  <p>Beaches &amp; Cream, uma lanchonete vintage na Disney</p>
+</div>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

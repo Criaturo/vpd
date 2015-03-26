@@ -1,0 +1,216 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Be Our Guest: o restaurante no castelo da Bela e a Fera</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/012-beourguest.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Be Our Guest: o restaurante no castelo da Bela e a Fera</h2>
+
+
+
+
+<p>Hoje vamos falar do Be Our Guest, um dos restaurantes mais populares da Disney e parada obrigatória da nova Fantasyland, área que recebeu o maior investimento da Disney nos últimos tempos para sua repaginação. O Be Our Guest, que fica dentro do castelo da Bela e a Fera, foi um dos primeiros pontos da nova Fantasyland a ser inaugurado (no final de 2012) mas até hoje é um dos restaurantes mais populares do parque. Não é por menos né? Não é todo dia que a Disney faz um novo castelo para uma princesa, então o sucesso já era esperado.</p>
+<div id="attachment_1580"><img src="../cont-imgs/restaurantes/012-beourguest/DSC_0947.jpg" alt="Castelo da Bela e a Fera: pequenininho mas super digno." width="640" height="427">
+  <p>Castelo da Bela e a Fera: pequenininho mas super digno.</p>
+</div>
+<h2><strong>Be Our Guest – Restaurante da Bela e a Fera</strong></h2>
+<p>Ainda que o sucesso já fosse super esperado, preciso dizer que o Be Our Guest superou as minhas expectativas. Honestamente, quando eu entro no castelo da Cinderella, sempre sinto que falta alguma coisa lá. O castelo é tão lindo por fora, que você fica esperando um monte de coisas legais lá dentro também. E aí, quando você entra no castelo, o que você encontra? Um mosaico…ok, bonitinho, mas nem de longe é o que a gente espera encontrar dentro do castelo ícone do parque, né? Bom, nesse quesito, a Disney caprichou no novo castelo! Apesar de ser bem menor, ele é muito bonito e a decoração atendeu bem mais as minhas expectativas do que o seu vizinho. Para os fãs, adianto que você encontra vários detalhes do filme lá dentro. Além disso, o restaurante em si é super legal.</p>
+<p>O nome, Be Our Guest, vem daquela musiquinha que o Lumiére canta no filme enquanto oferece um monte de comida na mesa para a Bela. Não lembra? Então olha o filminho aí embaixo. O importante é você saber que o restaurante tem uma influência francesa (claro) visto que o filme também se passa na França. Por isso, esta pode ser uma ótima opção para fugir do hambúrguer.</p>
+
+O mais legal do Be Our Guest é que ele funciona como um restaurante quick service (estilo fast-food) de dia e de noite funciona como um restaurante a la carte (ou full service). Em ambos os períodos, o cardápio é bem diferente dos demais encontrados pelo parque. Eu já fui almoçar e jantar lá no Be Our Guest e particularmente sou mais fã da versão quick service oferecida do almoço. Acho que o jantar é muito caro e tem poucas opções, o que faz não valer a pena quando se considera o esforço necessário para conseguir uma reserva lá e o valor pago. Enquanto isso, o almoço é sensacional, com ótimo custo benefício e na minha opinião, é o fast food mais diferenciado e bem pensado da Disney inteira, pois funciona com uma dinâmica completamente diferente.
+<h2><strong>Be Our Guest no almoço</strong></h2>
+<p>Como eu disse acima, o Be Our Guest é o maior sucesso e todo mundo quer conhecer o novo castelo da Disney. Como resultado, espere filas enormes no almoço. Mais para frente dou dicas de como diminuir o seu tempo nas filas, mas primeiro acho importante falar como funciona a dinâmica desse restaurante.<br>
+  Uma vez que você entra na fila, em algum momento o funcionário dos parques vai te dar um cardápio. Mais adiante (na sala de armaduras) você verá uns totens com um display eletrônico que mostra o cardápio também. Logo em seguida, enquanto você está lá decidindo o que vai querer, você vai chegar numa nova sala cheia de cortinas e outro funcionário da Disney vai te perguntar se você vai pagar com cartão ou dinheiro. Este funcionário também vai te dar um &ldquo;pager&rdquo; em formato de rosa (tipo aqueles pagers de espera do Outback, sabe? Mas em formato de rosa) e te encaminhar para um novo totem, onde você vai fazer o pedido e pagar.</p>
+<div id="attachment_1579"><img src="../cont-imgs/restaurantes/012-beourguest/DSC_0946.jpg" alt="Pois é, a fila já começa do lado de fora. Mas se o pessoal espera, é porque vale a pena, né?" width="640" height="427">
+  <p>Pois é, a fila já começa do lado de fora. Mas se o pessoal espera, é porque vale a pena, né?</p>
+</div>
+<div id="attachment_1584"><img src="../cont-imgs/restaurantes/012-beourguest/DSC_0956.jpg" alt="Be Our Guest: Totem onde você faz o pedido e paga. Alguns funcionários estão sempre a disposição para te ajudar nesta etapa." width="340" height="510">
+  <p>Totem onde você faz o pedido e paga. Alguns funcionários estão sempre a disposição para te ajudar nesta etapa.</p>
+</div>
+<p>Não fique confuso nesta etapa: depois de pagar, ninguém vai te dar a sua comida como acontece na maioria dos restaurantes quick service. Lembra do pager em formato de rosa? É agora que ele entra em ação. Depois de pagar pela sua comida, você segue para uma das próximas salas. Você pode seguir para a sala que preferir e as opções aqui são o salão principal do castelo (o mais imponente e lembra bem o salão de festas do filme) ou um dos dois salões adjacentes:a Rose Gallery (galeria das rosas, com uma imagem gigante da Bela e da Fera que dança como numa caixinha de música) e a Ala Oeste (mais escura, com a rosa do filme e um quadro da Fera quando ainda era um ser humano – é a sala com mais efeitos diferentes, mas como eu disse, é meio escura).</p>
+<div id="attachment_1586"><img src="../cont-imgs/restaurantes/012-beourguest/DSC_0960.jpg" alt="Pager em formato de rosa. É através dele que os funcionários da Disney te encontram para entregar sua comida. " width="640" height="427">
+  <p>Pager em formato de rosa. É através dele que os funcionários da Disney te encontram para entregar sua comida.</p>
+</div>
+<p>Escolha uma mesa e espere com a sua rosa. Quando a sua comida estiver pronta, outros funcionários da Disney vão levá-la até você através de um sistema de GPS que localiza a sua rosa e consequentemente, a mesa onde você estará sentado. E um detalhe que para mim, faz toda a diferença: sua comida vem em louça de verdade, nada de prato de papel e talher de plástico. Eu sei que é um detalhe, mas é realmente importante para mim.</p>
+<p>Além do esquema todo especial de levarem sua refeição na mesa, a comida em si também vale o passeio. As sopas são deliciosas e os sanduíches também. Eu realmente recomendo que você experimente as sopas, em especial a de batata com alho poró (apesar do Fe gostar mais da sopa de cebola). Quanto aos sanduíches, o meu preferido é o de roast beef.</p>
+<div id="attachment_1588"><img src="../cont-imgs/restaurantes/012-beourguest/DSC_0963.jpg" alt="Sopa deliciosa de batata com alho porró. Be Our Guest é o único quick service que não serve a sopa em um potinho de plástico ou papelão. " width="640" height="427">
+  <p>Sopa deliciosa de batata com alho porró. Be Our Guest é o único quick service que não serve a sopa em um potinho de plástico ou papelão.</p>
+</div>
+<div id="attachment_1587"><img src="../cont-imgs/restaurantes/012-beourguest/DSC_0962.jpg" alt="Croque Monsieur servido no almoço do Be Our Guest" width="640" height="427">
+  <p>Croque Monsieur servido no almoço do Be Our Guest</p>
+</div>
+<p>Enquanto come, fique atento aos detalhes do castelo, como a neve que cai pela janela de vez em quando. Vá até o salão da biblioteca ver a rosa do filme, e as paredes que são arranhadas pela Fera. Enfim, não vou ficar aqui contando tudo, mas a Disney é expert em cuidar dos detalhes e fazer um ambiente bem feito (com exceção do mosaico no castelo da Cinderella) então vá lá conferir você mesmo.</p>
+<p><strong>Dica extra</strong><br>
+  As sobremesas não são incríveis e nenhuma me chamou a atenção. Apesar disso, tem um cupcake chamado The Master&rsquo;s Cupcake que é feito com um negócio chamado &ldquo;grey stuff&rdquo; (&ldquo;coisa cinza&rdquo; em português) que pode interessar os fãs do filme e com certeza é o clássico da casa. Esse tal de grey stuff vem da música do Be Our Guest (filminho acima). Tem uma parte que eles cantam &ldquo;try the grey stuff, it&rsquo;s delicius, don&rsquo;t believe me? Ask the dishes. They can sing, they can dance, after all, Miss, this is France …&rdquo;. Eu confesso que por muito tempo fui meio recalcada com essa história do Grey Stuff e até já tinha contado isso para vocês nesse mesmo post (agora editado com mais essa informação).</p>
+<p>Achei o máximo quando vi que tinham feito o doce da letra da música do filme, mas das primeiras vezes que eu fui no Be Our Guest, o Grey Stuff era exclusivo para quem estivesse comemorando alguma data especial. Eu tontona deveria ter fingido que era meu aniversário, mas não. Fiquei só me lamentando mesmo. Agora que o Grey Stuff foi democratizado, eu tive a oportunidade de experimentá-lo e não sei se a expectativa era grande demais, mas achei que ele tem gosto de chantilly mesmo. Não achei nada demais e foi uma decepção nível mosaico do castelo da Cinderella. Não achei que valeu a minha espera e tão pouco as calorias, então só recomendo para os fãs do filme mesmo. Para os demais, existem muitos outros doces em outros pontos do parque que valem mais a sua atenção por aí (como alguns dos indicados aqui) <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"></p>
+<p>Se você se interessou em visitar esse restaurante no almoço, as dicas vão ser diferentes para os hóspedes e não hóspedes da Disney, mas temos alguns conselhos para ajudar você independente em qual das categorias você se inclua. Vamos lá:</p>
+<p><strong>Dicas para hóspedes da Disney</strong></p>
+<ul>
+  <li>Existe um sistema de Fastpass+ para o Be Our Guest sendo testado para hóspedes dos parques. Na teoria, você precisa ser selecionado aleatoriamente para este teste. Se você não foi selecionado, NÃO entre em contato com a Disney pedindo para participar do teste pois eles vão te dizer que você não pode fazer essa reserva antecipada se não foi selecionado. Aqui, a gente te ensina como fazer a reserva mesmo assim. <img src="../cont-imgs/restaurantes/icon_wink.gif" alt=";)"></li>
+  <li>Depois de ter sua reserva de hotel ou pacote vinculada à sua conta no My Disney Experience, <a class="linkvai" href="javascript:loadURL('https://beourguestlunch.disney.go.com/');">acesse esse site</a>. Além do seu login e senha, você vai precisar de um código de 12 dígitos, que é o código de reserva do seu hotel, o chamado &ldquo;CONFIRMATION NUMBER&rdquo;. Normalmente você poderá encontrá-lo dentro do My Disney Experience, depois de fazer login, na página &ldquo;My Reservations and Tickets&rdquo; que fica no menu do canto direito da página. O &ldquo;confirmation number&rdquo; se localiza logo abaixo das informações do hotel, que está na primeira sessão da página chamada de &ldquo;Disney Resort Hotel Reservations&rdquo;. Se não encontrá-lo, tente mais uma vez com uns 2 meses de antecedência da sua viagem, senão ligue para a agência ou site por onde você fez a reserva do hotel, e peça pelo número de confirmação da reserve junto a Disney (muitas vezes os sites têm os seus próprios números de reserva, por isso é importante pedir pelo número da Disney). Se você fez a reserva pelo site da Disney, o número já vai estar lá.</li>
+  <li>A partir daí você deve conseguir fazer a reserva do seu Fastpass+ para o almoço no Be Our Guest. Vale dizer que este Fastpass+ é adicional aos seus outros Fastpass+, ou seja, você continua podendo marcar outros 3 Fastpass+ para atrações. Além disso, esse Fastpass+ não vai aparecer no seu My Disney Experience, então anote todas as informações, ou melhor ainda: tire uma foto ou dê print screen na tela da reserva para poder ter acesso a essas informações no futuro.</li>
+  <li>Quando chegar no Be Our Guest no dia e hora do Fastpass+, faça o seu &ldquo;check in&rdquo; na entrada do restaurante e siga as orientações dos funcionários a partir de então.</li>
+  <li>Observação: como você pode ver, essa é uma maneira não oficial de conseguir esse benefício e por isso, o sistema pode sofrer alterações a qualquer momento. Qualquer atualização que tivermos notícia, vamos avisar vocês nessa mesma página.</li>
+</ul>
+<p><strong>Dicas para não-hóspedes da Disney</strong></p>
+<ul>
+  <li>Chegue cedo. Desde o início de Agosto/2014, a Disney está testando um novo sistema para dar conta da fila desse restaurante nos mesmos moldes do Fastpass antigo. Você chega no restaurante e ganha um papel que indica o horário que você deverá voltar para ser atendido. Quando chegar o horário indicado, você vai até o restaurante, entrega o papel do fastpass que retirou mais cedo e pronto: sua entrada será permitida para aproveitar o almoço nesse restaurante.</li>
+  <li>Não será possível entrar no restaurante sem esse comprovante. Os comprovantes serão distribuídos para todos os horários de funcionamento do restaurante no modelo quick service e para todas as vagas existentes, ou seja, se você não garantiu o seu comprovantes logo cedo, poderá não conseguir um quando tentar e como consequência, não vai poder entrar no restaurante ainda que esteja disposto a enfrentar uma fila gigante (o que funcionava antigamente). Por isso, mais uma vez: chegue cedo! Só assim você poderá garantir o seu comprovantes para comer ali.</li>
+  <li>Esse sistema está sendo testado, e não há nenhuma informação sobre o período de teste ou se ele veio para ser definitivo mesmo. A gente está acompanhando e descobrindo essas novidades juntos com vocês, então mudanças poderão acontecer a qualquer momento. Qualquer novidade, claro, a gente vai notificar aqui no blog e avisar vocês em todas as redes sociais.</li>
+</ul>
+<h2><strong>Be Our Guest no jantar</strong></h2>
+<p>O jantar na Disney começa cedo, a partir das 16h. Vale dizer que das 15h ás 16h eles não deixam ninguém entrar no castelo pois é quando estão fazendo a transição do sistema quick service para o sistema full service, então se programe para não comer neste horário. Isso dito, vale também, mais uma vez, enfatizar a popularidade deste restaurante: se você deseja jantar lá, faça uma reserva o quanto antes. As reservas abrem com 180 dias de antecedência e costumam esgotar rapidinho. Se você não sabe como reservar um restaurante da Disney, <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">clique aqui</a> para ver o nosso manual.</p>
+<div id="attachment_1585"><img src="../cont-imgs/restaurantes/012-beourguest/DSC_0959.jpg" alt="Janela no restaurante Be Out Guest com a neve caindo" width="340" height="510">
+  <p>Fique atento a esta janela. De vez em quando começa a nevar. Muito fofo!</p>
+</div>
+<div id="attachment_1575"><img src="../cont-imgs/restaurantes/012-beourguest/DSC_0274.jpg" alt="Mesa de jantar do Be Our Guest" width="640" height="427">
+  <p>Mesa do Be Our Guest no Jantar. Detalhe para a guardanapo em formato de rosa.</p>
+</div>
+<p>Como eu disse, eu tenho uma preferência pelo sistema do almoço no Be Our Guest, mas preciso ser justa: o jantar também é bem legal. A comida é gostosa, o ambiente é lindo e o atendimento ótimo. Sem contar que você encontra a Fera por lá para tirar uma bela foto. Só acho que medindo o custo benefício do jantar não é tão bom quanto o do almoço. Mas eu facilmente voltaria no jantar de lá também.</p>
+<p>Se você quiser experimentar o Grey Stuff no jantar, tem ainda mais sorte. Nem precisa comer o cupcake, pois tem uma sobremesa que é só Grey Stuff. Pensando bem, como eu não curti o Grey Stuff acho que isso não é tanta sorte não, mas mais uma vez, experimente e faça o seu próprio julgamento do doce. Bom, superando o assunto Grey Stuff, o importante é que o restaurante é ótimo e parte essencial da nova Fantasyland. O clima Disney está presente em todos os detalhes e o serviço é ótimo! Recomendo muitíssimo a visita em qualquer uma das refeições.</p>
+<p><strong>Nome:</strong> Be Our Guest<br>
+  <strong>Endereço:</strong> Magic Kingdom Dr, Orlando, FL 32836 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Be+Our+Guest+Restaurant/@28.421381,-81.580819,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x49b5c94af915901');">Veja no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-939-5277<br>
+  <strong>Referência:</strong> Dentro do Magic Kingdom, na Fantasyland<br>
+  <strong>Preço:</strong> US$25-50 por pessoa (janeiro/2014)<br>
+  <strong>Horário de Funcionamento:</strong> depende do horário de funcionamento do Magic Kingdom<br>
+  <strong>Cardápio:</strong><a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/magic-kingdom/be-our-guest-restaurant/menus/');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong><strong>Disney Dining Plan: </strong></strong>Sim – um crédito de quick service no almoço e um crédito de table service no jantar<strong><br>
+    Avaliação do VPD:</strong> <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Compras em Orlando: Eletrônicos</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../lojas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/009-eletronicos.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Compras em Orlando: Eletrônicos</h2>
+
+
+
+
+<p>Telefone, iPod, notebook, tablet, iPhone, GPS, maquina fotográfica, filmadora e muitos outros eletrônicos sempre aparecem no topo das nossas listas de compras nas viagens para Orlando. São muitas opções, diversas marcas disponíveis e uma dúzias de lojas querendo o seu suado dinheirinho. E muitos se perguntam: qual o melhor lugar para comprar eletrônicos em Orlando?<br>
+  Aqui vão algumas dicas para você não cair em uma roubada na hora de comprar seu eletrônico tão desejado.</p>
+
+<h2>Foque nas principais lojas de eletrônicos dos EUA</h2>
+<p>Se você pesquisar até cansar, vai notar que quase sempre, as grandes promoções vão estar nas maiores lojas e varejistas do país. Não é atoa, pois comprando um volume muito grande de produtos, essas lojas têm mais poder de barganha e conseguem ter preços menores. Talvez você encontre um produto específico mais barato em uma loja especializada, mas para a maior parte dos eletrônicos, as lojas maiores são escolha certa. São elas:</p>
+<ul>
+  <li><strong>Best Buy</strong>: Famigerada rede de eletrônicos dos Estados Unidos, tem lojas espalhadas pela cidade toda. E em Orlando, quase todas elas contam com vendedores que falam português. Minha dica é você procurar lojas que ficam mais fora do eixo de compras (a da Colonial Drive, em frente ao Florida Mall é a mais cheia!) pois os estoques duram mais e você tem mais opções para escolher. Recomendo a da Osceola Parkway ou ainda a da Millenia Blvd que não é tão fora de mão. <a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/search/Best+Buy+Orlando/@28.4811689,-81.36875,11z/data=!3m1!4b1');">Veja aqui</a> uma lista de todas as Best Buy de Orlando e procure a que fica mais próxima ao seu hotel.</li>
+  <li><strong>HHGregg</strong>: Quase sempre ao lado de uma Best Buy, porém com menos lojas na cidade, a HHGregg é outro varejista de eletrônicos tradicional nos EUA. Os preços são bem parecidos com os da Best Buy, porém como a loja é menos procurada, é normal você ter mais opções do que na concorrente azul e amarela.</li>
+  <li><strong>TigerDirect</strong> (ou pros antigos, <strong>CompUSA</strong>): Já foram muito grandes nos EUA, mas nos últimos anos tem cada vez menos lojas. A última vez que eu contei, havia somente uma em Orlando, na Orange Blossom. De qualquer maneira, pode fazer parte da sua rota de compra de eletrônicos na cidade pelas boas promoções que sempre encontrei por lá.</li>
+  <li><strong>Target, Walmart, Toys&rsquo;r&rsquo;us, etc</strong>: Supermercados e lojas de brinquedos são os lugares menos óbvios para se procurar eletrônicos, mas nunca os subestime, pois podem guardar grandes surpresas com preços excelentes. Meu videogame foi comprado em uma Toys&rsquo;r&rsquo;us, grande rede de loja de brinquedos, no fim do dia de uma Blackfriday, quando os estoques de todas as outras lojas já tinham acabado e eu quase desistido de procurar um bom negócio. Afinal, hoje em dia não tem hora para comprar eletrônicos, qualquer oportunidade para pescar o consumidor é válida.</li>
+</ul>
+<div id="attachment_840"><img src="../cont-imgs/lojas/009-eletronicos/compras-eletronicos-orlando-best-buy.jpg" alt="compras-eletronicos-orlando-best-buy" width="480" height="366">
+  <p>Best Buy da Osceola Parkway. Tranquila e estoques cheios</p>
+</div>
+<h2>Evite lojas desconhecidas e pequenos outlets de beira de estrada</h2>
+<p>Todo mundo sabe que Orlando é uma cidade de parques e compras né? Então, naturalmente, você encontra lojas em qualquer cantinho da cidade, além de uns shoppings e outlets pequenos, na beira das estradas e meio fora da rota. Então, meu caro leitor, parafraseio a minha querida avó: &ldquo;quando a esmola é demais, o santo desconfia&rdquo;. Guarde essa e você vai se dar bem.</p>
+<p>Se todas as lojas da cidade vendem um notebook por 1.000 dólares e uma lojinha pequena perto do seu hotel ta cobrando 700, fique bem esperto pra não cair em algum golpe. É muito comum você ver por ai alguns cartazes escritos &ldquo;fala-se português&rdquo; ou &ldquo;atendentes brasileiros&rdquo;, mas não se deixe enganar. Se não for de confiança, melhor enrolar no inglês ou apelar para mímica nas lojas mais populares. Ainda mais quando se trata de produtos caros como são os eletrônicos.</p>
+<h2>Eletrônicos? Se prepare para muito mais!</h2>
+<p>Lojas grandes como a Best Buy não se limitam a vender os eletrônicos como computadores e tablets, mas também eletroeletrônicos para casa, DVDs, sofás, balanças, jogos de video game e até mesmo escova de dente elétrica! Qualquer coisa que você pode vir a ligar na tomada (ou não!) você deve encontrar na Best Buy. Aqui vai uma pequena amostra das seções de uma loja:</p>
+<ul>
+  <li><strong>Audio</strong>: nesse departamento você vai achar MP3 players, iPods, fones, rádio relógios, receptores, amplificadores, home theaters …</li>
+  <li><strong>Beleza, Fitness &amp; Saúde</strong>: nessa seção você vai se divertir no meio dos monitores de saúde (glicemia, colesterol, pressão…), massageadores, balanças, escovas de dentes elétricas, barbeadores, depiladores…</li>
+  <li><strong>Câmeras fotográficas e filmadoras</strong>: aqui você encontra desde a máquina mais simples, até as excelentes DSLRs, além de filtros, lentes, tripés e muitos acessórios. Se estiver na dúvida do que comprar, <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-tirar-fotos-disney/');">clique aqui</a> para ver as nossas dicas. Aqui nesse departamento você também encontra a famosa GoPro e seus importantes acessórios.</li>
+  <li><strong>Casa e escritório</strong>: nessa seção você encontra móveis como sofás, poltronas, mesas e escrivaninhas, além de equipamentos para a segurança residencial (câmeras e alarmes), alguma pequena variedade de brinquedos e até malas de viagem.</li>
+  <li><strong>Computadores e tablets</strong>: o tradicional de muitas listas de compras com laptops (atenção, em inglês &lsquo;notebook&rsquo; significa caderno, o computador é chamado de laptop), tablets, computadores comuns, monitores, impressoras, scanners, roteadores wi-fi e por ai vai.</li>
+  <li><strong>Celulares e telefones</strong>: em geral localizado na entrada de cada loja, você acha uma infinidade de aparelhos e acessórios como capinhas, películas, carregadores, etc. Mas se for comprar um celular, lembre-se de pedir por um modelo desbloqueado, ou do inglês &lsquo;unblocked&rsquo; ou &lsquo;unlocked&rsquo;. Aqui você também encontra telefones comuns, sem fio e até walkie talkie (<a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/guia-para-se-comunicar-exterior/');">leia mais aqui sobre o uso de rádios nos EUA</a>). Procurando um iPhone, <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-comprar-iphone-orlando/');">clique aqui</a> para ver as nossas dicas.</li>
+  <li><strong>Eletrodomésticos</strong>: a seção onde a Re faz a festa no meio das batedeiras, liquidificadores, máquina de tudo (waffle, donut, crepe, pipoca…) e por ai vai até os refrigeradores, máquinas de lavar e secar, ar condicionado, ventiladores. O difícil é trazer tudo isso pro Brasil.</li>
+  <li><strong>Eletrônicos para o carro e GPS</strong>: aqui também se encontra equipamentos de áudio para os carros, como multimídias, DVDs, CD Players, alarmes para o carro e aparelhos de GPS.</li>
+  <li><strong>TV e Home Theater</strong>: essa é a seção que mais me faz passar vontade pois televisão é muito em conta nos EUA. Umas telas gigantescas por poucas centenas de dólares. Não é a toa que é comum ver algumas televisões rodando na esteira de bagagem do aeroporto na volta da viagem. O duro mesmo é passar pela <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/alfandega-dicas-declarar-ou-nao-compras/');">alfândega</a>. Além disso, nessa área você encontra uma grande variedades de equipamentos, cabos e suportes.</li>
+  <li><strong>Video Games, Filmes e Música</strong>: por último, aqui você encontra além de todos os consoles e uma grande variedade de títulos, acessórios e equipamentos para complementar os games. É de deixar qualquer gamemaníaco maluco. Uma grande biblioteca de DVDs, Blurays e CDs também entram nessa seção.</li>
+</ul>
+<h2>Compare os preços online e considere fazer seu pedido pela internet</h2>
+<p>Os preços nas lojas, em geral, são parecidos dos encontrados nos sites das mesmas na internet. E se você chegar na loja e estiver mais caro do que viu online, é só falar no caixa que muitos lugares cobrem o preço. Olhar os eletrônicos na Amazon também pode ser uma boa pedida, pois ao vender muito, eles conseguem ter preços bem competitivos. Dai é só pedir um pouco antes de viajar e chegando em Orlando, seu presentinho vai estar no hotel esperando, <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/compras-online-amazon-sites/');">conforme ensinamos aqui</a>.</p>
+<h2>Para os produtos da Apple, vá nas lojas da Apple</h2>
+<p>Aqui não faz muita diferença pois iPod, iPad, iPhone, iMac e Apple TV são sempre tabelados. Então faça direitinho e vá direto a uma loja da Apple para comprar. Você vai ver como a compra é rápida, fácil e o vendedor é o próprio caixa. E se for comprar um iPhone para trazer para o Brasil, também é o melhor lugar para achar aparelhos desbloqueados.</p>
+<p><a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-comprar-iphone-orlando/');">Clicando aqui</a> você encontra nosso guia de onde e como comprar o seu iPhone em Orlando. Na maior parte das outras lojas, os aparelhos já vem ligados a uma operadora e é um pesadelo encerrar o contrato e desbloquear.</p>
+<h2>Não peque na segurança: compre o eletrônico e guarde no hotel</h2>
+<p>A empolgação nas compras é normal, aceitável e eu até recomendo, mas na hora que for gastar um pouco mais de dólares em um item como em eletrônicos, vale a pena voltar pro hotel e deixa-lo bem guardado dentro do quarto, da mala ou até do cofre do quarto se couber. Como <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/dicas-de-seguranca-nas-compras-em-orlando/');">já falamos em uma matéria</a> sobre segurança nas compras, assaltos a carros e porta-malas são bem comuns nos shoppings de Orlando, principalmente nos meses de férias. Então com seu eletrônico, todo cuidado é pouco. Além disso, é importante ficar ligado nas dicas de segurança dentro dos hotéis que demos <a title="Segurança em Orlando: escolhendo o seu hotel" href="http://www.vaipradisney.com/blog/hotel-como-escolher-com-seguranca/" target="_blank">nessa outra matéria</a>.</p>
+<div id="attachment_837"><img src="../cont-imgs/lojas/009-eletronicos/compras-orlando-roubos-carros-porta-mala-800x533.jpg" alt="compras orlando roubos carros porta mala" width="560" height="373">
+  <p>Não faça isso!</p>
+</div>
+<h2>Pesquise antes e não deixe de ler as avaliações</h2>
+<p>Em sites especializados como o <a class="linkvai" href="javascript:loadURL('http://www.cnet.com/');">CNET </a>(<em>em inglês</em>) e o <a class="linkvai" href="javascript:loadURL('http://www.gizmodo.com.br/');">Gizmodo </a>(<em>em português</em>), você encontra diversos comparativos de quais são as melhores marcas de eletrônicos, as vantagens e desvantagens de cada modelo e o que estão pensando as pessoas que já compraram o mesmo produto que você está procurando.<br>
+  Olhar as comparações desses sites já me fizeram mudar de opinião sobre a última maquina fotográfica que eu comprei e olha, não me arrependi não, viu?</p>
+<h2>Comprar ou não a garantia estendida</h2>
+<p>As lojas sempre oferecem mas eu sempre recuso – mesmo quando prometem que vale no Brasil. Uma vez comprei um laptop da HP em uma Best Buy e o vendedor me assegurou que a garantia extra era internacional e cobria reparos no Brasil. E é claro que desastrado que eu sou, logo que voltei de viagem derrubei o laptop no metrô e ele ficou com um defeito na tela, uma linha rosa no canto direito. Quando levei na assistência da HP, eles me confirmaram que a garantia extra, só valia nos países que tinham Best Buy, ou seja, EUA e Canadá. Me ferrei! E agora também, não compro nada além do que eu to querendo – e se quebrar, pelo menos comprei mais barato do que compraria o mesmo produto no Brasil.</p>
+<h2>Formato das tomadas e voltagem dos EUA</h2>
+<p>Aqui é mais um lembrete. Desde que inventaram o maravilhoso (<em>ironia</em>) padrão brasileiro de tomadas, todos os eletrônicos americanos, que têm aquele pino achatado, não entram mais nas tomadas brasileiras sem adaptador. Então ou você agradece por morar em uma casa com tomadas antigas, ou se prepare para gastar uma graninha comprando adaptadores para todos os seus eletrônicos.</p>
+<p>Vale também alertar para a voltagem nos EUA: os eletrônicos comprados por lá são quase sempre por padrão entre 110V e 127V. Ou seja, se você mora em uma cidade do Brasil em que a voltagem é 220V, fique esperto para não queimar as suas compras na volta da viagem.</p>
+<div id="attachment_838"><img src="../cont-imgs/lojas/009-eletronicos/compras-tomada-eua-brasil.jpg" alt="compras tomada eua brasil eletrônico" width="560" height="400">
+  <p>Saudades da minha tomada antiga</p>
+</div>
+<p>Essas são as minhas dicas de hoje. Então vamos às compras e não esqueçam de rezar para não serem pegos na alfândega na volta ao Brasil. hehehe Brindadeirinha, nunca trouxe nada além de 500 dólares <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_wink.gif" alt=";)"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

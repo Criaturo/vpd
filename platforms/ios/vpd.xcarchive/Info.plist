@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApplicationProperties</key>
+	<dict>
+		<key>ApplicationPath</key>
+		<string>Applications/VPD de Bolso.app</string>
+		<key>CFBundleIdentifier</key>
+		<string>com.vpddebolso</string>
+		<key>CFBundleShortVersionString</key>
+		<string>1.0.0</string>
+		<key>CFBundleVersion</key>
+		<string>1.0.0</string>
+		<key>IconPaths</key>
+		<array>
+			<string>Applications/VPD de Bolso.app/icon@2x.png</string>
+			<string>Applications/VPD de Bolso.app/icon.png</string>
+			<string>Applications/VPD de Bolso.app/icon-40@2x.png</string>
+			<string>Applications/VPD de Bolso.app/icon-40.png</string>
+			<string>Applications/VPD de Bolso.app/icon-small@2x.png</string>
+			<string>Applications/VPD de Bolso.app/icon-small.png</string>
+			<string>Applications/VPD de Bolso.app/icon-60@2x.png</string>
+			<string>Applications/VPD de Bolso.app/icon-60.png</string>
+			<string>Applications/VPD de Bolso.app/icon@2x.png</string>
+			<string>Applications/VPD de Bolso.app/icon.png</string>
+			<string>Applications/VPD de Bolso.app/icon@2x.png</string>
+			<string>Applications/VPD de Bolso.app/icon-72@2x.png</string>
+			<string>Applications/VPD de Bolso.app/icon-72.png</string>
+			<string>Applications/VPD de Bolso.app/icon-72@2x.png</string>
+		</array>
+		<key>SigningIdentity</key>
+		<string>iPhone Developer: Felipe Almeida (3L4L85RDA6)</string>
+	</dict>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>CreationDate</key>
+	<date>2015-01-30T03:06:09Z</date>
+	<key>Name</key>
+	<string>VPD de Bolso</string>
+	<key>SchemeName</key>
+	<string>VPD de Bolso</string>
+</dict>
+</plist>

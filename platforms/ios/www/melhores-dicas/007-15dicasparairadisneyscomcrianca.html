@@ -1,0 +1,640 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>15 dicas para ir à Disney com crianças pequenas</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  
+  
+   <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   window.open(url, "_system");
+		}
+	</script>
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../melhores-dicas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>   
+		<div class="titulocenter"><h2>Melhores dicas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/dicas/thumbs/007-dicascrianca.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-melhoresdicas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">15 dicas para ir à Disney com crianças pequenas</h2>
+
+
+
+
+
+  <p>Viajar com crianças pequenas para a Disney é especialmente mágico, pois para elas toda a fantasia Disney é real. Apesar disso, enfrentar os parques com crianças menores exige uma série de cuidados e um maior planejamento. Hoje as dicas que vou dar tem como objetivo ajudar famílias viajando com crianças pequenas a aproveitarem ainda mais a sua viagem à Disney World. Se você está viajando com crianças, espero que encontre alguma dica interessante para a sua viagem aqui.</p>
+  <h2><strong>Guia para ir a Disney com crianças pequenas</strong></h2>
+  <h2>Faça seu filho entrar no clima</h2>
+  <p>Se seu filho é pequeno, muito provavelmente ele ainda não entende muito bem o que é a Disney World. Conte para ele que é lá que vários personagens dos filmes moram e assista os filmes dos personagens que vocês encontrarão na viagem. Criar essa expectative e ver quais personagens o seu filho gostaria mais de encontrar é uma ótima maneira de fazer ele começar a ficar animado com a viagem.</p>
+  <p>Só tome cuidado para não criar essa expectative com muito tempo de antecedência pois você poderá ter que escutar a pergunta &ldquo;Quando a gente vai pra Disney?&rdquo; muito mais vezes do que gostaria se começar a animar sua criança muito antes da hora. Comece este aquecimento para a viagem com um mês de antecedência do dia do embarque.</p>
+  <h2>Priorize os parques de acordo com os pequenos</h2>
+  <p>Se o objetivo da viagem for apresentar a Disney para as crianças pequenas, priorize os parques de acordo com elas. Eu sempre aconselho as pessoas a lerem <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/roteiros/');">os nossos roteiros</a>para entenderem a proposta de cada parque e definir quais são mais interessantes para o seu grupo. Esse conselho continua valendo, mas com base na minha experiência, segue a lista de como eu priorizaria os parques com crianças pequenas:</p>
+  <ol>
+    <li>Magic Kingdom (ideal visitar duas vezes)</li>
+    <li>Hollywood Studios</li>
+    <li>Animal Kingdom</li>
+    <li>Legoland</li>
+    <li>Sea World (se você gostar desse parque – muitas pessoas, eu inclusa, não concordam com a maneira que o Sea World trata os animais)</li>
+    <li>Bush Gardens</li>
+    <li>Islands of Adventure</li>
+    <li>Universal Studios e Epcot</li>
+  </ol>
+  <p>Mais uma vez, essa é minha opinião pessoal para uma criança genérica. Continuo acreditando que você saberá priorizar os parques melhor do que eu com base nos roteiros e nas preferências das crianças do seu grupo. Se o seu filho amar Harry Potter desde novinhos, os parques da Universal podem ganhar mais prioridade. Então não deixe de levar o perfil do seu grupo em conta na hora de definir a priorização.</p>
+  <div id="attachment_3747"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/007-15dicas/14633379859_27ac55b386_z.jpg" alt="Apesar de não ser um parque indicado para os mais velhos, a Legoland é um excelente parque para as crianças pequenas." width="600" height="400">
+    <p>Apesar de não ser um parque indicado para os mais velhos, a Legoland é um excelente parque para as crianças pequenas.</p>
+  </div>
+  <h2>Alugue um carrinho para as crianças descansarem</h2>
+  <p>Dias nos parques são extremamente cansativos até para adultos, o que dirá para as crianças. Uma boa maneira de garantir que seu filho terá o repouso que precisa na hora que quiser, sem precisar se separar do restante do grupo é alugar um carrinho de bebês. Estes carrinhos que podem ser alugados tanto dentro como fora dos parques são preparados para aguentar crianças até maiorizinhas, que em outros momentos não fariam uso de carrinho. Assim, quando elas se cansarem, poderão pegar uma carona no carrinho e até tirar um cochilo no meio do dia.  Existem dois tipos básicos de carrinhos para aluguel na Disney:</p>
+  <ul>
+    <li><strong>Simples</strong> (para crianças de até 22 kilos): US$15 por um dia ou US$13 por dia para aluguéis de mais de um dia.</li>
+    <li><strong>Double</strong> (para crianças de até 45 kilos): US$31 por dia ou US$27 por dia para aluguéis de mais de um dia.</li>
+  </ul>
+  <p>Além disso, outras diversas empresas de Orlando também oferece este serviço, muitas vezes por um preço melhor do que os parques temáticos. Vale a pena pesquisar. Algumas pessoas também sugerem que vale a pena comprar um carrinho apenas para o período da viagem, mas eu pessoalmente acho um desperdício fazer isso e largar o carrinho por lá depois.</p>
+  <h2>Leve lanchinhos para os parques</h2>
+  <p>Quando a gente viaja com crianças, sempre fica preocupada com a agenda de alimentação e hidratação. Na euforia de estar nos parques, as crianças não vão nem lembrar da fome e da sede, então cabe a nós a tarefa de lembrá-las da importância de estarem bem nutridos. Para evitar ter que parar toda hora para comprar algum lanchinho  ou um suquinho (que custarão preços exorbitantes dentro dos parques), considere comprar alguns itens básicos no supermercado e levar para os parques. Se você alugar o carrinho de crianças como falamos na dica acima, poderá deixar a bolsa de alimentos pendurada no carrinho e só se preocupar com ela quando quiser pegar alguma coisinha para comer. Para ver as regras para levar alimentos nos parques da Disney, <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/levando-comida-parques-disney/');">clique aqui.</a> O excelente blog Viajando com Pimpolhos, da Sut-Mie tem uma matéria bem legal sobre alimentação de crianças e bebês em Orlando que vale ler (
+  <a class=“linkvai" href="javascript:loadURL('http://viajandocompimpolhos.com/2013/08/02/forum-viagens-em-familia-como-alimentar-as-criancas-e-bebes-em-orlando/');">clique aqui</a> para acessá-la).</p>
+  <h2>Use o Baby Care Center</h2>
+  <p>Todos os parques possuem um espaço do bebê, todo equipado para você cuidar do seu bebê ou criança pequena. O espaço inclui um trocador maior, uma pequena cozinha com espaço para esquentar papinhas ou lanchinhos dos bebês, cadeirão para alimentá-los, um espaço mais privativo para fazer as crianças dormirem, entre outras amenidades. Normalmente o Baby Care Center fica próximo a entrada do parque e qualquer funcionário saberá te indicar exatamente a localização caso você precise. Vale dizer que é no Baby Care Center do parque que crianças que eventualmente se percam de seus pais serão rapidamente encaminhadas por um funcionário da Disney.</p>
+  <h2>Verifique quais atrações seu filho poderá visitar.</h2>
+  <p>Algumas atrações dos parques trazem um requerimento de altura mínima por questões de segurança. Verifique se o seu filho tem a altura mínima para ir em uma atração antes de permitir que ele se anime com a idéia. Não existe &ldquo;jeitinho brasileiro&rdquo; que contorne as regras de limite de altura: essa exigência visa garantir a segurança da sua criança e é por isso que a Disney é tão rígida com esse ponto. Se crianças menores do que a altura determinada entrarem na atração poderão se ferir e é por isso que eles nunca abrem excessão nesse caso. Veja abaixo a lista de atrações que exigem uma altura mínima.</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Parque</th>
+        <th>Atração</th>
+        <th>Altura mínima (cm)</th>
+      </tr>
+      <tr>
+        <td>Animal Kingdom</td>
+        <td>Dinosaur</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Animal Kingdom</td>
+        <td>Primeval Whirl</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Animal Kingdom</td>
+        <td>Expedition Everest</td>
+        <td>111,76</td>
+      </tr>
+      <tr>
+        <td>Animal Kingdom</td>
+        <td>Kali River Rapids</td>
+        <td>96,52</td>
+      </tr>
+      <tr>
+        <td>Blizzard Beach</td>
+        <td>Summit Plummet</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Blizzard Beach</td>
+        <td>Downhill Double Dipper</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Blizzard Beach</td>
+        <td>Cross Country Creek</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Busch Gardens</td>
+        <td>Congo River Rapids</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Busch Gardens</td>
+        <td>Scorpion</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Busch Gardens</td>
+        <td>Stanley Falls</td>
+        <td>116,84</td>
+      </tr>
+      <tr>
+        <td>Busch Gardens</td>
+        <td>Cheetah Chase</td>
+        <td>116,84</td>
+      </tr>
+      <tr>
+        <td>Busch Gardens</td>
+        <td>Tanganyika Tidal Wave</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Busch Gardens</td>
+        <td>Gwazi</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Busch Gardens</td>
+        <td>Montu</td>
+        <td>137,16</td>
+      </tr>
+      <tr>
+        <td>Busch Gardens</td>
+        <td>Kumba</td>
+        <td>137,16</td>
+      </tr>
+      <tr>
+        <td>Busch Gardens</td>
+        <td>SheiKra</td>
+        <td>137,16</td>
+      </tr>
+      <tr>
+        <td>DisneyQuest</td>
+        <td>Mighty Ducks Pinball Slam</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>DisneyQuest</td>
+        <td>Buzz Lightyear&rsquo;s AstroBlaster</td>
+        <td>129,54</td>
+      </tr>
+      <tr>
+        <td>DisneyQuest</td>
+        <td>Cyberspace Mountain</td>
+        <td>129,54</td>
+      </tr>
+      <tr>
+        <td>Epcot</td>
+        <td>Soarin&rsquo;</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Epcot</td>
+        <td>Test Track</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Epcot</td>
+        <td>Mission Space</td>
+        <td>111,76</td>
+      </tr>
+      <tr>
+        <td>Epcot</td>
+        <td>Sum of all Thrills</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Hollywood Studios</td>
+        <td>Star Tours – The Adventures Continue</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Hollywood Studios</td>
+        <td>The Twilight Zone Tower of Terror</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Hollywood Studios</td>
+        <td>Rock &lsquo;n&rsquo; Roller Coaster Starring Aerosmith</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Dragon Challenge™</td>
+        <td>137,16</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Dudley Do-Right&rsquo;s Ripsaw Falls</td>
+        <td>111,76</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Incredible Hulk Coaster</td>
+        <td>137,16</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Doctor Doom&rsquo;s Fearfall</td>
+        <td>132,08</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Harry Potter and the Forbidden Journey™</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Flight of the Hippogriff™</td>
+        <td>91,44</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Jurassic Park River Adventure</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Pteranodon Flyers</td>
+        <td>91,44</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Flying Unicorn</td>
+        <td>91,44</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>The Cat in the Hat</td>
+        <td>91,44</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Caro-Seuss-el (altura mínima para ir sozinho)</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>One Fish, Two Fish, Red Fish, Blue Fish (altura mínima para ir sozinho)</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Popeye &amp; Bluto&rsquo;s Bilge-Rat Barges</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>The Amazing Adventures of Spider-Man</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Islands of Adventure</td>
+        <td>Storm Force Accelatron</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Magic Kingdom</td>
+        <td>The Barnstormer</td>
+        <td>88,9</td>
+      </tr>
+      <tr>
+        <td>Magic Kingdom</td>
+        <td>Space Mountain</td>
+        <td>111,76</td>
+      </tr>
+      <tr>
+        <td>Magic Kingdom</td>
+        <td>Stitch&rsquo;s Great Escape</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Magic Kingdom</td>
+        <td>Splash Mountain</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Magic Kingdom</td>
+        <td>Big Thunder Mountain Railroad</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Swishy Fishies</td>
+        <td>91,44</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Shamu Express</td>
+        <td>96,52</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Journey to Atlantis</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Wild Arctic</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Jazzy Jellies</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Flying&rsquo; Fiddler</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Ocean Commotion</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Sea Carousel</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Sky Tower</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Kraken</td>
+        <td>137,16</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Manta</td>
+        <td>137,16</td>
+      </tr>
+      <tr>
+        <td>Sea World</td>
+        <td>Paddle Boats</td>
+        <td>142,24</td>
+      </tr>
+      <tr>
+        <td>Typhoon Lagoon</td>
+        <td>Bay Slide</td>
+        <td>132,08</td>
+      </tr>
+      <tr>
+        <td>Typhoon Lagoon</td>
+        <td>Humunga Kowabunga</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Universal Studios</td>
+        <td>Revenge Of The Mummy</td>
+        <td>121,92</td>
+      </tr>
+      <tr>
+        <td>Universal Studios</td>
+        <td>Hollywood Rip Ride Rockit</td>
+        <td>129,54</td>
+      </tr>
+      <tr>
+        <td>Universal Studios</td>
+        <td>Jimmy Neutron&rsquo;s Nicktoon Blast</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Universal Studios</td>
+        <td>The Simpsons Ride</td>
+        <td>101,6</td>
+      </tr>
+      <tr>
+        <td>Universal Studios</td>
+        <td>MEN IN BLACK Alien Attack</td>
+        <td>106,68</td>
+      </tr>
+      <tr>
+        <td>Universal Studios</td>
+        <td>Woody Woodpecker&rsquo;s Nuthouse Coaster</td>
+        <td>91,44</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h2>Aproveite mais com o Rider Switch</h2>
+  <p>Essa é provavelmente a principal dica dessa matéria. Se você e todo o seu grupo quer ir a uma atração que seu filho pequeno não quer ir ou não pode ir, vocês poderão revezar quem vai e quem fica com a criança, mas pegarão a fila somente uma vez. Tanto a Disney como a Universal oferecem este benefício sob o nome de Rider Switch (na Disney) ou Child Swap (na Universal). Funciona assim:</p>
+  <ol>
+    <li>Ao chegar na atração que vocês desejam ir mas o seu filho não pode ou não quer ir, vá com o grupo todo até o funcionário que estará na entrada da ride e peça por um Rider Switch. Na Disney, o funcionário te entregará um papel muito similar ao antigo fastpass de papel e pedirá para o restante do grupo entrar na fila. Na Universal, a parte do grupo que espera poderá aguardar em uma salinha,</li>
+    <li>Quando o restante do grupo sair da atração, a pessoa que ficou cuidando da criança poderá entrar na atração &ldquo;furando a fila&rdquo; junto com as pessoas que agendaram Fastpass+ (na Disney) ou entrar logo na frente de toda a fila mesmo (na Universal). Para não ir sozinha, o Rider Switch pode ser usado por até 2 pessoas do seu grupo, ou seja, um sortudo poderá ir duas vezes na atração.</li>
+    <li>Note que o Rider Switch não tem horário indicado para ser usado como o Fastpass+, então você poderá voltar mais tarde se desejar. Para evitar ficar dando mil voltas no parque, em geral eu recomendo que use o seu Rider Switch assim que tiver a oportunidade.</li>
+  </ol>
+  <p><strong>Dica:</strong> note que o Rider Switch funciona como um fastpass+ para uma quantidade limitada de pessoas. Se o seu grupo for pequeno (de até 4 pessoas+ criança) e você realmente tiver uma criança que não pode/quer ir nas atrações, <em>você pode maximizar o uso dos seus Fastpass+</em> da seguinte forma:</p>
+  <ol>
+    <li>Peque o fastpass+ para metade do seu grupo para as atrações que a criança não irá entrar. Antes de usá-lo vá com o grupo todo falar com o cast member e peça o seu Rider Switch.</li>
+    <li>Depois de ter o Rider Switch em mãos, use o seu fastpass+ para metade do grupo não precisar pegar a fila.</li>
+    <li>Quando a primeira metade do grupo sair da atração, a segunda metade também usa a fila do fastpass+ mas usando o Rider Switch. Assim, usando apenas 2 fastpass+ por vez os 4 do grupo poderão ir na atração sem filas e vocês poderão dividir os seus fastpass+ entre um número maior de atrações.</li>
+  </ol>
+  <p>Os parques da Universal oferecem Rider Switch/Child Swap para todas as atrações. Na Disney, as atrações que aceitam esse benefício são:</p>
+  <p><strong>Magic Kingdom:</strong></p>
+  <ul>
+    <li>Big Thunder Montain Railroad</li>
+    <li>Splash Mountain</li>
+    <li>Space Mountain</li>
+    <li>The Barnstormer</li>
+    <li>Stitch&rsquo;s Great Escape</li>
+    <li>Tomorrowland Indy Speedway</li>
+  </ul>
+  <p><strong>Epcot:</strong></p>
+  <ul>
+    <li>Mission: SPACE</li>
+    <li>Soarin&rsquo;</li>
+    <li>Test Track</li>
+  </ul>
+  <p><strong>Hollywood Studios:</strong></p>
+  <ul>
+    <li>Rock &rsquo;n&rsquo; Roller Coaster Starring Aerosmith</li>
+    <li>Star Tours® – The Adventures Continue</li>
+    <li>Twilight Zone Tower of Terror</li>
+  </ul>
+  <p><strong>Animal Kingdom:</strong></p>
+  <ul>
+    <li>DINOSAUR</li>
+    <li>Expedition Everest – Legend of the Forbidden Mountain®</li>
+    <li>Kali River Rapids</li>
+    <li>Primeval Whirl</li>
+  </ul>
+  <h2>Visite o Pirates League, Bibbidi Bobbidi Boutique e Jedi Academy</h2>
+  <p>Se suas crianças são fãs de sereias, piratas e princesas , com certeza vão adorar a idéia de se transformarem em um ou uma. A Disney oferece esse tipo de transformação para crianças com mais de 3 anos com uma experiência única no Bibbidi Bobbidi Boutique (onde as meninas viram princesas) e no Pirates League (onde meninos e meninas podem se tornar piratas e meninas podem se tornar sereias). Para ler mais sobre o Pirates League, <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/pirates-league-onde-voce-vira-pirata/');">clique aqui</a>. E para saber mais sobre o Bibbidi Bobbidi Boutique, <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/bibbidi-bobbidi-boutique-meninas-princesas/');">clique aqui</a>.</p>
+  <div id="attachment_3753"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/007-15dicas/13579935935_7f104b60fb_z.jpg" alt="Pirates League: onde as crianças se transformam em piratas." width="600" height="400">
+    <p>Pirates League: onde as crianças se transformam em piratas.</p>
+  </div>
+  <p>Além disso, existe a Jedi Academy, show onde as crianças aprendem a ser Jedis e até lutam contra o Darth Vader. O show acontece diversas vezes ao dia no Hollywood Studios. Para participar, os pais devem inscrever as crianças logo no começo do dia, no ABC Sound Studio.</p>
+  <p>Apesar de recomendar o Bibbidi Bobbidi Boutique e o Pirates League para crianças de qualquer idade e nacionalidade, eu recomendo a Jedi Academy apenas para crianças que atendam os seguintes requisitos:</p>
+  <ul>
+    <li>       Saibam o que é um Jedi</li>
+    <li>       Saibam um mínimo de ingles</li>
+    <li>       Não sintam medo de uma figura como a do Dath Vader</li>
+  </ul>
+  <p>Ou seja, eu só recomendo para um pequeno grupo de crianças pequenas, mas quando elas crescerem um pouquinho, vão aproveitar melhor a Jedi Academy. <img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"></p>
+  <div id="attachment_3759"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/007-15dicas/13577292364_e9f6287942_z.jpg" alt="Jedi Academy: indicado  apenas para as crianças que já conhecem e gostam de Star Wars" width="600" height="400">
+    <p>Jedi Academy: indicado apenas para as crianças que já conhecem e gostam de Star Wars</p>
+  </div>
+  <h2>Aproveite toda interação com personagens.</h2>
+  <p>Uma das experiências mais tradicionais de uma viagem para a Disney é a interação com personagens, principalmente quando viajamos com crianças que ainda acreditam que os personagens são reais. É muito mágico testemunhar o encanto de uma criança pequena encontrando os seus personagens preferidos. Para tirar o máximo de proveito dessa experiência, garanta que você esteja planejando ter todos os principais tipos de interação que a Disney oferece:</p>
+  <ul>
+    <li>Garanta um bom lugar na parada para que seus filhos possam acenar e ver os personagens de perto.</li>
+    <li>Reserve uma refeição com personagens que seu filho goste. Veja todos os detalhes sobre refeições com personagens da Disney <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/comendo-com-personagens-da-disney/');">clicando aqui</a>.</li>
+    <li>Tire foto com os personagens nos parques. Para verificar onde os personagens costumam ser encontrados, <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/personagem-disney-onde-encontrar/');">clique aqui.</a>
+      <div id="gallery-3736-1-slideshow" data-width="760" data-height="410" data-trans="fade" data-gallery="[{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/08\/13578258405_a2a7c58c3e_z.jpg','id':'3758','title':'13578258405_a2a7c58c3e_z','alt':'','caption':'Aproveite ao m\u00e1ximo a intera\u00e7\u00e3o com os personagens.'},{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/08\/14817140651_0466701515_z.jpg','id':'3739','title':'14817140651_0466701515_z','alt':'','caption':'Aproveite ao m\u00e1ximo a intera\u00e7\u00e3o com os personagens.'},{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/08\/14816815681_68f170d2e9_z.jpg','id':'3751','title':'','alt':'','caption':'Aproveite ao m\u00e1ximo a intera\u00e7\u00e3o com os personagens.'}]">
+        <div><img style="margin:0 auto; display: block;" rc="../cont-imgs/dicas/007-15dicas/14816815681_68f170d2e9_z.jpg?w=483" title="" alt="" align="middle"> 
+          <div>Aproveite ao máximo a interação com os personagens.</div>
+        </div>
+        <div></div>
+      </div>
+    </li>
+  </ul>
+  <h2>Visite um restaurante tematizado</h2>
+  <p>Além dos restaurantes com personagens, as crianças costumam gostar muito dos restaurantes tematizados. Para citar alguns exemplos : o Rainforest Café é inteiro tematizado de floresta, o T-Rex é todo decorado com dinossauros e o Sci-fi é igualzinho um drive-in de antigamente. Marque uma refeição em um desses lugares e entre no clima com a criançada.<br>
+    Apenas um adendo: antes de fazer uma reserve em um restaurante desses, sonde o seu filho para avaliar o quanto o tema vai agradá-lo. Eu que fui uma criança bem covarde, com certeza morreria de medo se minha mãe inventasse de me levar no T-Rex ou Rainforest Cafe quando eu tinha os meus 4 anos. Cada um sabe os filhos que tem né? Ela nunca nem tentou.</p>
+  <div id="attachment_3749"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/007-15dicas/14796950926_bf32ed5edd_z.jpg" alt="O T-Rex é um dos restaurantes tematizados preferidos das crianças." width="600" height="400">
+    <p>O T-Rex é um dos restaurantes tematizados preferidos das crianças.</p>
+  </div>
+  <h2>Se hospede em hotéis tematizados</h2>
+  <p>Seguindo essa mesma linha, hotéis tematizados podem não ser essenciais, mas com certeza são o &ldquo;algo a mais&rdquo; que também são muito aproveitados pelas crianças. Hotéis tematizados da Disney e da Universal te fazem sentir no clima dos parques durante a viagem toda, 24 horas por dia. Não é incomum as crianças pirarem na piscina desses hotéis mais do que aproveitam muitos dos parques. Para ajudar na decisão, entre os principais hotéis temáticos estão: Disney&rsquo;s All Star Resorts, Disney&rsquo;s Art of Animation, Disney&rsquo;s Animal Kingdom Lodge, Disney Caribbean Beach (peça o quarto de pirata) e Nickelodeon Suites Resort.</p>
+  <div id="attachment_3745"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/007-15dicas/14633632577_81d207f9b9_z.jpg" alt="O Disney's Art of Animation é o mais novo hotel tematizado da Disney e já se tornou um dos mais populares." width="600" height="400">
+    <p>O Disney&rsquo;s Art of Animation é o mais novo hotel tematizado da Disney e já se tornou um dos mais populares.</p>
+  </div>
+  <h2>Respeite o ritmo do seu filho</h2>
+  <p>A gente pode fazer mil planos e achar que sabe do que as crianças vão gostar, mas pode acontecer de chegar nos parques e o seu filho nem ligar para o Mickey mas se encantar com a fonte de água do Downtown Disney ou com o brinquedinho de luz que é vendido nas ruas durante a noite. Respeite as preferências dele. Se ele quiser ir milhões de vezes seguidas no Dumbo, aproveite com ele. Se ele estiver com sono, garanta que ele poderá dormir. Se ele estiver com medo, não insista. Respeitar o ritmo das crianças é muito importante para que eles aproveitem como no fim, é tudo que os pais querem.</p>
+  <h2>Considere começar uma coleção</h2>
+  <p>Como crianças muito pequenas ainda não podem ir em boa parte das atrações, uma boa maneira de mante-las entretidas é começar uma coleção nos parques. Pode ser coleção de autógrafos, pins, bichinhos de pelúcia e outras muitas opções. <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/colecionar-lembrancas-disney/');">Clique aqui</a> para ver mais detalhes sobre itens colecionáveis da Disney.</p>
+  <div id="attachment_3756"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/007-15dicas/13579412195_6c67d63ee9_z.jpg" alt="Pins: uma das muitas opções de itens colecionáveis dos parques." width="600" height="400">
+    <p>Pins: uma das muitas opções de itens colecionáveis dos parques.</p>
+  </div>
+  <h2>Inclua atividades diferentes na programação</h2>
+  <p>A Disney é cheia de opções menos óbvias para o entretenimento de pequenos que nem todo mundo sabe. As opções são muitas e logo logo vamos fazer um post sobre o assunto, mas para já te adianta, entre as opções de atividades diferentes você encontra:</p>
+  <ul>
+    <li>Passeio de pônei no Fort Wilderness</li>
+    <li>Pesca (com ou sem barco) também no Fort Wilderness (como já detalhamos aqui).</li>
+    <li>Mini Golf para a família toda, pode ser aproveitado por crianças a partir de 3 anos.</li>
+    <li>Sorcerers of the Magic Kingdom (que já falamos no roteiro desse parque)</li>
+    <li>Boliche, passeio de balão em Downtown</li>
+  </ul>
+  <div id="attachment_3740"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/007-15dicas/14633563269_9292895b8c_k-533x800.jpg" alt="Sorcerers of Magic Kingdom: uma ótima atividade para crianças que estão acompanhadas de alguém que fala inglês." width="533" height="800">
+    <p>Sorcerers of Magic Kingdom: uma ótima atividade para crianças que estão acompanhadas de alguém que fala inglês.</p>
+  </div>
+  <h2>Veja os nossos roteiros nas versões infantis</h2>
+  <p>Hoje, nenhuma outra dica aqui do Vai pra Disney é mais famosa do que <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/roteiros/');">os nossos roteiros</a>, que são gratuitos e tiveram mais de 50 mil downloads. Os roteiros trazem todas as dicas para se aproveitar o dia nos parques com ou sem crianças, e por isso sugiro fortemente que não deixe de dar uma olhada neles. Os roteiros do Hollywood Studios e do Magic Kingdom possuem uma versão separada para quem está viajando com crianças (disponível em um link no início do post do roteiro principal). Os demais roteiros apontam dicas para as crianças das demais.</p>
+  <p><strong>Dica Extra: procedimento em caso de crianças perdidas</strong></p>
+  <p>Muitos pais já me perguntaram sobre o medo de perder seus filhos nos parques e sempre que questionada sobre este tema, dou minhas dicas com base em duas experiências que tive: a de ter trabalhado nas ruas da Disney e já ter encontrado algumas crianças perdidas e a de ter perdido a minha irmã no parque uma vez quando ela tinha seis anos. O que posso dizer é que todos os funcionários são bem instruídos para encontrar os pais da criança da maneira mais rápida possível enquanto buscam evitar que a criança se assuste com a situação. Boa parte dos funcionários conseguem se comunicar rapidamente através do sistema de rádio para facilitar ainda mais o encontro da família e essas situações costumam ser resolvidas bem rapidamente. De qualquer forma, como já citei anteriormente, o ponto de encontro para crianças perdidas na Disney é SEMPRE o Baby Care Center do parque. Se você por acaso se encontrar nessa situação, comunique um funcionário do parque e se dirija ao Baby Care Center em seguida pois é lá que você encontrará o seu filho.  Além disso, aqui vão algumas dicas que sempre seguimos na minha família para facilitar um reencontro:</p>
+  <ul>
+    <li>Assim que chegar no parque, já identifique o Baby Care Center e tente achar alguma maneira fácil de explicar para o seu filho que é ali que eles deverão se encontrar.</li>
+    <li>Diferencie um funcionário da Disney dos demais adultos no parque para o seu filho. O instrua a procurar uma das pessoas com o crachá branco caso ele se perca e não falar com mais ninguém. Você pode deixa-lo com um bilhete no bolso para mostrar caso se perca ou ensiná-lo uma frase básica. Quando eu tinha 4 anos minha mãe me ensinou a falar que era do Brasil e que eu não falava inglês. Acho que pode ser mais prático ensiná-lo a dizer apenas que está perdido.</li>
+    <li>Aquelas etiquetas de identificação pode ser chatinhas, mas são uma belíssima facilidade nessa hora. Deixe o seu telefone de contato e qualquer outra informação que deseje na pulseira com etiqueta no braço do seu filho todos os dias que visitar o parque.</li>
+  </ul>
+  <p>Na Universal, não existe um procedimento tão claro quanto a crianças perdidas, então as recomendações acima são ainda mais importantes.</p>
+  <p>Bom, com todas essas dicas espero que você e suas crianças aproveitem ainda mais a viagem para a Disney, afinal é primeiramente para as crianças que acreditam em toda a magia que toda a magia Disney é criada todos os dias. Depois nos conte como foi.</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Como evitar o furto e roubo na sua bagagem</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  
+  
+   <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   window.open(url, "_system");
+		}
+	</script>
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../melhores-dicas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>   
+		<div class="titulocenter"><h2>Melhores dicas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/dicas/thumbs/003-comoevitarroubo.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-melhoresdicas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Como evitar o furto e roubo na sua bagagem</h2>
+
+
+
+
+
+  <p>Há algumas semanas, a leitora do Vai Pra Disney Marcia Barros, nos sugeriu um tópico que é de interesse de muitos que viajam para o exterior, principalmente para aqueles que planejam fazer compras: como arrumar as malas para evitar os roubos nos aeroportos?</p>
+  <p>Infelizmente este risco é uma realidade não só dos aeroportos do Brasil, mas também de diversos outros países, incluindo os EUA. Por isso, todo cuidado é pouco na hora de arrumas as malas e preparar a sua bagagem na volta da viagem.</p>
+  <p>Já falamos sobre como evitar roubos dentro dos hotéis (<a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/hotel-como-escolher-com-seguranca/');">clique aqui</a> para ver nosso guia completo sobre isso), e hoje reuni algumas dicas que tanto a Re como eu colocamos em prática em nossas viagens ao exterior buscando aumentar  a segurança das nossas bagagens no percurso para casa.  Espero que elas possam te ajudar a evitar uma dor de cabeça (pra falar o mínimo) com a sua bagagem na volta de sua viagem.</p>
+  <h2>Não coloque nada de alto valor na bagagem despachada</h2>
+  <p>Muitos funcionários das companhias áreas já alertam sobre este ponto na hora de fazer o check in, mas muita gente não presta muita atenção, por isso eu repito: qualquer item que seja de valor, leve na mala de mão com você. Isso incluí: máquina fotográfica, laptop, tablet, celular, videogame, jóias… Na mala de mão você pode levar quase tudo, com exceção aos itens cortantes e líquidos com mais de 100ml. Então faça um bom uso dela e evite despachar bagagem com itens caros.</p>
+  <h2>Aos dorminhocos, cuidem da sua bagagem de mão</h2>
+  <p>Pegar vôo noturno é um convite pra aquela dormida desconfortável no avião (pelo menos pra mim), então não bobeie e guarde o passaporte e o seu dinheiro junto com você. Eu faço isso quando viajo com dinheiro em espécie: coloco tudo nos bolsos da calça ou do casaco. Tem gente que ainda usa aquelas barrigueiras para guardar os dólares, mas eu acho muito desconfortável de usar.</p>
+  <p>Se estiver levando itens grandes na mala de mão, use um cadeado para prevenir que qualquer um abra a sua mala durante o seu sono no vôo.</p>
+  <h2>Tome cuidado com as malas de grife</h2>
+  <p>Eu entendo o desejo das pessoas de comprar malas bonitas, de grife e tal. São elegantes e até eu mesmo fico com vontade de comprar algumas delas quando vejo no shopping. Mas seja forte e resista, pois todas as malas, caras ou não, vão ser tratadas do mesmo jeito pelas empresas que as carregam a bagagem do check-in até o avião: como sacos de lixo.</p>
+  <p>Elas são jogadas de um lado para o outro e fatalmente vão ser rasgadas, ter alças quebradas e cantos trincados. Até mesmo aquelas que são etiquetadas com &ldquo;frágil&rdquo; no momento do embarque. Uma vez li uma &ldquo;confissão&rdquo; de um funcionário de aeroporto dizendo que quando ele via uma mala &ldquo;frágil&rdquo; ele jogava mais forte ainda. Quanta maldade! Espero que isso não aconteça com todos, mas por via das dúvidas, não invisto muito dinheiro na compra da mala.</p>
+  <p>Além disso, as malas de grife acabam chamando mais atenção de quem está mal intencionado. Se a mala é cara, imagine o que tem dentro? E dai, você corre mais risco de ter seus pertences bisbilhotados por alguém. Não estou falando para você usar mala porcaria. Justamente porque elas serão jogadas de um lado para o outro, é importante ter uma mala minimamente resistente. Só estou dizendo que não precisa ser uma hiper cara e muito menos uma que chame atenção para a marca.</p>
+  <h2>Prenda o zíper/cadeado na alça da mala</h2>
+  <p>Uma das mais conhecidas maneiras de se furtar itens de uma mala é utilizando um golpe chamado de &ldquo;cesárea&rdquo;, em que o ladrão usa uma caneta ou qualquer item pontiagudo para abrir o zíper e depois fechar a mala, mesmo que ela esteja presa com o cadeado. Isso acontece, pois o cadeado em geral prende um zíper no outro, mas ele pode ser deslizado ao redor da mala, então o ladrão força a abertura do zíper e depois a fecha deslizando os zíperes com o cadeado.</p>
+  <div id="attachment_5116"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/003-evitarroubo/furto-bagagem-golpe-cesarea-roubo-01-300x151.png" alt="Abrindo uma mala com uma caneta. Veja que o zíper está trancando a bagagem com cadeado | Reprodução ITS Tactical" width="300" height="151">
+    <p>Abrindo uma mala com uma caneta. Veja que o zíper está trancando a bagagem com cadeado.</p>
+  </div>
+  <div id="attachment_5115"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/003-evitarroubo/furto-bagagem-golpe-cesarea-roubo-02-300x151.png" alt="Conteúdo da bagagem pode ser acessado facilmente com esse golpe. Depois é só deslizar o zíper com o cadeado que a mala se fecha novamente | Reprodução ITS Tactical" width="300" height="151">
+    <p>Conteúdo da bagagem pode ser acessado facilmente com esse golpe. Depois é só deslizar o zíper com o cadeado que a mala se fecha novamente.</p>
+  </div>
+  <p>A melhor maneira de evitar esse golpe é prendendo o zíper e o cadeado em algum ponto fixo da mala como a alça por exemplo. Para isso, use aqueles lacres de plástico se possível de uma ou duas cores bem diferentes, para que o ladrão não prenda de novo com um qualquer.<br>
+    Algumas empresas vendem lacres parecidos, prometendo segurança adicional, mas eu acho besteira gastar tanto com isso. Basta comprar lacres simples que são vendidos em qualquer supermercado ou papelaria.</p>
+  <div id="attachment_5117"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/003-evitarroubo/lacre-para-evitar-roubo-bagagem-mala-aviao-e1417992004565.jpg" alt="Esses são os lacres que eu compro para travar a minha bagagem. Encontrei em uma papelaria por R$5, um pacote com 50." width="400" height="234">
+    <p>Esses são os lacres que eu compro para travar a minha bagagem. Encontrei em uma papelaria por R$5, um pacote com 50.</p>
+  </div>
+  <p>É evidente que fazendo isso, você não vai prevenir a ação, mas vai sem dúvida inibir, já que o ladrão quase sempre escolhe a mala mais vulnerável para furtar.</p>
+  <h2>Faça listas e tire fotos do que você colocou em cada mala</h2>
+  <p>A Re sempre anota em um papel todos os principais itens que colocou em cada mala que está despachando. Assumo que tenho preguiça de fazer isso, mas certa está ela que vai poder conferir tudo o que entrou e depois saiu da mala. Se há algo faltando, podemos reclamar com a cia aérea ou acionar o seguro para recuperar o valor perdido.</p>
+  <p>Uma outra idéia é tirar foto das malas abertas e de tudo o que colocou dentro dela. Além de economizar um tempinho na lista, você ainda vai ter &ldquo;provas&rdquo; para usar no momento de recuperar o que foi roubado, se isso por azar acontecer com você.</p>
+  <h2>Guarde os recibos de todas as compras</h2>
+  <p>Seguindo a linha do que falamos acima, uma vez percebido o que foi furtado chega a hora de pedir a indenização para a cia aérea. Nesse momento é de extrema importância conseguir comprovar qual foi o valor perdido e por isso eu sempre guardo todas as notinhas de tudo o que compro no exterior.</p>
+  <p>Já tinha comentado sobre a importância disso na matéria em que falamos sobre a alfândega (<a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/alfandega-dicas-declarar-ou-nao-compras/');">clique aqui</a> se ainda não leu), mas com os recibos em mão, você pode provar para a cia aérea e/ou para a seguradora, que os itens que sumiram valem $X.</p>
+  <p><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/003-evitarroubo/recibos-compras-eua.jpg" alt="Recibos para comprovar o que você colocou na bagagem | Foto: Hey Paul Studios" width="500" height="500"></p>
+  <h2>Faça um bom seguro de viagem</h2>
+  <p>Já falamos aqui no Vai Pra Disney da importância em se contratar um bom seguro de viagem antes de partir pro exterior (<a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/guia-seguro-viagem/');">clique aqui</a> para ler a matéria), mas além de te cobrir nos possíveis gastos médicos, o que muita gente não sabe é que a maioria dos seguros de viagem também cobrem roubos e extravios de bagagem.<br>
+    Então se a cia aérea estiver fazendo jogo duro pra te reembolsar o valor furtado, é só acionar o seguro que eles mesmo cuidam de tudo.<br>
+    Uma vez tive uma mala extraviada e a cia aérea estava cheia de burocracia pra encontrá-la. Liguei para o seguro e eles mesmo fizeram a pressão necessária para que a empresa me entregasse a mala muito rapidamente.</p>
+  <h2>Não esqueça do aeroporto</h2>
+  <p>Acho que essa dica todo mundo já sabe, mas nunca é demais repetir: diferencie a sua mala das outras. Não é somente longe dos nossos olhos que os furtos acontecem, mas muitas vezes, as malas mais &ldquo;discretas&rdquo; são retiradas da esteira de bagagem e levadas sem a gente perceber.</p>
+  <p>Por isso duas dicas: assim que o avião pousar, saia logo para passar na imigração e pegar as suas malas da esteira. Além disso, coloque fitas, elásticos, adesivos e tudo o que puder para diferenciar a sua mala das demais. Afinal, não somente pessoas mal intencionadas pode pegá-la, mas outras pessoas distraídas também. O pai da Re já pegou a mala errada por engano. Era igualzinha a dele, mas era de outra pessoa. Sorte que a mãe da Rê percebeu rapidinho e deu tempo de fazer a troca pela mala certa. Desde então eles sempre colocam alguma coisa na mala para diferenciar as malas deles das demais.</p>
+  <h2>Plastificar ou não a bagagem?</h2>
+  <p>Entre nós eu nunca plastifiquei as minhas malas. Primeiro porque acho muito caro. Segundo porque malas despachadas nos EUA, podem sempre ser abertas pelo TSA (Transportation Security Administration, a polícia dos aeroportos americanos) para fiscalização de itens duvidosos. As minhas malas e da Re quase sempre são paradas, pelas comidas engraçadas que trazemos para o Brasil.</p>
+  <p>Porém, seguindo a regra de &ldquo;dificultar&rdquo; a ação dos ladrões, o plástico pode sim ser uma barreira adicional. E se não quiser gastar dinheiro, é só passar no <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/walmart-orlando-dicas-compras/');">Walmart</a>, comprar plástico filme e fita adesiva para embalar a sua mala pagando quase nada.</p>
+  <p>Espero que as dicas sejam úteis e que ninguém aqui tenha que passar pela dor de cabeça que é ter itens furtados da sua mala. Se tiver outras dicas, fique a vontade para deixa-las na caixa de comentários, abaixo.</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

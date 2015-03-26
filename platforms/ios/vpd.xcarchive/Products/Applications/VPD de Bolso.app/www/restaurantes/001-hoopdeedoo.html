@@ -1,0 +1,231 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Hoop-Dee-Doo Musical Revue: comida e show ao vivo</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+<script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+
+</head> 
+
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>
+		
+		
+		
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/001-hoopdeedoo.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Hoop-Dee-Doo Musical Revue: comida e show ao vivo</h2>
+
+
+
+
+<p>Mais uma vez, o assunto de hoje é uma programação super legar de Orlando, hiper popular entre os americanos mas que nenhum brasileiro conhece.  Muitos dizem que uma das coisas mais difíceis de se achar em Orlando é um lugar onde não exista brasileiros, mas a verdade é que uma parte das programações da cidade ainda não ficou conhecida pelo nosso povo como o clássico <strong>Hoop-Dee-Doo Musical Revue</strong>, no nosso querido Fort Wilderness.</p>
+<p>O Hoop-Dee-Doo Musical Revue é um show e jantar ao mesmo tempo. Aliais, jantar é um eufemismo, pois o que é servido no Hoop-Dee-Doo é na realidade um gigantesco banquete!</p>
+<div id="attachment_5054"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/001-hoopdeedoo/hoop-dee-doo-musical-revue-jantar-show-02.jpg" alt="Hoop-Dee-Doo Musical Revue. Um dos melhores shows que já vi em Orlando" width="427" height="640">
+  <p>Hoop-Dee-Doo Musical Revue. Um dos melhores shows que já vi em Orlando</p>
+</div>
+<h2>A atmosfera do Hoop-Dee-Doo</h2>
+<p>Contando um pouquinho de história, o Hoop-Dee-Doo Musical Revue é apresentado há exatos 40 anos e é uma das atrações mais antigas da Disney, que fica meio escondida no hotel/camping perto do <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/roteiro-magic-kingdom/');">Magic Kingdom</a>. Os espectadores do show (que já somaram mais de 10 milhões de pessoas ao longo dos anos), são sempre recebidos em uma espécie de &ldquo;teatro da fazenda&rdquo;, o <strong>Pioneer Hall</strong>, onde são gentilmente sentados pelos funcionários da Disney.</p>
+<p>O teatro é todo de madeira, com um ar bem rústico e é composto de um andar térreo e de um mezanino, ambos equipados para receber os espectadores. Espalhados por todo o salão, ao invés de cadeiras enfileiradas, você encontra mesas de diversos tamanhos e com a tradicional toalha xadrez vermelha e branca.</p>
+<div id="attachment_5052"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/001-hoopdeedoo/hoop-dee-doo-musical-revue-jantar-show-04.jpg" alt="Pioneer Hall, onde acontece a mágica do Hoop-Dee-Doo" width="640" height="427">
+  <p>Pioneer Hall, onde acontece a mágica do Hoop-Dee-Doo</p>
+</div>
+<div id="attachment_5038"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/001-hoopdeedoo/hoop-dee-doo-musical-revue-jantar-show-19.jpg" alt="Ambiente rústico dá todo o clima para o Hoop-Dee-Doo" width="640" height="427">
+  <p>Ambiente rústico dá todo o clima para o Hoop-Dee-Doo</p>
+</div>
+<p>O Hoop-Dee-Doo Musical Revue surgiu para proporcionar um jantar divertido para as famílias que visitam a Disney, depois de um dia longo e cansativo nos parques. A idéia era não só servir comida gostosa e com sabor de &ldquo;preparada pela avó&rdquo;, mas também fazer os visitantes darem risadas em um show que mistura piada e música. Dai vem o nome em inglês de &ldquo;musical revue&rdquo;. Por ser tratar show, as cadeiras ao redor da mesa são todas posicionada para que cada pessoa fique de frente ou levemente de lado para o palco. Assim todos têm uma boa visualização para o show que acontece majoritariamente no palco.</p>
+<div id="attachment_5049"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/001-hoopdeedoo/hoop-dee-doo-musical-revue-jantar-show-07.jpg" alt="Mesas montadas com toalhas xadrez" width="427" height="640">
+  <p>Mesas montadas com toalhas xadrez</p>
+</div>
+<h2>O show do Hoop-Dee-Doo Musical Revue</h2>
+<p>Apresentado por 6 atores cantores, três mulheres e três homens, o Hoop-Dee-Doo Musical Revue foi criado na época em que não se tinha muito o que fazer em Orlando depois que os visitantes saíam do Magic Kingdom. Naquele tempo não havia tanta atividade noturna na cidade como existe hoje. Quem acampava no Fort Wilderness, não tinha nem mesmo um restaurante pra jantar, então a Disney resolveu abrir o nosso amado Trail&rsquo;s End (<a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/restaurante-trails-end/');">clique aqui</a> para ler nossa avaliação desse restaurante) e ao lado uma casa de shows. Depois de algum tempo com algumas apresentações variadas de música e teatro sendo exibidas no Pioneer Hall, o Hoop-Dee-Doo Musical Revue estreou em 1974 e não parou desde então.</p>
+<div id="attachment_5037"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/001-hoopdeedoo/hoop-dee-doo-musical-revue-jantar-show-20.jpg" alt="Hoop-Dee-Doo Musical Revue. Foto cedida pela Disney" width="640" height="457">
+  <p>Hoop-Dee-Doo Musical Revue. Foto cedida pela Disney</p>
+</div>
+<p>Os atores cantam músicas clássicas do &ldquo;country caipira&rdquo; americano, algumas das quais a gente conhece bem, mesmo que com outras letras. Ao longo do show, eles fazem piadas e brincadeiras com o público. Andam por entre as mesas e brincam com os garçons do restaurante. Eu mesmo fui alvo de uma brincadeira: uma das atrizes veio até a minha mesa, perguntou de onde eu era e depois cantaram uma parte da música falando do Brasil<img src="http://www.vaipradisney.com/blog/wp-includes/images/smilies/icon_smile.gif" alt=":)"></p>
+<p>Pra quem entende inglês, vai dar muita risada com as piadas e gracinhas do show. Quem não entende muito bem, vai curtir as músicas, o clima e comer muito bem!</p>
+<div id="attachment_5039"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/001-hoopdeedoo/hoop-dee-doo-musical-revue-jantar-show-17.jpg" alt="Piadas atrás de piadas no Hoop-Dee-Doo. Algumas são tão sem graças que todo mundo ri do ridículo. É muito bom!" width="640" height="427">
+  <p>Piadas atrás de piadas no Hoop-Dee-Doo. Algumas são tão sem graças que todo mundo ri do ridículo. É muito bom!</p>
+</div>
+<h2>A comida do Hoop-Dee-Doo Musical Revue</h2>
+<p>Bem similar à comida servida no restaurante irmão Trail&rsquo;s End, no Hoop-Dee-Doo Musical Revue você vai poder provar a tradicional comida de fazenda americana: frango frito, pão de milho, costelinha de porco (nunca comi uma tão suculenta!), purê de batatas, legumes cozidos e feijão. Sim, feijão! Mas bem diferente do que comemos aqui. Não estranhe.</p>
+<p>A comida é ilimitada e servida em baldes e outros recipientes curiosos. Ao terminar um &ldquo;baldinho&rdquo;, o garçom pergunta se você quer mais, no conhecido estilo &ldquo;family style&rdquo; que também é usado em outros restaurantes da Disney (como o Garden Grill que já falamos <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/garden-grill/');">aqui</a>). Comi mais do que eu devia naquela noite! E pra finalizar, eles servem um shortbread com calda de morango, que é como se fosse uma bolacha amanteigada, com calda de morango e chantilly. Bem gostoso.</p>
+<div id="gallery-5056-1-slideshow" data-width="760" data-height="410" data-trans="fade" data-gallery="[{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/12\/hoop-dee-doo-musical-revue-jantar-show-08.jpg','id':'5048','title':'hoop-dee-doo-musical-revue-jantar-show-08','alt':'','caption':'P\u00e3o de milho com manteiga. Eu j\u00e1 me garantia nessa entradinha.'},{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/12\/hoop-dee-doo-musical-revue-jantar-show-09.jpg','id':'5047','title':'hoop-dee-doo-musical-revue-jantar-show-09','alt':'','caption':'Salada americana tradicional\u00edssima'},{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/12\/hoop-dee-doo-musical-revue-jantar-show-10.jpg','id':'5046','title':'hoop-dee-doo-musical-revue-jantar-show-10','alt':'','caption':'Chopp de Bud Light'},{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/12\/hoop-dee-doo-musical-revue-jantar-show-11.jpg','id':'5045','title':'hoop-dee-doo-musical-revue-jantar-show-11','alt':'','caption':'Frango frito'},{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/12\/hoop-dee-doo-musical-revue-jantar-show-12.jpg','id':'5044','title':'hoop-dee-doo-musical-revue-jantar-show-12','alt':'','caption':'Costelinha de porco com molho barbecue. Suculenta at\u00e9 n\u00e3o poder mais'},{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/12\/hoop-dee-doo-musical-revue-jantar-show-13.jpg','id':'5043','title':'hoop-dee-doo-musical-revue-jantar-show-13','alt':'','caption':'Acompanhmentos: pur\u00ea de batatas, milho cozido e feij\u00e3o americano. Bem apimentado.'},{'src':'http:\/\/www.vaipradisney.com\/blog\/wp-content\/uploads\/2014\/12\/hoop-dee-doo-musical-revue-jantar-show-15.jpg','id':'5041','title':'hoop-dee-doo-musical-revue-jantar-show-15','alt':'','caption':''}]">
+  <div><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/001-hoopdeedoo/hoop-dee-doo-musical-revue-jantar-show-15.jpg?w=527" title="hoop-dee-doo-musical-revue-jantar-show-15" alt="" align="middle"> 
+    <div></div>
+  </div>
+  <div></div>
+</div>
+<p>A bebida também está inclusa e você pode ir pedindo qualquer uma das opções a seguir: Coca Cola, Diet Coke, Sprite, suco de laranja, limonada sabor romã, chá gelado, chá mate, suco de maçã, leite, achocolatado, café, cerveja artesanal, chopp Budweiser, vinho branco, tinto, rose e sangria.</p>
+<div id="attachment_5042"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/001-hoopdeedoo/hoop-dee-doo-musical-revue-jantar-show-14.jpg" alt="Mesa destruída depois de comer até não poder mais." width="640" height="427">
+  <p>Mesa destruída depois de comer até não poder mais.</p>
+</div>
+<h2>Indo no Hoop-Dee-Doo Musical Revue</h2>
+<p>Com 3 apresentações diárias todos os dias do ano (16h / 18:15h / 20:30) o show que dura aproximadamente 2 horas, fica lotado em quase todas as sessões. Por isso, fazer a reserva conforme <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">ensinamos aqui no Vai Pra Disney</a> é fundamental. Se estiver tendo dificuldades para encontrar uma mesa, <a title="Restaurantes Populares da Disney: dicas e alternativas" href="http://www.vaipradisney.com/blog/restaurantes-da-disney-dicas-alternativas/" target="_blank">clique aqui</a> para ver nossas dicas de como reservar os restaurantes mais concorridos.</p>
+<p>Como mencionei no começo da matéria, o teatro é dividido em 3 seções principais: em frente ao palco, ao fundo do salão e o mezanino. Para cada uma das 3 áreas, você paga um preço diferente e indica no ato da reserva, qual é a seção que quer ficar. O preço também varia de acordo com a época do ano e o dia da semana, por isso, abaixo você vai encontrar qual o mínimo e o máximo do valor que você vai encontrar:</p>
+<p><strong>Categoria 1</strong>: sentado no térreo, logo em frente ao palco até o meio do salão. Tem a melhor visão do palco. Provavelmente é o local onde os atores vão ficar brincando mais com os visitantes.<br>
+  Adultos (acima de 10 anos) $65,99 – $69,99 dólares, incluindo taxa e gorjeta.<br>
+  Crianças (de 3 a 9 anos) $33,99 – $35,99 dólares, incluindo taxa e gorjeta.<br>
+  Crianças (de 0 a 2 anos) Não paga</p>
+<p><strong>Categoria 2</strong> : sentado no térreo, atrás das mesas que ficam na categoria 2. Algumas mesas ficam abaixo do mezanino. Boa visão do palco e de vez em quando os atores passam ali para brincar também.<br>
+  Adultos (acima de 10 anos) $58,99 – $62,99 dólares, incluindo taxa e gorjeta.<br>
+  Crianças (de 3 a 9 anos) $28,99 – $30,99 dólares, incluindo taxa e gorjeta.<br>
+  Crianças (de 0 a 2 anos) Não paga</p>
+<p><strong>Categoria 3</strong>: sentado no mezanino, que fica no andar superior. Tem uma boa visão do palco também, ainda que seja uma visão de cima. Dificilmente os atores sobem ali para brincar e mexer com você.<br>
+  Adultos (acima de 10 anos) $54,99 – $58,99 dólares, incluindo taxa e gorjeta.<br>
+  Crianças (de 3 a 9 anos) $27,99 – $29,99 dólares, incluindo taxa e gorjeta.<br>
+  Crianças (de 0 a 2 anos) Não paga</p>
+<div id="attachment_5055"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/001-hoopdeedoo/hoop-dee-doo-musical-revue-jantar-show-01.jpg" alt="Mapa se seções do Hoop-Dee-Doo, no Pioneer Hall" width="642" height="414">
+  <p>Mapa se seções do Hoop-Dee-Doo, no Pioneer Hall</p>
+</div>
+<p>Por ser um show à parte, ao fazer a reserva pela internet, o valor total é cobrado no seu cartão de crédito no ato e você não precisa pagar nada na hora. Se você cancelar a reserva até 24 horas antes do show, o valor total é reembolsado no seu cartão. Se cancelar com menos de 24 horas antes, o valor é reembolsado descontando uma multa de 10 dólares por pessoa da reserva.<br>
+  Para quem quiser pagar com dinheiro, a única opção que sobra é tentar comprar o ingresso para o show na entrada no dia da apresentação, mas como o Hoop-Dee-Doo é super concorrido, as chances de você conseguir, são pequenas. Talvez na última apresentação do dia que acontece as 20:30.</p>
+<div id="attachment_5051"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/001-hoopdeedoo/hoop-dee-doo-musical-revue-jantar-show-05.jpg" alt="Minha reserva já paga, entregue na porta do show." width="640" height="427">
+  <p>Minha reserva já paga, entregue na porta do show.</p>
+</div>
+<p>Outra recomendação importante é chegar entre 30 e 40 minutos antes do show começar, já que forma uma fila bem grande antes e apesar de entrar todo mundo, é bacana ficar la sentado, tomando a sua bebida e comendo um pãozinho de milho com manteiga. Além disso, o Fort Wilderness é um tanto grande e você não quer chegar atrasado e perder começo do show.</p>
+<p>Se for de carro, basta estacioná-lo na entrada do Fort Wilderness e pegar qualquer um dos ônibus que circulam pelo camping para ficar na última parada, chamada de Settlement, onde fica o Pioneer Hall. Se estiver em outro parque, pegue um ônibus até o Fort Wilderness e de lá, pegue algum outro ônibus até o Settlement. Já pra quem estiver no Magic Kingdom, pode pegar o barco até o Fort Wilderness. O ponto de parada do barco fica bem pertinho do restaurante e eles continuam rodando mesmo após o show, para quem quiser voltar para pegar o carro no estacionamento do Magic Kingdom. Saiba mais sobre o sistema de transportes gratuito da Disney, <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/transporte-disney-gratuito/');">clicando aqui</a>.</p>
+<h2>Nossa opinião sobre o Hoop-Dee-Doo Musical Revue</h2>
+<p>A gente já tinha uma expectativa grande em relação ao show, por ter lido ótimas avaliações em sites e blogs sobre Disney e por já ter visto a fila gigante de gente que fica na porta esperando pela próximo show começar, mas o Hoop-Dee-Doo Musical Revue superou tudo o que imaginávamos. Dei muita risada, cantei junto, comi extremamente bem e confesso que saí de lá quase rolando. Foi um caminho difícil sair de lá, ir até o carro e depois dirigir até o meu hotel.<br>
+  Concordo que o preço é salgado mas pelo menos é um valor fixo, ou seja: sem surpresas na hora de ver a conta. Para quem está buscando uma experiência diferente na viagem para Orlando, recomendo o Hoop-Dee-Doo Musical Revue sem a menor dúvida. É uma programação que adoramos e queremos muito voltar nas próximas viagens para lá.</p>
+<p><strong>Nome</strong>: Hoop-Dee-Doo Musical Revue<br>
+  <strong>Endereço</strong>: 4510 Fort Wilderness Trail, Lake Buena Vista, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Hoop-Dee-Doo+Musical+Revue/@28.411559,-81.561657,15z/data=!4m2!3m1!1s0x0:0x6f60cea7f6f9911f');">Veja no Google Maps</a>)<br>
+  <strong>Telefone</strong>: +1 407-824-2803<br>
+  <strong>Referência</strong>: Dentro do Disney&rsquo;s Fort Wilderness<br>
+  <strong>Preço</strong>: algo entre US$28-US$70<br>
+  <strong>Horário de Funcionamento</strong>: três shows diários: 16h, 18:15, 20:30.<br>
+  <strong>Disney Dining Plan</strong>: Sim, vale dois créditos de Table Service. Mesas nas categorias 2 e 3 dos shows das 16 e das 18:15, ou na categoria 1 no show das 20:30.<br>
+  <strong>Avaliação do VPD</strong>: <img src="http://www.vaipradisney.com/blog/wp-content/uploads/2014/06/estrelas-avaliacao_5.png" alt="Nota 5 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

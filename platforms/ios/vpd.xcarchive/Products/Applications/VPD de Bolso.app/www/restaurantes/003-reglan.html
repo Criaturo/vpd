@@ -1,0 +1,229 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Raglan Road: o melhor pub irlandês de Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/003-reglan.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Raglan Road: o melhor pub irlandês de Orlando</h2>
+
+
+
+
+<p>Há muito tempo nos falavam do <strong>Raglan Road</strong>, o famoso e conceituado pub irlandês do Downtown Disney, mas na correria de sempre, quase nunca tínhamos a oportunidade de conhecer o local. Mas isso mudou recentemente, quando por curiosidade, abri o cardápio do restaurante na internet e gostei tanto que acabamos reservando um jantar por lá.</p>
+<p>Hoje vamos contar aqui como foi a nossa experiência irlandesa no meio de Orlando.</p>
+<div id="attachment_4798"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-01.jpg" alt="Entrada do Raglan Road no Downtown Disney. Cuidado para não confundir com a lanchonete, também irlandesa, ao lado" width="427" height="640">
+  <p>Entrada do Raglan Road no Downtown Disney. Cuidado para não confundir com a lanchonete, também irlandesa, ao lado</p>
+</div>
+<h2>A atmosfera do Raglan Road</h2>
+<p>Acho muito engraço o mote do Raglan Road que diz que &ldquo;<em>existe apenas 1 problema com 99% dos pubs irlandeses dos EUA: eles não são irlandeses</em>&ldquo;.<br>
+  Apesar de estar localizado dentro da Disney, mais especificamente no <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/downtown-disney-diversao-fora-parques/');">Downtown Disney</a>, o pub é de propriedade e operado por irlandeses, o que de acordo com eles próprios, faz toda a diferente na atmosfera do local.</p>
+<p>O Raglan Road é um pub e restaurante, bem grande, formado por alguns salões independentes que se encontram todos em um palco central, onde são apresentadas atrações tradicionalmente irlandesas, como bandas de rock e grupos de sapateado irlandês.<br>
+  Cuidado: não confunda a entrada do Raglan Road com a lanchonete irlandesa que fica ao lado, o Cookes of Dublin.</p>
+<div id="attachment_4794"><img style="margin:0 auto; display: block;"  src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-04.jpg" alt="Salão principal do Raglan Road onde acontecem as apresentações de sapateado irlandês e da banda local" width="640" height="427">
+  <p>Salão principal do Raglan Road onde acontecem as apresentações de sapateado irlandês e da banda local</p>
+</div>
+<p>Alguns dos ambientes representam muito bem os pubs de Dublin, com luz baixa, móveis e teto de mogno, música alta, mesas próximas umas das outras e paredes forradas de fotos, quadros e placas. O canto onde a gente sentou era tão escuro, que era difícil enxergar a comida (vocês vão notar nas fotos mais abaixo).</p>
+<p>Para os dias e noites de verão, o restaurante também tem uma área externa bacana, principalmente para quem está com grupos maiores e com crianças.</p>
+<div id="attachment_4799"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-02.jpg" alt="Area externa do Raglan Road: uma boa pedida para o verão" width="640" height="427">
+  <p>Area externa do Raglan Road: uma boa pedida para o verão</p>
+</div>
+<div id="attachment_4793"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-03.jpg" alt="Ambiente escuro, bem parecido com os pub tradicionalmente irlandeses" width="640" height="427">
+  <p>Ambiente escuro, bem parecido com os pub tradicionalmente irlandeses</p>
+</div>
+<p>Durante a noite, várias apresentações curtas de bandas apareciam no palco central do pub, mas sem dúvida a atração principal era o grupo de sapateado irlandês que aparecia a cada meia hora. O dança é tão animada e rápida, que fica difícil acompanhar. De vez em quando até mesmo uma menininha de uns 10 anos se apresentava junto com os outros dançarinos e dançarinas que se espalhavam em um palco no meio e no canto do salão.<br>
+  Em determinado momento, eles começavam uma espécie de &ldquo;competição&rdquo; de sapateado e é lógico, todo mundo que estava no restaurante se envolvia na brincadeira – até mesmo quem estava sentado um pouco mais longe como eu.</p>
+<div id="attachment_4795"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-05.jpg" alt="Apresentação de sapateado irlandês no Raglan Road" width="640" height="427">
+  <p>Apresentação de sapateado irlandês no Raglan Road</p>
+</div>
+<h2>Reservar ou não o Raglan Road?</h2>
+<p>Um dos motivos que sempre atrapalhavam a Re e eu de conhecermos o Raglan Road era a fila que se formava em frente ao restaurante. Principalmente no fim da noite quando os parques fecham e todo mundo vai passear e procurar algo para comer no Downtown Disney.</p>
+<p>Recentemente, também sem reserva, acabamos indo no final da tarde de um dia em que não tínhamos ido em parque, o que possibilitou pegarmos uma fila menor, mas mesmo assim a espera foi de 40 minutos, que aproveitamos para passear pelo Downtown.</p>
+<div id="attachment_4796"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-06.jpg" alt="Pager para a espera de uma mesa no Raglan Road" width="640" height="427">
+  <p>Pager para a espera de uma mesa no Raglan Road</p>
+</div>
+<p>Ao entrar na fila de espera, você escolhe se quer um lugar na área externa ou na interna e dai eles te entregam aqueles pagers que vibram e piscam quando a mesa estiver pronta. O page só funciona a alguns metros de distância do restaurante, mas contamos o tempo e depois de uns 25 minutos, voltamos para perto do pub para esperar o negócio tocar. E funcionou certinho.</p>
+<p>Então a minha dica é sim reservar o restaurante, caso você queria ir conhecê-lo.</p>
+<p>Assim como os outros restaurantes da Disney que são operados independentemente (<a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/t-rex-comendo-parque-dos-dinossauros/');">já falamos aqui do T-Rex por exemplo</a>), você pode reservar uma mesa no Raglan Road, usado o sistema de reservas da Disney (<a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">clique aqui</a> para ver como), o site oficial do restaurante (<a class="linkvai" href="javascript:loadURL('http://www.raglanroad.com/');">acesse aqui</a>), ou ligando lá mesmo através do telefone +1 (407) 938-0300.</p>
+<p>Vale lembrar que o restaurante só coloca algumas mesas a disposição no sistema de reservas da Disney, então se não estiver encontrando, vale a pena entrar em contato com o Raglan Road diretamente.</p>
+<h2>A comida do Raglan Road</h2>
+<p>Muita gente pensa que em um pub a bebida é boa e a comida está ali só pra dar aquela enganada. Mas não, a comida do Raglan Road é realmente muito especial e importante no restaurante.</p>
+<p>Mas primeiro, as cervejas: no pub você encontra uma variedade grande delas e que é constantemente trocada. No menu, você encontra cervejas irlandesas, de outros lugares da europa e também americanas. Obviamente que a tradicional Guinness é a primeira do cardápio. Algumas são normais e outras draft, que pode ser comparado com o que chamamos por aqui de chopp. Todas as servidas no tamanho &lsquo;pint&rsquo; que é um copo com quase meio litro de cerveja. É realmente pra se sentir na Irlanda.<br>
+  Além disso, existem o que eles chamam de &lsquo;flights&rsquo;, que é uma sequência de 4 ou 5 cervejas em porções menores para você degustar diferentes tipos.</p>
+<div id="attachment_4797"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-07.jpg" alt="Cerveja no Raglan Road: tem que experimentar" width="640" height="427">
+  <p>Cerveja no Raglan Road: tem que experimentar</p>
+</div>
+<p>Os menus variam entre o almoço, jantar e ceia que é o fim de noite. Aos fins de semana, o local também serve um famoso brunch entre as 10 da manhã e as 3 da tarde, que ainda não tivemos a chance de experimentar (mas está na listinha para a próxima viagem!). Os menus em português (em uma tradução meio tosca, mas dá pro gasto) com os preços, você encontra no <a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/pt/dining/downtown-disney/raglan-road-irish-pub-and-restaurant/menus/');">site oficial da Disney</a>.</p>
+<div id="attachment_4803"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-08.jpg" alt="Pãozinho com redução de cerveja servido à moda americana: de graça" width="640" height="427">
+  <p>Pãozinho com redução de cerveja servido à moda americana: de graça</p>
+</div>
+<p>Logo ao chegar, foi servido um pãozinho com uma redução de Guinness. Uma delícia e bem diferente da manteiga de sempre.<br>
+  Naquela noite, pedimos um Keen Eye for the Shepherd&rsquo;s Pie, que é uma releitura do tradicional prato do Reino Unido e um Risotto de cogumelos acompanhado com frango.<br>
+  Pra quem nunca ouviu falar, o Shepherd&rsquo;s Pie é um prato com carne moída e purê de batatas, então quem me conhece já sabe que eu praticamente não olhei para as outras opções do cardápio. Fui direto nele.</p>
+<div id="attachment_4804"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-09.jpg" alt="Keen Eye for the Shepherd's Pie no Raglan Road: brincadeirinha entre o nome do prato tradicional e do antigo reality show americano" width="640" height="427">
+  <p>Keen Eye for the Shepherd&rsquo;s Pie no Raglan Road: brincadeirinha entre o nome do prato tradicional e do antigo reality show americano</p>
+</div>
+<div id="attachment_4800"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-10.jpg" alt="Risotto de cogumelos com filet de frango no Raglan Road" width="640" height="427">
+  <p>Risotto de cogumelos com filet de frango</p>
+</div>
+<p>Os dois pratos estavam muito bons, bem preparados e servidos, apesar de não serem porções gigantescas, como as que estamos acostumados nos EUA. Detalhe é que aqui o tempero não tende a ser apimentado, o que muitos brasileiros reclamam ao comer a comida nos EUA.</p>
+<p>Mesmo satisfeitos com os pratos, não poderíamos deixar de provar a sobremesa, que nos recomendaram muito. O menu é extenso mas fomos nas mais famosas: Ger&rsquo;s Bread &amp; Butter Pudding e o Strawberry and Apple Crumble. Recomendo ambos, mas o meu preferido foi o pudim de pão. De qualquer maneira, vale a pena mencionar que as fotos abaixo não fazem jus ao sabor de cada sobremesa. E aqui, uma nota: são muito bem servidas então não faça como nós e divida.</p>
+<div id="attachment_4802"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-12.jpg" alt="Pudim de pão com caldas para você colocar em cima. Se de olhar pra essa foto de novo fiquei com água na boca" width="640" height="427">
+  <p>Pudim de pão com caldas para você colocar em cima. Se de olhar pra essa foto de novo fiquei com água na boca</p>
+</div>
+<div id="attachment_4805"><img style="margin:0 auto; display: block;" src="../cont-imgs/restaurantes/003-reglan/raglan-road-pub-downtown-disney-orlando-restaurante-irlandes-13.jpg" alt="O crumble de maçã e morango. Dá tranquilamente para dividir." width="640" height="427">
+  <p>O crumble de maçã e morango. Dá tranquilamente para dividir.</p>
+</div>
+<h2>E as crianças?</h2>
+<p>Não é por ser um pub que as crianças ficam de fora. O Raglan Road segue o preceito criado pelo Walt Disney (e consequentemente perpetuado por quase todos os locais do complexo) e é feito para a família toda. Sem limite de idade e horários.</p>
+<p>Como é comum em todos os restaurantes da Disney, no Raglan Road é oferecido um menu especial para as crianças, com diversas alternativas que fogem do &lsquo;fast food&rsquo;. Algumas que posso destacar: bife com batata frita, filet de frango com purê, e até filet de pescado a milanesa. O menu completo você encontra no link abaixo, mas é um bom lugar para as crianças com mais restrições comerem também.</p>
+<h2>Nossa opinião sobre o Raglan Road</h2>
+<p>Gostamos muito do que experimentamos ali, não só no quesito comida, mas no ambiente e nas atrações que foram acontecendo ao longo da noite. Mas pra mim, ficou claro uma coisa: conhecemos só um pouquinho de tudo o que o Raglan Road oferece.</p>
+<p>Primeiro que existem diversas opções de refeições que são servidas ali. E são todas diferentes entre si, então queremos voltar para experimentar. Depois, tem o cardápio, que é realmente muito grande. Experimentei 2 cervejas, mas tinham pelo menos outras 10 para que eu pudesse provar. Nem preciso falar que isso de estende para os pratos salgados e para as sobremesas. Quero experimentar as outras opções também.</p>
+<p>Falando em preço, não é incrivelmente barato, mas está longe de ser a refeição mais cara que já fiz em Orlando. Com cerveja, prato individual e sobremesa individual, cada um pagou pouco mais de $40 dólares. De qualquer maneira, eu achei que valeu a pena e quero voltar.</p>
+<p>Espero que tenham gostado da avaliação e queremos saber o que acharam do restaurante. Deixem os seus comentários abaixo quando voltarem de lá.</p>
+<p><strong>Nome</strong>: Raglan Road Irish Pub and Restaurant<br>
+  <strong>Endereço</strong>: 1640 E Buena Vista Dr, Lake Buena Vista, FL 32830 <a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Raglan+Road+Irish+Pub+%26+Restaurant/@28.371261,-81.5176,15z/data=!4m2!3m1!1s0x0:0xc0880af54bff41f7');">Veja no Google Maps</a>)<br>
+  <strong>Telefone</strong>: +1 407-938-0300<br>
+  <strong>Referência</strong>: Dentro do <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/downtown-disney-diversao-fora-parques/');">Downtown Disney</a><br>
+  <strong>Preço</strong>: algo entre US$20-US$40 (o cardápio possui opções para todos os bolsos)<br>
+  <strong>Horário de Funcionamento</strong>: em geral, entre as 11 da manhã às 11 da noite, mas pode variar.<br>
+  <strong>Cardápio</strong>:<a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/pt/dining/downtown-disney/raglan-road-irish-pub-and-restaurant/menus/');">clique aqui</a>.<br>
+  <strong>Disney Dining Plan</strong>: Sim, vale um crédito de Table Service.<br>
+  <strong>Avaliação do VPD</strong>: <img src="../cont-imgs/restaurantes/estrelas-avaliacao_4.png" alt="Nota 4 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

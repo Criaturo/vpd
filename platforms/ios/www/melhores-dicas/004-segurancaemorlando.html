@@ -1,0 +1,188 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Segurança em Orlando: escolhendo o seu hotel</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+     <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   window.open(url, "_system");
+		}
+	</script>
+  
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../melhores-dicas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>   
+		<div class="titulocenter"><h2>Melhores dicas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/dicas/thumbs/004-segurancaemorlando.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-melhoresdicas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Segurança em Orlando: escolhendo o seu hotel</h2>
+
+
+
+
+
+  <p>Muita gente nos pede indicação de hospedagem em Orlando, mas essa é uma resposta muito difícil de dar. O hotel que pode ser bom para mim, pode ser ótimo para uns e péssimo para outros. Tudo depende do que está se buscando: uns preferem preço, outros conforto, uns querem ficar mais próximos dos parques e outros dos shoppings.<br>
+    Um tempo atrás, a Re escreveu uma matéria bem legal sobre os tipos de hospedagem que você vai encontrar em Orlando (<a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/onde-se-hospedar-em-orlando/');">leia aqui a matéria completa</a>), mas agora quero contar um pouco como eu escolho o hotel que vou me hospedar por lá.</p>
+  <div id="attachment_1215"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/004-segurancaorlando/hotel-orlando-wyndham-lake-buena-vista.jpg" alt="Wyndham Lake Buena Vista, hotel muito bom e seguro que fica dentro da propriedade da Disney, mesmo não sendo operado por ela" width="550" height="366">
+    <p>Wyndham Lake Buena Vista, hotel muito bom e seguro que fica dentro da propriedade da Disney, mesmo não sendo operado por ela</p>
+  </div>
+  <h2><strong>O tipo de hospedagem</strong></h2>
+  <p>A primeira coisa que eu defino quando vou viajar a Orlando é o tipo de hospedagem que eu vou querer. Se vou ficar um tempo longo na cidade, considero as opções de Condos, que são os apartamentos em condomínios fechados e que oferecem uma infra estrutura um pouco mais completa (<a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/hoteis-orlando-blue-heron-worldquest/');">leia mais sobre o World Quest e o Blue Heron, dois condos que já testamos e aprovamos</a>). Se minha viagem será mais curta, procuro um hotel mesmo.</p>
+  <h2><strong>Refeições incluídas</strong></h2>
+  <p>Nos EUA não é comum encontrar hotéis com pensão completa como no Brasil e na Europa. No entanto, alguns hotéis podem oferecer café da manhã incluído ou por um preço bem em conta. Isso pode ser uma boa vantagem, mas em geral eu prefiro comprar alguma coisa no supermercado (<a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/perkins-comer-bem-barato-orlando/');">ou no Perkins</a>), como um suco ou um cereal e comer a caminho dos parques mesmo.</p>
+  <h2>Escolhendo o hotel em Orlando com segurança</h2>
+  <p>Depois de definir o tipo de hospedagem que eu quero, é hora de buscar as ofertas disponíveis por aí. Sites como <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/servicos/hotel/');">booking.com</a> são uma mão na roda e os preços podem variar bastante, então não deixe de pesquisar muito bem. Após escolher os hotéis mais promissores, eu vou consultar o que as pessoas que já se hospedaram, acharam deles. Para isso, prefiro usar o <a class=“linkvai" href="javascript:loadURL('http://www.tripadvisor.com.br/');">Trip Advisor</a>, já que os comentários ali são bem mais confiáveis do que os que eu encontro nos sites de reserva.</p>
+  <p>Em geral, eu não ligo muito para comentários como &ldquo;o a pintura do hotel está gasta&rdquo;, &ldquo;encontrei um cabelo no fundo do armário&rdquo;, &ldquo;as dobradiças da porta do banheiro estavam enferrujadas&rdquo;, mas cada um com as suas preferências. Fico mais preocupado com comentários que falam do atendimento, de problemas com a reserva, da localização, do barulho e até de questões ligadas a segurança.</p>
+  <div id="attachment_1216"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/004-segurancaorlando/hotel-orlando-avaliacao-trip-advisor.png" alt="Avaliações ruins de um hotel em Orlando. E ainda uma avaliação de um um ex-hóspede que foi roubado dentro do seu quarto." width="581" height="606">
+    <p>Avaliações ruins de um hotel em Orlando. E ainda uma avaliação de um um ex-hóspede que foi roubado dentro do seu quarto.</p>
+  </div>
+  <h2><strong>Segurança, um ponto importante e uma opinião pessoal</strong></h2>
+  <p>Como toda a cidade turística, o que não falta em Orlando são hotéis. Espalhados por todos os bairros da cidade, alguns hotéis são mais vulneráveis do que outros. Eu mesmo, nunca sofri nenhum tipo de assalto ou roubo na cidade, mas relatos de amigos e de outros turistas me fazem ficar mais alertas do que nunca na hora de escolher o meu hotel.</p>
+  <p>Procuro sempre ficar em hotéis mais afastados das zonas mais centrais, como a região da International Drive. Por ter muitos turistas, principalmente brasileiros que gastam milhares de dólares em compras, essas regiões acabam sendo mais visadas pelos oportunistas. Em geral, gosto dos hotéis que ficam em Lake Buena Vista, que as vezes são levemente mais caros, mas sem dúvida menos foco de assaltos.<br>
+    Mas como disse, essa é a minha opinião pessoal.</p>
+  <p><strong>Algumas dicas importantes:</strong></p>
+  <ol>
+    <li>Pelo <a class=“linkvai" href="javascript:loadURL('http://www.tripadvisor.com.br/');">Trip Advisor</a>, verifique se algum hospede já teve problemas com roubos e assaltos naquele hotel. Já deixei de ficar em hotéis pois li comentários de pessoas que tinha sofrido algum tipo de perda.</li>
+    <li>Pergunte se o seu hotel tem cofre, para que você possa deixar algum bem de maior valor.</li>
+    <li>Evite hotéis sem recepção e sem nenhuma forma de controle de acesso. Nos EUA muitos hotéis são abertos e tem somente uma recepção do lado de fora e sem nenhuma outra forma de controlar o acesso, deixando a passagem livre pra quem quiser entrar. Chamados de motéis (não confunda com os motéis que conhecemos no Brasil), esse tipo de hotel fica muito vulnerável a qualquer tipo de roubo.</li>
+    <li>Não deixe o seu passaporte no hotel, a menos que ele esteja trancado no cofre. Os mais cautelosos não confiam nem nos cofres e não cogitam deixar o passaporte no hotel em hipótese alguma. Esse é o seu único documento válido no exterior, então prefira sempre andar com ele muito bem guardado. Além disso, deixe cópias das primeiras folhas do seu passaporte mais da folha do visto no hotel, caso você perca o original. A cópia não tem validade nenhuma, mas pode te ajudar na hora de conseguir dados para falar no consulado em caso de perda ou roubo.
+      <div id="attachment_1214"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/004-segurancaorlando/hotel-orlando-aberto-acesso-corredor-seguranca-assaltos-800x600.jpg" alt="Evite hotéis sem controle de acesso aos quartos, como o da foto acima. Qualquer um pode bater na porta do seu quarto." width="600" height="450">
+        <p>Evite hotéis sem controle de acesso aos quartos, como o da foto acima. Qualquer um pode bater na porta do seu quarto.</p>
+      </div>
+    </li>
+    <li>No quarto, deixe suas compras dentro das malas com cadeado e evite deixar os eletrônicos muito a mão, especialmente se você usar o serviço de arrumadeiras. É lógico que nada disso evita um potencial roubo, mas pode dificultar um pouco a ação dos oportunistas. Além disso, nunca deixe sacolas e caixas das suas compras do lado de fora do seu quarto no hotel. Esse é um sinal claro que você fez muitas compras. Assim que guardar as suas compras, se desfaça de todas as sacolas em algum ponto longe do seu quarto.</li>
+    <li>Uma outra coisa, que parece besteira, mas eu sempre faço é deixar a televisão do quarto ligada. Assim, sem arrumadeira e com um barulho vindo de dentro do quarto, eu imagino que posso estar prevenindo um roubo.</li>
+    <li>Verifique a porta do quarto sempre que sair dele. Isso porque as vezes a porta fica emperrada e não fecha completamente. Quem estiver passando por ali pode ficar tentado a entrar no quarto. Lembre-se: a oportunidade faz o ladrão.</li>
+  </ol>
+  <p>Sei que tudo isso pode parecer um pouco assustador, mas como eu disse, nós nunca fomos vítimas de roubo em Orlando, e acredito que muitos problemas podem ser evitados quando a gente se previne. Pequenas atitudes como tomar cuidado com a bolsa, escolher uma região bacana para se hospedar e seguir as dicas que demos sobre segurança nas compras (<a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/dicas-de-seguranca-nas-compras-em-orlando/');">clique aqui se você ainda não leu as dicas</a>) podem fazer muita diferença nas suas férias. A idéia aqui é ajudá-los a garantir uma viagem tranquila. Com essas dicas, você vai escolher um bom hotel na cidade e evitar qualquer problema durante os seus dias na terra da magia.</p>
+  <div id="attachment_1213"><a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/hoteis-orlando-blue-heron-worldquest/');"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/004-segurancaorlando/hotel-orlando-condominio-fechado-worldquest-800x600.jpg" alt="Gosto dos condos, que ficam dentro de condomínios fechados e tem segurança 24h. O da foto é o WorldQuest, que já falamos em uma outra matéria." width="640" height="480"></a>
+    <p>Gosto dos condos, que ficam dentro de condomínios fechados e tem segurança 24h. O da foto é o WorldQuest, que já falamos em <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/hoteis-orlando-blue-heron-worldquest/');">uma outra matéria</a>.</p>
+  </div>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>
