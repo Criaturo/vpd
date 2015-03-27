@@ -1,0 +1,182 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Enxoval de bebê em Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../lojas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/013-enxovalbebe.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Enxoval de bebê em Orlando</h2>
+
+
+
+
+<p>Um dos posts mais pedidos por vocês aqui no blog é sobre enxoval de bebê. Sabemos que muitas pessoas vão a Orlando para aproveitar os preços excelentes e fazer o enxoval dos herdeiros que estão a caminho. Nada mais justo. O único problema é que eu e o Fe (ainda) não temos filhos, então este assunto sempre foi um problema para a gente. Afinal, nós nunca precisamos ir em lojas de bebês nas nossas viagens. Como os leitores do Vai Pra Disney merecem achar todas as respostas para sua viagem por aqui, e o nosso objetivo no site é facilitar a vida de quem está planejando uma viagem a Orlando, achamos que o assunto &ldquo;enxoval para bebês&rdquo; merecia nossa atenção!</p>
+<div id="attachment_1393"><img alt="enxoval-bebe-orlando-fraldas" src="../cont-imgs/lojas/013-enxovalbebe/enxoval-bebe-orlando-fraldas-800x450.jpg" width="640" height="360">
+  <p>É muita fofura numa loja só, né? Quero nem ver o estrago que vou fazer nas compras quando eu engravidar…</p>
+</div>
+<p>Para a nossa sorte, tanto eu como o Fe temos muitas parentes férteis, que se tornaram mães de primeira viagem em 2013. Como o vício pela Flórida corre no sangue de nossas famílias, é claro que a maioria delas foi para Orlando e/ou Miami fazer o enxoval dos nossos mais novos priminhos lindos e fofos. Coletamos todas as dicas com elas e com outros amigos que passaram pela mesma situação, e aqui estão as principais dicas de lojas que você não pode deixar de considerar se você estiver indo a Orlando para comprar um enxoval de bebê.</p>
+<p><strong><em>Gerais: encontre tudo o que você precisa na mesma loja.</em></strong></p>
+<p><em>Macrobaby:</em> esta loja é parada obrigatória de toda gestante em Orlando. O objetivo loja é justamente atender você, que está indo para a cidade com o objetivo de fazer o enxoval para o seu bebê. Dá para resolver praticamente tudo por lá mesmo e com preços bem competitivos. A loja é bem completa e acho que a mais querida entre os brasileiros.</p>
+<div id="attachment_1394"><img alt="enxoval-bebe-orlando-macrobaby" src="../cont-imgs/lojas/013-enxovalbebe/enxoval-bebe-orlando-macrobaby.png" width="458" height="275">
+  <p>Macrobaby, o pólo dos brasileiros que estão montando enxoval.</p>
+</div>
+<p><em>Babies &ldquo;R&rdquo; Us:</em> não é por nada mas até eu que não sou mãe tinha essa dica na ponta da língua. Essa loja é indispensável para quem vai fazer enxoval nos Estados Unidos! É o paraíso das futuras mamães e dos futuros papais. . A Babies &ldquo;R&rdquo; Us é a versão para bebês da famosa rede de lojas de brinquedos Toys &ldquo;R&rdquo; Us. Lá você encontra absolutamente tudo que o seu bebê vai precisar quando vier ao mundo. Cadeirinhas normais, cadeirinhas vibratórias, carrinhos, móbiles, roupas, brinquedos, babá eletrônica, mamadeiras, chupetas e tudo que você, future mãe super precavida, pode imaginar!</p>
+<p><em>Target:</em> neste caso não estou falando de uma loja de bebê, mas de um supermercado muito bom e completo. Já temos um post mais genérico sobre a Target (<a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/walmart-target/');">clique aqui para acessá-lo</a>), mas achei que valia o repeteco aqui, pois é bem possível que você encontre por lá algum produto que estava em falta nas lojas específicas para o público infantis. Então não deixe de considerá-la no seu roteiro.</p>
+<p><strong><em>Roupinhas, roupinhas e mais roupinhas:</em></strong></p>
+<div id="attachment_1392"><img alt="Carter's: roupas básicas, de ótima qualidade e preço." src="../cont-imgs/lojas/013-enxovalbebe/enxoval-bebe-orlando-carters-800x450.jpg" width="640" height="360">
+  <p>Carter&rsquo;s: roupas básicas, de ótima qualidade e preço.</p>
+</div>
+<p><em>Carter&rsquo;s:</em> se você vai fazer o seu enxoval em Orlando e pesquisou um pouco, com certeza já deu de cara com a Carter&rsquo;s na sua pesquisa. Essa rede de lojas é super famosa por lá e não pode faltar, pois você encontra uma variedade enorme de roupas básicas para o seu baby! O forte ali são as roupas básicas que,segundo as mães que consultamos, são roupas baratas de qualidade excelente.</p>
+<p><em>OshKosh B&rsquo;gosh:</em> essa loja segue a mesma linha da Carter&rsquo;s, apesar de ser um pouco menos conhecida. A visita também vale bem a pena pelas roupas básicas de qualidade.</p>
+<div id="attachment_1395"><img alt="enxoval-bebe-orlando-outlet-oshkosh" src="../cont-imgs/lojas/013-enxovalbebe/enxoval-bebe-orlando-outlet-oshkosh.jpg" width="533" height="400">
+  <p>O nome é difícil mas a loja é boa. Roupas básicas, boas e baratas!</p>
+</div>
+<p><em>Janie and Jack:</em> também é uma loja para comprar roupas, mas aqui a dica é comprar as roupas mais arrumadinhas. Minhas fontes me informaram que todas as roupinhas são super fofas, super lindas e um pouco mais caras que as citadas anteriormente. Mas todo bebê precisa de umas roupas mais arrumadas para aparecer nas milhares de fotos, né?</p>
+<p><em>Tommy, Ralph Lauren e Macy&rsquo;s</em> : quem nunca deu aquela paradinha na ala de roupas para bebê dessas lojas mesmo sem ter nenhum bebê para presentear? Eu já parei diversas vezes simplesmente porque as roupas eram tão fofas que eu não resisti! Vale sempre a pena checar a moda bebê por lá também.</p>
+<p><strong><em>Dicas extras:</em></strong></p>
+
+<p><em>Decoração:</em> se você está procurando itens para decorar o quarto do bebê, comece sua rota de lojas pela Pottery Barn Kids. Lá você terá sempre a garantia de encontrar coisas linhas para decorar o berço e o quarto do seu filho. Se você estiver procurando algo mais específico (como uma leitora que estava em busca de papel de parede com personagens da Disney) eu sugiro procurar em lojas de itens para casa como a Home Depot, Michaels e <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/dicas-compras-orlando-bed-bath-beyond/');">Bed Bath &amp; Beyond.</a></p>
+<p><em>A melhor pomada para o bebê:</em> todas as mães que usam uma tal de pomada Desitin nos seus filhos são apaixonadas por esse produto. Pelo que eu escuto de todas elas, as crianças que usam essa pomada nunca tiveram uma assadura sequer, na vida toda! Elas falam com tanto entusiasmo deste produto que, se eu fosse indicar uma única compra para um bebê na viagem, provavelmente seria essa pomada. A Desitin pode ser encontrada tanto na Target como na Babies &ldquo;R&rdquo; Us e possivelmente em outras lojas também.</p>
+<div id="attachment_1396"><img alt="Todas as mães recomendam demais essa pomada! Se elas dizem, eu acredito!" src="../cont-imgs/lojas/013-enxovalbebe/enxoval-bebe-orlando-pomada-desitin.png" width="408" height="209">
+  <p>Todas as mães recomendam demais essa pomada! Se elas dizem, eu acredito!</p>
+</div>
+<p><em>Pomada para o bico do seio:</em> pois é, vida de mãe não é fácil e amamentar não é tão simples quanto parece. Mas os comentários de quem já têm experiência nesse assunto é que a pomada Tender Care Lanolin da Medela pode ser uma grande aliada das mamães e impedir que o bico do seio rache. Muito recomendado e pode ser encontrada nas mesmas lojas que a Desitin.</p>
+<p><em>Dica na compra do carrinho:</em> se você já sabe exatamente o modelo de carrinho de bebê que está procurando para o seu filho, talvez valha a pena adiantar as compras, fazer o pedido pela internet e esperar entregarem no hotel. Isso é recomendável pois, às vezes, nas lojas, você não encontra todas as cores e modelos disponíveis no site. Comprando pela internet você garante que comprará exatamente o carrinho que você mais gostou.</p>
+<p>Bom, espero que com essa ajuda das mamães da nossa família, vocês consigam se preparar melhor para a chegada do tão esperado bebê de cada um de vocês. Boas compras.</p>
+<p>PS: aproveito o post para deixar registrado o nosso agradecimento a todo mundo que colaborou para este post, em especial a minha prima Vanessa que forneceu tantos detalhes da experiência dela. Sem a Van, não teria post! Obrigada, prima!</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

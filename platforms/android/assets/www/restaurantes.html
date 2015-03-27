@@ -1,0 +1,273 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+	<meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+  <script src="js/jquery/jquery-1.11.1.min.js"></script>
+ 
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+
+	
+	<header data-role="header" id="vpdheader"> 
+		
+		<a href="index.html" data-transition="flip" class="btn-ico-logo"><img src="images/ico-logo-vai-pra-disney.png" /></a>
+		
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar2').click(function(){
+					var lS = prompt("De um nome ao resultado para salvar.","");
+					localStorage.setItem(lS, $(location).attr('href'));
+				})
+			}); 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults6").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults6").rows.length; t > 1; t--){
+				document.getElementById("tableResults6").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults6").rows[document.getElementById("tableResults6").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults6").insertRow(document.getElementById("tableResults6").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults6" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>   
+	
+	
+  <div data-role="main" class="ui-content content_restaurantes" id="vpdlistposts">
+    <ul data-role="listview" data-inset="true" >    
+      <li>
+	<img src="images/restaurantes/001-hoopdeedoo.jpg"  />
+	<a href="restaurantes/001-hoopdeedoo.html"  data-transition="slide"><h3 style="margin-top:8px;">Hoop-Dee-Doo Musical Revue: comida e show ao vivo</h3></a>
+      </li>
+      
+        <li>
+	<img src="images/restaurantes/002-beachesecream.jpg" />
+	<a href="restaurantes/002-beacheseCrean.html"  data-transition="slide"><h3 style="margin-top:8px;">Beaches & Cream: melhor lanchonete da Disney</h3></a>
+      </li>
+	
+	<li>
+	<img src="images/restaurantes/003-reglan.jpg" style="float:left;" />
+	<a href="restaurantes/003-reglan.html"  data-transition="slide"><h3 style="margin-top:8px;">Raglan Road: o melhor pub irlandês de Orlando</h3></a>
+	</li>
+	  
+	<li>
+	<img src="images/restaurantes/004-scifidinein.jpg" style="float:left;" />
+	<a href="restaurantes/004-scifi.html"  data-transition="slide"><h3 style="margin-top:8px;">Sci-Fi Dine-In: refeição em drive-in na Disney</h3></a>
+	</li>
+      
+	<li>
+	<img src="images/restaurantes/005-ohana.jpg" style="float:left;" />
+	<a href="restaurantes/005-ohana.html"  data-transition="slide"><h3 style="margin-top:8px;">Ohana: café da manhã com o Mickey e Stitch</h3></a>
+	</li>
+	
+	
+	<li>
+	<img src="images/restaurantes/006-mythis.jpg" style="float:left;" />
+	<a href="restaurantes/006-mythos.html"  data-transition="slide"><h3 style="margin-top:8px;">Mythos: uma deliciosa opção no Islands of Adventures</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/restaurantes/007-espnclub.jpg" style="float:left;" />
+	<a href="restaurantes/007-espnclub.html"  data-transition="slide"><h3 style="margin-top:8px;">ESPN Club: o restaurante dos esportes em Orlando</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/restaurantes/008-chefmickeys.jpg" style="float:left;" />
+	<a href="restaurantes/008-chefmickes.html"  data-transition="slide"><h3 style="margin-top:8px;">Chef Mickey’s: refeição com a turma do Mickey</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/restaurantes/009-trexcomendo.jpg" style="float:left;" />
+	<a href="restaurantes/009-trex.html"  data-transition="slide"><h3 style="margin-top:8px;">T-Rex: comendo no parque dos dinossauros</h3></a>
+	</li>
+	
+	
+	
+	
+	<li>
+	<img src="images/restaurantes/010-akershus.jpg" style="float:left;" />
+	<a href="restaurantes/010-alershus.html"  data-transition="slide"><h3 style="margin-top:8px;">Akershus: restaurante com princesas do Epcot</h3></a>
+	</li>
+	
+	
+	
+	<li>
+	<img src="images/restaurantes/011-chefsdefrance.jpg" style="float:left;" />
+	<a href="restaurantes/011-chefsdefrance.html"  data-transition="slide"><h3 style="margin-top:8px;">Chefs de France: restaurante francês no Epcot</h3></a>
+	</li>
+	
+	<li>
+	<img src="images/restaurantes/012-beourguest.jpg" style="float:left;" />
+	<a href="restaurantes/012-beourguest.html"  data-transition="slide"><h3 style="margin-top:8px;">Be Our Guest: o restaurante no castelo da Bela e a Fera</h3></a>
+      </li>
+      
+        <li>
+	<img src="images/restaurantes/013-bigrivergrille.jpg" style="float:left;" />
+	<a href="restaurantes/013-bigriver.html"  data-transition="slide"><h3 style="margin-top:8px;">Big River Grille: restaurante e cervejaria artesanal na Disney</h3></a>
+      </li>
+	
+	<li>
+	<img src="images/restaurantes/014-briotuscam.jpg" style="float:left;" />
+	<a href="restaurantes/014-briotuscan.html"  data-transition="slide"><h3 style="margin-top:8px;">Brio Tuscan Grille: restaurante italiano em Orlando</h3></a>
+	</li>
+	  
+	<li>
+	<img src="images/restaurantes/015-sunshuneseasons.jpg" style="float:left;" />
+	<a href="restaurantes/015-sunshineseasons.html"  data-transition="slide"><h3 style="margin-top:8px;">Sunshine Seasons: descubra comida saudável na Disney</h3></a>
+	</li>
+      
+	<li>
+	<img src="images/restaurantes/016-capemay.jpg" style="float:left;" />
+	<a href="restaurantes/016-capemay.html"  data-transition="slide"><h3 style="margin-top:8px;">Cape May: café da manhã com personagens da Disney</h3></a>
+	</li>
+	
+	
+	<li>
+	<img src="images/restaurantes/017-fiveguys.jpg" style="float:left;" />
+	<a href="restaurantes/017-fiveguys.html"  data-transition="slide"><h3 style="margin-top:8px;">Five Guys: para os apaixonados por cheeseburger</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/restaurantes/018-trailsend.jpg" style="float:left;" />
+	<a href="restaurantes/018-trailsend.html"  data-transition="slide"><h3 style="margin-top:8px;">Trail’s End: comida de fazenda americana com todo capricho</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/restaurantes/019-gardengrill.jpg" style="float:left;" />
+	<a href="restaurantes/019-gardengrill.html"  data-transition="slide"><h3 style="margin-top:8px;">Garden Grill: comida fresquinha com personagens da Disney</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/restaurantes/020-bucadibeppo.jpg" style="float:left;" />
+	<a href="restaurantes/020-buscadibeppo.html"  data-transition="slide"><h3 style="margin-top:8px;">Buca di Beppo: restaurante barato para a família</h3></a>
+	</li>
+	
+	
+	
+	
+	<li>
+	<img src="images/restaurantes/021-vianapoli.jpg" style="float:left;" />
+	<a href="restaurantes/021-vianapoli.html"  data-transition="slide"><h3 style="margin-top:8px;">Via Napoli: a pizzaria italiana do Epcot</h3></a>
+	</li>
+	
+	
+	
+	<li>
+	<img src="images/restaurantes/022-capitalgrille.jpg" style="float:left;" />
+	<a href="restaurantes/022-capitalgrille.html"  data-transition="slide"><h3 style="margin-top:8px;">Capital Grille: onde carne é coisa séria</h3></a>
+	</li>
+	
+	
+	<li>
+	<img src="images/restaurantes/023-tuttoitalia.jpg" style="float:left;" />
+	<a href="restaurantes/023-tuttoitalia.html"  data-transition="slide"><h3 style="margin-top:8px;">Tutto Italia: restaurante italiano no Epcot</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/restaurantes/024-lecellier.jpg" style="float:left;" />
+	<a href="restaurantes/024-lecellier.html"  data-transition="slide"><h3 style="margin-top:8px;">Le Cellier: o restaurante do Canadá no Epcot</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/restaurantes/025-cheescakefactory.jpg" style="float:left;" />
+	<a href="restaurantes/025-cheescakefactory.html"  data-transition="slide"><h3 style="margin-top:8px;">Cheesecake Factory: comendo muito bem em Orlando</h3></a>
+	</li>
+      
+      
+	<li>
+	<img src="images/restaurantes/026-olivegarden.jpg" style="float:left;" />
+	<a href="restaurantes/026-olivegarden.html"  data-transition="slide"><h3 style="margin-top:8px;">Olive Garden: comer bem e barato em Orlando</h3></a>
+	</li>
+	
+	
+	
+	
+	<li>
+	<img src="images/restaurantes/027-earlofsandwich.jpg" style="float:left;" />
+	<a href="restaurantes/027-earlofsandwich.html"  data-transition="slide"><h3 style="margin-top:8px;">Earl of Sandwich: comer bem e barato em Orlando</h3></a>
+	</li>
+	
+	
+	
+	<li>
+	<img src="images/restaurantes/028-perkins.jpg" style="float:left;" />
+	<a href="restaurantes/028-perkins.html"  data-transition="slide"><h3 style="margin-top:8px;">Perkins: comer bem e barato em Orlando</h3></a>
+	</li>
+	
+	
+    </ul>
+  </div>
+
+
+</div><!-- /page -->
+
+
+ 	<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+	
+
+	<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

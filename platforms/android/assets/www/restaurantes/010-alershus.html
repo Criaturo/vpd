@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/010-akershus.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Akershus: restaurante com princesas do Epcot</h2>
+
+
+
+
+<p>Uma das experiências mais características da Disney é o encontro com personagem, em especial com o Mickey e com as princesas. Para famílias com crianças então, esse é um momento ainda mais mágico. A primeira vez que eu vivi essa experiência foi com 4 anos, quando fui para a Disney pela primeira vez e fiz uma refeição com as princesas. Já faz 22 anos que isso aconteceu e eu lembro até hoje de como eu me senti encontrando a Cinderela naquela época. É por isso que sou muito defensora das interações com personagens, principalmente em refeições pois te permite ter uma experiência um pouco mais personalizada e mais agradável (sem precisar passar um tempão em filas para poder ficar um tempinho com a personagem).</p>
+<div id="attachment_3708"><img src="../cont-imgs/restaurantes/010-akershus/2014-08-22_11-18-26-800x533.jpg" alt="No Akershus, as princesas fazem uma espécie de desfile com as crianças diversas vezes durante a sua refeição." width="600" height="400">
+  <p>No Akershus, as princesas fazem uma espécie de desfile com as crianças diversas vezes durante a sua refeição.</p>
+</div>
+<p>Quando a gente pensa em refeição com princesas, o primeiro local que vem à cabeça é o Cinderella&rsquo;s Royal Table, restaurante que fica dentro do castelo da Cinderela no Magic Kingdom. Esse restaurante realmente é exclente, mas é super difícil de conseguir uma reserva ali. O que muita gente não sabe, é que o Epcot também possui um restaurante ótimo onde é possível ter uma experiência super legal com as princesas da Disney. É esse restaurante, o Akershus, que é o nosso tema de hoje.</p>
+<p>O Akershus fica dentro do Word Showcase, no pavilhão da Noruega. E se você está pensando que ele não é tão legal quanto o castelo da Cinderela por ele fica escondido no meio do Epcot, muito você se engana. O Akershus tem uma ambientação toda medieval e foi inteirinho baseado em um castelo norueguês de verdade, que chama advinha como? Akershus! Por causa disso, o clima do restaurante é completamente diferente do restante do Epcot, desde os pequenos detalhes da arquitetura até a decoração – tudo como na idade média.</p>
+<div id="attachment_3697"><img src="../cont-imgs/restaurantes/010-akershus/2014-08-22_11-16-01-800x533.jpg" alt="Pequenos detalhes da decoração do Akershus. " width="600" height="400">
+  <p>Pequenos detalhes da decoração do Akershus.</p>
+</div>
+<p>Quando você chega no restaurante, você é convidado a tirar uma foto com uma princesa (que pode variar de acordo com o dia) logo na recepção. Durante a sua refeição vão te entregar essa foto em uma versão grande e 4 pequenas sem nenhum custo adicional. Outras fotos poderão ser compradas caso haja interesse. Além dessa foto inicial, as princesas também rodam as mesas para interagir e tirar foto com os visitantes enquanto os mesmos comem e ainda acontece um mini desfile diversas vezes ao dia (acho que a cada 30 minutos) com as princesas passeando pelo restaurante e as crianças todas seguindo a rota (vide a primeira foto do post). Vale dizer que existe um rodízio de princesas então você nunca tem certeza de quem você vai encontrar lá.  Acho uma sacanagem a Disney não informar antes exatamente quais personagens você encontrará lá, mas infelizmente é assim que funciona. A única coisa que a gente sabe é que você encontrará umas 4 ou 5 personagens, sendo a maioria princesas. As personagens mais prováveis de se encontrar lá são:</p>
+<ul>
+  <li>Ariel</li>
+  <li>Aurora (bela adormecida)</li>
+  <li>Bela</li>
+  <li>Branca de Neve</li>
+  <li>Cinderella</li>
+  <li>Jasmine</li>
+  <li>Mary Poppins</li>
+</ul>
+<p>A comida é bem variada, com toques noruegueses mas um cardápio com opções para todos os paladares. No café da manhã, o restaurante funciona como buffet em que você paga um preço fixo e se serve quantas vezes quiser. O café é super completo como todos os buffets da Disney: traz pães, frutas e itens típicos como salmão gravlax. A nossa última refeição lá foi justamente no café da manhã e gostamos muito. Uma coisa legal de todo café da manhã dentro de parque, é que normalmente as reservas começam para um horário antes do parque abrir, ou seja, você entra no parque antes, têm uma experiência super legal e ainda tem o dia todo para curtir o parque depois. No almoço e no jantar o sistema é um pouquinho diferente:você paga um preço fixo para ter uma refeição de 3 pratos que são servidos em estilos diferentes. Primeiro, existe um buffet de entradas bem no estilo norueguês, chamado Taste of Norway (&ldquo;Gosto da Noruega&rdquo; em português), depois você escolhe no cardápio qual das opções de pratos principais individuais você deseja pedir, e por fim servem uma sobremesa tamanho família para todo o seu grupo.</p>
+
+<p>O preço fixo de uma refeição no Akershus pode variar bastante dependendo do dia da semana e da época do ano mas seguem mais ou menos o intervalo de valor que colocamos na avaliação no fim do post. Sendo bem honesta, a comida atende a necessidade e não decepciona, mas não é um restaurante que eu visitaria apenas por causa da alimentação. O que vale ali mesmo é a experiência com personagens e nesse quesito, o Akershus é um dos melhores restaurantes da Disney. Se você vai viajar com crianças (ou até adultos mesmo) que amam as princesas, o Akershus pode ser uma das experiência mais inesquecíveis da sua viagem. Outra ponto legal do Akershus que não posso deixar de citar é que ele custa apenas um crédito de Table Service no Disney Dining Plan (o plano de refeições da Disney que já explicamos em detalhes <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/disney-dining-plan-refeicoes/');">aqui</a>) enquanto o  Cinderella Royal Table custa dois créditos. Em outras palavras, se você fechou o Disney Dining Plan com opção de Table Service, o Akershus traz praticamente os mesmos personagens que o Cinderella&rsquo;s Royal Table e uma experiência bem similar, pela metade do valor.</p>
+<div id="attachment_3710"><img src="../cont-imgs/restaurantes/010-akershus/2014-08-22_11-19-10-e1408752590530-533x800.jpg" alt="Se você marcar café da manhã em qualquer restaurante dentro de parque antes do mesmo abrir, procure por uma placa como essa ao chegar. Dando o nome da reserva, você poderá fazer sua refeição antes das atrações abrirem. " width="533" height="800">
+  <p>Se você marcar café da manhã em qualquer restaurante dentro de parque antes do mesmo abrir, procure por uma placa como essa ao chegar. Dando o nome da reserva, você poderá fazer sua refeição antes das atrações abrirem.</p>
+</div>
+<p>Se você se interessou, marque a sua reserva o quanto antes seguindo o passo a passo que ensinamos <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">aqui</a>. Lembre-se que restaurantes com princesas não ficam com vagas sobrando com frequência, então garanta a sua experiência assim que possível. E se quiser encontrar outros personagens em sua refeição, veja a lista completa de suas alternativas clicando <a href="http://www.vaipradisney.com/blog/comendo-com-personagens-da-disney/" target="_blank">aqui</a>.</p>
+<p><strong>Nome</strong>: Akershus Royal Banquet Hall <br>
+  <strong>Endereço</strong>: 1510 Avenue of the Stars, Lake Buena Vista, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Akershus+Royal+Banquet+Hall/@28.370442,-81.546797,17z/data=!3m1!4b1!4m2!3m1!1s0x88dd7fa62faf60e5:0xbadec48081172ba1');">Veja no Google Maps</a>)<br>
+  <strong>Telefone</strong>: +1 407-939-3463<br>
+  <strong>Referência</strong>: Dentro do Epcot<br>
+  <strong>Preço</strong>: Entre US$40 a US$60 dólares por adulto e US$ 25 e US$30 dólares por criança entre 3 e 9 anos.<br>
+  <strong>Horário de Funcionamento</strong>: varia de acordo com o horário do parque. <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/horarios-dos-parques-da-disney/');">Veja aqui</a> como verificar o horário para o dia da sua visita.<br>
+  <strong>Cardápio</strong>: <a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/epcot/akershus-royal-banquet-hall/menus/');">clique aqui</a> para visualizar os cardápios de todas as refeições (em inglês).<br>
+  <strong>Disney Dining Plan</strong>: Sim, vale um crédito de Table Service.<br>
+  <strong>Avaliação do VPD</strong>: <img src="../cont-imgs/restaurantes/estrelas-avaliacao_4.png" alt="Nota 4 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

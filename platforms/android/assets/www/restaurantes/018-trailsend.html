@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Trail’s End: comida de fazenda americana com todo capricho</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/018-trailsend.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Trail’s End: comida de fazenda americana com todo capricho</h2>
+
+
+
+
+<p>Estou muito animada com o post de hoje pois vamos dividir com vocês a dica do meu restaurante preferido de Orlando, o Trail&rsquo;s End. Praticamente escondido em um dos hotéis da Disney, este restaurante foi até hoje praticamente o nosso cantinho secreto, pois nunca encontrei outro brasileiro por lá. Bom, já está mais que na hora disso mudar né? Se você gosta de comida americana feita com capricho, anota essa dica! Para você que ainda não se convenceu, adianto só uma coisa: buffet de Baked Potato. Consegui sua atenção agora né?</p>
+<div id="attachment_2229"><img src="../cont-imgs/restaurantes/018-trailsend/DSC_0389-2-533x800.jpg" alt="Placa do Trail's End: apesar de escondido, o local é bem sinalizado e fácil de chegar. " width="426" height="640">
+  <p>Placa do Trail&rsquo;s End: apesar de escondido, o local é bem sinalizado e fácil de chegar.</p>
+</div>
+<p>O Trail&rsquo;s End fica no Disney&rsquo;s Fort Wilderness, hotel pouco explorado pelos brasileiros, mas um dos mais incríveis da Disney na minha opinião. Eu e o Fe amamos o hotel e somos loucos para nos hospedar lá, mas estamos guardando o Fort Wilderness para quando tivermos filhos, pois acho que é um hotel excelente para curtir com crianças. Ele possui chalés, espaço para se hospedar com trailer ou até barracas. Não quero me estender, mas é um hotel com uma temática meio rústica, algo intermediário entre um camping e um hotel fazenda. Essa temática rústica possui uma forte influência na cozinha do Trail&rsquo;s End, que serve pratos  típicos dos sítios e fazendas americanas.</p>
+<p>Sei que muito brasileiro não curte comida americana por acreditar que esta consiste unicamente em hambúrguer e pizza, mas isso é longe de ser verdade. Assim como a comida do Brasil não é só feijoada, a comida dos EUA não é só hambúrguer. Indo nos lugares certos, você encontra uma comida de qualidade e muito versátil, capaz de agradar qualquer paladar.  Na minha opinião, o Trail&rsquo;s End é um lugar seguro para se experimentar uma boa comida típica americana de qualidade.</p>
+<div id="attachment_2230"><img src="../cont-imgs/restaurantes/018-trailsend/DSC_0390-2-800x533.jpg" alt="DSC_0390 2" width="640" height="426">
+  <p>Trail&rsquo;s End possui comida para todos os gostos. Detalhe para a decoração rústica do restaurante.</p>
+</div>
+<p>Como eu disse, o restaurante fica bem escondido.  Além de estar situado em um hotel pouco conhecido, mesmo depois de você chegar ao Fort Wilderness, não é tão simples achar o restaurante. Existem duas maneiras de chegar ao Trail&rsquo;s End:</p>
+<ol>
+  <li>Vá até a entrada do Fort Wilderness, deixe o seu carro no estacionamento, se dirija ao ponto de ônibus e espere um ônibus que leve até o Settlement. A maioria dos ônibus internos levam até lá mas eu sempre confirmo com o motorista antes de entrar.</li>
+  <li>Saindo do Magic Kingdom, vá até o pier de onde saem barcos para os resorts e se dirija a fila dos barcos para o Fort Wilderness. O barco chega bem ao lado do Trail&rsquo;s End, o que é uma facilidade.</li>
+</ol>
+<p>Essa pequena viagem para chegar ao Settlement (onde fica o Trail&rsquo;s End e o Hoop-Dee-Doo Musical Revue, assunto que ficará para outro post) pode parecer cansativo, mas na verdade é bem rapidinha e serve como aquecimento para você entrar no clima de natureza que envolve o local. Chegando no Trail&rsquo;s End, é só alegria. O restaurante funciona no estilo buffet no café da manhã e no jantar,  quando você paga um preço fixo e come a vontade. Vale citar que a maioria das bebidas também já estão inclusas no buffet. Ao contrário do jantar e café da manhã, o almoço é &ldquo;a la carte&rdquo;,  mas minha dica de hoje para vocês é ir no jantar mesmo, pois este é um dos poucos buffets que valem mais que um a la carte.</p>
+<p>Eu vou confessar que em geral fico super com pé atrás com restaurantes buffet simplesmente porque acho difícil manter a qualidade fazendo comida em tanta quantidade. Bom, posso dizer que os cozinheiros do Trail&rsquo;s End são bem mais competentes do que eu, pois apesar de oferecerem o jantar em buffet, tudo lá é super caprichado, fresquinho e delicioso, melhor que muito restaurante a la carte por aí. Sempre atenta aos detalhes, a Disney caprichou na decoração do Trail&rsquo;s End dando toques rústicos muito legais, inclusive na louça, com pratos de metal e copos no formato de pote de geléia.</p>
+
+<p>Seguindo esta linha de comida de fazenda americana, o buffet traz um menu bem completo para agradar toda a família. Tudo é muito bem feito, com uma qualidade acima da média na minha opinião. Veja bem: não estou falando de sofisticação, mas de pratos simples muito bem preparados. Eu não quero ficar listando todos os itens do menu aqui, mas realmente acho importante destacar que é um dos mais completos que já vi. As fotos podem te ajudar a ter uma boa noção, mas o menu contempla peixe (em geral salmão), carne, frango a milanesa (que apesar de delicioso tem como ponto negativo o fato deles fritarem o frango com a pele, o que me faz separar todo o milanesa para poder me livrar da pele. ECA! ), costela de porco, diversas saladas, legumes fresquinhos (a cenoura e o milho são sensacionais), massas (destaque para o mac n cheese, tradicionalíssimo americano) , pizza e muito mais.</p>
+<p>Para mim é difícil escolher os vencedores, mas acho que é importante  destacar o super caseiro e maravilhoso pão de milho com manteiga com toque de mel (gosto tanto desse pão que tento replicar aqui em casa) e o buffet de baked potato,  onde você pode montar a sua batata como quiser, quantas vezes quiser.  É ai que eu te pergunto: como não amar um restaurante que tem um &ldquo;open bar&rdquo; de baked potato, minha gente?  Não dá, né? É a melhor idéia que um restaurante já teve!</p>
+
+<p>Como se já não fosse comida o suficiente para matar sua fome por uma semana, o Trail&rsquo;s End mantém a qualidade e quantidade no quesito sobremesas. Para começar, entre as opções está uma máquina de sorvete daquelas tipo a do Mc Donalds, sabe? Nela você faz o seu sorvete e coloca as coberturas e confeitos que quiser. Super legal! Além disso, são oferecidas diversas outras opções de sobremesas que variam de um dia para o outro, entre tortas, bolos, cookies, pudins, etc em maior quantidade do que você vai conseguir comer. Sempre um momento de duras escolhas.</p>
+<p>Outro ponto muito positivo do Trail&rsquo;s End é o preço justo que cobram por tudo que oferecem. Uma refeição por lá sai pouco menos de 30 dólares por adulto, já contando o valor da gorjeta (valores de abril/2014). O fato de ser um restaurante que cobra um preço fixo pelo buffet ajuda a não ter surpresas na conta. Por isso, acho que é um restaurante indicado para grandes grupos que terão que dividir a conta, pois o valor por cabeça é sempre o mesmo e fácilmente calculado.</p>
+<div id="attachment_2252"><img src="../cont-imgs/restaurantes/018-trailsend/DSC_0412-2-800x533.jpg" alt="Conta para duas pessoas, ainda sem gorjeta. Com gorjeta deu pouco menos de 30 dólares por pessoa. " width="640" height="426">
+  <p>Conta para duas pessoas, ainda sem gorjeta. Com gorjeta deu pouco menos de 30 dólares por pessoa.</p>
+</div>
+<p>Como eu disse, este é meu restaurante preferido em Orlando ultimamente. Comida boa, simples, com variedade, sem &ldquo;frufru&rdquo;, sem invenções e tudo muito bem preparado. Além disso, o fato de você fugir completamente do cenário do nosso dia a dia faz dessa experiência ainda mais gostosa. Gostou? Então entra no site da Disney e faça a sua reserva. Não sabe como? Então <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/como-reservar-restaurante-na-disney/');">clique aqui</a> que a gente ensina. Espero que goste tanto quanto nós gostamos. Depois conta para a gente o que achou, tá? <img src="../cont-imgs/restaurantes/icon_smile.gif" alt=":)"></p>
+<p><strong>Nome:</strong> Trail&rsquo;s End (jantar)<br>
+  <strong>Endereço:</strong> 4510 Fort Wilderness Trail, Lake Buena Vista, FL 32830 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Trail's+End+Restaurant/@28.411741,-81.561857,17z/data=!3m1!4b1!4m2!3m1!1s0x0:0x5bed5839c9fc1e2d');">Veja no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-939-3463<br>
+  <strong>Referência:</strong> Dentro do hotel Disney&rsquo;s Fort Wilderness Resort<br>
+  <strong>Preço:</strong> US$20-30 por pessoa (abril/2014)<br>
+  <strong>Horário de Funcionamento:</strong> 07:30am–2:00pm, 4:30pm–9:30pm<br>
+  <strong>Cardápio:</strong><a class="linkvai" href="javascript:loadURL('https://disneyworld.disney.go.com/dining/cabins-at-fort-wilderness-resort/trails-end-restaurant/menus/');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong><strong>Disney Dining Plan: </strong></strong>Sim<br>
+  <strong>Avaliação do VPD:</strong> <img src="../cont-imgs/restaurantes/estrelas-avaliacao_5.png" alt="Nota 5 de 5" width="138" height="22"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

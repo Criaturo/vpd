@@ -1,0 +1,203 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+	<meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+  
+    <script src="js/jquery/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="js/lib/GALocalStorage.js"></script>
+
+</head> 
+<body>
+	
+
+<div data-role="page" class="content">
+
+	
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="index.html" class="btn-logo"><img src="images/logo-vai-pra-disney.png" /></a>
+		<a href="#myPanel" class="btn-favoritos2" id="viewfovoritos" ><img src="images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			$(document).ready(function(){
+				$('.btnSalvar2').click(function(){
+					var lS = prompt("De um nome ao resultado para salvar.","");
+					localStorage.setItem(lS, $(location).attr('href'));
+				}) 				
+				  
+				$('.btn-favoritos2').click(function(){
+					var tamanho = localStorage.length;
+					var chave = '';
+					var valor = '';
+					
+					if(document.getElementById("tableResults").rows.length > 1)	{
+						for(var t = document.getElementById("tableResults").rows.length; t > 1; t--){
+						document.getElementById("tableResults").deleteRow(1);
+						}
+					}
+										
+					var numOfCols = document.getElementById("tableResults").rows[document.getElementById("tableResults").rows.length-1].cells.length;
+						
+					for(var c = 0; c < tamanho;c++){
+						chave = localStorage.key(c);
+						valor = localStorage.getItem(chave);
+						
+						
+						var newRow = document.getElementById("tableResults").insertRow(document.getElementById("tableResults").rows.length);
+							
+							for (var j = 0; j < numOfCols; j++) {
+							
+							newCell = newRow.insertCell(j);
+							
+							if(j==0){
+								
+								}else if(j == 1){
+									newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+								} } }	
+					});
+			});
+
+			$('.link').on('tap', function() {
+			    url = $(this).attr("rel");   
+			    loadURL(url);
+			});
+				
+			function loadURL(url){
+			   window.open(url, "_system");
+			} 
+		</script>
+			
+			<table id="tableResults" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>   
+
+ 
+
+	<div data-role="main" class="ui-content">
+		
+		<div class="ui-grid-a">
+			
+			<div class="ui-block-a bg-roteiros-parques ajusteDeAltura">
+				<a href="roteiros-parques.html" class="btn-home" id="analyticsbutton"  data-transition="flip">
+						<div class="centralizarVertical">
+							<img src="images/ico-roteiros-parques.png" />
+							<span>Roteiros <br/>dos parques</span>
+						</div>
+				</a>
+			</div>
+			
+			<div class="ui-block-b bg-melhoresdicas ajusteDeAltura">
+				<a href="melhores-dicas.html" class="btn-home" data-transition="flip">
+					<div class="centralizarVertical">
+						<img src="images/ico-melhores-dicas.png" />
+						<span>Melhores <br/>dicas</span>
+					</div>
+				</a>
+			</div>
+		
+			
+			<div class="ui-block-a bg-restaurantes-recomendados ajusteDeAltura">
+				<a href="restaurantes.html" class="btn-home" data-transition="flip">
+					<div class="centralizarVertical">
+						<img src="images/ico-restaurantes-recomendados.png" />
+						<span>Restaurantes <br/>recomendados</span>
+					</div>
+				</a>
+			</div>
+			
+			<div class="ui-block-b bg-lojas-recomendadas ajusteDeAltura">
+				<a href="lojas.html" class="btn-home" data-transition="flip">
+					<div class="centralizarVertical">
+						<img src="images/ico-lojas-recomendadas.png" />
+						<span>Lojas <br/>recomendadas</span>
+					</div>
+				</a>
+			</div>
+		
+			<div class="ui-block-a bg-acessar-vai-disney ajusteDeAltura">
+				<a href="javascript:loadURL('http://www.vaipradisney.com');" class="link btn-home">
+					<div class="centralizarVertical">
+						<img src="images/ico-acessar-vaipradisney.png" />
+						<span>Acessar o <br/>VPD Online</span>
+					</div>
+				</a>
+			</div>
+			
+			<div class="ui-block-b bg-ajustes ajusteDeAltura">
+				<a href="ajustes.html" class="btn-home"   data-transition="flip">
+				
+					<div class="centralizarVertical">
+						<img src="images/ico-ajustes.png" />
+						<span>Ajustes</span>
+					</div>
+				</a>
+			</div>
+		
+		</div>
+	
+	 </div>
+	
+	
+	
+</div><!-- /page -->
+
+	<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+
+    verificarAjusteLayout();
+
+    $(window).bind('resize', function(){
+    	verificarAjusteLayout();
+    });
+});
+
+function verificarAjusteLayout(){
+	//calculo para ajuste de altura dos blocos
+    alturaBloco = $(".ajusteDeAltura").eq(0).height();
+    alturaJanela = window.innerHeight - $("#vpdheader").height();
+
+    //quando a tela for bem maior que os blocos
+    if( alturaJanela > ( alturaBloco * 3 ) )
+    {
+    	//calculando altura por bloco
+    	novaAltura = Math.abs( ( alturaJanela + ( $("#vpdheader").height() - 40 ) ) / 3 );
+    	$(".ajusteDeAltura").css({"height":novaAltura+"px"});
+
+    	//aplicar apenas se a nova altura não for igual a soma das alturas da imagem e texto
+    	somaAlturas = $(".ajusteDeAltura .centralizarVertical").eq(0).height() + 30;
+
+    	if( somaAlturas < novaAltura )
+    	{
+    		$(".ajusteDeAltura").css({"height":novaAltura+"px"});
+
+    		//ajustando ícones sempre ao centro
+		    altura = $(".ajusteDeAltura .centralizarVertical").eq(0).height() + 66; //acrescentando diferença pelo padding
+		    altura = Math.abs(altura * .5);
+
+		    $(".ajusteDeAltura .centralizarVertical").css({"top":"50%","margin-top":-altura+"px","position":"relative"});
+    	}
+    }
+
+    //ocultando splash screen
+    //navigator.splashscreen.hide();
+}
+</script>
+</body>
+</html>

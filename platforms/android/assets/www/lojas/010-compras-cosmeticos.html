@@ -1,0 +1,188 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Compras em Orlando: Cosméticos</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../lojas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/010-cosmeticos.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Compras em Orlando: Cosméticos</h2>
+
+
+
+
+<p>Todo mundo que vai pra Orlando acaba fazendo compras. Mesmo que você seja super contido e não queira comprar nada, pode apostar que vai receber no mínimo uma encomenda dos amigos que ficarão no Brasil. E um item que não falta na lista de comprar de um turista em Orlando é cosmético. Afinal, seja para você ou para uma encomenda de um amigo que ficou no Brasil todo mundo acha que um batom, uma sombra ou um perfume a mais nunca é demais, certo? Certo! E o melhor é que quase sempre estes itens são bem mais baratos por lá e ocupam pouquíssimo espaço na mala. E porque os cosméticos são itens tão importantes nas nossas compras em Orlando, hoje vou falar um pouquinhos das dicas gerais para escolher onde comprar os seus produtos e em seguinda, vou listar alguns dos principais lugares da cidade onde você encontra cremes, maquiagens, perfumes e tudo que você vai precisar riscar estes itens da sua lista de compras pessoais ou de encomendas.</p>
+<h2><strong>Dicas para Compras de Cosméticos em Orlando</strong></h2>
+<p>Orlando possui uma infinidade de lojas, muitas das quais vendem cosméticos. Mas é sempre bom ter cuidado redobrado na hora de escolher onde vai fazer suas compras, pois nem todas são confiáveis. A gente sempre quer escolher bem a roupa ou a bolsa que compra, mas quando a gente fala de cosméticos (que vão direto na sua pele e no seu rosto) é ainda mais importante ter essa atenção. Eu que não vou querer ficar com a cara toda empipocada depois!</p>
+<p>Em Orlando existem mil lojas de rua e eu fujo de todas elas! Nunca compre em lojas desconhecidas que dizem vender todos os cosméticos de marca pela metade do preço. Cosméticos possuem preços tabelados e por isso, se eles estiverem com o preço muito abaixo do normal, é  possível que sejam falsificados. Para evitar problemas, sempre dou preferência para as lojas das próprias marcas dos produtos ou para as lojas de departamento. Tentei agrupar as principais lojas que valem a pena você considerar na sua rota de compras pelo estilo de lojas, para que você possa usar isso como guia e entender todas as opções para adquirir os itens que você está buscando. </p>
+<p>Nordstrom: uma das muitas lojas de departamento onde você encontra quiosques das marcas de cosméticos. Detalhe para os maridos esperando do lado de fora.</p>
+<p> </p>
+<h2><strong>Melhores Lojas de Cosméticos em Orlando</strong></h2>
+<p><strong>Macy&rsquo;s, Neiman Marcus, Saks Fifth Avenue, Nordstrom e Bloomingdales:</strong><em><br>
+</em>Todas estas são lojas de departamentos que vendem diversas marcas de roupas, acessórios e cosméticos (umas mais chiques do que outras). Cada marca de cosmético possui um quiosque e vendedoras exclusivas para te auxiliarem. Algumas dessas lojas são mais esnobes, mas não deixe isso te inibir! Como eu falei, os preços de cosméticos são tabelados, então não precisa ficar com medo de tomar susto na hora de pagar sua sombra numa Bloomingdales. Enquanto você ficar no campo dos cosméticos, o preço não vai ser diferente do da Macy&rsquo;s por exemplo. Vale avisar que os quiosques de cada uma das lojas de departamento podem trazer marcas diferentes entre elas, então ás vezes vale visitar todas para ver se encontra a marca que procura.</p>
+<p>A vantagem aqui é que algumas marcas, como Lâncome e Clinique, oferecem muitos brindes dependendo do valor gasto. Vale muuuuito a pena e eu sempre checo o que as lojas de departamentos estão oferecendo antes de comprar em outro lugar. Eu não sei vocês mas eu adoro um brinde, ainda mais quando é uma versão miniatura de cosméticos tão bons. Excelente opção para levar na bolsa.</p>
+<p><strong>Clinique, MAC, Origins, Bare Escentuals, Khiels, entre outras:</strong><br>
+  Todas essas são marcas de cosméticos que possuem tanto lojas próprias (até aqui no Brasil) como quiosques nas lojas de departamento. O legal é que todos os vendedores destas marcas são sempre especialistas, que sabem exatamente o que te oferecer. Eles analisam sua pele para ver o tom, a oleosidade, se tem problema de espinha e tudo mais. Na MAC eles te deixam experimentar a maquiagem para ver se você realmente curtiu o produto na sua pele antes de comprar ( e claro, sempre sugerem mais outros mil produtos maravilhosos, porque eles não são bobos nem nada). Vale muito a pena visitar as lojas das marcas. Das que eu citei, a Origins, a Khiels e a Clinique possuem produtos mais para cuidado da pele (hidratante, sabonetes, etc) enquanto o negócio da MAC e da Bare Escentuals é maquiagem mesmo.</p>
+<p>Dica: se você passar em uma loja própria que tem quiosque dentro das lojas multimarcas, for atendida por um especialista e decidir comprar alguns produtos, verifique se os mesmos produtos não te darão direito a nenhum brinde se adquirido nos quiosques das lojas multimarcas. Não são todas as marcas de cosméticos que oferecem brindes, mas se tiver com tempo, não custa checar.</p>
+<p><strong>Victoria Secrets e Bath and Body Works:</strong><em><strong><br>
+</strong></em>A mulherada adora os hidratantes da Victoria Secrets, né? Se elas já gostam aqui, imagina depois de descobrirem que são bem baratinhos nos EUA. E quanto mais você compra, mais barato sai a unidade. É pra encher a mala mesmo! Fica aí uma ótima dica de lembrancinha para trazer pras amigas. Além disso, algumas maquiagens podem chamar sua atenção por lá também. Outra ótima loja de creminhos cheirosos e produtos para banho é a Bath and Body Works. Lá eles também tem o mesmo esquema de preços baixos que a Victoria Secrets, mas eu gosto ainda mais dos produtos.</p>
+<div id="attachment_1644"><img src="../cont-imgs/lojas/010-cosmeticos/5817138542_cbea5c0691_b-800x600.jpg" alt="Sephora: parada obrigatória para quem quer comprar cosméticos." width="640" height="480">
+  <p>Sephora: parada obrigatória para quem quer comprar cosméticos.</p>
+</div>
+<p><strong>Sephora:</strong><br>
+  É o paraíso dos cosméticos, simples assim. Parada obrigatória para toda mulher, na minha opinião. Tanto que um dia desses vou fazer um post só para falar da Sephora, pois ela merece. Se você estiver sem tempo e tiver que escolher um só lugar para compra seus cosméticos, este é o seu lugar. Lá você encontra maquiagens, cremes, acessórios e tudo o que você precisa para ficar linda, até um monte de produtos que você nem sabia que existia. Todas as principais marcas estão ali também. As vendedoras entendem muito dos produtos e podem te ajudar a escolher o que mais funcionará para você, sem necessariamente falarem de uma marca só. Você poderá experimentar muitos dos produtos enquanto escolhe, o que é sempre bem legal.</p>
+<p>Uma das coisas que o meu lado consumidora mais gosta na Sephora é a fila para pagar. Enquanto você espera feliz na fila para pagar pelos seus novos produtos, você fica cercada por vários outros produtos legais. Uma estratégia deles para você colocar mais coisas na sua cesta de compras  antes de chegar ao caixa que eu sempre caio que nem uma pata, mas nunca me arrependi. Os produtos que ficam expostos na fila são muito legais. Um dos que eu mais gosto é uma bolsinha com vários produtos para uma emergência feminina. É uma bolsinha pequena que cabe em qualquer bolsa e facilita mesmo a vida. Tem lencinho umedecido, um advil, uma base de unha, um colírio, um o.b, um band-aid, entre outras coisinhas que já quebraram o galho várias vezes na minha vida. Outro produto que vende na fila e eu não fico sem é o Rosebud (foto abaixo). Ele pode parecer um creminho comum para você passar nos lábios rachados, mas ele é muito mais do que isso. Além de ser a melhor coisa para lábios rachados de frio, ele também é ótimo para tirar a dor de queimaduras. Eu cozinho muito (inclusive já dei dicas de compras de cozinha <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/compras-em-orlando-itens-de-cozinha/');">aqui</a>) e vivo me queimando no fogão, então o Rosebud é praticamente meu melhor amigo. </p>
+<p><strong>Lojas de Cabeleireiros nos shoppings:</strong><br>
+  Vivemos numa época pós MoroccanOil e já sabemos as maravilhas que este e outros produtos de cabeleireiro fazem pelos nossos cabelos. Achar os produtos da MaroccanOil e outras marcas muito específicas, nem sempre é uma tarefa fácil, mas aqui vai uma boa dica pra vocês: tanto no Florida Mall como no Mall at Millenia, existe uma loja/ cabeleireiro que vende diversos produtos para o cabelo. Lá eles vendem toda a linha Marrocan Oil. Além do óleo, super indico o creme pra fazer hidratação em casa. Meu cabelo é muito difícil e esse creme já fez milagres por mim aqui, viu? As marcas profissionais (como L&rsquo;Anza e Kérastase) que são super difíceis de encontrar pela cidade, você também encontra nesse lugares também.</p>
+<p><strong>Perfumeland:</strong><em><strong><br>
+</strong></em>Essa é uma loja que eu aconselho ter cuidado.  Sei que muita gente vai e adora, e eu não to dizendo que tudo lá é ruim ou falsificado, mas tem uma boa parcela que é bem suspeita.  Eu não compro lá, e já vi vários relatos de produtos falsificados (alguns inclusive nos comentários dessa matéria). Por outro lado, também já vi muita gente que comprou coisas verdadeiras e saiu super feliz. Então se quiser, vá e visite, eles possuem uma infinidade de cosméticos por lá inclusive produtos difíceis, que é capaz de você só achar lá mesmo. Então se quiser, vá, mas vá de olhos bem abertos.</p>
+<p>Fique atento ao seguinte: como eu já disse anteriormente, boa parte dos cosméticos possuem preços tabelados e se eles estão sendo vendidos na Perfumeland por um preço inferior ao dos demais lugares, é para ficar com a pulga atrás da orelha. Se não tiver nenhum motivo muito bom para o preço inferior, desconfie. E desconfie mesmo, porque ouvi dizer que as vendedoras lá tem maior lábia pra te convencer. Além disso, a Perfumeland fecha acordo com muitas agências, então quase todas as excursões passam lá simplesmente porque estão ganhando por fora da Perfumeland para te fazer comprar lá. Óbvio que eles nunca vão falar isso pros turistas, mas é o que acontece.</p>
+<p>Eu não frequento muito essa loja porque sou maior azarada e aposto que se eu pegasse um produto falsificado,  seria justamente o produto que faz a pele ficar verde ou o cabelo cair ou qualquer coisa assim. Mas pelos relatos, prefiro não recomendar nem recriminar a compra lá. Acho que fica realmente a critério de cada um correr ou não o risco das compras lá. Vale deixar claro o lado bom: além da variedade de produtos, há sempre muitos brasileiros por lá, então este é um território bom para quem não arrisca um inglês e quer comprar se comunicando no bom e velho português.</p>
+<div id="attachment_1646"><img src="../cont-imgs/lojas/010-cosmeticos/DSC_1012-800x533.jpg" alt="Corredor de cosméticos do Wallgreens. Definitivamente não deve ser subestimado. Ótimos produtos com preços bem honestos." width="640" height="426">
+  <p>Corredor de cosméticos do Wallgreens. Definitivamente não deve ser subestimado. Ótimos produtos com preços bem honestos.</p>
+</div>
+<p><strong>CVS e Walgreens:</strong><br>
+  Não subestime estas lojas de conveniência que em algum momento terão post próprio. Elas são demais, inclusive no que se refere a venda de cosméticos. Pode ter certeza que encontrará muita maquiagem, shampoo, hidratante, esfoliante e outras muitas coisas legais nessas lojas. E muitas vezes são marcas muito boas e que possuem um preço bem mais acessível. Não ache que cosmético necessariamente precisa ser Dior para ser bom. Tem muita marca boa e mais acessível! O Aussie creme hidratante que está super na moda já era encontrado na CVS do Florida Mall muito antes de bombar por aí. Hoje claro, ele já é encontrado não só na CVS mas também no Walgreens, Target, entre outras lojas. E eu continuo sempre comprando na CVS junto com outros produtos.</p>
+<div id="attachment_4680"><img src="../cont-imgs/lojas/010-cosmeticos/14797114706_d659a1c2bc_z.jpg" alt="Aussie agora é encontrado não só na CVS mas em várias outras lojas. " width="427" height="640">
+  <p>Aussie agora é encontrado não só na CVS mas em várias outras lojas.</p>
+</div>
+<p><strong>Target e Walmart:</strong></p>
+<p>Calma, eu não tô falando pra você comprar toda a sua maquiagem nos supermercados mas também acho que não devem ser subestimadas. Assim como as lojas de conveniências, os supermercados americanos são bem completos e com marcas muito legais de cosméticos. Eu já comprei muita maquiagem, shampoo bom, cremes, esfoliantes e acessórios legais (como conjunto de pincéis por exemplo) na Target, que possui marcas ótimas,  então eu realmente recomendo.</p>
+<p><strong>E os outlets?</strong></p>
+<p>A melhor opção para compra de cosméticos em outlets é a Cosmetic Company Store, que está presente no Premium (nos dois). Essa loja vende produtos do grupo Estée Lauder, que inclui marcas como Bobbi Brown, Clinique e MAC. Geralmente, os produtos disponíveis (principalmente entre as maquiagens) são de coleções passadas, então é uma boa pedida pra quem procura estojos e conjuntinhos, como os que são comercializados no Natal. Tudo legítimo nessa loja, nas outras, já não sei.</p>
+<p>Bom, agora é só correr pras compras! E já que o assunto é compras, não se esqueça de ver nossas dicas para aproveitar melhor as compras (<a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/5-dicas-compras-em-orlando/');">clicando aqui</a>) e as nossas dicas de segurança nos shoppings e outlets (<a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/dicas-de-seguranca-nas-compras-em-orlando/');">clicando aqui</a>).</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

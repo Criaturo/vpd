@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Cheesecake Factory: comendo muito bem em Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/025-cheescakefactory.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Cheesecake Factory: comendo muito bem em Orlando</h2>
+
+
+
+
+<p dir="ltr">Eu e o Felipe sempre gostamos de comer bem na viagem e hoje vou falar de um restaurante que não pode faltar na nossa programação em Orlando, a Cheesecake Factory. Este restaurante que é queridinho tanto dos brasileiros como dos americanos, é um dos nossos preferidos em Orlando e não é à que gostamos de comer bem sempre. Hoje vou contar um pouquinho sobre a Cheesecake Factory, um dos nossos restaurantes preferidos em Orlando. Em uma de nossas últimas viagens fomos lá e estava tão bom que voltamos…4 vezes! A gente simplesmente não conseguia evitar e acabava voltando sempre. O sucesso com os brasileiros é tanto que a rede está planejando abrir uma unidade em São Paulo em 2015. Estou torcendo muito mas enquanto isso não acontece, a gente te apresenta a unidade de Orlando mesmo.</p>
+<div id="attachment_4692"><img src="../cont-imgs/restaurantes/025-cheesecakefactory/13575136993_4322a50545_z.jpg" alt="13575136993_4322a50545_z" width="640" height="427">
+  <p>Um dos meus cheesecakes favoritos, com maçã e caramelo!</p>
+</div>
+<h2>A atmosfera da Cheesecake Factory</h2>
+<p>A Cheesecake Factory é uma rede de restaurantes super conhecida nos Estados Unidos e está presente praticamente no país inteiro. Como eu falei, o restaurante é super popular entre locais e turistas. O ambiente é bem despojado, não é preciso se preocupar muito com vestimenta ou nada disso, é um restaurante simples e descomplicado. Acho legal que a Cheesecake Factory é super versátil, sendo uma boa opção para praticamente qualquer viajante: você pode estar sozinho, em casal, com os amigos ou com a família, em todos os casos a Cheesecake Factory é uma ótima programação para a viagem. Este clima versátil cria um ambiente bem confortável e aconchegante, que de alguma forma me lembra o estilão do outback, sabe? A unidade da Cheesecake Factory em Orlando fica dentro do Mall at Millenia, ou seja, é uma opção ótima para ir antes, durante ou depois das compras. É melhor ser um programa depois das compras, porque você não vai querer experimentar roupas empanturrada de cheesecake, né? Eu pelo menos prefiro fazer as compras antes.</p>
+<p><img src="../cont-imgs/restaurantes/025-cheesecakefactory/13575126353_cf5089fe28_z.jpg" alt="13575126353_cf5089fe28_z" width="600" height="400"></p>
+<p>O restaurante é bem grande, conseguindo sentar muitas pessoas de uma vez só. Ainda assim, dada a popularidade, em muitos dias da semana há espera nos horários de pico. Se não quiser esperar, busque passar por lá em horários alternativos ou em último caso, visite o <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/brio-restaurante-orlando/');">Brio</a>, restaurante vizinho que é mais difícil de ter fila. Isso dito, normalmente as filas não são muito demoradas não. Eu raramente espero mais de 20 minutos para sentar. E enquanto espera, você pode pedir algum drink ou petisco na área do bar que é livre de espera. Se você estiver em um grupo pequeno e conseguir uma mesinha ou espaço no balcão na área do bar, pode até optar por desistir da fila e pedir seus pratos lá mesmo. Fica a seu critério.</p>
+<p>Ah! E para quem vai viajar com o smartphone mas não quer pagar plano de dados para usar a internet, de muitos pontos da Cheesecake Factory é possível &ldquo;roubar&rdquo; o sinal de wifi do restaurante do lado, o <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/capital-grille-onde-carne-e-coisa-seria/');">The Capital Grille</a>. Fica a dica.</p>
+<h2>A comida da Cheesecake Factory</h2>
+<p>O cardápio da Cheesecake Factory é super variado, aliás, é o mais variado do país inteiro. Sim, eles possuem o maior cardápio dos Estados Unidos, ou seja, é praticamente impossível não ter uma opção que você goste. Para os mais curiosos, vocês podem olhar o cardápio <a class="linkvai" href="javascript:loadURL('http://www.thecheesecakefactory.com/menu/');">clicando aqui</a>.</p>
+<div id="attachment_4697"><img src="../cont-imgs/restaurantes/025-cheesecakefactory/13575464524_c8a2f06dbd_z.jpg" alt="O cardápio parece um livro, de tão grande que é. Prepare-se para ficar na dúvida, pois você vai ter que escolher uma entre muitas opções excelentes!" width="640" height="427">
+  <p>O cardápio parece um livro, de tão grande que é. Prepare-se para ficar na dúvida, pois você vai ter que escolher uma entre muitas opções excelentes!</p>
+</div>
+<p dir="ltr">A rede é famosa pelos seus cheesecakes dos sabores mais variados, indo do tradicional com calda de morango ao de doce de leite, de chocolate, de maçã…a variedade é imensa! Eu nunca comi um cheesecake ruim, mas acho que o melhor de todos é o de doce de leite. Não, é o de maçã. Ou é o de doce de leite? É, não sei.</p>
+<div id="attachment_4691"><img src="../cont-imgs/restaurantes/025-cheesecakefactory/13575077685_2ce29ddaf3_z.jpg" alt="Outra boa pedida: cheesecake Red Velvet!" width="640" height="427">
+  <p>Outra boa pedida: cheesecake Red Velvet!</p>
+</div>
+<p dir="ltr">Mas nem só de cheesecake vive um restaurante e todo o cardápio da Cheesecake Factory é excelente, começando pelo pãozinho do couvert até a sobremesa, pode ir tranquilo que você vai comer bem. O cardápio hiper variado tem opções de massas, carnes, peixes, sanduíches, pizzas e tudo é super gostoso. Eu adoro as massas, principalmente a carbonara. Quem gosta de camarão também elogia muito o prato de camarões com macarrão cabelo de anjo. É tudo bem temperado, no estilo americano, mas tudo é feito no maior capricho e por um preço super justo. Vale dizer que as porções são bem grandes. Se você for no almoço, eles oferecem uma opção um pouco menor (com preço também menor, claro) que pode valer a pena. Se pedir o prato no tamanho normal, dependendo da sua fome é possível dividir. Para saber se faz sentido dividir ou não, basta ficar de olho nas mesas a sua volta para ver o tamanho dos pratos que estão chegando. Na hora de avaliar se vai dar conta de comer o prato inteiro, não esqueça de &ldquo;guardar espaço&rdquo; pro seu cheesecake depois, heim? <img src="../cont-imgs/restaurantes/icon_wink.gif" alt=";)"></p>
+<div id="attachment_4696"><img src="../cont-imgs/restaurantes/025-cheesecakefactory/13575461374_773ee27130_z.jpg" alt="13575461374_773ee27130_z" width="600" height="400">
+  <p>Pão delicioso que chega quentinho na mesa.</p>
+</div>
+<p dir="ltr"><img src="../cont-imgs/restaurantes/025-cheesecakefactory/13575091535_3709be6922_z.jpg" alt="13575091535_3709be6922_z" width="640" height="427"></p>
+<div id="attachment_4694"><img src="../cont-imgs/restaurantes/025-cheesecakefactory/13575454234_d49f8ce1de_z.jpg" alt="13575454234_d49f8ce1de_z" width="640" height="427">
+  <p>Frango com purê de batatas. Super temperadinho e delicioso!</p>
+</div>
+<p>Gostou? Então não deixe de colocar a Cheesecake Factory na sua programação. Tenho certeza que você vai gostar e é bem capaz de querer voltar mais milhares de vezes como a gente faz.</p>
+<p><strong>Nome:</strong> The Cheesecake Factory<br>
+  <strong>Endereço:</strong> 4200 Conroy Rd, Orlando, FL 32839 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/4200+Conroy+Rd,+Orlando,+FL+32839,+USA/@28.485565,-81.4315497,17z/data=!3m1!4b1!4m2!3m1!1s0x88e77ea8f2b0a973:0xdb7da569593d5143');">Veja no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-226-0333<br>
+  <strong>Referência:</strong> Dentro do shopping Mall At Millenia<br>
+  <strong>Preço:</strong> US$15-25 por pessoa (novembro/2013)<br>
+  <strong>Horário de Funcionamento:</strong> 10am–11:00pm<br>
+  <strong>Cardápio:</strong><a class="linkvai" href="javascript:loadURL('http://www.thecheesecakefactory.com/media/menus/TCF_TakeOut_Orlando_0813.pdf');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong>Avaliação do VPD:</strong>  <img src="../cont-imgs/restaurantes/estrelas-avaliacao_4.png" alt="Nota 4 de 5" width="138" height="22"></p>
+<p>&nbsp;</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

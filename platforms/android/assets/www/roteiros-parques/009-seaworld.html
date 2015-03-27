@@ -1,0 +1,213 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Sea World</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  
+  <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   window.open(url, "_system");
+		}
+	</script>
+  
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../roteiros-parques.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>
+		<div class="titulocenter"><h2>Roteiros dos parques</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/roteiros/thumbs/009seaworld.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-roteiros"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Sea World</h2>
+
+
+
+
+
+  <p style="text-align:center;"><img src="../cont-imgs/roteiros/009-seaworld/logo-sea-world.jpg" alt="logo-sea-world" width="160" height="98"></p>
+ 
+  <p>O Sea World é um parque polêmico. Enquanto alguns adoram os shows, muitos condenam o parque por &ldquo;explorar&rdquo; os animais marinhos e submetê-los a um ambiente longe dos seus habitats naturais. Se por um lado eu sou contra esse lado pelo qual o Sea World ficou famoso, por outro eu acho que as montanhas russas do parque estão entre as melhores de Orlando, na minha opinião. Fato é que independente da sua posição em relação a polêmica, o Sea World tem atrações que agradam os mais diversos visitantes, desde os mais radicais até as crianças pequenas.</p>
+  <p><strong>O parque fecha mais cedo</strong><br>
+    Por ser um parque com animais, assim como o Animal Kingdom da Disney, o Sea World fecha na maior parte do ano, mais cedo do que os outros parques. Nos meses de Outono e Inverno (de Setembro a Abril), o parque fecha entre às 17 e às 18 horas. Já nos meses de primavera e verão (de Maio a Agosto) entre as 21 e 22 horas.<br>
+    Aproveite que é um parque menor e que fecha mais cedo, para colocá-lo junto com outros programas no seu roteiro: compras ou outro parque que fecha mais tarde da Disney como o Epcot ou o Magic Kingdom (mas vale dizer que estes parques merecem um dia inteiro da programação, se você tiver tempo para isso).</p>
+  <p><strong>Também tem show de fogos</strong><br>
+    Nos meses mais quentes em que o parque fecha mais tarde, alguns shows especiais com as baleias e shows de fogos de artifício são incluídos na programação do Sea World.</p>
+  <p><strong>Tudo espalhado por ai</strong><br>
+    Diferente de todos os outros parques da cidade, o Sea World não é dividido por zonas temáticas.  Suas atrações e shows ficam espalhados por todo o parque. Por isso, nosso roteiro também vai ser diferente. Vamos dividir todas as atrações entre as categorias &ldquo;imperdíveis&rdquo;, &ldquo;se sobrar tempo&rdquo;, &ldquo;não recomendo&rdquo; e &ldquo;só para crianças&rdquo;.</p>
+  <p><strong>Sentido e tabela de horários</strong><br>
+    Assim como todos em outros roteiros, sempre deixo a dica: programar seu caminho no parque no sentido anti-horário (da direita para a esquerda no mapa) é a melhor maneira pois a maior parte dos turistas caminham no sentido horário. Além disso, sendo um parque com muitos shows, tenha sempre a mão o mapa e a tabela de horários do dia. Assim você não perde nada na sua programação.</p>
+  <p><strong>Minha opinião</strong><br>
+    Sendo o Sea World um parque com muitos shows com animais, esse roteiro reflete muito mais a minha opinião pessoal do que somente um mapeamento de todas as atrações. Eu por exemplo, prefiro muito mais os shows com os animais marinhos do que o show de pets (animais domésticos) que o parque também exibe. Então tenha consciência de que você deve montar sua programação de acordo com o seu gosto, não com o meu <img src="../cont-imgs/roteiros/icon_smile.gif" alt=":)"></p>
+  <p><strong>SUGESTÃO DE ROTEIRO DO SEA WORLD</strong></p>
+  <p><strong><img src="../cont-imgs/roteiros/icone-mickey-imperdiveis.jpg" alt="icone-mickey-imperdiveis" width="14" height="14"> IMPERDÍVEIS</strong> (no sentido anti-horário)<br>
+    – <strong>One Ocean</strong> (Shamu Stadium): O famoso show da baleia Shamu. Na verdade, a baleia que apresenta hoje é da família da Shamu original (se eu não me engano, da 4a ou 5a geração). Seja com a original ou com a tataraneta, o One Ocean é um show imperdível e é impressionante de tão bonito. São diversas baleias que fazem acrobacias em um tanque gigantesco, brincam com os treinadores e até com uma criança que é convidada da platéia a participar. Minha dica é: tente ir para lá assim que entrar no parque. Além de ser o show mais buscado, as baleias estão mais dispostas pela manhã, e o show tende a ser bem melhor. E se o dia estiver calor, sente nas fileiras mais próximas do tanque para levar um banho d&rsquo;agua.</p>
+  
+  <p>- <strong>Wild Artic</strong>: Um simulador muito legal de uma expedição no Ártico, pra quem gosta desse tipo de atração como eu. No final, você cai em uma espécie de aquário com animais polares, como pinguins e até um urso polar branco gigantesco!<br>
+    <br>
+    – <strong>Antarctica: Empire of the Penguin</strong>: Essa é a atração da vez no Sea World. Só se fala no Antartica. O propósito da atração é mostrar como é a vida dos pinguins no polo sul, mais precisamente de um pinguim que eles escolheram para ser o personagem principal da atração, o Puck. O começo da atração é meio monótono pois é bem explicativo, mas não desista, no meio dela você terá que escolher o nível de intensidade da atração: leve (mild) ou radical (wild), e a partir dai você entra em carrinhos que ficam fora de trilhos em uma aventura pela Antarctica. Apesar de eu não ter gostado muito, toda a minha família gostou e ela de fato é bem popular a julgar pelo tamanho das filas, por isso a coloquei no grupo de atrações imperdíveis.<br>
+    <br>
+    – <strong>Shark Encounter</strong>: Um aquário embaixo d&rsquo;agua que te permite ver &ldquo;por dentro&rdquo; o habitat natural dos tubarões. É impressionante pois através de um tubo, você fica cara a cara com diversas espécies de tubarão.<br>
+    <br>
+    – <strong>Sea Lion &amp; Otter Theather</strong>: Para mim esse teatro sempre trouxe os shows mais divertidos do parques. Desde que eu era criança ele apresenta montagens em que os personagens principais são leões marinhos e sempre com um viés de comédia. O teatro não fica aberto o ano todo, por isso cheque no site da Sea World se ele estará apresentando algum show durante a sua viagem.<br>
+    <br>
+    – <strong>Kraken</strong>: Essa é a montanha russa mais antiga do Sea World, e é bem forte. A temática dela é baseada no monstro do mar chamado Kraken e ela anda com bastante velocidade, altura e um looping no meio. Pra quem curte, vale a pena!<br>
+    <br>
+    – <strong>Journey to Atlantis</strong>: Essa é a Splash Mountain do Sea World. Ela é bem chatinha na parte interna, onde alguns bonecos se movimentam e cantam, mas as quedas são boas e ela nem molha tanto quanto as da Disney e da Universal.</p>
+  
+  <p>- <strong>Blue Horizons</strong> (Dolphin Theater): Outro show muito bonito, dessa vez com golfinhos. Os animais são incrivelmente sincronizados e velozes, que combina muito bem com os acrobatas/treinadores que encenam com eles.<br>
+    <br>
+    – <strong>Manta</strong>: Pra mim essa é uma das melhores montanhas russas de Orlando. A Manta, que imita uma &ldquo;raia marinha&rdquo;, deixa as pessoas de barriga pra baixo no carrinho, o que pode dar um pouquinho de medo no começo, mas só no começo. Depois, todo mundo curte muito um passeio panoramico pelo Sea World. Vale a pena cada segundo e eu me arrependo de ter ido apenas uma vez.</p>
+ 
+  <p><strong><img src="../cont-imgs/roteiros/icone-mickey-se-sobrar-tempo.jpg" alt="icone-mickey-se-sobrar-tempo" width="14" height="14"> SE SOBRAR TEMPO</strong><br>
+    - <strong>Sea Garden</strong><br>
+    <br>
+    – <strong>Sky Tower</strong>: Um passeio tranquilo por uma torre que te leva a 400 metros de altura para uma vista panoramica de Orlando. Pra quem gosta de passeios tranquilos e de apreciar uma boa vista, vale a pena embarcar nessa atração que foi construída há 40 anos.<br>
+    <br>
+    – <strong>Pacific Point Preserve</strong><br>
+    <br>
+    – <strong>Dolphin Cove</strong>: Veja um tanque cheio de golfinhos, próximo dos tratadores e até brinque com eles.</p>
+  <p><strong><img src="../cont-imgs/roteiros/icone-mickey-naorecomendo.jpg" alt="icone-mickey-naorecomendo" width="14" height="14">NÃO RECOMENDO</strong><br>
+    - <strong>A&rsquo;Lure, The Call of the Ocean</strong> (Nautilus Theather): Um show bem no estilo Cirque du Soleil, mas em uma escala bem menor. Eu não sou fã do estilo, mas pra quem gosta, não deixe de colocar no seu roteiro.</p>
+  
+  <p><strong><img src="../cont-imgs/roteiros/icone-criancas1.gif" alt="icone-dicas" width="14" height="14"> SÓ PARA AS CRIANÇAS</strong><br>
+    As atrações abaixo fazem parte de um playground bem divertido que a maioria das crianças pira pra ficar brincando:<br>
+    – Jazzy Jellies<br>
+    – Ocean Commotion<br>
+    – Shamu Express<br>
+    – Flying Fiddler<br>
+    – Swishy Fishies<br>
+    – Seven Seas Hailway<br>
+    – Sea Carrousel</p>
+ 
+  <p><img src="../cont-imgs/roteiros/icone-food-tip.png" alt="icone-food-tip" width="14" height="14"><strong>FOOD TIP</strong><br>
+    Existem diversos restaurantes e lanchonetes espalhadas pelo parque, mas uma das que eu mais gosto, fica bem no meio dele e se chama Lakeside Panini Bistro. Lá você come uns sanduíches bem gostos e saudáveis, com vista para o lago que fica no centro do Sea World.<br>
+    Comi lá também, um bolo de cenoura (carrot cake) delicioso – o bolo de cenoura americano é bem diferente do nosso pois ele é mais escuro, tem algumas especiarias dentro e não é coberto com chocolate, mas com um fondant bem gostoso. Eu gosto pra caramba!</p>
+  <p>Espero que tenha gostado desse roteiro e aproveite sua ida ao Sea World!</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+ 
+
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

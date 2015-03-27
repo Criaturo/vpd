@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Five Guys: para os apaixonados por cheeseburger</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/017-fiveguys.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Five Guys: para os apaixonados por cheeseburger</h2>
+
+
+
+
+<p>Já publicamos muito sobre <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/comidas-disney-alem-do-hamburguer/');">comidas saudáveis nos parques</a> e <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/category/comida/recomendacao-de-restaurantes/');">opções para quem não curte os famosos fast food americanos</a>, mas eu não poderia deixar de assumir que sou um apaixonado por hambúrguer. Tenho sempre a missão de experimentar quantos restaurantes e lanchonetes eu puder (e conseguir sem prejudicar minha saúde), em busca do melhor hambúrguer do mundo. Isso fica um pouquinho mais difícil sendo casado com a Re, que não é super fã de junk food, mas hoje vou dar uma dica de um lugar em Orlando que até mesmo ela curte pra caramba, o Five Guys.</p>
+<p>Essa lanchonete criado no estado de Virginia, nos EUA, há quase 30 anos, por um pai e seus cinco filhos (por isso o nome Five Guys), já tomou conta do país e até já expandiu para o Reino Unido e Canadá. Em Orlando e região, são encontradas 11 lojas da rede. O que eu mais gosto no Five Guys é o conceito simples que a lanchonete tem. Aqui você basicamente tem a opção de escolher entre um hambúrguer, cachorro quente ou alguns outros poucos sanduíches. Nada de comida gourmet e longos cardápios.</p>
+<div id="attachment_2637"><img src="../cont-imgs/restaurantes/017-fiveguys/five-guys-recomendado.jpg" alt="Várias placas com guias, jornais e revistas que recomendam o Five Guys" width="640" height="427">
+  <p>Várias placas com guias, jornais e revistas que recomendam o Five Guys</p>
+</div>
+<p>Para o carro chefe da casa, você escolhe o tamanho do hambúrguer entre normal e pequeno (lá eles chamam de &lsquo;patty&rsquo; ou &lsquo;little patty&rsquo;) e depois ir adicionando quantos ingredientes você quiser, sem custo nenhum a mais. Eu que gosto de cheeseburguer simples, sem muita invenção. Quase sempre peço cheeseburger pequeno acebloado, com queijo, katchup e maionese. Mas são muitos os &ldquo;recheios&rdquo; que você pode incluir: maionese, alface, picles, tomate, cebola grelhada, champignon grelhado, ketchup, mostarda, relish de pepino, cebolas cruas, pimenta jalapeño, pimenta verde, molho barbeque e molho apimentado. Como eu disse, o que você quiser sem custo algum.</p>
+<p>O legal é que a lanchonete também tem uma linha mais natural, prometendo não servir nenhum produto com conservantes e aquelas coisas químicas que ouvimos por aí. De acordo com eles, o próprio hambúrguer é feito com carne 100% bovina sem adição de nada mais.</p>
+<div id="attachment_2634"><img src="../cont-imgs/restaurantes/017-fiveguys/five-guys-cardapio.jpg" alt="Cardápio simples do Five Guys. Para os apaixonados por cheeseburguer" width="640" height="427">
+  <p>Cardápio simples do Five Guys. Para os apaixonados por cheeseburguer</p>
+</div>
+<p>Uma curiosidade do Five Guys, é que logo que a casa abriu, eles receberam uma ligação do Pentágono (pra quem não sabe, o cérebro militar dos EUA) com um pedido de 15 hambúrgueres. O dono da rede perguntou quando eles viriam buscar o pedido e o oficial do outro lado da linha falou &ldquo;mas todo mundo entrega comida para o exército dos EUA&rdquo;. No dia seguinte, o fundador colocou uma faixa gigante em frente a loja dizendo &ldquo;NÃO FAZEMOS ENTREGA&rdquo;, só pra reforçar o que eles haviam dito na noite anterior.</p>
+<p>O presidente Obama também é um fã da rede e quando se mudou para Washington, foi pessoalmente até uma loja do Five Guys e almoçou por lá com toda a sua comitiva. O que ele pediu? Cheeseburger com alface, tomate, pimenta jalapeño e mostarda.</p>
+<div id="attachment_2636"><img src="../cont-imgs/restaurantes/017-fiveguys/five-guys-obama.jpg" alt="Obama com sua comitiva no Five Guys que fica perto da Casa Branca. Foto: Embaixada dos EUA na Bolivia" width="640" height="427">
+  <p>Obama com sua comitiva no Five Guys que fica perto da Casa Branca. Foto: Embaixada dos EUA na Bolivia</p>
+</div>
+<p>Outra coisa que eu adoro lá no Five Guys são as batatinhas fritas. Como elas são cortadas a mão, na própria loja e no dia que serão servidas, elas ficam parecendo as batatinhas que a minha avó fazia quando eu era pequeno. Meio irregulares e bem suculentas, diferente das congeladas que encontramos por ai.</p>
+<div id="attachment_2638"><img src="../cont-imgs/restaurantes/017-fiveguys/five-guys-saco-de-batata.jpg" alt="Sacos de batatas que são diariamente cortadas e fritas nas lojas" width="640" height="427">
+  <p>Sacos de batatas que são diariamente cortadas e fritas nas lojas</p>
+</div>
+<div id="attachment_2633"><img src="../cont-imgs/restaurantes/017-fiveguys/five-guys-batatinha-frita.jpg" alt="Batatinha frita que vem junto com o sanduíche, embalado no papel alumínio." width="427" height="640">
+  <p>Batatinha frita que vem junto com o sanduíche, embalado no papel alumínio.</p>
+</div>
+<p>Pra quem não é fã de hambúrguer, o Five Guys também oferece cachorro quente e algumas opção de sanduíches como o vegetariano, queijo quente e o famoso BLT (bacon, alface e tomate).</p>
+<p>Não dá para falar do Five Guys sem citar os amendoins que são oferecidos nas lojas de graça, como aperitivo para os visitantes. A princípio não citamos este detalhe na matéria e até meu sogro me ligou para perguntar porque não falamos do amendoim, então aqui está nossa retratação. Além de toda a comida simples e gostosa que é oferecida, o Five Guys oferece este aperitivo muito gostoso gratuitamente que dá um ar aconchegante a casa, e faz a gente se sentir convidado para ficar lá dentro beliscando sem pressa.</p>
+<p>Recomendo muito o Five Guys pra quem curte sanduíche e principalmente Cheeseburger. Em Orlando as principais lojas ficam no Premium Outlets da International Drive, e na Sand Lanke. <a class="linkvai" href="javascript:loadURL('http://fiveguys.com/locations.aspx?fAddress=32821&radius=25&units=mi');">Clique aqui</a> para ver o endereço de todas as lojas em Orlando e <a class="linkvai" href="javascript:loadURL('http://fiveguys.com/menu.aspx');">aqui</a> para ver o cardápio da rede.</p>
+<p><img src="../cont-imgs/restaurantes/017-fiveguys/five-guys-sanduiche.jpg" alt="five-guys-sanduiche" width="640" height="427"></p>
+<p>Para finalizar, deixo com vocês o depoimento do leitor João Alvares Neto, que comentou nesta matéria contando a experiência dele com o Five Guys. Acho que ele conseguiu passar  exatamente o clima gostoso da casa para a gente, espero que vocês sintam o mesmo.</p>
+<p><em>&ldquo;Eu conheci o Five Guys em Boston, em 2012 e afirmo com prioridade que é o melhor Fast Food Burguer que por lá tem, inclusive meus amigos americanos que estão acostumados com fast food afirmaram isso. E os amendoins são uma perdição, já passei uma tarde inteira lá sentado comendo amendoim, bebendo refrigerante e jogando papo fora&rdquo;</em></p>
+<p><strong>Nome:</strong> Five Guys<br>
+  <strong>Endereço:</strong> 4969 International Dr Orlando, FL 32819 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/search/five+guys+orlando/@28.4811689,-81.36875,11z/data=!3m1!4b1');">Veja todas as lojas no Google Maps</a>)<br>
+  <strong>Telefone:</strong> +1 407-352-8362<br>
+  <strong>Referência:</strong> Dentro do Premium Outlets da International Drive<br>
+  <strong>Preço:</strong> US$9-18 por pessoa (maio/2014)<br>
+  <strong>Horário de Funcionamento:</strong> Seg-Sab das 11am-9pm e Dom das 11am-6pm<br>
+  <strong>Cardápio:</strong> <a class="linkvai" href="javascript:loadURL('http://www.fiveguys.com/menu.aspx');">clique aqui para visualizar o cardápio (em inglês)</a><br>
+  <strong>Avaliação do VPD:</strong> <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

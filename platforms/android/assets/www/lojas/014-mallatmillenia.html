@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Shopping em Orlando: Mall at Millenia e Florida Mall</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+	$('.linkvai').on('tap', function() {
+	  url = $(this).attr("rel");   
+	  loadURL(url);
+	});
+	function loadURL(url){
+		   window.open(url, "_system");
+		} 
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../lojas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/014-mallatmillenia.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Shopping em Orlando: Mall at Millenia e Florida Mall</h2>
+
+
+
+
+<p>Boa parte de toda viagem a Orlando é feita de compras. Eu já disse que minhas malas vão vazias e sempre voltam no limite do peso, mas mesmo quem é mais controlado do que eu, não deixa de aproveitar os preços muito abaixo dos praticados no Brasil. Por conta dos preços tão atrativos, basta eu pisar em Orlando para eu querer adicionar mais dias de compras no meu roteiro. É muito fácil ficar meio encantado com aquelas promoções para todo o lado e acabar não sabendo onde comprar, pra qual shopping ir, onde encontrar o que se procura.<span id="more-567"> </span></p>
+<p>Aos poucos, vamos tentar contar aqui no blog tudo que aprendemos sobre os diferentes locais de compras em Orlando e para começar, vamos falar dos shoppings. Orlando possui dois shoppings principais, um completamente diferente do outro: o Florida Mall e o Mall at Millenia. Por muitos anos o Florida Mall foi o único shopping da cidade, e mesmo quando o Mall at Millenia inaugurou, demorou algum tempo para ele se tornar &ldquo;habitável&rdquo; por gente como a gente. Nos primeiros anos deste shopping, a única loja com preços aceitáveis era a Macy&rsquo;s, de resto o shopping só possuía lojas do estilo Tiffany, Cartier, Jimmy Choo, Channel, Louis Vitton, etc. Hoje, ainda que continuem com perfis bem distintos, os dois shoppings têm seu valor e atendem um tipo de público diferente. Aqui vai uma breve explicação de cada shoopping bem como uma lista dos prós e contras de fazer suas compras em cada um. Considere estes pontos para ver qual shopping combina mais com a sua viagem.</p>
+<div id="attachment_573"><img alt="A linda entrada do Mall at Millenia e a Cheesecake Factory logo ao lado. " src="../cont-imgs/lojas/014-shoppingorlando/mall-at-millenia-300x195.jpg" width="300" height="195">
+  <p>A linda entrada do Mall at Millenia e a Cheesecake Factory logo ao lado.</p>
+</div>
+<p><strong><em>Mall at Millenia </em></strong><br>
+  Por ter nascido com esta proposta meio &ldquo;classuda&rdquo;, o Mall at Millenia tem um estilo mais luxuoso e continua trazendo lojas de algumas das grifes mais famosas dos EUA. Apesar disso, acho que em algum momento eles caíram na real e começaram a trazer lojas mais normais para o seu portfólio. Hoje, esse shopping traz lojas bem diferentes e ainda que muitas não sejam muito conhecidas dos brasileiros, com certeza vale a visita.</p>
+<p><em>Porque comprar no Mall at Millenia?</em></p>
+<ul>
+  <li>Mais bonito e gostoso de passear</li>
+  <li>Possui algumas das lojas que todo mundo gosta de visitar com menos muvuca do que no Florida Mall. Alguns exemplos dessas lojas que estou falando: Abercrombie, Apple, Banana Republic, Forever 21, Victoria&rsquo;s Secrets, Macy&rsquo;s, M.A.C (que inclusive é uma loja M.A.C Pro, com produtos exclusivos, não vendidos nas lojas comuns da rede).</li>
+  <li>Por enquanto o shopping não têm Sephora e H&amp;M, mas as duas estão para inaugurar por lá também.</li>
+  <li>Lojas bem variadas. Vá sem pressa e se permita perder tempo olhando as vitrines. Você já conhece a Urban Outfitters? E a 7 for all man kind? E a Anthropology? Essas e muitas outras lojas do Millenia são sim mais caras do que GAP e Macy&rsquo;s mas não são completamente inacessíveis e possuem produtos muito legais. Vá e tire suas próprias conclusões.</li>
+  <li>No Millenia, existem algumas lojas de departamentos diferentes como a Bloomingdales (que a Rachel Green do Friends trabalhava, lembram?) e a Neiman Marcus. Quanto eu digo diferentes eu quero dizer chiques e caras. Não são para o meu bico! hahaha</li>
+  <li>A Macy&rsquo;s de lá é mais organizada e completa na minha opinião. Além de ter mais opções disponíveis, já que menos gente passa por ali.</li>
+  <li>Para quem gosta de comprar itens de cozinha, a William Sonoma e a Crate&amp;Barrel são paradas obrigatórias.</li>
+  <li>No quesito alimentação, esse shopping é bem melhor que o Florida Mall. Pra começar, lá têm Cheesecake Factory, um dos restaurantes que eu mais amo nos Estados Unidos. Experimente o cheesecake de doce de leite! Hummmmm</li>
+  <li>Essa é uma opinião bem pessoal, mas eu ADORO que no Millenia não possui aqueles quiosques com uns hispano-hablantes chatos perguntando se você é brasileiro e tentando te forçar a experimentar o polidor de unhas maravilhoso deles. Eu não sei você, mas eu detesto vendedor insistente e abomino todos os quiosques no meio dos shoppings de Orlando. Eu nunca nem comprei nada deles pela birra já adquirida, mas eu sinto que tudo que eles vendem é enganação. A ausência deste tipo de lojinha no Millenia é um grande ponto positivo pra mim.</li>
+  <li>Outra opinião bem pessoal: a sensação que eu tenho, é de que o Millenia tem uma segurança maior do que o Florida Mall (o que não é motivo pra dar bobeira, heim? <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/dicas-de-seguranca-nas-compras-em-orlando/');">Leia as dicas de segurança aqui</a>).</li>
+  <li>O banheiro é bem limpinho. Homens podem não ligar, mas para as mulheres este é um ponto importante.</li>
+</ul>
+<div id="attachment_574"><img alt="Florida Mall e a preferidinha das mulheres: Forever XXI" src="../cont-imgs/lojas/014-shoppingorlando/shopping-the-florida-mall-orlando-300x200.jpg" width="300" height="200">
+  <p>Florida Mall e a preferidinha das mulheres: Forever XXI</p>
+</div>
+<p><em><strong>Florida Mall:</strong></em><br>
+  O Florida é o mais clássico dos shoppings de Orlando. O tempo passa, Orlando cresce, os brasileiros chegam, mas o Flórida Mall está sempre lá para a alegria de todos.</p>
+<p><em>Porque comprar no Florida Mall?</em></p>
+<ul>
+  <li>Este shopping é bem grande e possui uma variedade muito maior de lojas.</li>
+  <li>Por enquanto é o único shopping de Orlando com Sephora e H&amp;M.</li>
+  <li>Traz algumas lojas com preços mais acessíveis e com produtos de boa qualidade, como a GAP, Aeropostale, Hollister, JC Penney, entre outras.</li>
+  <li>Tem a loja do M&amp;M e da Disney que são legais de conhecer e ótimas para comprar lembrancinhas.</li>
+</ul>
+<p><strong><em>Conclusão:</em></strong><br>
+  Não existe shopping melhor ou pior. Cada shopping é mais adequado para um tipo de viagem, mas na dúvida, conheça os dois! Hoje em dia eu resolvo a maioria das minhas compras no Millenia e passo pouco tempo no Florida Mall. Afinal, se eu quero comprar calça jeans barata, eu vou pros outlets (e eu vou mesmo!). Mesmo assim, eu não deixo de passar no Florida Mall pelo menos uma vez na viagem para verificar se não estou perdendo nada. A grande conclusão mesmo é que você vai precisar separar alguns dias de sua viagem para as compras, quanto mais, melhor! E se você já conhece os shoppings de Orlando, conte para a gente qual você gosta mais</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

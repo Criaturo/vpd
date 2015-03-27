@@ -1,0 +1,223 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Discovery Cove</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   window.open(url, "_system");
+		}
+	</script>
+  
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../roteiros-parques.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>
+		<div class="titulocenter"><h2>Roteiros dos parques</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/roteiros/thumbs/012discoverycove.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-roteiros"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Discovery Cove</h2>
+
+
+
+
+
+  <p style="text-align:center;"><img src="../cont-imgs/roteiros/012-cove/logo-discovery-cove.jpg" alt="Discovery Cove" width="160" height="90"></p>
+  <p>O Discovery Cove é um dos parques mais diferentes que eu já fui até hoje. Acho até estranho chamá-lo de parque, pois a experiência de estar ali não foi nada similar a dos parques temáticos ou aquáticos de Orlando. E não é a toa: de acordo com a própria administração, o Discovery Cove simula a experiência de estar em um resort no caribe e não em um parque no meio da Flórida.</p>
+  <p>Parte integrante do grupo Sea World, o <strong>Discovery Cove</strong> é um dos parques mais caros dos EUA, mas no ingresso estão inclusas diversas coisas que acabam sendo pagas nos outros: alimentação completa, bebidas alcoólicas, não-alcoólicas e snacks à vontade, estacionamento, máscaras, snorkel, roupas de mergulho e até mesmo coisas pequenas como o armário para guardar seus pertences e protetor solar. Estão também inclusos no ingresso do Discovery Cove, entradas ilimitadas para o Sea World e para o Aquatica durante 14 dias, então lembre-se disso na hora de comprar seus ingressos.</p>
+  <p>A atração principal do parque é o &ldquo;dolphin swim&rdquo;, uma experiência de pouco mais de 30 minutos em que você pode alimentar, brincar, nadar e tirar foto com golfinhos. Pessoalmente, nem a Re nem eu somos a favor da exploração dos animais nos parques de diversão, mas isso é assunto para outro momento. Na semana passada visitei o parque e quero relatar para vocês como é passar um dia no Discovery Cove.</p>
+  
+  <h2>Compra dos ingressos</h2>
+  <p>Para ir no Discovery Cove não adianta simplesmente chegar na porta do parque e querer comprar ingressos. Como disse acima, a experiência toda é muito similar a um resort e como tal, é necessário reservar com antecedência a visita ao parque.<br>
+    Todo o processo é feito no site do parque e os valores variam de acordo com a época e o dia que você vai visitar. Você tem a opção de comprar o ingresso sem a experiência do nado com os golfinhos por um valor menor, ou ainda incluir visitas ilimitadas ao Busch Gardens por um valor adicional. Nos slides abaixo, eu mostro o passo a passo da compra dos ingressos.</p>
+  
+  <p>Como o parque propõe uma experiência muito personalizada, existe um limite de visitantes permitidos por dia: são 1300 pessoas e somente 200 podem entrar na água com os golfinhos. Como quase todo mundo que vai até lá quer nadar com golfinho, é difícil este parque receber mais de 300 visitantes em um dia. Para quem vai em alta temporada, principalmente no verão americano, é importante reservar a visita com pelo menos 40 dias de antecedência para não correr o risco de não encontrar datas.</p>
+  <p>Vale a pena dizer que se você precisar cancelar o ingresso, deve fazê-lo pelo menos 30 dias de antes da visita, do contrário o cancelamento não é reembolsado, mas você tem até 2 anos para agendar uma nova visita sem multa mediante disponibilidade (isso na primeira troca. Para trocas posteriores é cobrado $50 por remarcação).</p>
+  <p>Ao comprar o ingresso pelo site, você deve imprimir uma página de confirmação que é utilizada no momento do check in no parque. Aqui não existe voucher ou troca de ingressos de will call. É como se você estivesse entrando em um hotel mesmo. Junto com a impressão da confirmação,  você também tem a opção de imprimir os ingressos para o Aquatica e para o Sea World, que funcionam direto na catraca dos parques. <a title="Ingressos para os parques de Orlando" href="javascript:loadURL('http://www.vaipradisney.com/blog/ingressos-parques-orlando/');" class="linkvai">Clique aqui</a> para saber mais informações sobre ingressos.</p>
+  <h2>Melhor época para ir ao Discovery Cove</h2>
+  <p>O parque fica aberto o ano inteiro, inclusive no inverno, mas como é de se esperar, nos meses frios a água não é aquecida por conta dos animais. Por isso, não recomendo a visita ao Discovery Cove no inverno americano. Sabemos que a temperatura por lá pode chegar abaixo de 0ºC e não é nada legal correr o risco de uma hipotermia.</p>
+  <p><em>Mas Felipe, usando a roupa de neoprene não vou estar protegido contra o frio?</em>Não, ainda mais considerando que você deve utilizar as roupas do parque (não são aceitas roupas trazidas de fora) que não protegem nenhum pouco da água gelada e do vento do lado de fora. Se quiser muito ir, vá por sua conta em risco. Dúvidas sobre o clima de Orlando? <a href="javascript:loadURL('http://www.vaipradisney.com/blog/clima-temperatura-orlando/');" class="linkvai">Clique aqui</a> para ler mais sobre o tema.</p>
+  <p>Fui em Julho, que é o pico do verão nos EUA, com temperaturas que batiam os 40 graus todos os dias, e mesmo assim achei a água do &ldquo;lago&rdquo; dos golfinhos muito gelada (cerca de 22ºC independente da época do ano).</p>
+  <p>O parque funciona normalmente em dias de chuva, porém em caso de raios e trovoadas no céu, o parque é fechado e seu ingresso remarcado ou reembolsado.</p>
+ 
+  <h2>Chegada ao Discovery Cove</h2>
+  <p>Ali não existem catracas ou filas. Chegar no Discovery Cove é realmente parecido com a chegada em um hotel. A recepção é um grande lobby com vários balcões onde são feitos o check in dos visitantes daquele dia. Com o comprovante (ou até mesmo apenas com o número do comprovante) da sua reserva e uma identidade (que pode ser o passaporte ou a carteira de motorista do Brasil), o atendente vai imprimir um crachá de plástico para cada pessoa, com foto e dados pessoais. Você deverá usar o crachá em um cordão em volta do pescoço durante todo o dia, que traz anexo um mapinha também de plástico. É no seu crachá que vão estar anotadas informações sobre o seu nado com o golfinho e até mesmo se você pode ou não tomar bebidas alcoólicas (maiores de 21 anos).</p>
+  
+    <p>Mapa impresso em um cartão plástico e que fica pendurado no pescoço durante o tempo todo. Sem desculpa para se perder</p>
+  
+  <p>Cheguei bem cedo e fui encaixado no primeiro grupo de nado com os golfinhos. A atendente me orientou a seguir adiante que outros funcionários iriam me orientar na visita. Ao sair do lobby, encontrei alguns fotógrafos que tiraram uma foto minha que estava inclusa no pacote para retirada da versão impressa no final do dia.</p>
+  <p>Em seguida, um funcionário chama um grupo de umas 5 pessoas de cada vez e explica onde fica o restaurante e o vestiário que cada um deve ir. São vários funcionários falando com esses pequenos grupos e que vão dividindo as pessoas entre os 3 vestiários existentes no parque. Depois eles nos convidam a ir tomar café da manhã.</p>
+  <p>Como eu estava no primeiro grupo para nadar com os golfinhos, fui me trocar primeiro para depois tomar o café. O vestiário é bem completo e oferece tudo o que você vai precisar durante o dia: sabonete, shampoo, condicionador, toalhas a vontade e até mesmo sacos plásticos para você guardar a roupa molhada no final do dia.<br>
+    Do lado de fora, você tem a opção de pegar um macacão de neoprene (wet suit) ou somente um colete de neoprene (wet vest) caso queira vestir a sua bermuda ou maiô de preferência. Além disso, você retira um kit com máscara e snorkel para mergulho, junto com um protetor solar que eles permitem o uso para quem vai nadar com os golfinhos. Para preservar a saúde dos animais, o Discovery Cove não permite o uso de outros protetores para quem for nadar com os golfinhos, e por isso oferece sem custo um protetor que não prejudica estes animais.</p>
+  <p>Depois de se trocar, você pode deixar seus pertences nos armários que ficam logo do lado de fora dos vestiários. Próximo a eles você encontra um funcionário do parque que distribuí chaves para que você possa guardar suas coisas em um dos lockers. Diferentemente dos outros parques aquáticos, no Discovery Cove você não paga pelo uso dos armários e pode utilizar quantos quiser (afinal, você já pagou o suficiente no valor do ingresso.).</p>
+  
+  <h2>Nadando com os golfinhos</h2>
+  <p>Devidamente alimentado e vestido, você tem que ir até uma das cabanas de orientação para o nado com o golfinho. O nome da cabana e o horário estarão escritos no seu crachá. Ao chegar na cabana, você e seu grupo vão receber orientações importantes sobre a experiência com os golfinhos. Em geral cada grupo vai ter entre 15 e 20 pessoas dependendo do dia e do número de grupos que vão estar no parque.</p>
+  <p>Cada pessoa vai receber uma prancheta para preencher com o nome, endereço, telefone e assinatura certificando que está ciente de todos os riscos que envolvem a experiência com o nado com os golfinhos. Ali vão constar coisas como risco de afogamento, de ferimento decorrente da piscina e/ou dos animais e até morte. Assusta um pouco, mas sem hesitar muito eu preenchi o formulário.<br>
+    Para os menores de idade, os pais ou representantes legais devem preencher o formulário, com seus dados e os dados do menor. Pra quem quiser ler o documento antes de comprar o ingresso, <a href="javascript:loadURL('http://www.discoverycove.com/AssetManagement/Assets/WIP/DCO/English_Dolphin_Release%20_For%20Minors.pdf');" class="linkvai">clique aqui para abrir o PDF</a>.</p>
+  
+  <p>Outra informação importante é que os menores de 12 anos só poderão entrar na piscina com os golfinhos se acompanhados de um adulto pagante. Não adianta o adulto ficar de fora, que a criança não poderá entrar sozinha.</p>
+  <p>Durante a orientação, os treinadores do seu grupo vão chegar, passar um vídeo e contar os detalhes do nado com os golfinhos. Ali eles explicam que existem animais de todas as idades, que o mais novo tem meses de vida enquanto o mais velho, mais de 50 anos. Eles explicam também que os olhos e a boca dos golfinhos são muito sensíveis, e orientam os visitantes a não incomodá-los. A orientação é tocá-los sempre depois do orifício respiratório que se localiza no alto da cabeça deles. Os treinadores também deixam muito espaço para que as pessoas façam perguntas antes de entrarmos na água.</p>
+  <p>É nesse momento também que os instrutores avisam que é proibido entrar na água com câmeras e outros objetos como jóias, óculos e bonés. O único assesório permitido é um anel/aliança por pessoa. Isso porque os golfinhos são muito curiosos e não hesitam em te &ldquo;roubar&rdquo; caso você esteja carregando um desses objetos. O parque oferece um fotógrafo e um cinegrafista por grupo caso você deseje comprar as fotos na saída. Existem diversos pacotes que vão desde 1 foto (que custa US$25) até pacotes com diversas fotos, vídeos e até chaveirinhos (que passam dos US$200).</p>
+  <p>Se alguém do seu grupo não for fazer o nado, a pessoa pode ficar fora da água tirando fotos de quem está nadando com os golfinhos. É lógico que as fotos não vão ficar tão legais quanto as tiradas pelos fotógrafos do parque mas serão bem mais baratas. Como eu estava sozinho, não tive opção e acabei comprando uma foto no final – e achei bem cara!</p>
+  <p>Logo após a orientação inicial e com os formulários devidamente assinados e preenchidos, cada treinador seleciona 5 pessoas e vai pra uma parte da piscina (que não é muito bem uma piscina, tá mais pra um lago) onde o grupo irá encontrar os golfinhos.</p>
+ 
+  <p>A partir dai é bem divertido. Apesar do estranhamento inicial com a temperatura da água que é bem bem gelada, os treinadores mostram bastante intimidade com os animais, que chegam brincando, fazem truques, posam para fotos e ficam recebendo carinho de todos. Cada golfinho tem uma particularidade e no meu grupo, conhecemos 3. Eu nadei com uma chamada Ipanema que me levou para um passeio até a parte mais funda da piscina. Todo os golfinhos que interagi eram muito amigáveis e calmos. Depois do nado, que demora cerca de 30 minutos, todos estão liberados para continuar aproveitando o parque.</p>
+  
+  
+  <h2>Outras atrações</h2>
+  <p>Além das três piscinas onde são realizadas as experiências com os golfinhos, o Discovery Cove oferece outros locais para você curtir um dia bem tranquilo.</p>
+  <p>No Grand Reef, você encontra uma outra piscina com água muito gelada, diversos peixes e raias gigantes que nadam por ali. Eu que não sou muito fã de peixe me beliscando ou nadando por entre as minhas pernas, entrei rapidamente, filmei um pouco e logo saí da piscina.</p>
+  <p>Já o meu local preferido do parque foi o Wind Away River, uma espécie de rio bem comprido, com alguma leve correnteza (e sem animais nadando) para você mergulhar e ficar lagarteando no sol. O rio é largo e possuí algumas cavernas ao longo do caminho para você explorar com o snorkel e a máscara de mergulho. Passei umas boas horas boiando por ali, até porque você pode pegar algumas bóias para relaxar. Abaixo fiz um vídeo com os principais mergulhos feitos no parque!
+ 
+    <br>
+    <br>
+    Outra atração que acaba fugindo um pouco do tema do parque é o Explorer&rsquo;s Aviary, um viveiro com pássaros tropicais que você pode tirar foto e alimentar com frutas e sementes que o próprio parque te dá. Mais uma vez, como não sui muito fã da idéia, entrei e sai rapidinho.</p>
+  <p>Existem outras experiências que podem ser compradas separadamente, como a de ser um treinador de golfinhos e a Sea Venture, que te ensina a mergulhar com tanque de oxigênio mesmo que você não tenha a certificação de mergulho. Eu optei por não comprar nada adicional e acabei não conhecendo estas experiências.</p>
+ 
+  <h2>Alimentação</h2>
+  <p>Ponto bem legal do Discovery Cove é a alimentação oferecida pelo parque. Estão inclusos café da manhã e almoço, além de comidas e bebidas à vontade ao longo do dia.</p>
+  <p>O café da manhã é servido até as 11 da manhã e tem os itens básicos do café americano: torradas, waffles, panquecas, ovos mexidos, bacon, croissant, outros tipos de pães, frutas e cereais. Para beber, você encontra sucos, café, achocolatado e leite.</p>
+  
+  
+ 
+  <p>No almoço, são servidos diversos tipos de pratos: frango com arroz, macarrão, saladas, costelinha suína, pescados e até mesmo cheeseburger e cachorro quente. A variedade de sobremesas também é gigante.</p>
+  <p>Durante o dia todo, algumas tendas espalhadas pelo parque servem salgadinhos, pretzels doces e salgados, churros, refrigerantes, sucos, cerveja e algumas batidinhas alcoólicas. Eles também sempre deixam um cooler bem grande cheio de garrinhas de água mineral para você pegar a vontade.</p>
+ 
+  
+  <h2>5 dicas para aproveitar melhor o Discovery Cove</h2>
+  <p><strong>– Chegue cedo</strong>: como a ordem para o nado com os golfinhos é na base do &ldquo;first come first serve&rdquo;, quem chegar mais cedo, vai antes e livra o resto do dia para aproveitar o parque. Recomendo chegar até 1 hora antes do parque abrir para dar bastante tempo de fazer o check in, se trocar e tomar café da manhã com calma.<br>
+    <strong>- Máscaras de mergulho de grau</strong>: se você usa óculos ou lentes de grau, pode solicitar uma máscara de mergulho especial no momento do check in. Eles dispõe de diversas máscaras especiais e você pode retirá-las sem custo adicional na recepção.<br>
+    <strong>- Não esqueça a sua foto</strong>: todo mundo tem direito a uma foto por família que é tirada na entrada do parque (infelizmente não é possível substituí-la pela foto com o golfinho). Retire na saída do parque. Vale dizer que as vezes, dependendo da lotação do parque, eles deixam de distribuir a foto gratuita depois de 1 ou 2 horas que o parque abriu. Mais um motivo para chegar cedinho.<br>
+    <strong>- Sem pressa</strong>: vá ao Discovery Cove para descansar. Esse será um dia sem correria de shoppings e fila dos parques temáticos. Aqui você não vai ter lotação e a experiência é valida para se estirar na areia e descansar no sol. Sem correria hein!<br>
+    <strong>- Leve pouca coisa</strong>: eu mesmo só levei meus chinelos, uma troca de roupa e minhas câmeras (a de água e a normal) para registrar o dia. Deixei tudo no hotel e aproveitei das amenidades oferecidas pelo parque.</p>
+ 
+  <p>Mesmo sendo contra a exploração dos animais nos parques da Sea World, tinha a curiosidade de conhecer este parque e preciso dizer que aproveitei bastante o dia. Independente de convicções, é certo que a experiência proporcionada pelo Discovery Cove é única e bem interessante pra quem quer fugir dos parques e shoppings de Orlando.</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+ 
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

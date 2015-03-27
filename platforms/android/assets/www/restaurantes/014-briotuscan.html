@@ -1,0 +1,166 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Brio Tuscan Grille: restaurante italiano em Orlando</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+   <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../restaurantes.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>	 
+		<div class="titulocenter"><h2>Restaurantes Recomendados</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/restaurantes/thumbs/014-briotuscam.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-restaurantes"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Brio Tuscan Grille: restaurante italiano em Orlando</h2>
+
+
+
+
+<p>Hoje vamos falar sobre um restaurante delicioso que muita gente passa na frente em meio as compras e não nota: o Brio Tuscan Grille (que de agora em diante chamarei só de Brio para facilitar). Com uma cozinha de influência italiana, o Brio é na verdade mais um restaurante de gastronomia variada e delicioso. Para mim, é o melhor plano B para os dias em que a sua vizinha popular Cheesecake Factory está muito cheia. Essa recomendação de hoje veio na verdade a pedido de vocês. Nos últimos tempos dividimos muitas dicas de restaurantes dentro dos parques, o que fez com que alguns leitores começassem a nos pedir mais dicas de alimentação fora da Disney também. Pois bem, o Brio é uma deliciosa opção de alimentação fora dos parques, que já estava na lista para vir parar aqui no blog. Como o pedido de post de vocês funciona como um fastpass, ele furou a fila de todas as outras matérias e ganhou o espaço do blog hoje. <img src="../cont-imgs/restaurantes/icon_smile.gif" alt=":)"></p>
+<p>Como boa parte dos restaurantes que nos apaixonamos em Orlando, o Brio faz parte de uma rede de restaurantes, com unidades em todo o país. Na região próxima a Disney são duas casas: uma em Orlando mesmo, que fica no Mall at Millenia, e outra em Winter Park. Eu sempre vou na do Mall at Millenia porque acho o local delicioso para uma refeição sem pressa depois das compras (nunca antes, pois ninguém merece fazer compras de barriga cheia). Quando digo que a refeição tem que ser sem pressa, é porque a carta de drinks e as entradas são a parte que mais gosto do Brio. Eu sou uma pessoa bem viciada em carpaccios, sempre experimento em todos os restaurantes que passo e avalio a qualidade de uma casa italiana pela qualidade de seu carpaccio. Nesse quesito o Brio ganhou muitos pontos comigo, pois o carpaccio além de GIGANTE (para se dividir com certeza), é bem fininho e com um tempero super saboroso. As entradas com frutos do mar que a minha família já pediu lá também fizeram muito sucesso na mesa, mas eu não comi para saber se era gostoso mesmo. Como eu não como frutos do mar, provavelmente não teria nada de bom para dizer para vocês, então prefiro confiar na opinião deles.</p>
+
+<p> </p>
+<p>Nos pratos principais, apesar das massas serem a grande pedida da casa, o menu também apresenta excelentes opções de saladas, carnes e frutos do mar. O menu é super variado e ainda mais completo no jantar, em que é apresentado em uma versão maior. Para os carnívoros de plantão que estiverem com bastante fome, fica a dica da deliciosa Bisteca alla Fiorentina com uma massa na manteiga. A dica é do meu pai que entende do assunto, mas já foi provada e aprovada por mim também! Vale dizer que os pratos são grandes, mas não gigantes como os da Cheesecake Factory por exemplo. Se você tiver com pouca fome, dá para dividir a maioria dos pratos. Vai realmente depender do tamanho da sua fome, então peça instrução para o garçom a respeito do que você está querendo pedir para avaliar se vale ou não dividir.</p>
+<p><img src="../cont-imgs/restaurantes/014-briotuscan/13582454275_aa49f0b0ae_z.jpg" alt="13582454275_aa49f0b0ae_z" width="640" height="427"></p>
+<p>O menu de sobremesas do Brio também é bem legal, e tem uma opção que eu adoro nos restaurantes americanos, o chamado sample menu, um prato que traz várias miniaturas de sobremesas, excelente pedida para os curiosos (como eu) que não sabem o que escolher. Outra favorita da minha família no Brio é o Tiramissu, muito bem preparado pela casa, fazendo valer a sua raiz italiana.</p>
+<p>Vale dizer que além de tudo isso, o Brio também oferece Brunch (refeição que mistura café da manhã e almoço). Eu nunca fui mas também não recomendo, porque o cardápio deles é bem simples para esta refeição. Se você quiser ir num brunch, melhor ir num bem legal, né? Se ficou interessado nessa opção, considere por exemplo o Cape May que em seu café da manhã oferece vários pratos de brunch. Guarde o Brio para as outras refeições que você vai se dar bem.</p>
+<p>Gostou? Então considere o Brio para fechar a noite pós compras no Mall at Millenia ou até sua unidade no Winter Park. Depois conta para a gente o que achou, tá?</p>
+<p><strong>Nome</strong>: Brio Tuscan Grille<br>
+  <strong>Endereço</strong>: 4200 Conroy Road, Orlando, FL 32839 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/Brio+Tuscan+Grille/@28.485565,-81.4315497,17z/data=!4m2!3m1!1s0x88e77ea9a9dc9d13:0xaa2dea337f1de505');">Veja no Google Maps</a>)<br>
+  <strong>Telefone</strong>: +1 407-351-8909<br>
+  <strong>Referência</strong>: Dentro do Mall at Millenia, ao lado da Cheesecake Factory.<br>
+  <strong>Preço</strong>: US$25 a US$40 dólares por pessoa em média, podendo variar muito dependendo do pedido.<br>
+  <strong>Horário de Funcionamento</strong>: Seg a Qui: 11am -10pm – Sex e Sáb: 11am-11pm – Dom 10am-10pm (sujeito a alterações)<br>
+  <strong>Cardápio</strong>:<a class="linkvai" href="javascript:loadURL('http://www.brioitalian.com/menus.html');">clique aqui</a> para visualizar o cardápio (em inglês)<br>
+  <strong>Disney Dining Plan</strong>: Não, o restaurante fica fora do complexo Disney.<br>
+  <strong>Avaliação do VPD</strong>: <img src="../cont-imgs/restaurantes/estrelas-avaliacao_3.png" alt="Nota 3 de 5" width="138" height="23"></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

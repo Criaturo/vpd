@@ -1,0 +1,176 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Vai pra Disney</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+  
+  
+  <script>
+		$('.linkvai').on('tap', function() {
+		   url = $(this).attr("rel");   
+		   loadURL(url);
+		});
+		function loadURL(url){
+		   window.open(url, "_system");
+		}
+	</script>
+  
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../melhores-dicas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a>   
+		<div class="titulocenter"><h2>Melhores dicas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults3").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults3").rows.length; t > 1; t--){
+				document.getElementById("tableResults3").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults3").rows[document.getElementById("tableResults3").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults3").insertRow(document.getElementById("tableResults3").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults3" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/dicas/thumbs/010-levandocomida.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-melhoresdicas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Levando comida para os parques da Disney</h2>
+
+
+
+
+
+  <p>A Disney é repleta de restaurantes, quiosques e lanchonetes com as mais diversas opções de comida, porém sabemos que a alimentação dentro dos parques pode encarecer bastante o passeio, e por isso uma excelente dica de economia durante a viagem é levar sua própria comida para as refeições durante um dia de parque. A recomendação é ir já no começo da viagem a um supermercado como o Walmart ou a Target (<a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/walmart-target/');">clique aqui para ver as dicas que demos sobre os dois</a>) e já abastecer o quarto do hotel com itens para serem consumidos ali mesmo ou nos parques. Como muitas pessoas já nos questionaram sobre as restrições existentes para levar suas comidas para os parques, resolvemos escrever esta matéria para esclarecer todos os pontos a respeito dessa alternativa econômica de alimentação na Disney.</p>
+  <p>A Disney permite sim a entrada de alimentos de fora dos parques, todavia, existem algumas regras pré estabelecidas para este tipo de prática que visam garantir a segurança e evitar práticas proibidas de venda de comida lá dentro por exemplo (o que facilmente resultaria numa expulsão para o candidato a comerciante). São pouquíssimas regras e bem sensatas se você parar para pensar. Para explicá-las é muito mais fácil listar o que você <em>não</em> pode fazer do que o que você pode fazer, afinal, é assim mesmo que a Disney determinou a restrição.</p>
+  <div id="attachment_2759"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/010-levandocomida/perkins-cinnamon-roll.jpg" alt="Comida nos parques: Cinnamon rolls do Perkins são uma ótima opção de lanchinho/café da manhã que você pode levar sem problemas para os parques. São mais baratos dos que os oferecidos na Disney e bem mais gostosos. " width="604" height="402">
+    <p>Cinnamon rolls do <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/perkins-comer-bem-barato-orlando/');">Perkins</a> são uma ótima opção de lanchinho/café da manhã que você pode levar sem problemas para os parques. São mais baratos dos que os oferecidos na Disney e bem mais gostosos.</p>
+  </div>
+  <p> </p>
+  <h2>O que é proibido quando se quer levar de comida e bebida para dentro dos parques da Disney</h2>
+  <p><strong><em>Itens de vidro:</em></strong> são proibidos pela questão óbvia da falta de segurança que estes itens oferecem. Nem pense em tentar entrar nos parques com garrafas ou vasilhas de vidro que você vai ser barrado. Uma única exceção a essa regra existe: papinhas de bebês são permitidas, mesmo que seja daquelas que vem em potinhos de vidro (tipo a da Nestlé, sabe?).</p>
+  <p><strong><em>Bebidas alcóolicas:</em> </strong>acho que a idéia aqui é realmente evitar gente bêbada no parque. Se um funcionário da Disney percebe que uma pessoa está mais alterada pelo álcool, ele pode optar por não vender mais bebida a este visitante. Se o cara leva a própria bebida é muito mais complicado ter este controle e por isso tal prática é proibida.</p>
+  <p><em><strong>Itens que possam ser usados como uma arma:</strong></em> facas, abridor de latas afiado, ralador de qualquer coisa ou qualquer outro tipo de utensílio que possa ser usado para ferir um coleguinha no parque será confiscado por questões de segurança.</p>
+  <div id="attachment_2746"><img style="margin:0 auto; display: block;" src="../cont-imgs/dicas/010-levandocomida/VPD-Hot-Can.jpg" alt="Você sabia que nos EUA você encontra produtos que esquentam sozinhos, sem precisar usar fogão ou no microondas? Essas latinhas são exemplos desses alimentos  'modernos'. Se por um lado são a solução para a restrição de esquentar comida nos parques, por outro lado fogem da proposta de economizar dinheiro." width="600" height="248">
+    <p>Você sabia que nos EUA você encontra produtos que esquentam sozinhos, sem precisar usar fogão ou no microondas? Essas latinhas são exemplos desses alimentos &ldquo;modernos&rdquo;. Se por um lado são a solução para a restrição de esquentar comida nos parques, por outro lado fogem da proposta de economizar dinheiro. Foto: divulgação Hot-Can US</p>
+  </div>
+  <p><strong><em>Esquentar sua comida:</em> </strong>a Disney não permite que funcionários dos parques manipulem comidas que eles não têm controle sobre a qualidade. Isso significa que não dá para pedir para um funcionário de um restaurante esquentar sua comida pois ele não vai poder fazer isso. Como também não é oferecido nenhum espaço com microondas ou qualquer outro aparelho de aquecer alimentos, a dica é levar comidinhas simples que você poderá comer fria mesmo: sanduíches, frutas, wraps, saladas ou vegetais para os mais saudáveis ou salgadinhos, bolachas e chocolates para os nem tão saudáveis.</p>
+  <p>Mais uma vez a exceção é a papinha de bebê que poderá ser esquentada no Baby Care Center de cada parque mas vale ressaltar que este espaço é para esquentar a comida de bebês e crianças pequenas, não a lasanha que você trouxe de casa, hein? Se você realmente quiser muito esquentar sua comida, a solução é ir até um hotel da Disney próximo ao parque que possua uma praça de alimentação equipada e usar o microondas de lá, mas isso vai significar em perda de muito tempo que você deixou de estar no parque. Pensando no preço do ingresso, vale a pena economizar por um lado se você precisará perder tempo de parque (que você já pagou para ter direito)? Eu pessoalmente prefiro levar uma comida que possa ser consumida fria ou então como lá na Disney mesmo. Indo na direção oposta, vale dizer que também não é possível fazer uso de geladeiras ou refrigeradores do parque, então se você vai a Disney em um dia quente, leve alimentos que precisam deste cuidado em bolsas térmicas ou cobertos por gelo.</p>
+  <p><strong><em>Bagagens grandes demais:</em> </strong>mochilas, malas, bolsas ou qualquer compartimentos para guardar as suas coisas (incluindo suas comidas e bebidas) que tenham dimensões maiores do que 61cm x 38cm x 46cm (comprimento x largura x altura). Não acho que dá nem pra reclamar dessa restrição, né? Não consigo imaginar razão para você precisar de mais espaço do que esse por pessoa. Lembrando que se você levar uma bagagem pesada para o parque, poderá deixá-la nos lockers/armários localizados próximo a entrada, mas vale ressaltar duas coisas: 1) você terá que voltar para a entrada do parque toda vez que quiser alguma coisa e 2) os lockers/armários são pagos, então cuidado para a tentativa de economia não sair um tiro no pé. Pessoalmente, sempre prefiro levar apenas o que eu sou (ou o Felipe meu herói é) capaz de carregar.</p>
+  <h2>Política de entrada de alimentos e bebidas em outros parques de Orlando</h2>
+  <p>A pedido de alguns leitores, resolvemos incluir aqui também as regras de entrada de alimentos nos outros parques de Orlando: Sea World, Universal, Islands of Adventure, Bush Gardens, Legoland e Kennedy Space Center.</p>
+  <p><strong>Universal Studios, Islands of Adventure e Legoland:</strong> estes dois grupos de parques permitem a entrada nos parques com garrafas plásticas de água, pequenos snacks e lanchinhos que não necessitem de resfriamento ou aquecimento e alimentos de bebê. Além disso, também é permitido qualquer alimento que seja parte de alguma dieta especial ou indicação médica. Você também pode levar uma bolsa térmica ou coolers maleáveis (os duros não podem) desde que não tenham rodinhas e respeitem o limite máximo de tamanho de 21,5cm de largura, 15,2cm de altura e 15,2cm de profundidade. Sendo assim, não são permitidos refeições grandes (que eles chamam de picnic lunches), ou comidinhas que precisam ser aquecidas ou refrigeradas, garrafas ou qualquer item de vidro ou material cortante, bolsas térmicas duras, com rodinhas ou acima do limite de tamanho já mencionado.</p>
+  <p><strong>Sea World: </strong>as regras aqui focam bem mais no que é proibido do que em o que é permitido e olha que eles proíbem bastante coisa. Segundo o regulamento do parque, é proibida a entrada de bolsas térmicas ou coolers duros<strong>, </strong>comidas, bebidas e compartimentos de vidro ou material cortante. Basicamente só é permitido entrar com alimento/papinha de bebê ou com outros alimentos para quem segue dieta especial (por exemplo diabéticos ou celíacos).</p>
+  <p><strong>Bush Gardens: </strong>as regras são bem rígidas aqui e só permitem mesmo a entrada de garrafas de plástico de água. Até mesmo sanduíches e outras bebidas são proibidas. Para quem tem alguma dieta especial ou indicação médica para uma alimentação específica, é preciso entrar em contato com o parque através do email guestinformation@buschgardens.com.</p>
+  <p><strong>Discovery Cove:</strong> visto que a admissão do parque já te dá direito a consumir todas as comidas e bebidas disponíveis no parque á vontade, não é permitida a entrada de nenhum alimento ou bebida neste parque. </p>
+  <p>Simples não é? Seguindo estas regras, você poderá levar comidas e bebidas para os parques sem problema nenhum.  Se por outro lado você quer economizar mas achou estas regras complicadas ou restritivo demais para o seu paladar, <a class=“linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/comidas-disney-alem-do-hamburguer/');">clique aqui </a>e veja como comer nos restaurantes da Disney gastando pouco e fugindo do hambúrguer e batata frita.</p>
+  <p><strong>Kennedy Space Center:</strong> o regulamento não é muito claro através do site deles mas a regra oficial é que não se pode entrar com comida e bebida lá dentro. Ainda assim, já ouvi muitos relatos de gente que conseguiu entrar com garrafa de água sem problema. O ponto aqui é que mesmo com essa restrição, a comida do Kennedy Space Center é cara e muito ruim, simples assim. Então a minha recomendação é tomar um café da manhã reforçado e levar pelo menos alguns snacks e deixar no seu carro, pois se a fome apertar você sair do parque, come e depois volta.</p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>

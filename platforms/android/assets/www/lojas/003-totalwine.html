@@ -1,0 +1,184 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="UTF-8" />
+	<title>Total Wine: o shopping dos vinhos</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="css/jquery/jquery.mobile-1.0rc1.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  
+  
+
+  
+
+ 
+  
+  
+ <link rel="stylesheet" href="css/jquery/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery/jquery-1.11.1.min.js"></script>
+<script src="js/jquery/jquery.mobile-1.4.5.min.js"></script>
+  
+ <script>
+$('.linkvai').on('tap', function() {
+  url = $(this).attr("rel");   
+  loadURL(url);
+});
+function loadURL(url){
+		   window.open(url, "_system");
+		}
+</script>
+</head> 
+<body> 
+
+<div data-role="page" id="event_page">
+
+	<header data-role="header" id="vpdheader"> 
+		<a href="../lojas.html" data-transition="flip" class="btn-ico-logo"><img src="../images/ico-logo-vai-pra-disney.png" /></a> 
+		<div class="titulocenter"><h2>Lojas Recomendadas</h2></div>
+		
+		<a href="#myPanel" class="btn-favoritos" id="viewfovoritos" ><img src="../images/ico-favoritos.png" /></a>
+	</header><!-- /header -->
+	
+		
+		
+	
+	<div data-role="panel" id="myPanel"  data-position="right"  data-display="overlay">  
+		<script>
+			  
+			$(function() {	
+				$('.btnSalvar').click(function(){
+					navigator.notification.prompt(
+						"Dê um Nome ao seu favorito :)", //mensagem
+						salvarFavorito, //callback
+						"Adicionar favorito",//titulo
+						['Cancelar','Ok'], //botões
+						'Favorito' //texto padrão
+					);
+				});
+			}); 				
+			
+			function salvarFavorito(results){
+				if( $.trim(results.input1).length > 0 && results.buttonIndex == 2 )
+				{
+					
+					localStorage.setItem(results.input1, $(location).attr('href'));
+				}
+			} 				
+			  
+			  
+		$('.btn-favoritos').click(function(){
+			var tamanho = localStorage.length;
+			var chave = '';
+			var valor = '';
+			
+			if(document.getElementById("tableResults9").rows.length > 1)	{
+				for(var t = document.getElementById("tableResults9").rows.length; t > 1; t--){
+				document.getElementById("tableResults9").deleteRow(1);
+				}
+			}
+								
+			var numOfCols = document.getElementById("tableResults9").rows[document.getElementById("tableResults9").rows.length-1].cells.length;
+				
+			for(var c = 0; c < tamanho;c++){
+				chave = localStorage.key(c);
+				valor = localStorage.getItem(chave);
+				
+				
+				var newRow = document.getElementById("tableResults9").insertRow(document.getElementById("tableResults9").rows.length);
+					
+					for (var j = 0; j < numOfCols; j++) {
+					
+					newCell = newRow.insertCell(j);
+					
+					if(j==0){
+						
+						}else if(j == 1){
+							newCell.innerHTML = "<a href='"+valor+"'>• "+chave+"</a>";
+						} } }	
+			})	
+		</script>
+			
+			<table id="tableResults9" class="tabela" border="0">
+				 <tr><td></td><td></td></tr>
+			</table>
+	</div>  
+
+
+
+
+
+<div data-role="main" class="ui-content content_internas" style="background-color:#fff;">
+
+
+<div style="background:url('../images/lojas/thumbs/003-totalwine.jpg') no-repeat center center; background-size: cover;" class="thumbsPosts thumbsborder-lojas"></div>
+
+<a href="#" class="click_favoritos btnSalvar"></a>
+
+
+
+<!--CONTEUDO-->
+<h2 class="titulo_internasposts">Total Wine: o shopping dos vinhos</h2>
+
+
+
+
+<p>Que Orlando é o paraíso das compras disso ninguém discorda, mas o que poucos sabem é que além das roupas, <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/cosmeticos-orlando/');">cosméticos</a> e <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/eletronicos-dicas-compras-orlando/');">eletrônicos</a>, a cidade também reserva boas oportunidades para as compras de especialidades, como por exemplo, vinhos.<br>
+  Há alguns anos, o meu sogro me apresentou a <strong>Total Wine</strong>, um shopping de vinhos onde você pode encontrar não só uma variedade gigantesca de marcas, tipos e origens, mas também garrafas de todos os preços. E acredite, quando você começa a comparar com os valores dos vinhos no Brasil e até no free shop, você vai querer levar loja toda.</p>
+<div id="attachment_3105"><img src="../cont-imgs/lojas/003-totalwine/total-wine-orlando-vinhos-08.jpg" alt="Fachada da loja Total Wine, que fica próxima ao shopping Mall at Millenia - Loja de vinhos" width="640" height="427">
+  <p>Fachada da loja Total Wine, que fica próxima ao shopping Mall at Millenia</p>
+</div>
+<p>Eu não sou um super entendido de vinhos, mas gosto muito de tomar os tintos, rosés e também os espumantes. Um coisa boa da Total Wine é que você pode contar com vários especialistas que te ajudam a escolher os melhores custo-benefício da loja. Se você não é muito chegado em ficar pedindo indicação (eu não sou!), algumas plaquinhas classificam os vinhos de acordo com vários critérios: preços, recomendação dos funcionários e até mesmo a pontuação do vinho de acordo com os rankings globais, como o do Wine Advocate por exemplo. Isso já ajuda bastante na hora de escolher os vinhos bons.</p>
+<p>A Total Wine é dividida de acordo com a região de origem do vinho e dentro de cada região, a divisão é feita por tipo. Então você tem várias sessões como França, Itália, Argentina, Chile, EUA e dentro de cada uma delas há os espumantes, tintos, brancos e rosés. Vale lembrar que dentro da França, tem uma sessão dedicada aos champanhes, que são os espumantes produzidos na região de Champagne. Essa sessão é um destaque à parte: aqueles que buscam marcas famosas e quase inacessíveis no Brasil, como Veuve Clicquot e Dom Perignon, encontram garrafas a partir de $25 dólares na Total Wine. Esses são champanhes que no Brasil passam de 150 reais a garrafa e dependendo da safra, o preço vai pro espaço.</p>
+<div id="attachment_3110"><img src="../cont-imgs/lojas/003-totalwine/total-wine-orlando-vinhos-03.jpg" alt="Corredores que são divididos de acordo com o local de produção e tipo de vinho" width="427" height="640">
+  <p>Corredores que são divididos de acordo com o local de produção e tipo de vinho</p>
+</div>
+<div id="attachment_3112"><img src="../cont-imgs/lojas/003-totalwine/total-wine-orlando-vinhos-01.jpg" alt="Etiquetas que dão mais informações dos vinhos, mostram as recomendações dos funcionários e até mesmo a pontuação de acordo com os rankings internacionais" width="640" height="427">
+  <p>Etiquetas que dão mais informações dos vinhos, mostram as recomendações dos funcionários e até mesmo a pontuação de acordo com os rankings internacionais</p>
+</div>
+<div id="attachment_3111"><img src="../cont-imgs/lojas/003-totalwine/total-wine-orlando-vinhos-02.jpg" alt="O Amarone Della Valpolicella é o vinho que a Re mais gosta, feito com uvas passa e é super difícil de achar aqui no Brasil por bons preços" width="427" height="640">
+  <p>O Amarone Della Valpolicella é o vinho que a Re mais gosta, feito com uvas passa e é super difícil de achar aqui no Brasil por bons preços</p>
+</div>
+<p>Além dos vinhos, você encontra todo o tipo de bebida alcóolica na Total Wine, como vodkas, gins, tequilas, cervejas, whiskeys e até mesmo a famigerada cachaça (essa última é melhor deixar para comprar no Brasil! hehe). Uma boa idéia para quem quer trazer um presente diferente da viagem, mas não quer distribuir chaveiros do Mickey na volta, é comprar algumas miniaturas de algumas das dezenas de bebidas que são vendidas na Total Wine. Aposto que os amigos e familiares que você quer presentear, vão gostar das garrafinhas.</p>
+<div id="attachment_3109"><img src="../cont-imgs/lojas/003-totalwine/total-wine-orlando-vinhos-04.jpg" alt="Garrafas de bebidas em miniaturas. Uma ótima idéia para presentear alguém aqui no Brasil ou para trazer como souvenir " width="427" height="640">
+  <p>Garrafas de bebidas em miniaturas. Uma ótima idéia para presentear alguém aqui no Brasil ou para trazer como souvenir</p>
+</div>
+<p>Uma outra sessão da Total Wine que fica um pouco isolada da área de bebidas é a sala de charutos. Lá você encontra uma infinidade de marcas e tipos de charutos que ficam numa espécie de aquário climatizado para manter a qualidade dos cigarros. Você encontra charutos de vários países, mas já aviso que se você for procurar pelos famosso cubanos, não vai encontrá-los. Isso porque é ilegal vender os tais charutos devido ao embargo que existe em relação aos produtos de Cuba nos EUA. De qualquer maneira, essa é uma outra boa idéia para quem quer trazer um presente diferente da viagem.</p>
+<div id="attachment_3108"><img src="../cont-imgs/lojas/003-totalwine/total-wine-orlando-vinhos-05.jpg" alt="'Aquário' onde são armazenados os charutos na Total Wine" width="640" height="427">
+  <p>&ldquo;Aquário&rdquo; onde são armazenados os charutos na Total Wine</p>
+</div>
+<p><img src="../cont-imgs/lojas/003-totalwine/total-wine-orlando-vinhos-07.jpg" alt="total-wine-orlando-vinhos-07" width="640" height="427"></p>
+<p>A pergunta que sempre nos fazem quando o assunto é vinho é como trazer as garrafas para o Brasil. Aqui tenho duas indicações:<br>
+  – Embalagens especiais: na própria Total Wine você encontra umas embalagens plásticas chamadas de Wine Skin que você embrulha a garrafa e transporta com segurança dentro da sua mala. O problema dessas embalagens é que elas custam caro (média de $7 o par) e cada uma transporta uma garrafa por vez.<br>
+  – Bubble Wrap : esse é o nome em inglês do famigerado (e muito amado) plástico bolha. Em qualquer <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/walmart-target/');">Walmart ou Target</a> você encontra rolos dele e junto com uma fita adesiva, você embrulha cada garrafa com bastante vigor. Além de ser mais barato, eu sempre acabo confiando mais no plástico bolha para proteger as garrafas de vinho dentro das minhas malas. Depois é só posiciona-las estrategicamente entre as roupas na mala e já fico pronto pra voltar pro Brasil</p>
+<h2>Trazendo vinhos para o Brasil</h2>
+<p>Como já falamos na página sobre a <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/alfandega-dicas-declarar-ou-nao-compras/');">Alfândega</a>, cada pessoa pode trazer ao Brasil e sem custo de importação, até 12 litros de bebidas, o que dá 16 garrafas de vinho por pessoa (para as garrafas comuns de 750ml). Mas pense bem antes de trazer tudo isso pois 16 garrafas fazem um volume em tanto dentro da mala. Outra observação importante é que nos EUA, a idade mínima para a compra e consumo de bebidas alcoólicas é de 21 anos, ou seja, se prepare para levar na loja um documento de identidade com foto (preferencialmente o seu passaporte) para que a compra seja autorizada.</p>
+<p>Espero que tenha gostado de mais essa dica. E se quiser ler mais sobre outras lojas que recomendamos em Orlando, <a class="linkvai" href="javascript:loadURL('http://www.vaipradisney.com/blog/category/compras/recomendacao-de-lojas/');">clique aqui</a>.</p>
+<p><strong>Total Wine Orlando</strong><br>
+  Endereço: 4625 Millenia Plaza Way. Millenia Plaza. Orlando, FL 32839 (<a class="linkvai" href="javascript:loadURL('https://www.google.com.br/maps/place/4625+Millenia+Plaza+Way/@28.4951216,-81.42898,17z/data=!3m1!4b1!4m2!3m1!1s0x88e77eaab7435ac3:0x202ccc9004658c7a');">ver no Google Maps</a>)<br>
+  Telefone: +1 (407) 352-6330<br>
+  Horário de funcionamento: Domingo a Quinta das 9 as 22 / Sexta e Sábado das 9 as 23<br>
+  Site: <a class="linkvai" href="javascript:loadURL('http://www.totalwine.com/');">http://www.totalwine.com/</a></p>
+  </div>
+	
+	
+	
+	
+	
+	
+	
+<!--FIM CONTEUDO-->
+
+
+</div>
+</div><!-- /page -->
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+jQuery(document).ready(function () {
+    app.initialize();
+    app.sendTrackPacgeView();
+});
+</script>
+</body>
+</html>
