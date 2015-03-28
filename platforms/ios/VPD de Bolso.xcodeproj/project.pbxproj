@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		19AAE2FA779E4727BB94F6CA /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2F7CD558F9409B9D3C8E4F /* CDVStatusBar.m */; };
 		1B0FF5831AC46F32005FEB27 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0FF5821AC46F32005FEB27 /* FBSDKCoreKit.framework */; };
