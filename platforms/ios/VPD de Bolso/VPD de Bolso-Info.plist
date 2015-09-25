@@ -57,11 +57,24 @@
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.0.1</string>
+    <string>1.0.2</string>
     <key>CFBundleSignature</key>
     <string>????</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb.918435491540008</string>
+        </array>
+      </dict>
+    </array>
     <key>CFBundleVersion</key>
-    <string>1.0.1</string>
+    <string>1.0.2</string>
+    <key>FacebookAppID</key>
+    <string>926178420759605</string>
+    <key>FacebookDisplayName</key>
+    <string>VPD de Bolso</string>
     <key>LSRequiresIPhoneOS</key>
     <true/>
     <key>NSMainNibFile</key>
@@ -179,19 +192,6 @@
       <string>UIInterfaceOrientationLandscapeLeft</string>
       <string>UIInterfaceOrientationPortraitUpsideDown</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
-    </array>
-    <key>FacebookAppID</key>
-    <string>918435491540008</string>
-    <key>FacebookDisplayName</key>
-    <string>VPD de Bolso</string>
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>fb.918435491540008</string>
-        </array>
-      </dict>
     </array>
     <key>UIViewControllerBasedStatusBarAppearance</key>
     <false/>

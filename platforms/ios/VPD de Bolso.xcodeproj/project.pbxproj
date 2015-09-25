@@ -7,7 +7,6 @@
 	objects = {
 /* Begin PBXBuildFile section */
 		19AAE2FA779E4727BB94F6CA /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2F7CD558F9409B9D3C8E4F /* CDVStatusBar.m */; };
-		1B0FF5831AC46F32005FEB27 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B0FF5821AC46F32005FEB27 /* FBSDKCoreKit.framework */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
@@ -50,6 +49,7 @@
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		895E3E53B874455F92028482 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5C39B11D728F404F86651668 /* CDVNotification.bundle */; };
 		9F559847D4BE446E82C4E112 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06CCC130562C45AABC67D82F /* CoreData.framework */; };
+		AC087F201AC667940033CB11 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC087F1F1AC667940033CB11 /* FBSDKCoreKit.framework */; };
 		C1C2A2117E5745BFB0C1B515 /* CDVVibration.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB5A333D0514ED9964F6687 /* CDVVibration.m */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F1EF0A2E4A114D798F376BDB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE980AC1EEDB415983B665B0 /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -76,7 +76,6 @@
 
 /* Begin PBXFileReference section */
 		06CCC130562C45AABC67D82F /* CoreData.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		1B0FF5821AC46F32005FEB27 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* VPD de Bolso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VPD de Bolso.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +134,7 @@
 		9F7ED683C5C541A5BCAB148B /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = com.danielcwilson.plugins.googleanalytics/GAIFields.h; sourceTree = "<group>"; };
 		A059AB426D3B484690560910 /* CDVVibration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDVVibration.h; path = org.apache.cordova.vibration/CDVVibration.h; sourceTree = "<group>"; };
 		A645D715E3AE4D55B8B54525 /* CDVDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVDevice.m; path = org.apache.cordova.device/CDVDevice.m; sourceTree = "<group>"; };
+		AC087F1F1AC667940033CB11 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../../Library/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B6BFB0994124458AA0FC0C38 /* CDVNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVNotification.m; path = org.apache.cordova.dialogs/CDVNotification.m; sourceTree = "<group>"; };
 		B755D2B6785649919E3FEE4D /* UniversalAnalyticsPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UniversalAnalyticsPlugin.m; path = com.danielcwilson.plugins.googleanalytics/UniversalAnalyticsPlugin.m; sourceTree = "<group>"; };
 		B7624A2A01394198A5D04559 /* CDVSplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDVSplashScreen.m; path = org.apache.cordova.splashscreen/CDVSplashScreen.m; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 				5B1594DD16A7569C00FEF299 /* AssetsLibrary.framework in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
-				1B0FF5831AC46F32005FEB27 /* FBSDKCoreKit.framework in Frameworks */,
+				AC087F201AC667940033CB11 /* FBSDKCoreKit.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				F1EF0A2E4A114D798F376BDB /* AudioToolbox.framework in Frameworks */,
 				F766B197949043229DEA4172 /* SystemConfiguration.framework in Frameworks */,
@@ -240,7 +240,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B0FF5821AC46F32005FEB27 /* FBSDKCoreKit.framework */,
+				AC087F1F1AC667940033CB11 /* FBSDKCoreKit.framework */,
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
@@ -508,13 +508,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Felipe Almeida (V2S3N6R3XH)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Felipe Almeida (V2S3N6R3XH)";
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/brunoh/Documents/FacebookSDK,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/FacebookSDK";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -540,7 +537,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "VPD de Bolso";
-				PROVISIONING_PROFILE = "6d18f7a6-0d6d-4acd-87bb-38f1414aaab0";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -550,13 +547,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Felipe Almeida (V2S3N6R3XH)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Felipe Almeida (V2S3N6R3XH)";
 				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/brunoh/Documents/FacebookSDK,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/FacebookSDK";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VPD de Bolso/VPD de Bolso-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
@@ -580,7 +574,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "VPD de Bolso";
-				PROVISIONING_PROFILE = "6d18f7a6-0d6d-4acd-87bb-38f1414aaab0";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
